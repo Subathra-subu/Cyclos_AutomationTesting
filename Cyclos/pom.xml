@@ -72,6 +72,18 @@
 			<version>2.25.4</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox</artifactId>
+			<version>3.0.5</version>
+		</dependency>
 		<!--  Source:
 		https://mvnrepository.com/artifact/io.qameta.allure/allure-testng  -->
 		<dependency>

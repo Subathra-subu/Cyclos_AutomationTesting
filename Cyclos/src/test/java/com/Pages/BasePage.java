@@ -1,6 +1,10 @@
+
+
 package com.Pages;
 
-public class BasePage 
+import com.Actions.BaseAction;
+
+public class BasePage extends BaseAction 
 
 {
 
