@@ -6,7 +6,6 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
 
   @Smoke
   Scenario Outline: Verify ticket transactions for different status filters
-
     When user selects "<status>" from status dropdown
     And user clicks first row of the transactions table
     And user clicks the print button
@@ -16,10 +15,6 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
       | status      |
       | Not applied |
       | Open        |
-      | Not applied |
-      | Open        |
-      | Not applied |
-      | Open        |
-      | Not applied |
-      | Open        |
+      | Canceled    |
+      | Processed   |
       

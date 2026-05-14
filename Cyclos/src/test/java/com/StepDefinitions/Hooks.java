@@ -17,73 +17,59 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 
-    public static final Logger logger =
-            LogManager.getLogger(Hooks.class);
+    public static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    LoginActions loginActions =
-            new LoginActions();
+    LoginActions loginActions = new LoginActions();
 
     @Before
     public void setUp(Scenario scenario) {
+        logger.info("=== Scenario STARTED: {} ===", scenario.getName());
 
         HelperClass.setupDriver();
-
         HelperClass.openPage();
-
         loginActions.loginToApplication();
 
-        logger.info(
-                "Scenario started: {}",
-                scenario.getName());
+        logger.info("Setup complete. Browser ready.");
     }
 
     @After
     public void tearDown(Scenario scenario) {
-
         if (scenario.isFailed()) {
 
-            File screenshotFile =
-                    ((TakesScreenshot) HelperClass.getDriver())
-                            .getScreenshotAs(OutputType.FILE);
-
             try {
-
-                File destinationFile =
-                        new File(
-                                "screenshots/"
-                                        + scenario.getName()
-                                        .replaceAll(" ", "_")
-                                        + ".png");
-
-                FileUtils.copyFile(
-                        screenshotFile,
-                        destinationFile);
-
                 byte[] screenshotBytes =
                         ((TakesScreenshot) HelperClass.getDriver())
                                 .getScreenshotAs(OutputType.BYTES);
 
-                scenario.attach(
-                        screenshotBytes,
-                        "image/png",
-                        "Failure Screenshot");
+                // Attach to Cucumber / Extent report
+                scenario.attach(screenshotBytes, "image/png", "Failure Screenshot");
 
-                logger.error(
-                        "Scenario failed: {}",
+                // FIX: Ensure screenshots folder exists before saving
+                File screenshotsDir = new File("screenshots");
+                if (!screenshotsDir.exists()) screenshotsDir.mkdirs();
+
+                File screenshotFile =
+                        ((TakesScreenshot) HelperClass.getDriver())
+                                .getScreenshotAs(OutputType.FILE);
+
+                File destinationFile = new File(
+                        "screenshots"
+                                + File.separator
+                                + scenario.getName().replaceAll("[^a-zA-Z0-9]", "_")
+                                + ".png");
+
+                FileUtils.copyFile(screenshotFile, destinationFile);
+
+                logger.error("=== Scenario FAILED: {} — screenshot saved ===",
                         scenario.getName());
 
             } catch (Exception e) {
-
-                logger.error(
-                        "Failed to save screenshot: {}",
-                        e.getMessage());
+                logger.error("Failed to save screenshot for scenario '{}': {}",
+                        scenario.getName(), e.getMessage());
             }
 
         } else {
-
-            logger.info(
-                    "Scenario passed: {}",
-                    scenario.getName());
+            logger.info("=== Scenario PASSED: {} ===", scenario.getName());
         }
 
         HelperClass.tearDown();

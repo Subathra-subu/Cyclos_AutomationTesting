@@ -1,5 +1,6 @@
 package com.Utilities;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,112 +25,83 @@ public class HelperClass {
     public static Logger log =
             LogManager.getLogger(HelperClass.class);
 
+    // FIX: Use File.separator instead of hardcoded "\\" — works on Linux (Jenkins) and Windows
+    public static String getDownloadPath() {
+        return System.getProperty("user.dir")
+                + File.separator
+                + "Downloads";
+    }
+
     public static void setupDriver() {
 
-        ChromeOptions options =
-                new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 
-        String downloadPath =
-                System.getProperty("user.dir")
-                        + "\\Downloads";
+        // FIX: Cross-platform download path
+        String downloadPath = getDownloadPath();
 
-        Map<String, Object> prefs =
-                new HashMap<>();
+        // Ensure the Downloads folder exists
+        new File(downloadPath).mkdirs();
 
-        prefs.put(
-                "download.default_directory",
-                downloadPath);
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("download.default_directory", downloadPath);
+        prefs.put("download.prompt_for_download", false);
+        prefs.put("download.directory_upgrade", true);
+        prefs.put("safebrowsing.enabled", true);
+        prefs.put("plugins.always_open_pdf_externally", true);
 
-        prefs.put(
-                "download.prompt_for_download",
-                false);
+        options.setExperimentalOption("prefs", prefs);
+        options.addArguments("--disable-pdf-viewer");
 
-        prefs.put(
-                "download.directory_upgrade",
-                true);
-
-        prefs.put(
-                "safebrowsing.enabled",
-                true);
-
-        prefs.put(
-                "plugins.always_open_pdf_externally",
-                true);
-
-        options.setExperimentalOption(
-                "prefs",
-                prefs);
-
-        options.addArguments(
-                "--disable-pdf-viewer");
+        // FIX: Always add these for Jenkins/CI headless environments
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--window-size=1920,1080");
 
         if (ConfigureClass.isHeadless()) {
-
             options.addArguments("--headless=new");
             options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
         }
 
         WebDriverManager.chromedriver().setup();
 
         WebDriver webDriver;
-
-        String browser =
-                ConfigureClass.getBrowser();
+        String browser = ConfigureClass.getBrowser();
 
         if (browser.equalsIgnoreCase("chrome")) {
-
-            webDriver =
-                    new ChromeDriver(options);
-
+            webDriver = new ChromeDriver(options);
         } else {
-
-            throw new RuntimeException(
-                    "Browser not supported: "
-                            + browser);
+            throw new RuntimeException("Browser not supported: " + browser);
         }
 
         driver.set(webDriver);
 
-        wait.set(
-                new WebDriverWait(
-                        webDriver,
-                        Duration.ofSeconds(
-                                ConfigureClass.getExplicitWait())));
+        wait.set(new WebDriverWait(
+                webDriver,
+                Duration.ofSeconds(ConfigureClass.getExplicitWait())));
 
         webDriver.manage().timeouts()
-                .pageLoadTimeout(
-                        Duration.ofSeconds(
-                                ConfigureClass.getPageLoadTimeout()));
+                .pageLoadTimeout(Duration.ofSeconds(ConfigureClass.getPageLoadTimeout()));
 
         webDriver.manage().window().maximize();
     }
 
     public static void openPage() {
-
-        getDriver().get(
-                ConfigureClass.getUrl());
+        getDriver().get(ConfigureClass.getUrl());
     }
 
     public static WebDriver getDriver() {
-
         return driver.get();
     }
 
     public static WebDriverWait getWait() {
-
         return wait.get();
     }
 
     public static void tearDown() {
-
         if (getDriver() != null) {
-
             getDriver().quit();
-
             driver.remove();
-
             wait.remove();
         }
     }

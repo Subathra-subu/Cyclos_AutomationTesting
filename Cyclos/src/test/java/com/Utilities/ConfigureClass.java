@@ -9,75 +9,58 @@ public class ConfigureClass {
     private static Properties properties;
 
     static {
-
         try {
-
-            FileInputStream fis =
-                    new FileInputStream(
-                            System.getProperty("user.dir")
-                                    + "/src/test/resources/Configure.properties");
+            FileInputStream fis = new FileInputStream(
+                    System.getProperty("user.dir")
+                            + "/src/test/resources/Configure.properties");
 
             properties = new Properties();
-
             properties.load(fis);
 
         } catch (IOException e) {
-
             e.printStackTrace();
+            throw new RuntimeException(
+                    "Failed to load Configure.properties. Ensure it exists at src/test/resources/Configure.properties");
         }
     }
 
     public static String getBrowser() {
-
-        return properties.getProperty("browser");
+        return properties.getProperty("browser", "chrome");
     }
 
     public static String getUrl() {
-
         return properties.getProperty("url");
     }
 
     public static String getUsername() {
-
         return properties.getProperty("username");
     }
 
     public static String getPassword() {
-
         return properties.getProperty("password");
     }
 
     public static int getExplicitWait() {
-
-        return Integer.parseInt(
-                properties.getProperty("explicitWait"));
+        return Integer.parseInt(properties.getProperty("explicitWait", "20"));
     }
 
     public static boolean isHeadless() {
-
-        return Boolean.parseBoolean(
-                properties.getProperty("headless"));
+        return Boolean.parseBoolean(properties.getProperty("headless", "false"));
     }
 
     public static String getScreenshotPath() {
-
-        return properties.getProperty("screenshotPath");
+        return properties.getProperty("screenshotPath", "screenshots/");
     }
 
     public static String getReportPath() {
-
-        return properties.getProperty("reportPath");
+        return properties.getProperty("reportPath", "target/reports/");
     }
 
     public static boolean isParallel() {
-
-        return Boolean.parseBoolean(
-                properties.getProperty("parallel"));
+        return Boolean.parseBoolean(properties.getProperty("parallel", "false"));
     }
 
     public static int getPageLoadTimeout() {
-
-        return Integer.parseInt(
-                properties.getProperty("pageLoadTimeout"));
+        return Integer.parseInt(properties.getProperty("pageLoadTimeout", "60"));
     }
 }
