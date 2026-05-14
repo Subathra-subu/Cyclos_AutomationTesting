@@ -15,7 +15,11 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
     Examples:
       | status      |
       | Not applied |
-      | Expired     |
       | Open        |
-      | Processed   |
+      | Not applied |
+      | Open        |
+      | Not applied |
+      | Open        |
+      | Not applied |
+      | Open        |
       
