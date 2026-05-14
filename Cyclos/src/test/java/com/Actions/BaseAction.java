@@ -16,113 +16,205 @@ import com.Utilities.HelperClass;
 
 public class BaseAction {
 
-    // CLICK
+    
     public void click(By locator) {
+
         waitForClickable(locator);
-        HelperClass.getDriver().findElement(locator).click();
+
+        HelperClass.getDriver()
+                .findElement(locator)
+                .click();
+        HelperClass.log.info("Clicked on element: " + locator.toString());
     }
 
-    // JS CLICK
+   
     public void jsClick(By locator) {
-        WebElement element = HelperClass.getWait().until(
-                ExpectedConditions.elementToBeClickable(locator));   // ← was visibilityOf; clickable is safer
 
-        JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
-        js.executeScript("arguments[0].click();", element);
+        WebElement element =
+                HelperClass.getWait().until(
+                        ExpectedConditions.elementToBeClickable(locator));
+
+        JavascriptExecutor js =
+                (JavascriptExecutor) HelperClass.getDriver();
+
+        js.executeScript(
+                "arguments[0].click();",
+                element);
+        HelperClass.log.info("JS Clicked on element: " + locator.toString());
     }
 
-    // SEND KEYS
-    public void sendKeys(By locator, String value) {
+    
+    public void sendKeys(By locator,
+                         String value) {
+
         waitForVisibility(locator);
-        WebElement element = HelperClass.getDriver().findElement(locator);
+
+        WebElement element =
+                HelperClass.getDriver()
+                        .findElement(locator);
+
         element.clear();
+
         element.sendKeys(value);
+        
+        HelperClass.log.info("Sent keys to element: " + locator.toString() + " with value: " + value);
     }
 
-    // GET TEXT
+    
     public String getText(By locator) {
+
         waitForVisibility(locator);
-        return HelperClass.getDriver().findElement(locator).getText();
+
+        HelperClass.log.info("Got text from element: " + locator.toString());
+        
+        return HelperClass.getDriver()
+                .findElement(locator)
+                .getText();
+        
+        
     }
 
-    // WAIT FOR VISIBILITY
+    
     public void waitForVisibility(By locator) {
+
         HelperClass.getWait().until(
                 ExpectedConditions.visibilityOfElementLocated(locator));
+        
+        HelperClass.log.info("Element is visible: " + locator.toString());
     }
 
-    // WAIT FOR CLICKABLE
+    
     public void waitForClickable(By locator) {
+
         HelperClass.getWait().until(
                 ExpectedConditions.elementToBeClickable(locator));
+        
+        HelperClass.log.info("Element is clickable: " + locator.toString());
     }
 
-    // WAIT FOR ELEMENT TO DISAPPEAR (useful after clicking menus)
+    
     public void waitForInvisibility(By locator) {
+
         HelperClass.getWait().until(
                 ExpectedConditions.invisibilityOfElementLocated(locator));
+        
+        HelperClass.log.info("Element is invisible: " + locator.toString());
     }
 
-    // SCROLL
+    
     public void scrollIntoView(By locator) {
-        WebElement element = HelperClass.getDriver().findElement(locator);
-        JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+
+        WebElement element =
+                HelperClass.getDriver()
+                        .findElement(locator);
+
+        JavascriptExecutor js =
+                (JavascriptExecutor) HelperClass.getDriver();
+
+        js.executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                element);
+        
+        HelperClass.log.info("Scrolled into view: " + locator.toString());
     }
 
-    // MOUSE HOVER
+    
     public void mouseHover(By locator) {
-        WebElement element = HelperClass.getDriver().findElement(locator);
-        Actions actions = new Actions(HelperClass.getDriver());
-        actions.moveToElement(element).perform();
+
+        WebElement element =
+                HelperClass.getDriver()
+                        .findElement(locator);
+
+        Actions actions =
+                new Actions(HelperClass.getDriver());
+
+        actions.moveToElement(element)
+                .perform();
+        
+        HelperClass.log.info("Mouse hovered on element: " + locator.toString());
     }
 
-    // DISPLAYED
+    
     public boolean isDisplayed(By locator) {
+
         try {
-            return HelperClass.getDriver().findElement(locator).isDisplayed();
+        	
+        	HelperClass.log.info("Checking if element is displayed: " + locator.toString());
+
+            return HelperClass.getDriver()
+                    .findElement(locator)
+                    .isDisplayed();
+            
+            
+
         } catch (Exception e) {
+        	
+        	HelperClass.log.warn("Element not found or not displayed: " + locator.toString());
             return false;
         }
     }
 
-    // FILE DOWNLOAD — FIXED: FluentWait now uses WebDriver, not a dummy WebElement
-    public void waitForFileDownload(String downloadPath, String fileExtension) {
+    
+    public void clearDownloadFolder(String downloadPath) {
 
-        FluentWait<WebDriver> wait = new FluentWait<>(HelperClass.getDriver())
-                .withTimeout(Duration.ofSeconds(60))          // increased to 60s for slow downloads
-                .pollingEvery(Duration.ofSeconds(2))
-                .ignoring(Exception.class);
+        File folder = new File(downloadPath);
+
+        File[] files = folder.listFiles();
+
+        if (files != null) {
+
+            for (File file : files) {
+
+                if (file.isFile()) {
+
+                    file.delete();
+                }
+            }
+        }
+    }
+
+   
+    public void waitForFileDownload(String downloadPath,
+                                    String fileExtension) {
+
+        FluentWait<WebDriver> wait =
+                new FluentWait<>(HelperClass.getDriver())
+                        .withTimeout(Duration.ofSeconds(60))
+                        .pollingEvery(Duration.ofSeconds(2))
+                        .ignoring(Exception.class);
 
         wait.until(driver -> {
+
             File folder = new File(downloadPath);
+
             File[] files = folder.listFiles();
+
             if (files != null) {
+
                 for (File file : files) {
-                    // Ignore incomplete Chrome download temp files
+
                     if (file.getName().contains(fileExtension)
                             && !file.getName().endsWith(".crdownload")
                             && !file.getName().endsWith(".tmp")) {
+
                         return true;
                     }
                 }
             }
+
             return false;
         });
     }
 
-    // PAUSE — small sleep helper for cases where JS animations cause timing issues
-    public void pause(long milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-    }
+    
+    public void waitForVisibility(By locator,
+                                  int timeoutSeconds) {
 
-    // WAIT WITH CUSTOM TIMEOUT
-    public void waitForVisibility(By locator, int timeoutSeconds) {
-        new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(timeoutSeconds))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator));
+        new WebDriverWait(
+                HelperClass.getDriver(),
+                Duration.ofSeconds(timeoutSeconds))
+
+                .until(
+                        ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }

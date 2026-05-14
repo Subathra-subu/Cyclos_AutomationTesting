@@ -29,45 +29,36 @@ public class ConfigureClass {
         }
     }
 
-    // BROWSER
+    
 
     public static String getBrowser() {
 
         return properties.getProperty("browser");
     }
 
-    // URL
-
+    
     public static String getUrl() {
 
         return properties.getProperty("url");
     }
 
-    // USERNAME
-
+    
     public static String getUsername() {
 
         return properties.getProperty("username");
     }
 
-    // PASSWORD
 
     public static String getPassword() {
 
         return properties.getProperty("password");
     }
 
-    // IMPLICIT WAIT
+  
 
-    public static int getImplicitWait() {
+   
 
-        return Integer.parseInt(
-
-                properties.getProperty(
-                        "implicitWait"));
-    }
-
-    // EXPLICIT WAIT
+    
 
     public static int getExplicitWait() {
 
@@ -77,7 +68,7 @@ public class ConfigureClass {
                         "explicitWait"));
     }
 
-    // HEADLESS
+    
 
     public static boolean isHeadless() {
 
@@ -87,7 +78,7 @@ public class ConfigureClass {
                         "headless"));
     }
 
-    // SCREENSHOT PATH
+    
 
     public static String getScreenshotPath() {
 
@@ -95,7 +86,7 @@ public class ConfigureClass {
                 "screenshotPath");
     }
 
-    // REPORT PATH
+    
 
     public static String getReportPath() {
 
@@ -103,7 +94,6 @@ public class ConfigureClass {
                 "reportPath");
     }
 
-    // PARALLEL EXECUTION
 
     public static boolean isParallel() {
 
@@ -113,7 +103,7 @@ public class ConfigureClass {
                         "parallel"));
     }
 
-    // PAGE LOAD TIMEOUT
+   
 
     public static int getPageLoadTimeout() {
 

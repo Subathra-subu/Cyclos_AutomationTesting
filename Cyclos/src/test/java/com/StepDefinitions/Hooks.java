@@ -12,19 +12,19 @@ public class Hooks {
 
     @Before
     public void setup() {
-        // SETUP DRIVER — always creates a fresh instance per scenario
+       
         HelperClass.setupDriver();
 
-        // OPEN APPLICATION
+       
         HelperClass.openPage();
 
-        // LOGIN
+        
         loginActions.loginToApplication();
     }
 
     @After
     public void tearDown() {
-        // CLOSE BROWSER
+       
         HelperClass.tearDown();
     }
 }

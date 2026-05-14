@@ -2,6 +2,7 @@ package com.Actions;
 
 import com.Pages.LoginPage;
 import com.Utilities.ConfigureClass;
+import com.Utilities.HelperClass;
 
 public class LoginActions extends BaseAction {
 
@@ -11,17 +12,18 @@ public class LoginActions extends BaseAction {
 
     public void loginToApplication() {
 
-        // CLICK LOGIN BUTTON
-
+       
+    	HelperClass.log.info("Logging in to the application");
+    	
         click(loginPage.loginButton);
 
-        // WAIT FOR USERNAME FIELD
+        
 
         waitForVisibility(
 
                 loginPage.usernameTextBox);
 
-        // ENTER USERNAME
+        HelperClass.log.info("Login form is visible");
 
         sendKeys(
 
@@ -29,7 +31,7 @@ public class LoginActions extends BaseAction {
 
                 ConfigureClass.getUsername());
 
-        // ENTER PASSWORD
+        HelperClass.log.info("Entered username: " + ConfigureClass.getUsername());
 
         sendKeys(
 
@@ -37,8 +39,8 @@ public class LoginActions extends BaseAction {
 
                 ConfigureClass.getPassword());
 
-        // CLICK SUBMIT BUTTON
-
+        
+        HelperClass.log.info("Submitting login form");
         jsClick(loginPage.submitButton);
     }
 }

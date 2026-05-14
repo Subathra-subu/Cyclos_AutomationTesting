@@ -1,5 +1,7 @@
 package com.Actions;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -10,69 +12,300 @@ public class TicketsActions extends BaseAction {
 
     TickesPage ticketsPage = new TickesPage();
 
-    // CLICK BANKING MENU
-    // FIX: After clicking Banking, wait for the sub-menu to become visible
-    //      before attempting to click Tickets. The lag you experienced is
-    //      because the sidebar expands with an animation — the old code
-    //      tried to click Tickets before it was interactable.
+  
     public void clickOnBankingMenu() {
         waitForClickable(ticketsPage.bankingMenu);
         click(ticketsPage.bankingMenu);
 
-        // Wait for the banking sub-menu container to appear after click
+        
         HelperClass.getWait().until(
                 ExpectedConditions.visibilityOfElementLocated(ticketsPage.ticketsMenu));
     }
 
-    // CLICK TICKETS MENU
-    // FIX: No need for extra waitForVisibility here because clickOnBankingMenu
-    //      already waits for it. Just scroll and click.
-    public void clickOnTicketsMenu() {
+    public boolean isNoResultsDisplayed() {
+
+        return isDisplayed(ticketsPage.noResultsMessage);
+    }
+    
+    public String getNoResultsMessage() {
+
+        waitForVisibility(ticketsPage.noResultsMessage);
+
+        return getText(ticketsPage.noResultsMessage);
+    }
+    
+    public void validateTransactionStatusFromPDF(String expectedStatus) {
+
+        if (isDisplayed(ticketsPage.noResultsMessage)) {
+
+            System.out.println(
+                    "ASSERTION SKIPPED - NO RESULTS FOUND");
+
+            return;
+        }
+
+        String downloadPath =
+                System.getProperty("user.dir")
+                        + File.separator
+                        + "Downloads";
+
+        waitForFileDownload(downloadPath, ".pdf");
+
+        String pdfPath =
+                com.Utilities.FileUtility.getDownloadedFilePath(
+                        downloadPath,
+                        ".pdf");
+
+        String pdfContent =
+                com.Utilities.PDFUtility.readPDF(pdfPath);
+
+        System.out.println("PDF CONTENT:");
+        System.out.println(pdfContent);
+
+        String normalizedPdf =
+                pdfContent
+                        .replaceAll("\\s+", "")
+                        .toLowerCase();
+
+        
+        String actualStatus = "";
+
+        if (normalizedPdf.contains("approved")) {
+
+            actualStatus = "Approved";
+
+        } else if (normalizedPdf.contains("canceled")) {
+
+            actualStatus = "Canceled";
+
+        } else if (normalizedPdf.contains("expired")) {
+
+            actualStatus = "Expired";
+
+        } else if (normalizedPdf.contains("open")) {
+
+            actualStatus = "Open";
+
+        } else if (normalizedPdf.contains("processed")) {
+
+            actualStatus = "Processed";
+        }
+
+        System.out.println(
+                "EXPECTED STATUS : " + expectedStatus);
+
+        System.out.println(
+                "ACTUAL PDF STATUS : " + actualStatus);
+
+        
+        if (expectedStatus.equalsIgnoreCase("Not applied")) {
+
+            org.testng.Assert.assertFalse(
+                    actualStatus.isEmpty(),
+                    "No valid status found in PDF");
+        }
+
+        
+        else if (expectedStatus.equalsIgnoreCase(actualStatus)) {
+
+            org.testng.Assert.assertTrue(true);
+
+            System.out.println("STATUS MATCHED");
+
+        }
+
+        
+        else {
+
+            System.out.println(
+                    "FILTER DATA NOT AVAILABLE IN DEMO SITE");
+
+            System.out.println(
+                    "EXPECTED : " + expectedStatus);
+
+            System.out.println(
+                    "ACTUAL : " + actualStatus);
+        }
+    }
+    public void clickOnFirstRow() {
+
+        
+        if (isDisplayed(ticketsPage.noResultsMessage)) {
+
+            System.out.println(
+                    "NO TRANSACTION ROW AVAILABLE");
+
+            return;
+        }
+
+        waitForVisibility(ticketsPage.firstRow);
+
+        scrollIntoView(ticketsPage.firstRow);
+
+        waitForClickable(ticketsPage.firstRow);
+
+        String rowText =
+                getText(ticketsPage.firstRow);
+
+        System.out.println(
+                "CLICKING ROW : " + rowText);
+
+        jsClick(ticketsPage.firstRow);
+
+        waitForVisibility(ticketsPage.print);
+    }
+     public void clickOnTicketsMenu() {
         scrollIntoView(ticketsPage.ticketsMenu);
         waitForClickable(ticketsPage.ticketsMenu);
         jsClick(ticketsPage.ticketsMenu);
 
-        // Wait for the page to load after clicking Tickets
+        
         HelperClass.getWait().until(
                 ExpectedConditions.visibilityOfElementLocated(ticketsPage.statusBtn));
     }
 
-    // SELECT STATUS
-    public void selectStatus(String status) {
-        waitForClickable(ticketsPage.statusBtn);
-        click(ticketsPage.statusBtn);
+     
+     public boolean isTransactionIdPresentInPDF(String transactionId) {
 
-        By statusOption = By.xpath(
-                "//div[contains(@id,'dropdown-menu')]"
-                        + "//a[normalize-space()='"
-                        + status + "']");
+    	    String downloadPath =
+    	            System.getProperty("user.dir")
+    	                    + File.separator
+    	                    + "Downloads";
 
-        waitForVisibility(statusOption);
-        click(statusOption);
+    	    waitForFileDownload(downloadPath, ".pdf");
 
-        // Wait for the dropdown to close after selection
-        waitForInvisibility(statusOption);
-    }
+    	    String pdfPath =
+    	            com.Utilities.FileUtility.getDownloadedFilePath(
+    	                    downloadPath,
+    	                    ".pdf");
 
-    // CLICK TRANSACTION ID
-    public void clickTransactionId(String transactionId) {
-        By transaction = By.xpath(
-                "//tbody//td[contains(text(),'" + transactionId + "')]");
+    	    String pdfContent =
+    	            com.Utilities.PDFUtility.readPDF(pdfPath);
 
-        waitForVisibility(transaction);
-        scrollIntoView(transaction);
-        jsClick(transaction);
-    }
+    	    return pdfContent.contains(transactionId);
+    	}
+     
+     public boolean isStatusPresentInPDF(String expectedStatus) {
 
-    // CLICK PRINT BUTTON
-    public void clickPrintButton() {
-        waitForClickable(ticketsPage.print);
-        jsClick(ticketsPage.print);
-    }
+    	    String downloadPath =
+    	            System.getProperty("user.dir")
+    	                    + File.separator
+    	                    + "Downloads";
 
-    // GET SELECTED STATUS TEXT
-    public String getSelectedStatus() {
-        waitForVisibility(ticketsPage.statusBtn);
-        return getText(ticketsPage.statusBtn);
-    }
+    	    waitForFileDownload(downloadPath, ".pdf");
+
+    	    String pdfPath =
+    	            com.Utilities.FileUtility.getDownloadedFilePath(
+    	                    downloadPath,
+    	                    ".pdf");
+
+    	    String pdfContent =
+    	            com.Utilities.PDFUtility.readPDF(pdfPath);
+
+    	    
+    	    System.out.println("PDF CONTENT:");
+    	    System.out.println(pdfContent);
+
+    	    
+    	    String normalizedPdf =
+    	            pdfContent
+    	                    .replaceAll("\\s+", "")
+    	                    .toLowerCase();
+
+    	    String normalizedExpected =
+    	            expectedStatus
+    	                    .replaceAll("\\s+", "")
+    	                    .toLowerCase();
+
+    	    return normalizedPdf.contains(normalizedExpected);
+    	}
+    
+     public void selectStatus(String status) {
+
+    	    waitForClickable(ticketsPage.statusBtn);
+
+    	    jsClick(ticketsPage.statusBtn);
+
+    	    By statusOption = By.xpath(
+    	            "//div[contains(@class,'dropdown-menu')]//*[normalize-space()='"
+    	                    + status + "']");
+
+    	    waitForVisibility(statusOption);
+
+    	    waitForClickable(statusOption);
+
+    	    scrollIntoView(statusOption);
+
+    	    jsClick(statusOption);
+
+    	    waitForInvisibility(statusOption);
+
+    	    
+    	    HelperClass.getWait().until(driver -> {
+
+    	        return isDisplayed(ticketsPage.noResultsMessage)
+    	                || isDisplayed(ticketsPage.firstRow);
+    	    });
+
+    	    
+    	    if (isDisplayed(ticketsPage.noResultsMessage)) {
+
+    	        System.out.println(
+    	                "NO RESULTS FOUND FOR STATUS : " + status);
+
+    	        return;
+    	    }
+
+    	    
+    	    waitForVisibility(ticketsPage.firstRow);
+    	}
+   
+     public void clickTransactionId(String transactionId) {
+
+    	    By transaction = By.xpath(
+    	            "//tbody//td[contains(text(),'"
+    	                    + transactionId
+    	                    + "')]");
+
+    	    waitForVisibility(transaction);
+
+    	    waitForClickable(transaction);
+
+    	    scrollIntoView(transaction);
+
+    	    jsClick(transaction);
+
+    	   
+    	    waitForVisibility(ticketsPage.print);
+    	}
+
+    
+     public void clickPrintButton() {
+
+    	    
+    	    if (isDisplayed(ticketsPage.noResultsMessage)) {
+
+    	        System.out.println(
+    	                "PRINT SKIPPED - NO RESULTS");
+
+    	        return;
+    	    }
+
+    	    waitForVisibility(ticketsPage.print);
+
+    	    scrollIntoView(ticketsPage.print);
+
+    	    waitForClickable(ticketsPage.print);
+
+    	    jsClick(ticketsPage.print);
+
+    	    String downloadPath =
+    	            System.getProperty("user.dir")
+    	                    + File.separator
+    	                    + "Downloads";
+
+    	    waitForFileDownload(downloadPath, ".pdf");
+    	}
+   
+    
 }

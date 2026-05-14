@@ -17,7 +17,8 @@ public class PDFUtility {
 
             File file = new File(filePath);
 
-            PDDocument document = Loader.loadPDF(file);
+            PDDocument document =
+                    Loader.loadPDF(file);
 
             PDFTextStripper stripper =
                     new PDFTextStripper();
