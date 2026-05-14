@@ -36,32 +36,8 @@ public class ConfigureClass {
         return properties.getProperty("password");
     }
 
-    public static int getImplicitWait() {
-        return Integer.parseInt(properties.getProperty("implicitWait"));
-    }
-
-    public static int getExplicitWait() {
-        return Integer.parseInt(properties.getProperty("explicitWait"));
-    }
-
     public static boolean isHeadless() {
         return Boolean.parseBoolean(properties.getProperty("headless"));
-    }
-
-    public static String getScreenshotPath() {
-        return properties.getProperty("screenshotPath");
-    }
-
-    public static String getReportPath() {
-        return properties.getProperty("reportPath");
-    }
-
-    public static boolean isParallel() {
-        return Boolean.parseBoolean(properties.getProperty("parallel"));
-    }
-
-    public static int getPageLoadTimeout() {
-        return Integer.parseInt(properties.getProperty("pageLoadTimeout"));
     }
 
 }
