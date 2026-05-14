@@ -1,3 +1,20 @@
-.metadata/
+# Reports & logs
+allure-results/
+HtmlReport/
+PdfReport/
+Reports/
+test-output/
 target/
+logs/
+screenshots/
+
+# Eclipse / IDE files
+.metadata/
+.settings/
+.classpath
+.project
 *.log
+
+# OS files
+.DS_Store
+Thumbs.db
