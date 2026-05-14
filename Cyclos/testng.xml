@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.Utilities.HelperClass"/>
-      <class name="com.StepDefinitions.Hooks"/>
+      <class name="com.Runner.TestNGRunner"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
