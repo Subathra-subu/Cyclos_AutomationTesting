@@ -36,9 +36,13 @@ public class PaymentToUserActions extends BaseAction {
 		click(paymentpage.payuser);
 	}
 	public void enterUser(String value) {
-		
-		sendKeys(paymentpage.userfield, value);
+		if(value != null && !value.trim().isEmpty()) {
+			waitForVisibility(paymentpage.userfield);
+			sendKeys(paymentpage.userfield, value);
+		}
 	}
+
+
 	public String validateErrorMessage() {
 		
 		waitForVisibility(paymentpage.errormsg);
