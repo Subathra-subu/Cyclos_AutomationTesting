@@ -16,7 +16,6 @@ import com.Utilities.HelperClass;
 
 public class BaseAction {
 
-    
     public void click(By locator) {
 
         waitForClickable(locator);
@@ -24,10 +23,11 @@ public class BaseAction {
         HelperClass.getDriver()
                 .findElement(locator)
                 .click();
-        HelperClass.log.info("Clicked on element: " + locator.toString());
+
+        HelperClass.log.info(
+                "Clicked on element: " + locator.toString());
     }
 
-   
     public void jsClick(By locator) {
 
         WebElement element =
@@ -40,10 +40,11 @@ public class BaseAction {
         js.executeScript(
                 "arguments[0].click();",
                 element);
-        HelperClass.log.info("JS Clicked on element: " + locator.toString());
+
+        HelperClass.log.info(
+                "JS Clicked on element: " + locator.toString());
     }
 
-    
     public void sendKeys(By locator,
                          String value) {
 
@@ -56,52 +57,53 @@ public class BaseAction {
         element.clear();
 
         element.sendKeys(value);
-        
-        HelperClass.log.info("Sent keys to element: " + locator.toString() + " with value: " + value);
+
+        HelperClass.log.info(
+                "Sent keys to element: "
+                        + locator.toString()
+                        + " with value: "
+                        + value);
     }
 
-    
     public String getText(By locator) {
 
         waitForVisibility(locator);
 
-        HelperClass.log.info("Got text from element: " + locator.toString());
-        
+        HelperClass.log.info(
+                "Got text from element: " + locator.toString());
+
         return HelperClass.getDriver()
                 .findElement(locator)
                 .getText();
-        
-        
     }
 
-    
     public void waitForVisibility(By locator) {
 
         HelperClass.getWait().until(
                 ExpectedConditions.visibilityOfElementLocated(locator));
-        
-        HelperClass.log.info("Element is visible: " + locator.toString());
+
+        HelperClass.log.info(
+                "Element is visible: " + locator.toString());
     }
 
-    
     public void waitForClickable(By locator) {
 
         HelperClass.getWait().until(
                 ExpectedConditions.elementToBeClickable(locator));
-        
-        HelperClass.log.info("Element is clickable: " + locator.toString());
+
+        HelperClass.log.info(
+                "Element is clickable: " + locator.toString());
     }
 
-    
     public void waitForInvisibility(By locator) {
 
         HelperClass.getWait().until(
                 ExpectedConditions.invisibilityOfElementLocated(locator));
-        
-        HelperClass.log.info("Element is invisible: " + locator.toString());
+
+        HelperClass.log.info(
+                "Element is invisible: " + locator.toString());
     }
 
-    
     public void scrollIntoView(By locator) {
 
         WebElement element =
@@ -114,11 +116,11 @@ public class BaseAction {
         js.executeScript(
                 "arguments[0].scrollIntoView({block:'center'});",
                 element);
-        
-        HelperClass.log.info("Scrolled into view: " + locator.toString());
+
+        HelperClass.log.info(
+                "Scrolled into view: " + locator.toString());
     }
 
-    
     public void mouseHover(By locator) {
 
         WebElement element =
@@ -130,31 +132,33 @@ public class BaseAction {
 
         actions.moveToElement(element)
                 .perform();
-        
-        HelperClass.log.info("Mouse hovered on element: " + locator.toString());
+
+        HelperClass.log.info(
+                "Mouse hovered on element: " + locator.toString());
     }
 
-    
     public boolean isDisplayed(By locator) {
 
         try {
-        	
-        	HelperClass.log.info("Checking if element is displayed: " + locator.toString());
+
+            HelperClass.log.info(
+                    "Checking if element is displayed: "
+                            + locator.toString());
 
             return HelperClass.getDriver()
                     .findElement(locator)
                     .isDisplayed();
-            
-            
 
         } catch (Exception e) {
-        	
-        	HelperClass.log.warn("Element not found or not displayed: " + locator.toString());
+
+            HelperClass.log.warn(
+                    "Element not found or not displayed: "
+                            + locator.toString());
+
             return false;
         }
     }
 
-    
     public void clearDownloadFolder(String downloadPath) {
 
         File folder = new File(downloadPath);
@@ -173,7 +177,6 @@ public class BaseAction {
         }
     }
 
-   
     public void waitForFileDownload(String downloadPath,
                                     String fileExtension) {
 
@@ -206,7 +209,6 @@ public class BaseAction {
         });
     }
 
-    
     public void waitForVisibility(By locator,
                                   int timeoutSeconds) {
 

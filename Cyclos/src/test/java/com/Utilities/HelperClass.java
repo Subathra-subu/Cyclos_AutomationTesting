@@ -15,34 +15,53 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HelperClass {
 
-    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-    private static ThreadLocal<WebDriverWait> wait = new ThreadLocal<>();
-    
-    public static Logger log = LogManager.getLogger(HelperClass.class);
+    private static ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
+
+    private static ThreadLocal<WebDriverWait> wait =
+            new ThreadLocal<>();
+
+    public static Logger log =
+            LogManager.getLogger(HelperClass.class);
 
     public static void setupDriver() {
 
-        ChromeOptions options = new ChromeOptions();
+        ChromeOptions options =
+                new ChromeOptions();
 
-        
         String downloadPath =
-                System.getProperty("user.dir") + "\\Downloads";
+                System.getProperty("user.dir")
+                        + "\\Downloads";
 
-        
-        Map<String, Object> prefs = new HashMap<>();
+        Map<String, Object> prefs =
+                new HashMap<>();
 
-        prefs.put("download.default_directory", downloadPath);
-        prefs.put("download.prompt_for_download", false);
-        prefs.put("download.directory_upgrade", true);
-        prefs.put("safebrowsing.enabled", true);
+        prefs.put(
+                "download.default_directory",
+                downloadPath);
 
-        
-        prefs.put("plugins.always_open_pdf_externally", true);
+        prefs.put(
+                "download.prompt_for_download",
+                false);
 
-        options.setExperimentalOption("prefs", prefs);
+        prefs.put(
+                "download.directory_upgrade",
+                true);
 
-        
-        options.addArguments("--disable-pdf-viewer");
+        prefs.put(
+                "safebrowsing.enabled",
+                true);
+
+        prefs.put(
+                "plugins.always_open_pdf_externally",
+                true);
+
+        options.setExperimentalOption(
+                "prefs",
+                prefs);
+
+        options.addArguments(
+                "--disable-pdf-viewer");
 
         if (ConfigureClass.isHeadless()) {
 
@@ -56,42 +75,50 @@ public class HelperClass {
 
         WebDriver webDriver;
 
-        String browser = ConfigureClass.getBrowser();
+        String browser =
+                ConfigureClass.getBrowser();
 
         if (browser.equalsIgnoreCase("chrome")) {
 
-            webDriver = new ChromeDriver(options);
+            webDriver =
+                    new ChromeDriver(options);
 
         } else {
 
             throw new RuntimeException(
-                    "Browser not supported: " + browser);
+                    "Browser not supported: "
+                            + browser);
         }
 
         driver.set(webDriver);
 
-        wait.set(new WebDriverWait(
-                webDriver,
-                Duration.ofSeconds(
-                        ConfigureClass.getExplicitWait())
-        ));
+        wait.set(
+                new WebDriverWait(
+                        webDriver,
+                        Duration.ofSeconds(
+                                ConfigureClass.getExplicitWait())));
 
         webDriver.manage().timeouts()
-                .pageLoadTimeout(Duration.ofSeconds(
-                        ConfigureClass.getPageLoadTimeout()));
+                .pageLoadTimeout(
+                        Duration.ofSeconds(
+                                ConfigureClass.getPageLoadTimeout()));
 
         webDriver.manage().window().maximize();
     }
 
     public static void openPage() {
-        getDriver().get(ConfigureClass.getUrl());
+
+        getDriver().get(
+                ConfigureClass.getUrl());
     }
 
     public static WebDriver getDriver() {
+
         return driver.get();
     }
 
     public static WebDriverWait getWait() {
+
         return wait.get();
     }
 
@@ -102,6 +129,7 @@ public class HelperClass {
             getDriver().quit();
 
             driver.remove();
+
             wait.remove();
         }
     }

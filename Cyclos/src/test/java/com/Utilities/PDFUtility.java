@@ -3,7 +3,6 @@ package com.Utilities;
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
@@ -15,15 +14,17 @@ public class PDFUtility {
 
         try {
 
-            File file = new File(filePath);
+            File file =
+                    new File(filePath);
 
             PDDocument document =
-                    Loader.loadPDF(file);
+                    PDDocument.load(file);
 
             PDFTextStripper stripper =
                     new PDFTextStripper();
 
-            text = stripper.getText(document);
+            text =
+                    stripper.getText(document);
 
             document.close();
 
