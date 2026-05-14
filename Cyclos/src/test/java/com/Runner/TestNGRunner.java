@@ -11,8 +11,9 @@ import io.cucumber.testng.CucumberOptions;
 
         monochrome = true,
 
-        // Disable online cucumber publish to avoid Jenkins timeout issue
         publish = false,
+
+        tags = "@Filter",
 
         plugin = {
 

@@ -23,7 +23,6 @@ public class TicketsTest {
 
         ticketsActions.selectStatus(status);
 
-        // Check whether records are available
         if (ticketsActions.isNoResultsDisplayed()) {
 
             HelperClass.log.warn(
@@ -39,7 +38,7 @@ public class TicketsTest {
     @When("user clicks first row of the transactions table")
     public void user_clicks_first_row_of_the_transactions_table() {
 
-        // Skip click if no records available
+       
         if (ticketsActions.isNoResultsDisplayed()) {
 
             HelperClass.log.warn(
@@ -59,7 +58,7 @@ public class TicketsTest {
     @When("user clicks the print button")
     public void user_clicks_the_print_button() {
 
-        // Clear existing downloads
+        
         String downloadPath = HelperClass.getDownloadPath();
 
         ticketsActions.clearDownloadFolder(downloadPath);
@@ -67,10 +66,42 @@ public class TicketsTest {
         ticketsActions.clickPrintButton();
     }
 
+    @When("user clicks on the filter link")
+    public void user_clicks_on_the_filter_link() 
+    
+    {
+        
+    	ticketsActions.filterClick();
+    	
+    	
+    }
+
+    @When("user clicks on the status filter dropdown")
+    public void user_clicks_on_the_status_filter_dropdown() 
+    
+    {
+        ticketsActions.filterStsClick();
+        
+    }
+
+    @When("user select the Open in the status")
+    public void user_select_the_open_in_the_status() {
+        // Write code here that turns the phrase above into concrete actions
+    	ticketsActions.clickOpenSts();
+    }
+
+    @Then("the user should see the transactions with {string} status")
+    public void the_user_should_see_the_transactions_with_status(String string)
+    
+    {
+       ticketsActions.assertOpen(string);
+    }
+
+
     @Then("the user should seen the transaction status {string}")
     public void the_user_should_seen_the_transaction_status(String expectedStatus) {
 
-        // Skip validation when no records exist
+        
         if (ticketsActions.isNoResultsDisplayed()) {
 
             HelperClass.log.warn(

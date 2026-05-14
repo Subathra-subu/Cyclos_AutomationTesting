@@ -81,8 +81,7 @@ public class BaseAction {
 			return false;
 		}
 	}
-
-	// FIX: Use HelperClass.getDownloadPath() everywhere — no hardcoded separators
+	
 	public void clearDownloadFolder(String downloadPath) {
 		File folder = new File(downloadPath);
 		if (!folder.exists()) {

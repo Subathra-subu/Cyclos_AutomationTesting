@@ -17,6 +17,10 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
       | Open        |
       | Canceled    |
       | Processed   |
-      
-      
-	
+
+  @Filter
+  Scenario: Verify ticket transactions filter options works properly
+    When user clicks on the filter link
+    And user clicks on the status filter dropdown
+    And user select the Open in the status
+    Then the user should see the transactions with "Open" status

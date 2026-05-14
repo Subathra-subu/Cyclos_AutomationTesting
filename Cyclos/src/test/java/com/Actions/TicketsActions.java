@@ -178,8 +178,28 @@ public class TicketsActions extends BaseAction {
 
 		return normalizedPdf.contains(normalizedExpected);
 	}
-
 	
+	public void clickOpenSts()
+	{
+		waitForClickable(ticketsPage.clickOpen);
+
+		jsClick(ticketsPage.clickOpen);
+	}
+	public void filterClick() {
+
+	    waitForClickable(ticketsPage.filter);
+
+	    jsClick(ticketsPage.filter);
+
+	    waitForVisibility(ticketsPage.filterStatusBtn);
+	}
+
+	public void filterStsClick() {
+
+	    waitForClickable(ticketsPage.filterStatusBtn);
+
+	    jsClick(ticketsPage.filterStatusBtn);
+	}
 	public boolean isNoResultsDisplayed() {
 		return isDisplayed(ticketsPage.noResultsMessage);
 	}
@@ -194,6 +214,12 @@ public class TicketsActions extends BaseAction {
 				|| isDisplayed(ticketsPage.firstRow) || isDisplayed(ticketsPage.statusBtn));
 	}
 
+	public void assertOpen(String status)
+	{
+		waitForVisibility(ticketsPage.asserOpen);
+		String actualStatus = getText(ticketsPage.asserOpen);
+		org.testng.Assert.assertEquals(actualStatus, status, "Expected status does not match actual status");
+	}
 	private String extractStatusFromPDF(String normalizedPdf) {
 		
 		if (normalizedPdf.contains("approved"))
