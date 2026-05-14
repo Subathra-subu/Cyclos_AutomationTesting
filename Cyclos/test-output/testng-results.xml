@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-14T17:09:04 IST" name="Default suite" finished-at="2026-05-14T17:12:05 IST" duration-ms="181580">
+  <suite started-at="2026-05-14T19:28:24 IST" name="Default suite" finished-at="2026-05-14T19:29:34 IST" duration-ms="70227">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-14T17:09:04 IST" name="Default test" finished-at="2026-05-14T17:12:05 IST" duration-ms="181580">
+    <test started-at="2026-05-14T19:28:24 IST" name="Default test" finished-at="2026-05-14T19:29:34 IST" duration-ms="70227">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:09:04 IST" name="setUpClass" finished-at="2026-05-14T17:09:04 IST" duration-ms="644" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:28:24 IST" name="setUpClass" finished-at="2026-05-14T19:28:25 IST" duration-ms="630" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4b6c5fa2]]>
+                <![CDATA[org.testng.TestRunner@d082916]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:09:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:09:21 IST" duration-ms="16102" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:28:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T19:28:43 IST" duration-ms="18086" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:09:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:09:34 IST" duration-ms="13790" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:28:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T19:28:56 IST" duration-ms="13145" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:09:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:09:48 IST" duration-ms="13748" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:28:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T19:29:11 IST" duration-ms="14737" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -69,46 +69,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:09:48 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:11:07 IST" duration-ms="79111" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify ticket transactions for different status filters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for com.Actions.BaseAction$$Lambda/0x000001aa96556d10@5b324447
-(tried for 60 seconds with 2000 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: driver.version: unknown]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.Actions.BaseAction$$Lambda/0x000001aa96556d10@5b324447
-(tried for 60 seconds with 2000 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:279)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at com.Actions.BaseAction.waitForFileDownload(BaseAction.java:107)
-at com.Actions.TicketsActions.clickPrintButton(TicketsActions.java:105)
-at com.StepDefinitions.TicketsTest.user_clicks_the_print_button(TicketsTest.java:47)
-at ✽.user clicks the print button(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/tickets.feature:11)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:11:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:11:24 IST" duration-ms="16883" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:29:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T19:29:26 IST" duration-ms="15584" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -124,55 +85,7 @@ at ✽.user clicks the print button(file:///D:/Project/Cyclos_AutomationTesting/
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:11:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:11:37 IST" duration-ms="12666" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify ticket transactions for different status filters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:11:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:11:49 IST" duration-ms="12494" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify ticket transactions for different status filters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:11:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T17:12:01 IST" duration-ms="12099" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify ticket transactions for different status filters"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T17:12:01 IST" name="tearDownClass" finished-at="2026-05-14T17:12:05 IST" duration-ms="3987" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@15a04efb]" started-at="2026-05-14T19:29:26 IST" name="tearDownClass" finished-at="2026-05-14T19:29:34 IST" duration-ms="7998" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
