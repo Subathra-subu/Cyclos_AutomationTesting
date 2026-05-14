@@ -30,9 +30,9 @@ public class InviteUserPage extends BasePage {
 
         click(loginButton);
 
-        type(usernameTextBox, username);
+        sendKeys(usernameTextBox, username);
 
-        type(passwordTextBox, password);
+        sendKeys(passwordTextBox, password);
 
         click(submitButton);
     }
@@ -46,7 +46,7 @@ public class InviteUserPage extends BasePage {
 
     public void enterEmail(String email) {
 
-        type(emailTextBox, email);
+    	sendKeys(emailTextBox, email);
     }
 
     public void clickSendInvitation() {

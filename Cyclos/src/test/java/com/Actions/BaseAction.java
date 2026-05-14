@@ -103,7 +103,7 @@ public class BaseAction {
         }
     }
 
-    
+  
     public void clearDownloadFolder(String downloadPath) {
 
         File folder = new File(downloadPath);
