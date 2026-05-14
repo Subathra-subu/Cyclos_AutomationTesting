@@ -1,1 +1,9 @@
-/target/
+allure-results/
+HtmlReport/
+PdfReport/
+Reports/
+test-output/
+target/
+logs/
+screenshots/
+

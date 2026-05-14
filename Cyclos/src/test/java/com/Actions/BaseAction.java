@@ -11,9 +11,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import com.Pages.LoginPage;
 import com.Utilities.HelperClass;
 
 public class BaseAction {
+	
+	public LoginPage loginPage = new LoginPage();
 	
 	public JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
 	
