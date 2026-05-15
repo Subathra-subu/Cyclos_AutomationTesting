@@ -58,7 +58,10 @@ public class BaseAction {
         HelperClass.getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    
+    public void waitForpresence(By locator) {
+
+        HelperClass.getWait().until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
     public void waitForClickable(By locator) {
 
         HelperClass.getWait().until(ExpectedConditions.elementToBeClickable(locator));

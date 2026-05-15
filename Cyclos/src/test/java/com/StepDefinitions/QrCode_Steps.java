@@ -53,7 +53,7 @@ public class QrCode_Steps {
 	@When("the user enters a valid amount empty")
 	public void the_user_enters_a_valid_amount_empty() {
 	    // Write code here that turns the phrase above into concrete actions
-	   qpage.enter_amount("");
+	   qpage.enterEmpty_amount();
 	}
 
 	@Then("a Field-level validation error message should be displayed")

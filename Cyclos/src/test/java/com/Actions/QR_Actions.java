@@ -18,9 +18,11 @@ public class QR_Actions extends BaseAction {
        public void bank_click(By locator) {
     	   click(locator);
        }
-       public void  qr_click(By locator) {
-    	   waitForClickable( locator);
+       public void  qr_click(By locator)  {
+    	  
     	   click(locator);
+    	    try { Thread.sleep(1500); } catch (Exception e) {}
+       
        }
        
        public void send_amount(By locator, String value) {
@@ -28,7 +30,9 @@ public class QR_Actions extends BaseAction {
     	   sendKeys(locator,value);
        }
        public void button_click(By locator) {
+    	   
     	   click(locator);
+    	  
        }
        public Boolean qr_check(By locator) {
     	   waitForVisibility(locator);
@@ -36,7 +40,7 @@ public class QR_Actions extends BaseAction {
     	   
        }
        public String error_check(By locator) {
-    	   
+    	   waitForVisibility(locator);
     	   return  getText(locator);
        }
        
