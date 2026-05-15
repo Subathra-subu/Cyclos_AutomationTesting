@@ -9,8 +9,6 @@ import io.cucumber.testng.CucumberOptions;
 
     glue = "com.StepDefinitions",
 
-    tags = "@generate",
-
     plugin = {
         "pretty",
         "json:target/cucumber.json",
