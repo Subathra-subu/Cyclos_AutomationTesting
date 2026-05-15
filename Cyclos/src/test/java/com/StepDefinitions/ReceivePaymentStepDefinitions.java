@@ -40,8 +40,6 @@ public class ReceivePaymentStepDefinitions {
         receivePaymentPage.enterDetails(user, amount, description);
     }
 
-
-
     @When("User clicks on the Submit button and confirms the password {string}")
     public void user_clicks_on_the_submit_button(String confirmpass) {
 //    	receivePaymentPage.submit(confirmpass);
