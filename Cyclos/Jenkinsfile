@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                git branch: 'akksheetha',
+                    url: 'https://github.com/Subathra-subu/Cyclos_AutomationTesting.git'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                bat 'mvn clean test'
+            }
+        }
+    }
+}
