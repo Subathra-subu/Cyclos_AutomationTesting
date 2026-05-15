@@ -1,19 +1,95 @@
 pipeline {
+
     agent any
+
+    tools {
+        maven 'Maven-3.9.6'
+        jdk 'JDK21'
+    }
 
     stages {
 
-        stage('Checkout') {
+        stage('Workspace Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Checkout Source Code') {
             steps {
                 git branch: 'akksheetha',
                     url: 'https://github.com/Subathra-subu/Cyclos_AutomationTesting.git'
             }
         }
 
-        stage('Run Tests') {
+        stage('Build & Execute Automation Suite') {
             steps {
+
+                echo "Executing Maven Test Suite..."
+
                 bat 'mvn clean test'
             }
+        }
+
+        stage('Publish Cucumber Report') {
+            steps {
+                cucumber(
+                    buildStatus: 'UNSTABLE',
+                    fileIncludePattern: '**/target/cucumber.json',
+                    sortingMethod: 'ALPHABETICAL'
+                )
+            }
+        }
+
+        stage('Publish Cucumber HTML Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target',
+                    reportFiles: 'cucumber-reports.html',
+                    reportName: 'Cucumber HTML Report'
+                ])
+            }
+        }
+
+        stage('Publish Extent Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'Reports',
+                    reportFiles: 'Spark.html',
+                    reportName: 'Extent Spark Report'
+                ])
+            }
+        }
+
+        stage('Publish Allure Report') {
+            steps {
+                allure([
+                    includeProperties: false,
+                    results: [[path: 'target/allure-results']]
+                ])
+            }
+        }
+    }
+
+    post {
+
+        always {
+
+            junit 'target/surefire-reports/*.xml'
+
+            archiveArtifacts artifacts: '''
+                target/**,
+                test-output/**
+            ''',
+            allowEmptyArchive: true
+
+            echo "Execution Completed with Status: ${currentBuild.currentResult}"
         }
     }
 }
