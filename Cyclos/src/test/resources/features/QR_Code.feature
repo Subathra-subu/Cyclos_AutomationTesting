@@ -17,7 +17,7 @@ Background:
           And the user clicks on the generate QR code button          Then a Field-level validation error message should be displayed
           
      @generate
-Scenario: Verify user can generate a new QR code successfully
+Scenario: Verify user can regenerate a new QR code successfully
     When the user enters a valid amount "100"
     And the user clicks on the generate QR code button
     And the user clicks on the Generate New QR Code button
