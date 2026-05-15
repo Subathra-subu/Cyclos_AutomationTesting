@@ -36,11 +36,11 @@ public class HelperClass {
 
 		driver.set(webDriver);
 
-		wait.set(new WebDriverWait(webDriver, Duration.ofSeconds(10)));
+		wait.set(new WebDriverWait(webDriver, Duration.ofSeconds(20)));
 
 		webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-		webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
 		webDriver.manage().window().maximize();
 	}

@@ -10,7 +10,7 @@ public class QRcode_page extends QR_Actions{
 	By QRcode = By.xpath("//div[text()='Receive QR-code']");
 	By Amount = By.xpath("//input[@placeholder='0,00']");
 	By Generate = By.xpath("//span[normalize-space()='Generate QR code']");
-	By Qrcode = By.xpath("//img[@class='mb-3']");
+	By Qrcode = By.xpath("//img[contains(@class,'mb-3')]");
 	 By loginButton = By.xpath("//*[@id=\"login-link\"]/div");
 
 	    By usernameTextBox = By.xpath("//input[@placeholder='User']");
