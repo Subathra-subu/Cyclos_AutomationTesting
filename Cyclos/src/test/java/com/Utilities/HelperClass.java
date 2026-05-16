@@ -1,79 +1,108 @@
 package com.Utilities;
 
+import java.io.File;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.WebDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HelperClass {
-	
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-	
-	private static ThreadLocal<WebDriverWait> wait = new ThreadLocal<>();
 
-	private static HelperClass helperClass;
+    private static ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
 
-	HelperClass() {
+    private static ThreadLocal<WebDriverWait> wait =
+            new ThreadLocal<>();
 
-		ChromeOptions options = new ChromeOptions();
+    public static Logger log =
+            LogManager.getLogger(HelperClass.class);
 
-		if (ConfigureClass.isHeadless()) {
-			options.addArguments("--headless=new");
-		}
+    // FIX: Use File.separator instead of hardcoded "\\" — works on Linux (Jenkins) and Windows
+    public static String getDownloadPath() {
+        return System.getProperty("user.dir")
+                + File.separator
+                + "Downloads";
+    }
 
-		WebDriver webDriver = null;
+    public static void setupDriver() {
 
-		if (ConfigureClass.getBrowser().equalsIgnoreCase("chrome")) {
+        ChromeOptions options = new ChromeOptions();
 
-			webDriver = new ChromeDriver(options);
+        // FIX: Cross-platform download path
+        String downloadPath = getDownloadPath();
 
-		} else {
+        // Ensure the Downloads folder exists
+        new File(downloadPath).mkdirs();
 
-			System.out.println("Browser not supported");
-		}
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("download.default_directory", downloadPath);
+        prefs.put("download.prompt_for_download", false);
+        prefs.put("download.directory_upgrade", true);
+        prefs.put("safebrowsing.enabled", true);
+        prefs.put("plugins.always_open_pdf_externally", true);
 
-		driver.set(webDriver);
+        options.setExperimentalOption("prefs", prefs);
+        options.addArguments("--disable-pdf-viewer");
 
-		wait.set(new WebDriverWait(webDriver, Duration.ofSeconds(10)));
+        // FIX: Always add these for Jenkins/CI headless environments
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--window-size=1920,1080");
 
-		webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        if (ConfigureClass.isHeadless()) {
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+        }
 
-		webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        WebDriverManager.chromedriver().setup();
 
-		webDriver.manage().window().maximize();
-	}
+        WebDriver webDriver;
+        String browser = ConfigureClass.getBrowser();
 
-	public static void openPage() {
-		getDriver().get(ConfigureClass.getUrl());
-	}
+        if (browser.equalsIgnoreCase("chrome")) {
+            webDriver = new ChromeDriver(options);
+        } else {
+            throw new RuntimeException("Browser not supported: " + browser);
+        }
 
-	public static WebDriver getDriver() {
-		return driver.get();
-	}
+        driver.set(webDriver);
 
-	public static WebDriverWait getWait() {
-		return wait.get();
-	}
+        wait.set(new WebDriverWait(
+                webDriver,
+                Duration.ofSeconds(ConfigureClass.getExplicitWait())));
 
-	public static void setupDriver() {
+        webDriver.manage().timeouts()
+                .pageLoadTimeout(Duration.ofSeconds(ConfigureClass.getPageLoadTimeout()));
 
-		if (helperClass == null) {
-			helperClass = new HelperClass();
-		}
-	}
+        webDriver.manage().window().maximize();
+    }
 
-	public static void tearDown() {
+    public static void openPage() {
+        getDriver().get(ConfigureClass.getUrl());
+    }
 
-		if (getDriver() != null) {
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
 
-			getDriver().quit();
+    public static WebDriverWait getWait() {
+        return wait.get();
+    }
 
-			driver.remove();
-			wait.remove();
-		}
-
-		helperClass = null;
-	}
+    public static void tearDown() {
+        if (getDriver() != null) {
+            getDriver().quit();
+            driver.remove();
+            wait.remove();
+        }
+    }
 }
