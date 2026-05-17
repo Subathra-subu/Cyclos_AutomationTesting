@@ -20,7 +20,7 @@ public class ReceivePaymentStepDefinitions {
     }
 
     @When("User navigates to the Receive Payment page")
-    public void user_navigates_to_the_receive_payment_page() {
+    public void user_navigates_to_the_receive_payment_page() throws InterruptedException {
     	receivePaymentPage.clickingLinks();
     }
 

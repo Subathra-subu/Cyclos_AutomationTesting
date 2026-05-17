@@ -9,9 +9,10 @@ public class ReceivePaymentActions extends BaseAction {
 
     ReceivePaymentPage receivePaymentPage = new ReceivePaymentPage();
     
-    public void clickingLinks() {
+    public void clickingLinks() throws InterruptedException {
         click(receivePaymentPage.bankingLink);
         HelperClass.log.info("Clicked Banking Menu");
+        Thread.sleep(2000);
         click(receivePaymentPage.receivePaymentLink);
         HelperClass.log.info("Clicked Receive Payment Menu");
     }
