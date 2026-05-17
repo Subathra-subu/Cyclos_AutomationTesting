@@ -7,27 +7,32 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
-		glue = "com.StepDefinitions",
+        glue = "com.StepDefinitions",
 
-		monochrome = true,
+        monochrome = true,
 
-		publish = false,
+        // Disable online cucumber publish to avoid Jenkins timeout issue
+        publish = false,
+
 
 //		tags = " @restaruant",
 
-		plugin = {
+        plugin = {
 
-				"pretty",
 
-				"html:target/CucumberReports/Cucumber.html",
+                "pretty",
 
-				"json:target/CucumberReports/Cucumber.json",
+                "html:target/CucumberReports/Cucumber.html",
 
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "json:target/CucumberReports/Cucumber.json",
 
-				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-public class TestNGRunner extends AbstractTestNGCucumberTests {
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+        }
+)
 
-	
+public class TestNGRunner
+        extends AbstractTestNGCucumberTests {
+
 }
