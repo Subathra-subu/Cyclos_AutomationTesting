@@ -8,7 +8,9 @@ public class LoginActions extends BaseAction {
 
     LoginPage loginPage = new LoginPage();
 
-    public void loginToApplication() {
+    public void loginToApplication()
+    
+    {
 
        try {
     	   HelperClass.log.info("Navigating to login page and clicking login button");
