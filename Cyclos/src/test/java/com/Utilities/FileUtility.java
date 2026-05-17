@@ -13,7 +13,7 @@ public class FileUtility {
         File folder = new File(downloadPath);
 
         if (!folder.exists()) {
-            HelperClass.logger.warn("Download folder does not exist: " + downloadPath);
+            HelperClass.log.warn("Download folder does not exist: " + downloadPath);
             return null;
         }
 
