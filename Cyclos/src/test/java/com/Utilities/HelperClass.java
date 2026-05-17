@@ -25,7 +25,7 @@ public class HelperClass {
     public static Logger log =
             LogManager.getLogger(HelperClass.class);
 
-    // FIX: Use File.separator instead of hardcoded "\\" — works on Linux (Jenkins) and Windows
+   
     public static String getDownloadPath() {
         return System.getProperty("user.dir")
                 + File.separator
@@ -36,10 +36,9 @@ public class HelperClass {
 
         ChromeOptions options = new ChromeOptions();
 
-        // FIX: Cross-platform download path
+        
         String downloadPath = getDownloadPath();
 
-        // Ensure the Downloads folder exists
         new File(downloadPath).mkdirs();
 
         Map<String, Object> prefs = new HashMap<>();

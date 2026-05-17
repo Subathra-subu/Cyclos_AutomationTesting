@@ -32,6 +32,7 @@ public class Hooks {
         logger.info("Setup complete. Browser ready.");
     }
 
+    // AI refer 
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {

@@ -10,7 +10,9 @@ public class LoginActions extends BaseAction {
 
     public void loginToApplication() {
 
-        HelperClass.log.info("Navigating to login page and clicking login button");
+       try {
+    	   HelperClass.log.info("Navigating to login page and clicking login button");
+       
 
         click(loginPage.loginButton);
 
@@ -29,5 +31,10 @@ public class LoginActions extends BaseAction {
         jsClick(loginPage.submitButton);
 
         HelperClass.log.info("Login form submitted successfully");
+       }
+		catch (Exception e) {
+			HelperClass.log.error("Login failed: " + e.getMessage());
+			throw e;
+		}
     }
 }

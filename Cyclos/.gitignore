@@ -10,6 +10,12 @@
 /PdfReport/
 /Reports/
 
+# Spark Report
+Spark.html
+
+# Downloads
+Downloads/
+
 # TestNG Reports
 /test-output/
 
@@ -18,6 +24,12 @@
 
 # Screenshots
 /screenshots/
+
+# PDF Files
+*.pdf
+
+# PNG Screenshots
+*.png
 
 # IDE Files
 /.classpath
