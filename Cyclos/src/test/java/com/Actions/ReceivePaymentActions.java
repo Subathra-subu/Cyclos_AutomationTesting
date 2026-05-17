@@ -20,7 +20,8 @@ public class ReceivePaymentActions extends BaseAction {
     }
 
     public void enterDetails(String userName, String amountToUser, String descriptiontothefield) throws InterruptedException {
-        sendKeys(receivePaymentPage.user, userName);
+    	Thread.sleep(3000);
+    	sendKeys(receivePaymentPage.user, userName);
         HelperClass.log.info("Entered Username : " + userName);
         click(receivePaymentPage.userClick);
         Thread.sleep(2000);
