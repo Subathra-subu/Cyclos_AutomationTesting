@@ -5,19 +5,19 @@ import org.openqa.selenium.By;
 public class ReceivePaymentPage {
 
     public By bankingLink =
-            By.xpath("//div[contains(@class,'menu-text') and contains(normalize-space(),'Banking')]");
+            By.xpath("//div[contains(@class,'menu-text') and contains(.,'Banking')]");
 
     public By receivePaymentLink =
-            By.xpath("//*[contains(normalize-space(),'Receive payment')]");
+            By.xpath("//a[contains(@href,'receive')]");
 
     public By user =
-            By.xpath("//input[contains(@placeholder,'search') or contains(@class,'autocomplete')]");
-    
+            By.xpath("//input[@type='text']");
+
     public By userClick =
-            By.xpath("//*[contains(@class,'autocomplete-option')]");
+            By.xpath("(//*[contains(@class,'autocomplete-option')])[1]");
 
     public By amount =
-            By.xpath("//input[@type='tel' or @type='number']");
+            By.xpath("//input[contains(@type,'tel') or contains(@class,'amount')]");
 
     public By description =
             By.xpath("//textarea");
@@ -26,10 +26,10 @@ public class ReceivePaymentPage {
             By.xpath("//button[contains(.,'Next') or contains(.,'Submit')]");
 
     public By confirmationpass =
-            By.xpath("//input[contains(@placeholder,'Password') or @type='password']");
+            By.xpath("//input[@type='password']");
 
     public By confirm =
-            By.xpath("//span[contains(normalize-space(),'Confirm')]");
+            By.xpath("//*[contains(text(),'Confirm')]");
 
     public By paymentconfirmation =
             By.xpath("//*[contains(text(),'successfully processed')]");
