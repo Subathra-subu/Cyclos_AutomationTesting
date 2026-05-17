@@ -1,1 +1,43 @@
+# Maven Target Folder
 /target/
+
+# Allure Reports
+/allure-results/
+/allure-report/
+
+# Extent Reports
+/HtmlReport/
+/PdfReport/
+/Reports/
+
+# Spark Report
+Spark.html
+
+# Downloads
+Downloads/
+
+# TestNG Reports
+/test-output/
+
+# Logs
+/logs/
+
+# Screenshots
+/screenshots/
+
+# PDF Files
+*.pdf
+
+# PNG Screenshots
+*.png
+
+# IDE Files
+/.classpath
+/.project
+/.settings/
+/.idea/
+/.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db

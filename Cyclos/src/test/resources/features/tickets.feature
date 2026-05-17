@@ -2,7 +2,7 @@
 Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
 
   Background:
-    Given user navigates to the tickets page
+    Given user in the Tickets Page
 
   @ticketStatus
   Scenario Outline: Verify ticket transactions for different status filters
@@ -13,10 +13,16 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
 
     Examples:
       | status      |
-      | Not applied |
+      | Approved    |
       | Open        |
-      | Canceled    |
+      | Expired     |
       | Processed   |
-      
-      
-	
+      | Not applied |
+      | Canceled    |
+
+  @Filter
+  Scenario: Verify ticket transactions filter options works properly
+    When user clicks on the filter link
+    And user clicks on the status filter dropdown
+    And user select the Open in the status
+    Then the user should see the transactions with "Open" status

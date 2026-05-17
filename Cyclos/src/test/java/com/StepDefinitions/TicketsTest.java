@@ -9,81 +9,104 @@ import io.cucumber.java.en.When;
 
 public class TicketsTest {
 
-    TicketsActions ticketsActions = new TicketsActions();
+	TicketsActions ticketsActions = new TicketsActions();
 
-    @Given("user navigates to the tickets page")
-    public void user_navigates_to_the_tickets_page() {
+	@Given("user in the Tickets Page")
+	public void user_in_the_tickets_page() {
+	    // Write code here that turns the phrase above into concrete actions
+		ticketsActions.clickOnBankingMenu();
+		ticketsActions.clickOnTicketsMenu();
+	}
 
-        ticketsActions.clickOnBankingMenu();
-        ticketsActions.clickOnTicketsMenu();
-    }
 
-    @When("user selects {string} from status dropdown")
-    public void user_selects_from_status_dropdown(String status) {
+	@When("user selects {string} from status dropdown")
+	public void user_selects_from_status_dropdown(String status) {
 
-        ticketsActions.selectStatus(status);
+		ticketsActions.selectStatus(status);
 
-        // Check whether records are available
-        if (ticketsActions.isNoResultsDisplayed()) {
+	}
 
-            HelperClass.log.warn(
-                    "No data available for status : " + status
-            );
+	@When("user clicks the print button")
+	public void user_clicks_the_print_button() {
 
-            System.out.println(
-                    "NO DATA AVAILABLE FOR STATUS : " + status
-            );
-        }
-    }
+		if (ticketsActions.isNoResultsDisplayed()) {
 
-    @When("user clicks first row of the transactions table")
-    public void user_clicks_first_row_of_the_transactions_table() {
+			HelperClass.log.warn("Skipping print action because no records found");
+		}
 
-        // Skip click if no records available
-        if (ticketsActions.isNoResultsDisplayed()) {
+		else
+		{
+		String downloadPath = HelperClass.getDownloadPath();
 
-            HelperClass.log.warn(
-                    "Skipping row click because no records found"
-            );
+		ticketsActions.clearDownloadFolder(downloadPath);
 
-            System.out.println(
-                    "STEP SKIPPED : NO TRANSACTION ROW AVAILABLE"
-            );
+		ticketsActions.clickPrintButton();
+		}
+	}
 
-            return;
-        }
+	@When("user clicks first row of the transactions table")
+	public void user_clicks_first_row_of_the_transactions_table() {
 
-        ticketsActions.clickOnFirstRow();
-    }
+		if (ticketsActions.isNoResultsDisplayed()) {
 
-    @When("user clicks the print button")
-    public void user_clicks_the_print_button() {
+			HelperClass.log.warn("Skipping first row click because no records found");
+		}
 
-        // Clear existing downloads
-        String downloadPath = HelperClass.getDownloadPath();
+		else
+		{
+		ticketsActions.clickOnFirstRow();
+		}
+	}
 
-        ticketsActions.clearDownloadFolder(downloadPath);
+	@When("user clicks on the filter link")
+	public void user_clicks_on_the_filter_link()
 
-        ticketsActions.clickPrintButton();
-    }
+	{
 
-    @Then("the user should seen the transaction status {string}")
-    public void the_user_should_seen_the_transaction_status(String expectedStatus) {
+		ticketsActions.filterClick();
 
-        // Skip validation when no records exist
-        if (ticketsActions.isNoResultsDisplayed()) {
+	}
 
-            HelperClass.log.warn(
-                    "Validation skipped because no transaction records available"
-            );
+	@When("user clicks on the status filter dropdown")
+	public void user_clicks_on_the_status_filter_dropdown()
 
-            System.out.println(
-                    "VALIDATION SKIPPED FOR STATUS : " + expectedStatus
-            );
+	{
+		ticketsActions.filterStsClick();
 
-            return;
-        }
+	}
 
-        ticketsActions.validateTransactionStatusFromPDF(expectedStatus);
-    }
+	@When("user select the Open in the status")
+	public void user_select_the_open_in_the_status() {
+		// Write code here that turns the phrase above into concrete actions
+		ticketsActions.clickOpenSts();
+	}
+
+	@Then("the user should see the transactions with {string} status")
+	public void the_user_should_see_the_transactions_with_status(String string)
+
+	{
+		if (ticketsActions.isNoResultsDisplayed()) {
+
+			HelperClass.log.warn("Validation skipped because no transaction records available");
+
+			System.out.println("VALIDATION SKIPPED FOR STATUS : " + string);
+
+			return;
+		}
+		ticketsActions.assertOpen(string);
+	}
+
+	@Then("the user should seen the transaction status {string}")
+	public void the_user_should_seen_the_transaction_status(String expectedStatus) {
+
+		if (ticketsActions.isNoResultsDisplayed()) {
+
+			ticketsActions.assertNoResultsMessage();
+		}
+
+		else
+		{
+		ticketsActions.validateTransactionStatusFromPDF(expectedStatus);
+		}
+	}
 }
