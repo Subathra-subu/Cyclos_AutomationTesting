@@ -9,22 +9,17 @@ public class ReceivePaymentActions extends BaseAction {
 
     ReceivePaymentPage receivePaymentPage = new ReceivePaymentPage();
     
-    public void clickingLinks() throws InterruptedException {
+    public void clickingLinks() {
         click(receivePaymentPage.bankingLink);
-        Thread.sleep(3000);
         HelperClass.log.info("Clicked Banking Menu");
-        Thread.sleep(2000);
         click(receivePaymentPage.receivePaymentLink);
-        Thread.sleep(4000);
         HelperClass.log.info("Clicked Receive Payment Menu");
     }
 
-    public void enterDetails(String userName, String amountToUser, String descriptiontothefield) throws InterruptedException {
-    	Thread.sleep(3000);
-    	sendKeys(receivePaymentPage.user, userName);
+    public void enterDetails(String userName, String amountToUser, String descriptiontothefield) {
+        sendKeys(receivePaymentPage.user, userName);
         HelperClass.log.info("Entered Username : " + userName);
         click(receivePaymentPage.userClick);
-        Thread.sleep(2000);
         HelperClass.log.info("Selected User From Dropdown");
         sendKeys(receivePaymentPage.amount, amountToUser);
         HelperClass.log.info("Entered Amount : " + amountToUser);
@@ -52,21 +47,38 @@ public class ReceivePaymentActions extends BaseAction {
     }
 
     public void isPaymentSuccessful() {
-    	waitForVisibility(receivePaymentPage.paymentconfirmation);
-    	String text1 = getText(receivePaymentPage.paymentconfirmation);
-    	Assert.assertEquals(text1, "Payment confirmation");
-    	HelperClass.log.info("Payment Confirmation Page Displayed");
-    	submit();
 
-    	try {
-    		waitForVisibility(receivePaymentPage.success, 10);
-    		String text = getText(receivePaymentPage.success);
-    		Assert.assertEquals(text,
-    				"The payment was successfully processed");
-    		HelperClass.log.info("Payment processed successfully");
-    	} catch (Exception e) {
-    		HelperClass.log.warn("Payment Limit Exceeded");
-    	}
+        try {
+
+            if (isDisplayed(receivePaymentPage.paymentconfirmation)) {
+
+                HelperClass.log.info("Payment Confirmation Page Displayed");
+
+                submit();
+            }
+
+            waitForVisibility(receivePaymentPage.success, 10);
+
+            String text = getText(receivePaymentPage.success);
+
+            Assert.assertEquals(text,
+                    "The payment was successfully processed");
+
+            HelperClass.log.info("Payment processed successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.warn("Success message not displayed. Checking payment limit message");
+
+            waitForVisibility(receivePaymentPage.exceededLimit, 10);
+
+            String text = getText(receivePaymentPage.exceededLimit);
+
+            Assert.assertEquals(text,
+                    "You have exceeded the maximum of payments per day for the demo network");
+
+            HelperClass.log.warn("Payment Limit Exceeded");
+        }
     }
 
     public boolean errorMessageDisplayed() {

@@ -1,9 +1,14 @@
 package com.StepDefinitions;
 
+import org.testng.Assert;
+
+import com.Pages.LoginPage;
 import com.Actions.LoginActions;
 import com.Actions.ReceivePaymentActions;
+import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -16,16 +21,21 @@ public class ReceivePaymentStepDefinitions {
 
     @Given("Registered user launches the Cyclos application")
     public void registered_user_launches_the_cyclos_application() {
-        HelperClass.log.info("Cyclos application launched successfully");
+        //Done By hooks
+    }
+
+    @When("User logs in with valid credentials")
+    public void user_logs_in_with_valid_credentials() {
+    	//Done By Hooks
     }
 
     @When("User navigates to the Receive Payment page")
-    public void user_navigates_to_the_receive_payment_page() throws InterruptedException {
+    public void user_navigates_to_the_receive_payment_page() {
     	receivePaymentPage.clickingLinks();
     }
 
     @When("User enters payment details with {string}, {string} and {string}")
-    public void user_enters_payment_details_with_and(String user, String amount, String description) throws InterruptedException {
+    public void user_enters_payment_details_with_and(String user, String amount, String description) {
         receivePaymentPage.enterDetails(user, amount, description);
         receivePaymentPage.clickingNext();
     }
@@ -52,7 +62,7 @@ public class ReceivePaymentStepDefinitions {
     }
 
     @And("User enters invalid payment details with {string}, {string} and {string}")
-    public void user_enters_invalid_payment_details(String user, String amount, String description) throws InterruptedException {
+    public void user_enters_invalid_payment_details(String user, String amount, String description) {
         receivePaymentPage.enterDetails(user, amount, description);
     }
     
@@ -76,7 +86,7 @@ public class ReceivePaymentStepDefinitions {
     }
     
     @Then("the alert message for exceeding limit should be displayed")
-    public void the_alert_message_for_exceeding_limit_should_be_displayed() {
+    	public void the_alert_message_for_exceeding_limit_should_be_displayed() {
     	receivePaymentPage.isPaymentSuccessful();
-    }
+    	}
 }
