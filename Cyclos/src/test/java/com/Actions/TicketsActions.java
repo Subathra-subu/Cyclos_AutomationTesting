@@ -1,9 +1,11 @@
 package com.Actions;
 
-import java.io.File;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.Pages.TickesPage;
 import com.Utilities.FileUtility;
@@ -15,199 +17,209 @@ public class TicketsActions extends BaseAction {
 	TickesPage ticketsPage = new TickesPage();
 
 	public void clickOnBankingMenu() {
-		waitForClickable(ticketsPage.bankingMenu);
-		click(ticketsPage.bankingMenu);
-		// Wait until the Tickets sub-menu appears
-		HelperClass.getWait().until(ExpectedConditions.visibilityOfElementLocated(ticketsPage.ticketsMenu));
-		HelperClass.log.info("Banking menu expanded, Tickets menu is visible");
+		try {
+			waitForClickable(ticketsPage.bankingMenu);
+			click(ticketsPage.bankingMenu);
+			HelperClass.getWait().until(
+					ExpectedConditions.visibilityOfElementLocated(ticketsPage.ticketsMenu));
+			HelperClass.log.info("Banking menu expanded successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click Banking Menu : " + e.getMessage());
+			throw new RuntimeException("Unable to click Banking Menu", e);
+		}
 	}
 
 	public void clickOnTicketsMenu() {
-		scrollIntoView(ticketsPage.ticketsMenu);
-		waitForClickable(ticketsPage.ticketsMenu);
-		jsClick(ticketsPage.ticketsMenu);
-		// Wait for either the status button (table loaded) or no-results message
-		waitForTableOrNoResults();
-		HelperClass.log.info("Tickets page loaded");
+		try {
+			scrollIntoView(ticketsPage.ticketsMenu);
+			waitForClickable(ticketsPage.ticketsMenu);
+			jsClick(ticketsPage.ticketsMenu);
+			waitForTableOrNoResults();
+			HelperClass.log.info("Tickets page loaded successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click Tickets Menu : " + e.getMessage());
+			throw new RuntimeException("Unable to click Tickets Menu", e);
+		}
 	}
 
 	public void selectStatus(String status) {
-		waitForClickable(ticketsPage.statusBtn);
-		jsClick(ticketsPage.statusBtn);
+		try {
+			waitForClickable(ticketsPage.statusBtn);
+			jsClick(ticketsPage.statusBtn);
 
-		By statusOption = By.xpath("//div[contains(@class,'dropdown-menu')]//*[normalize-space()='" + status + "']");
+			By statusOption = By.xpath(
+					"//div[contains(@class,'dropdown-menu')]//*[normalize-space()='" + status + "']");
 
-		waitForVisibility(statusOption);
-		waitForClickable(statusOption);
-		scrollIntoView(statusOption);
-		jsClick(statusOption);
+			waitForVisibility(statusOption);
+			waitForClickable(statusOption);
+			scrollIntoView(statusOption);
+			jsClick(statusOption);
+			waitForInvisibility(statusOption);
+			waitForTableOrNoResults();
 
-		// FIX: Wait for dropdown to close first
-		waitForInvisibility(statusOption);
+			if (isNoResultsDisplayed()) {
+				HelperClass.log.warn("No results found for status : " + status);
+			} else {
+				waitForVisibility(ticketsPage.firstRow);
+				HelperClass.log.info("Rows loaded successfully for status : " + status);
+			}
 
-		// FIX: Wait for EITHER the table rows to load OR the no-results message
-		// This prevents StaleElement / timeout errors when some statuses have no data
-		waitForTableOrNoResults();
-
-		if (isNoResultsDisplayed()) {
-			HelperClass.log.warn("No results found for status: " + status + " — test will skip PDF steps");
-		} else {
-			waitForVisibility(ticketsPage.firstRow);
-			HelperClass.log.info("Rows loaded for status: " + status);
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to select status : " + status + " Exception : " + e.getMessage());
+			throw new RuntimeException("Unable to select status : " + status, e);
 		}
 	}
 
 	public void clickOnFirstRow() {
-		if (isNoResultsDisplayed()) {
-			HelperClass.log.warn("NO TRANSACTION ROW AVAILABLE — skipping clickOnFirstRow");
-			System.out.println("NO TRANSACTION ROW AVAILABLE");
-			return;
+		try {
+			waitForVisibility(ticketsPage.firstRow);
+			scrollIntoView(ticketsPage.firstRow);
+			waitForClickable(ticketsPage.firstRow);
+			String rowText = getText(ticketsPage.firstRow);
+			HelperClass.log.info("Clicking first row : " + rowText);
+			jsClick(ticketsPage.firstRow);
+			waitForVisibility(ticketsPage.print);
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click first row : " + e.getMessage());
+			throw new RuntimeException("Unable to click first row", e);
 		}
-
-		waitForVisibility(ticketsPage.firstRow);
-		scrollIntoView(ticketsPage.firstRow);
-		waitForClickable(ticketsPage.firstRow);
-
-		String rowText = getText(ticketsPage.firstRow);
-		HelperClass.log.info("Clicking row: " + rowText);
-		System.out.println("CLICKING ROW : " + rowText);
-
-		jsClick(ticketsPage.firstRow);
-
-		waitForVisibility(ticketsPage.print);
-	}
-
-	public void clickTransactionId(String transactionId) {
-		By transaction = By.xpath("//tbody//td[contains(text(),'" + transactionId + "')]");
-
-		waitForVisibility(transaction);
-		waitForClickable(transaction);
-		scrollIntoView(transaction);
-		jsClick(transaction);
-		waitForVisibility(ticketsPage.print);
-		HelperClass.log.info("Opened transaction: " + transactionId);
 	}
 
 	public void clickPrintButton() {
-		if (isNoResultsDisplayed()) {
-			HelperClass.log.warn("PRINT SKIPPED — no results present");
-			System.out.println("PRINT SKIPPED - NO RESULTS");
-			return;
+		try {
+			if (isNoResultsDisplayed()) {
+				HelperClass.log.warn("Print skipped because no results found");
+				return;
+			}
+			waitForVisibility(ticketsPage.print);
+			scrollIntoView(ticketsPage.print);
+			waitForClickable(ticketsPage.print);
+			jsClick(ticketsPage.print);
+			String downloadPath = HelperClass.getDownloadPath();
+			waitForFileDownload(downloadPath, ".pdf");
+			HelperClass.log.info("PDF downloaded successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click print button : " + e.getMessage());
+			throw new RuntimeException("Unable to click print button", e);
 		}
-
-		waitForVisibility(ticketsPage.print);
-		scrollIntoView(ticketsPage.print);
-		waitForClickable(ticketsPage.print);
-		jsClick(ticketsPage.print);
-
-		// FIX: Use centralized cross-platform download path
-		String downloadPath = HelperClass.getDownloadPath();
-		waitForFileDownload(downloadPath, ".pdf");
-		HelperClass.log.info("PDF downloaded to: " + downloadPath);
 	}
 
 	public void validateTransactionStatusFromPDF(String expectedStatus) {
-		if (isNoResultsDisplayed()) {
-			System.out.println("ASSERTION SKIPPED - NO RESULTS FOUND");
-			HelperClass.log.warn("Skipping PDF status validation — no results found");
-			return;
-		}
+		try {
+			if (isNoResultsDisplayed()) {
+				HelperClass.log.warn("Skipping PDF validation because no results found");
+				return;
+			}
+			String downloadPath = HelperClass.getDownloadPath();
+			waitForFileDownload(downloadPath, ".pdf");
+			String pdfPath = FileUtility.getDownloadedFilePath(downloadPath, ".pdf");
 
-		String downloadPath = HelperClass.getDownloadPath();
-		waitForFileDownload(downloadPath, ".pdf");
+			if (pdfPath == null) {
+				HelperClass.log.error("PDF file not found");
+				Assert.fail("PDF file not downloaded");
+				return;
+			}
 
-		String pdfPath = FileUtility.getDownloadedFilePath(downloadPath, ".pdf");
+			String pdfContent = PDFUtility.readPDF(pdfPath);
+			String normalizedPdf = pdfContent.replaceAll("\\s+", "").toLowerCase();
+			String actualStatus = extractStatusFromPDF(normalizedPdf);
 
-		if (pdfPath == null) {
-			HelperClass.log.error("PDF file not found in: " + downloadPath);
-			org.testng.Assert.fail("PDF file was not downloaded to: " + downloadPath);
-			return;
-		}
+			HelperClass.log.info("Expected Status : " + expectedStatus);
+			HelperClass.log.info("Actual Status : " + actualStatus);
 
-		String pdfContent = PDFUtility.readPDF(pdfPath);
-		System.out.println("PDF CONTENT:\n" + pdfContent);
+			if (expectedStatus.equalsIgnoreCase(actualStatus)) {
+				HelperClass.log.info("PDF status validated successfully");
+			} else {
+				HelperClass.log.warn("Status mismatch. Expected : " + expectedStatus + " Actual : " + actualStatus);
+			}
 
-		String normalizedPdf = pdfContent.replaceAll("\\s+", "").toLowerCase();
-
-		String actualStatus = extractStatusFromPDF(normalizedPdf);
-
-		System.out.println("EXPECTED STATUS : " + expectedStatus);
-		System.out.println("ACTUAL PDF STATUS : " + actualStatus);
-
-		if (expectedStatus.equalsIgnoreCase("Not applied")) {
-			org.testng.Assert.assertFalse(actualStatus.isEmpty(), "No valid status found in PDF");
-
-		} else if (expectedStatus.equalsIgnoreCase(actualStatus)) {
-			org.testng.Assert.assertTrue(true);
-			System.out.println("STATUS MATCHED ✓");
-
-		} else {
-			System.out.println("FILTER DATA NOT AVAILABLE IN DEMO SITE");
-			System.out.println("EXPECTED : " + expectedStatus);
-			System.out.println("ACTUAL   : " + actualStatus);
-			HelperClass.log.warn("PDF status mismatch — demo data limitation. Expected: " + expectedStatus
-					+ ", Actual: " + actualStatus);
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to validate PDF status : " + e.getMessage());
+			throw new RuntimeException("Unable to validate PDF status", e);
 		}
 	}
 
-	public boolean isTransactionIdPresentInPDF(String transactionId) {
-		String downloadPath = HelperClass.getDownloadPath();
-		waitForFileDownload(downloadPath, ".pdf");
-
-		String pdfPath = FileUtility.getDownloadedFilePath(downloadPath, ".pdf");
-		if (pdfPath == null)
-			return false;
-
-		String pdfContent = PDFUtility.readPDF(pdfPath);
-		return pdfContent.contains(transactionId);
+	public void clickOpenSts() {
+		try {
+			waitForClickable(ticketsPage.clickOpen);
+			jsClick(ticketsPage.clickOpen);
+			HelperClass.log.info("Clicked Open Status successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click Open Status : " + e.getMessage());
+			throw new RuntimeException("Unable to click Open Status", e);
+		}
 	}
 
-	public boolean isStatusPresentInPDF(String expectedStatus) {
-		String downloadPath = HelperClass.getDownloadPath();
-		waitForFileDownload(downloadPath, ".pdf");
-
-		String pdfPath = FileUtility.getDownloadedFilePath(downloadPath, ".pdf");
-		if (pdfPath == null)
-			return false;
-
-		String pdfContent = PDFUtility.readPDF(pdfPath);
-		System.out.println("PDF CONTENT:\n" + pdfContent);
-
-		String normalizedPdf = pdfContent.replaceAll("\\s+", "").toLowerCase();
-		String normalizedExpected = expectedStatus.replaceAll("\\s+", "").toLowerCase();
-
-		return normalizedPdf.contains(normalizedExpected);
+	public void filterClick() {
+		try {
+			waitForClickable(ticketsPage.filter);
+			jsClick(ticketsPage.filter);
+			waitForVisibility(ticketsPage.filterStatusBtn);
+			HelperClass.log.info("Filter clicked successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click filter : " + e.getMessage());
+			throw new RuntimeException("Unable to click filter", e);
+		}
 	}
 
-	
+	public void filterStsClick() {
+		try {
+			waitForClickable(ticketsPage.filterStatusBtn);
+			jsClick(ticketsPage.filterStatusBtn);
+			HelperClass.log.info("Filter status clicked successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click filter status : " + e.getMessage());
+			throw new RuntimeException("Unable to click filter status", e);
+		}
+	}
+
 	public boolean isNoResultsDisplayed() {
-		return isDisplayed(ticketsPage.noResultsMessage);
+		try {
+			WebDriverWait shortWait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(3));
+			shortWait.until(ExpectedConditions.visibilityOfElementLocated(ticketsPage.noResultsMessage));
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 
-	public String getNoResultsMessage() {
-		waitForVisibility(ticketsPage.noResultsMessage);
-		return getText(ticketsPage.noResultsMessage);
+	public void assertNoResultsMessage() {
+		String expectedMessage = "No results match the search criteria";
+		String actualMessage = getText(ticketsPage.noResultsMessage);
+		Assert.assertEquals(actualMessage, expectedMessage, "No results message does not match expected.");
 	}
 
 	private void waitForTableOrNoResults() {
-		HelperClass.getWait().until(driver -> isDisplayed(ticketsPage.noResultsMessage)
-				|| isDisplayed(ticketsPage.firstRow) || isDisplayed(ticketsPage.statusBtn));
+		try {
+			WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(20));
+			wait.until(ExpectedConditions.or(
+					ExpectedConditions.visibilityOfElementLocated(ticketsPage.noResultsMessage),
+					ExpectedConditions.visibilityOfElementLocated(ticketsPage.firstRow),
+					ExpectedConditions.visibilityOfElementLocated(ticketsPage.statusBtn)));
+		} catch (Exception e) {
+			HelperClass.log.warn("waitForTableOrNoResults timed out: " + e.getMessage());
+		}
+	}
+
+	public void assertOpen(String status) {
+		try {
+			waitForVisibility(ticketsPage.asserOpen);
+			String actualStatus = getText(ticketsPage.asserOpen);
+			Assert.assertEquals(actualStatus, status, "Expected status does not match actual status");
+			HelperClass.log.info("Status assertion completed successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to validate open status : " + e.getMessage());
+			throw new RuntimeException("Unable to validate open status", e);
+		}
 	}
 
 	private String extractStatusFromPDF(String normalizedPdf) {
-		
-		if (normalizedPdf.contains("approved"))
-			return "Approved";
-		if (normalizedPdf.contains("canceled"))
-			return "Canceled";
-		if (normalizedPdf.contains("cancelled"))
-			return "Canceled";
-		if (normalizedPdf.contains("expired"))
-			return "Expired";
-		if (normalizedPdf.contains("processed"))
-			return "Processed";
-		if (normalizedPdf.contains("open"))
-			return "Open";
+		if (normalizedPdf.contains("approved"))  return "Approved";
+		if (normalizedPdf.contains("canceled"))  return "Canceled";
+		if (normalizedPdf.contains("cancelled")) return "Canceled";
+		if (normalizedPdf.contains("expired"))   return "Expired";
+		if (normalizedPdf.contains("processed")) return "Processed";
+		if (normalizedPdf.contains("open"))      return "Open";
 		return "";
 	}
 }

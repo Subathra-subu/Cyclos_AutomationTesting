@@ -8,12 +8,11 @@ import io.cucumber.testng.CucumberOptions;
 
 @Test
 @CucumberOptions(
-		features = "src/test/resources/features/Login.feature",
+		features = "src/test/resources/features/AdInterest.feature",
 		
 //		features = "@target/rerun.txt",
 		
 		glue = "com.StepDefinitions",
-//		tags="@BlankUsername",
 		plugin = {
 				"pretty",
 				"html:target/cucumber-reports.html",

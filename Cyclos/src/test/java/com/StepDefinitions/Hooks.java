@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import com.Actions.LoginAction;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.After;
@@ -21,14 +22,25 @@ public class Hooks {
 
     @Before
     public void setUp(Scenario scenario) {
+    	
         logger.info("=== Scenario STARTED: {} ===", scenario.getName());
 
         HelperClass.setupDriver();
         HelperClass.openPage();
+        
+        
+        LoginAction loginAction = new LoginAction();
+    	
+    	loginAction.clickLoginLink();
+    	
+    	loginAction.entervaliduserNameAndPassword();
+    	
+    	loginAction.clickSubmitButton();
 
         logger.info("Setup complete. Browser ready.");
     }
 
+    // AI refer 
     @After
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed()) {
@@ -38,10 +50,10 @@ public class Hooks {
                         ((TakesScreenshot) HelperClass.getDriver())
                                 .getScreenshotAs(OutputType.BYTES);
 
-                // Attach to Cucumber / Extent report
+                
                 scenario.attach(screenshotBytes, "image/png", "Failure Screenshot");
 
-                // FIX: Ensure screenshots folder exists before saving
+                
                 File screenshotsDir = new File("screenshots");
                 if (!screenshotsDir.exists()) screenshotsDir.mkdirs();
 
