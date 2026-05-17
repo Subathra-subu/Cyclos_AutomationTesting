@@ -52,8 +52,7 @@ public class Hooks {
 			logger.info("Scenario passed : {}",scenario.getName());
 		}
 		
-		HelperClass.getDriver().quit();
-		
+		HelperClass.tearDown();		
 	}
 
 }

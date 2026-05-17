@@ -9,6 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features/paymentToUser.feature",
 		glue = "com.StepDefinitions",
+		
 		plugin = {
 				"pretty",
 				"html:target/cucumber-reports.html",
@@ -16,6 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
 		},
+		
 		
 		monochrome=true)
 
