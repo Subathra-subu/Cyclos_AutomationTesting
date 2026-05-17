@@ -5,23 +5,27 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigureClass {
-	
+
     private static Properties properties;
 
     static {
         try {
-        	FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/Configure.properties");
-        	
-        	properties = new Properties();
+            FileInputStream fis = new FileInputStream(
+                    System.getProperty("user.dir")
+                            + "/src/test/resources/Configure.properties");
+
+            properties = new Properties();
             properties.load(fis);
 
         } catch (IOException e) {
             e.printStackTrace();
+            throw new RuntimeException(
+                    "Failed to load Configure.properties. Ensure it exists at src/test/resources/Configure.properties");
         }
     }
 
     public static String getBrowser() {
-        return properties.getProperty("browser");
+        return properties.getProperty("browser", "chrome");
     }
 
     public static String getUrl() {
@@ -35,9 +39,10 @@ public class ConfigureClass {
     public static String getPassword() {
         return properties.getProperty("password");
     }
-
+    
     public static boolean isHeadless() {
         return Boolean.parseBoolean(properties.getProperty("headless"));
     }
-
 }
+
+   

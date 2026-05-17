@@ -28,5 +28,4 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}
-
 }
