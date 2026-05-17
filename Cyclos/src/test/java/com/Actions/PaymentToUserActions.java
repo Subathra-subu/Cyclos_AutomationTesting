@@ -13,10 +13,12 @@ public class PaymentToUserActions extends BaseAction {
 		click(paymentpage.nextBtn);
 	}
 	public void clickPayUser() {
-		
-		waitForVisibility(paymentpage.payuser);
-		
-		click(paymentpage.payuser);
+
+	    waitForClickable(paymentpage.payuser);
+
+	    scrollIntoView(paymentpage.payuser);
+
+	    jsClick(paymentpage.payuser);
 	}
 
 	public void enterUser(String value) {
@@ -53,8 +55,11 @@ public class PaymentToUserActions extends BaseAction {
 
 	public String validateLimitExceededMessage() {
 
-		waitForVisibility(paymentpage.limitExceededMsg);
-		return getText(paymentpage.limitExceededMsg);
+	    waitForVisibility(paymentpage.limitExceededMsg);
+
+	    scrollIntoView(paymentpage.limitExceededMsg);
+
+	    return getText(paymentpage.limitExceededMsg);
 	}
 	public void selectSchedulingType(String type) {
 

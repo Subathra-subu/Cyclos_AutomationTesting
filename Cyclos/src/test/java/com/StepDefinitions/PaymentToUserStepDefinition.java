@@ -20,7 +20,7 @@ public class PaymentToUserStepDefinition {
 
 	    private final LoginAction loginAction =
 	            new LoginAction();
-    @Given("User should be logged into the application and must on home page")
+    @Given("User should be logged into the cyclos application and must on home page")
     public void user_should_be_logged_into_the_application_and_must_on_home_page() {
     	HelperClass.openPage();
 
@@ -70,15 +70,12 @@ public class PaymentToUserStepDefinition {
 
     	actions.clickNext();
 
-    	Assert.assertTrue(
-    		actions.validateLimitExceededMessage().contains("Amount")
-    	);
+    	Assert.assertTrue(actions.validateLimitExceededMessage().contains("Amount"));
     }
     @When("User enters scheduled payment details")
     public void user_enters_scheduled_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =  dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -100,8 +97,7 @@ public class PaymentToUserStepDefinition {
     @When("User enters recurring payment details")
     public void user_enters_recurring_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -118,15 +114,12 @@ public class PaymentToUserStepDefinition {
 
         actions.clickNext();
 
-        Assert.assertTrue(
-                actions.validatePaymentConfirmationTitle().contains("Payment")
-        );
+        Assert.assertTrue(actions.validatePaymentConfirmationTitle().contains("Payment") );
     }
     @When("User enters monthly installment payment details")
     public void user_enters_monthly_installment_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -144,8 +137,7 @@ public class PaymentToUserStepDefinition {
 
         actions.clickNext();
 
-        Assert.assertTrue(
-            actions.validatePaymentConfirmationTitle().contains("Payment")
+        Assert.assertTrue( actions.validatePaymentConfirmationTitle().contains("Payment")
         );
     }
 }
