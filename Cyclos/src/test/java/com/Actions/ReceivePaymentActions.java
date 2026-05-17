@@ -11,16 +11,19 @@ public class ReceivePaymentActions extends BaseAction {
     
     public void clickingLinks() throws InterruptedException {
         click(receivePaymentPage.bankingLink);
+        Thread.sleep(3000);
         HelperClass.log.info("Clicked Banking Menu");
         Thread.sleep(2000);
         click(receivePaymentPage.receivePaymentLink);
+        Thread.sleep(4000);
         HelperClass.log.info("Clicked Receive Payment Menu");
     }
 
-    public void enterDetails(String userName, String amountToUser, String descriptiontothefield) {
+    public void enterDetails(String userName, String amountToUser, String descriptiontothefield) throws InterruptedException {
         sendKeys(receivePaymentPage.user, userName);
         HelperClass.log.info("Entered Username : " + userName);
         click(receivePaymentPage.userClick);
+        Thread.sleep(2000);
         HelperClass.log.info("Selected User From Dropdown");
         sendKeys(receivePaymentPage.amount, amountToUser);
         HelperClass.log.info("Entered Amount : " + amountToUser);

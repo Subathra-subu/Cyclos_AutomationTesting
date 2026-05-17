@@ -25,7 +25,7 @@ public class ReceivePaymentStepDefinitions {
     }
 
     @When("User enters payment details with {string}, {string} and {string}")
-    public void user_enters_payment_details_with_and(String user, String amount, String description) {
+    public void user_enters_payment_details_with_and(String user, String amount, String description) throws InterruptedException {
         receivePaymentPage.enterDetails(user, amount, description);
         receivePaymentPage.clickingNext();
     }
@@ -52,7 +52,7 @@ public class ReceivePaymentStepDefinitions {
     }
 
     @And("User enters invalid payment details with {string}, {string} and {string}")
-    public void user_enters_invalid_payment_details(String user, String amount, String description) {
+    public void user_enters_invalid_payment_details(String user, String amount, String description) throws InterruptedException {
         receivePaymentPage.enterDetails(user, amount, description);
     }
     
