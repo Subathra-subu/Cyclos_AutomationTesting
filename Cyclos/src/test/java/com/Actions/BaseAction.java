@@ -10,150 +10,164 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Pages.LoginPage;
+import com.StepDefinitions.Hooks;
 import com.Utilities.HelperClass;
 
 public class BaseAction {
-	
-	public LoginPage loginPage = new LoginPage();
-	
-	public JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
-	
+
 	public void click(By locator) {
+		
+		waitForClickable(locator);
+		
+		HelperClass.getDriver().findElement(locator).click();
+		
+		Hooks.logger.info("Clicked on element: " + locator.toString());
+	}
 
-        waitForClickable(locator);
+	public void jsClick(By locator) {
+		
+		WebElement element = HelperClass.getWait().until(ExpectedConditions.elementToBeClickable(locator));
+		
+		JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
+		
+		js.executeScript("arguments[0].click();", element);
+		
+		Hooks.logger.info("JS Clicked on element: " + locator.toString());
+	}
 
-        HelperClass.getDriver().findElement(locator).click();
-    }
+	public void sendKeys(By locator, String value) {
+		
+		waitForVisibility(locator);
+		
+		WebElement element = HelperClass.getDriver().findElement(locator);
+		
+		element.clear();
+		
+		element.sendKeys(value);
+		
+		Hooks.logger.info("Sent keys to: " + locator.toString() + " value: " + value);
+	}
 
-   
-    public void jsClick(By locator) {
+	public String getText(By locator) {
+		
+		waitForVisibility(locator);
+		
+		Hooks.logger.info("Got text from element: " + locator.toString());
+		
+		return HelperClass.getDriver().findElement(locator).getText();
+	}
 
-        WebElement element = HelperClass.getWait().until(ExpectedConditions.elementToBeClickable(locator));
+	public void waitForVisibility(By locator) {
+		
+		HelperClass.getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
+		
+		Hooks.logger.info("Element is visible: " + locator.toString());
+	}
 
-        js.executeScript("arguments[0].click();",element);
-    }
+	public void waitForClickable(By locator) {
+		
+		HelperClass.getWait().until(ExpectedConditions.elementToBeClickable(locator));
+		
+		Hooks.logger.info("Element is clickable: " + locator.toString());
+	}
 
-    
-    public void sendKeys(By locator,String value) {
+	public void waitForInvisibility(By locator) {
+		
+		HelperClass.getWait().until(ExpectedConditions.invisibilityOfElementLocated(locator));
+		
+		Hooks.logger.info("Element is invisible: " + locator.toString());
+	}
 
-        waitForVisibility(locator);
+	public void scrollIntoView(By locator) {
+		
+		WebElement element = HelperClass.getDriver().findElement(locator);
+		
+		JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
+		
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		
+		Hooks.logger.info("Scrolled into view: " + locator.toString());
+	}
 
-        WebElement element = HelperClass.getDriver().findElement(locator);
+	public void mouseHover(By locator) {
+		
+		WebElement element = HelperClass.getDriver().findElement(locator);
+		
+		Actions actions = new Actions(HelperClass.getDriver());
+		
+		actions.moveToElement(element).perform();
+		
+		Hooks.logger.info("Mouse hovered on element: " + locator.toString());
+	}
 
-        element.clear();
+	public boolean isDisplayed(By locator) {
+		
+		try {
+			
+			Hooks.logger.info("Checking if element is displayed: " + locator.toString());
+			
+			return HelperClass.getDriver().findElement(locator).isDisplayed();
+		} 
+		catch (Exception e) {
+			
+			Hooks.logger.warn("Element not found or not displayed: " + locator.toString());
+			
+			return false;
+		}
+	}
 
-        element.sendKeys(value);
-    }
+	// FIX: Use HelperClass.getDownloadPath() everywhere — no hardcoded separators
+	public void clearDownloadFolder(String downloadPath) {
+		
+		File folder = new File(downloadPath);
+		
+		if (!folder.exists()) {
+			folder.mkdirs();
+			return;
+		}
+		
+		File[] files = folder.listFiles();
+		
+		if (files != null) {
+			for (File file : files) {
+				if (file.isFile()) {
+					file.delete();
+				}
+			}
+		}
+		
+		Hooks.logger.info("Cleared download folder: " + downloadPath);
+	}
 
-    
-    public String getText(By locator) {
+	public void waitForFileDownload(String downloadPath, String fileExtension) {
+		
+		FluentWait<WebDriver> wait = new FluentWait<>(HelperClass.getDriver()).withTimeout(Duration.ofSeconds(60))
+				.pollingEvery(Duration.ofSeconds(2)).ignoring(Exception.class);
 
-        waitForVisibility(locator);
+		wait.until(driver -> {
+			
+			File folder = new File(downloadPath);
+			
+			File[] files = folder.listFiles();
+			
+			if (files != null) {
+				for (File file : files) {
+					if (file.getName().toLowerCase().contains(fileExtension.toLowerCase())
+							&& !file.getName().endsWith(".crdownload") && !file.getName().endsWith(".tmp")) {
+						return true;
+					}
+				}
+			}
+			return false;
+		});
 
-        return HelperClass.getDriver().findElement(locator).getText();
-    }
+		Hooks.logger.info("File with extension " + fileExtension + " downloaded in: " + downloadPath);
+	}
 
-    
-    public void waitForVisibility(By locator) {
-
-        HelperClass.getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    
-    public void waitForClickable(By locator) {
-
-        HelperClass.getWait().until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
-    
-    public void waitForInvisibility(By locator) {
-
-        HelperClass.getWait().until(ExpectedConditions.invisibilityOfElementLocated(locator));
-    }
-
-    
-    public void scrollIntoView(By locator) {
-
-        WebElement element =HelperClass.getDriver().findElement(locator);
-
-        JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
-
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});",element);
-    }
-
-    
-    public void mouseHover(By locator) {
-
-        WebElement element = HelperClass.getDriver().findElement(locator);
-
-        Actions actions = new Actions(HelperClass.getDriver());
-
-        actions.moveToElement(element).perform();
-    }
-
-    
-    public boolean isDisplayed(By locator) {
-
-        try {
-
-            return HelperClass.getDriver().findElement(locator).isDisplayed();
-
-        } catch (Exception e) {
-
-            return false;
-        }
-    }
-
-    
-    public void clearDownloadFolder(String downloadPath) {
-
-        File folder = new File(downloadPath);
-
-        File[] files = folder.listFiles();
-
-        if (files != null) {
-
-            for (File file : files) {
-
-                if (file.isFile()) {
-
-                    file.delete();
-                }
-            }
-        }
-    }
-
-   
-    public void waitForFileDownload(String downloadPath,String fileExtension) {
-
-        FluentWait<WebDriver> wait = new FluentWait<>(HelperClass.getDriver())
-                        .withTimeout(Duration.ofSeconds(60))
-                        .pollingEvery(Duration.ofSeconds(2))
-                        .ignoring(Exception.class);
-
-        wait.until(driver -> {
-
-            File folder = new File(downloadPath);
-
-            File[] files = folder.listFiles();
-
-            if (files != null) {
-
-                for (File file : files) {
-
-                    if (file.getName().contains(fileExtension)
-                            && !file.getName().endsWith(".crdownload")
-                            && !file.getName().endsWith(".tmp")) {
-
-                        return true;
-                    }
-                }
-            }
-
-            return false;
-        });
-    }
-	
+	public void waitForVisibility(By locator, int timeoutSeconds) {
+		
+		new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(timeoutSeconds)).until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
 }

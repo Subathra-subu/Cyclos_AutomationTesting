@@ -1,7 +1,10 @@
 package com.StepDefinitions;
 
+import java.io.IOException;
+
 import com.Actions.DashBoardAction;
 import com.Actions.LoginAction;
+import com.Utilities.ExcelUtilities;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.en.Given;
@@ -58,35 +61,97 @@ public class LoginTest {
 	@Then("the user should see the {string} alert meaasage")
 	public void the_user_should_see_the_alert_meaasage(String string) {
 	    
-		loginAction.assertAlertMessage();
+		loginAction.assertAlertMessage(string);
 		
 	}
 	
 	@When("the user enters a valid password and leaves the username field blank")
-	public void the_user_enters_a_valid_password_and_leaves_the_username_field_blank() {
+	public void the_user_enters_a_valid_password_and_leaves_the_username_field_blank() throws IOException {
+		
+		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
+
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",1,0);
+
+	    String password = ExcelUtilities.getCellData(path,"Sheet1",1,1);
+
+	    loginAction.enterBlankUserName(username,password);
 	   
-		loginAction.enterBlankUserName();
 		
 	}
 
 	@Then("the user should be able to see the {string} error message under username filed")
 	public void the_user_should_be_able_to_see_the_error_message_under_username_filed(String string) {
 	   
-		loginAction.assertUsernameRequired();
+		loginAction.assertUsernameRequired(string);
 		
 	}
 	
 	@When("the user enter a valid userName and leaves the password field blank")
-	public void the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank() {
+	public void the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank() throws IOException {
 		
-		loginAction.enterBlankPassword();
+		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
+
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",2,0);
+
+	    String password = ExcelUtilities.getCellData(path,"Sheet1",2,1);
+
+	    loginAction.enterBlankPassword(username,password);
+		
 		
 	}
 
 	@Then("the user should be able to see the {string} message under password filed")
 	public void the_user_should_be_able_to_see_the_message_under_password_filed(String string) {
 	    
-		loginAction.assertPasswordRequired();
+		loginAction.assertPasswordRequired(string);
+		
+	}
+	
+	
+	@When("the user leaves the userName and password fields blank")
+	public void the_user_leaves_the_user_name_and_password_fields_blank() throws IOException {
+		
+		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
+
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",3,0);
+
+	    String password = ExcelUtilities.getCellData(path,"Sheet1",3,1);
+
+	    loginAction.enterBlankInputs(username,password);
+	   
+		
+	}
+
+	@Then("the user should be able to see the {string} message under userName and password fileds")
+	public void the_user_should_be_able_to_see_the_message_under_user_name_and_password_fileds(String string) {
+	   
+		loginAction.assertBothRequiredMessage(string);
+		
+	}
+	
+	@When("the logs into the application with valid credentials")
+	public void the_logs_into_the_application_with_valid_credentials() {
+	  
+		loginAction.clickLoginLink();
+		
+		loginAction.entervaliduserNameAndPassword();
+		
+		loginAction.clickSubmitButton();
+		
+	}
+	
+	
+	@When("the clicks logout link")
+	public void the_clicks_logout_link() {
+	   
+		dashBoardAction.clickLogoutLink();
+		
+	}
+
+	@Then("the user should be able to logout the application successfully")
+	public void the_user_should_be_able_to_logout_the_application_successfully() {
+	    
+		loginAction.checkLogout();
 		
 	}
 

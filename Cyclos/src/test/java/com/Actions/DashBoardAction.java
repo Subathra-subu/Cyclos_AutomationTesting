@@ -6,9 +6,10 @@ import com.Pages.DashBoardPage;
 
 public class DashBoardAction extends BaseAction {
 	
+	DashBoardPage dashBoardPage = new DashBoardPage();
+	
 	public void successfullLogin() {
 		
-		DashBoardPage dashBoardPage = new DashBoardPage();
 		
 		String actual = getText(dashBoardPage.dashBoard);
 		
@@ -18,5 +19,10 @@ public class DashBoardAction extends BaseAction {
 		
 	}
 	
+	public void clickLogoutLink() {
+		
+		jsClick(dashBoardPage.logout);
+		
+	}
 
 }

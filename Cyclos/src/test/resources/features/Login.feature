@@ -26,10 +26,25 @@ Feature: Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin
   Scenario: Login with Blank Username
     When the user enters a valid password and leaves the username field blank
     And click submit button
-    Then the user should be able to see the "The field is required" error message under username filed
+    Then the user should be able to see the "This field is required" error message under username filed
 
   @BlankPassword
   Scenario: Login with Blank password
     When the user enter a valid userName and leaves the password field blank
     And click submit button
-    Then the user should be able to see the "The field is required" message under password filed
+    Then the user should be able to see the "This field is required" message under password filed
+   
+  @BlankUsernameAndPassword
+  Scenario: Login With Blank credentials
+   When the user leaves the userName and password fields blank  
+   And click submit button
+   Then the user should be able to see the "This field is required" message under userName and password fileds
+
+   @Logout
+   Scenario: Verify user can perform logout functionality
+   When the logs into the application with valid credentials
+   When the clicks logout link
+   Then the user should be able to logout the application successfully
+   
+   
+   

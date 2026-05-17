@@ -10,6 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/resources/features/Login.feature",
 		glue = "com.StepDefinitions",
+//		tags="@BlankUsername",
 		plugin = {
 				"pretty",
 				"html:target/cucumber-reports.html",

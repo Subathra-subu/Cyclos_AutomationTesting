@@ -3,10 +3,15 @@ package com.Actions;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
+import com.Pages.LoginPage;
 import com.StepDefinitions.Hooks;
 import com.Utilities.ConfigureClass;
 
+import com.Pages.LoginPage;
+
 public class LoginAction extends BaseAction{
+	
+	LoginPage loginPage = new LoginPage();
 	
 	public void sendUserName(String name) {
 		
@@ -68,50 +73,71 @@ public class LoginAction extends BaseAction{
 		sendPassword(password);
 	}
 	
-	public void assertAlertMessage() {
+	public void assertAlertMessage(String expected) {
 		
 		String actual = getText(loginPage.alertMessage);
-		
-		String expected = "The given name / password are incorrect. Please, try again.";
 
 		Assert.assertEquals(actual,expected);
 		
 	}
 	
-	public boolean assertRequiredMessage(By locator) {
+	public void assertRequiredMessage(By locator,String expected) {
 		
 		String actual = getText(locator);
 		
-		String expected = "This field is required";
-		
-		return actual.equals(expected);
+		Assert.assertEquals(actual, expected);
 		
 	}
 	
-	public void assertUsernameRequired() {
+	public void assertUsernameRequired(String expected) {
 		
-		boolean actual = assertRequiredMessage(loginPage.userRequiredMessage);
+		assertRequiredMessage(loginPage.userRequiredMessage,expected);
 		
-		Assert.assertEquals(actual,true);
-		
-	}
-	
-	public void assertPasswordRequired() {
-		
-		boolean actual = assertRequiredMessage(loginPage.passwordRequiredMessage);
-		
-		Assert.assertEquals(actual,true);
 		
 	}
 	
-	public void enterBlankUserName() {
+	public void assertPasswordRequired(String expected) {
+		
+		assertRequiredMessage(loginPage.passwordRequiredMessage,expected);
 		
 	}
 	
-	public void enterBlankPassword() {
+	public void enterBlankUserName(String username, String password) {
+		
+		sendUserName(username);
+		sendPassword(password);
+		
 		
 	}
 	
+	public void enterBlankPassword(String username, String password) {
+		
+		sendUserName(username);
+		sendPassword(password);
+		
+	}
+	
+	public void assertBothRequiredMessage(String expected) {
+		
+		assertUsernameRequired(expected);
+		assertPasswordRequired(expected);
+		
+	}
+	
+	public void enterBlankInputs(String username, String password) {
+		
+		sendUserName(username);
+		sendPassword(password);
+		
+	}
+	
+	public void checkLogout() {
+		
+		boolean actual = isDisplayed(loginPage.loginLink);
+		
+		Assert.assertEquals(actual, true);
+		
+	}
 	
 
 }
