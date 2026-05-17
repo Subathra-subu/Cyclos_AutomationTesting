@@ -7,7 +7,6 @@ import com.Pages.LoginPage;
 import com.StepDefinitions.Hooks;
 import com.Utilities.ConfigureClass;
 
-import com.Pages.LoginPage;
 
 public class LoginAction extends BaseAction{
 	
