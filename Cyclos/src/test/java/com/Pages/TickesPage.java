@@ -2,7 +2,7 @@ package com.Pages;
 
 import org.openqa.selenium.By;
 
-public class TickesPage extends BasePage {
+public class TickesPage  {
 
 	public By bankingMenu = By.xpath("//a[@id='menu_banking']");
 

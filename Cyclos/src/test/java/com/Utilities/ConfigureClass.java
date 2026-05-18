@@ -39,10 +39,28 @@ public class ConfigureClass {
     public static String getPassword() {
         return properties.getProperty("password");
     }
-    
+
+    public static int getExplicitWait() {
+        return Integer.parseInt(properties.getProperty("explicitWait", "20"));
+    }
+
     public static boolean isHeadless() {
-        return Boolean.parseBoolean(properties.getProperty("headless"));
+        return Boolean.parseBoolean(properties.getProperty("headless", "false"));
+    }
+
+    public static String getScreenshotPath() {
+        return properties.getProperty("screenshotPath", "screenshots/");
+    }
+
+    public static String getReportPath() {
+        return properties.getProperty("reportPath", "target/reports/");
+    }
+
+    public static boolean isParallel() {
+        return Boolean.parseBoolean(properties.getProperty("parallel", "false"));
+    }
+
+    public static int getPageLoadTimeout() {
+        return Integer.parseInt(properties.getProperty("pageLoadTimeout", "60"));
     }
 }
-
-   
