@@ -21,7 +21,7 @@ public class Hooks {
 
     commonLoginAction loginActions = new commonLoginAction();
 
-    @Before
+    @Before("@UserLogin")
     public void setUplogin(Scenario scenario) {
     	
         logger.info("=== Scenario STARTED: {} ===", scenario.getName());
