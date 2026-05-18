@@ -8,7 +8,7 @@ import com.StepDefinitions.Hooks;
 import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
 
-public class commonLoginAction extends BaseAction {
+public class CommonLoginAction extends BaseAction {
 
 	CommonLoginPage loginPage = new CommonLoginPage();
 
