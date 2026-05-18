@@ -2,7 +2,9 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
   Description: Validate Advertisement Functionality
 
   Background:
-    Given the user in the Marketplace menu
+  	
+  	Given the user login with valid credentials
+    And the user click the Marketplace menu
     And the user clicks the Advertisement Interests button
 
   @delete
