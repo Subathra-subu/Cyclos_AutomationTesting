@@ -34,21 +34,14 @@ public class LoginAction extends BaseAction{
 		
 	
 	public void clickLoginLink() {
-
-	    try {
-
-	        waitForVisibility(loginPage.loginLink);
-
-	        click(loginPage.loginLink);
-
-	        Hooks.logger.info("Clicked login link");
-
-	    }
-
-	    catch(Exception e) {
-
-	        Hooks.logger.error("Unable to click the login link", e);
-	    }
+		
+		try {
+			click(loginPage.loginLink);
+		}
+		catch(Exception e) {
+			Hooks.logger.error("Unable to click the link", e);
+		}
+	
 	}
 	
 	public void entervaliduserNameAndPassword() {

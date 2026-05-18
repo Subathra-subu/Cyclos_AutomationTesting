@@ -4,9 +4,8 @@ import java.util.Map;
 
 import org.testng.Assert;
 
-
+import com.Actions.LoginAction;
 import com.Actions.PaymentToUserActions;
-import com.Actions.commonLoginAction;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -18,12 +17,22 @@ public class PaymentToUserStepDefinition {
 
 	 private final PaymentToUserActions actions =
 	            new PaymentToUserActions();
-   commonLoginAction login=new commonLoginAction();
-	    
-    @Given("User clicks the payment to user button")
-    public void user_clicks_the_payment_to_user_button() {
-    	actions.clickPayUser();
-    }
+	 LoginAction login = new LoginAction();	    
+	 @Given("User should be logged into application and must on home page")
+	 public void user_should_be_logged_into_application_and_must_on_home_page() {
+
+	     HelperClass.openPage();
+
+	     login.clickLoginLink();
+
+	     login.entervaliduserNameAndPassword();
+
+	     login.clickSubmitButton();
+	 }
+   @When("User clicks the payment to user button")
+   public void user_clicks_the_payment_to_user_button() {
+   	actions.clickPayUser();
+   }
     
     @When("User gives the empty user field {string}")
     public void user_gives_the_empty_user_field(String value) {
@@ -61,12 +70,15 @@ public class PaymentToUserStepDefinition {
 
     	actions.clickNext();
 
-    	Assert.assertTrue(actions.validateLimitExceededMessage().contains("Amount"));
+    	Assert.assertTrue(
+    		actions.validateLimitExceededMessage().contains("Amount")
+    	);
     }
     @When("User enters scheduled payment details")
     public void user_enters_scheduled_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =
+                dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -88,7 +100,8 @@ public class PaymentToUserStepDefinition {
     @When("User enters recurring payment details")
     public void user_enters_recurring_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =
+                dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -105,12 +118,15 @@ public class PaymentToUserStepDefinition {
 
         actions.clickNext();
 
-        Assert.assertTrue( actions.validatePaymentConfirmationTitle().contains("Payment") );
+        Assert.assertTrue(
+                actions.validatePaymentConfirmationTitle().contains("Payment")
+        );
     }
     @When("User enters monthly installment payment details")
     public void user_enters_monthly_installment_payment_details(DataTable dataTable) {
 
-        Map<String, String> data =dataTable.asMaps(String.class, String.class).get(0);
+        Map<String, String> data =
+                dataTable.asMaps(String.class, String.class).get(0);
 
         actions.enterUser(data.get("username"));
 
@@ -128,19 +144,8 @@ public class PaymentToUserStepDefinition {
 
         actions.clickNext();
 
-        Assert.assertTrue(actions.validatePaymentConfirmationTitle().contains("Payment"));
+        Assert.assertTrue(
+            actions.validatePaymentConfirmationTitle().contains("Payment")
+        );
     }
 }
-
-
-
-
-
-
-
-
-
-
-
- 
-

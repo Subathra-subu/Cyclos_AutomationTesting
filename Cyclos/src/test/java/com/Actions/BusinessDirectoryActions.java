@@ -6,9 +6,9 @@ import com.Pages.BusinessDirectoryPage;
 
 public class BusinessDirectoryActions extends BaseAction {
 
-    BusinessDirectoryPage businessPage =  new BusinessDirectoryPage();
+    BusinessDirectoryPage businessPage =
+            new BusinessDirectoryPage();
 
-   
     public void navigateBusinessDirectory() {
 
         waitForVisibility(businessPage.businessDirectoryMenu);
@@ -16,7 +16,6 @@ public class BusinessDirectoryActions extends BaseAction {
         click(businessPage.businessDirectoryMenu);
     }
 
-   
     public void enterKeyword(String keyword) {
 
         waitForVisibility(businessPage.keywordField);
@@ -24,15 +23,14 @@ public class BusinessDirectoryActions extends BaseAction {
         sendKeys(businessPage.keywordField, keyword);
     }
 
-   
     public void validateSearchResults() {
 
-        Assert.assertTrue(isDisplayed(businessPage.businessCards));
+        waitForVisibility(businessPage.businessCards);
+
+        Assert.assertTrue(
+                isDisplayed(businessPage.businessCards));
     }
 
-   
-
-   
     public void clickListView() {
 
         scrollIntoView(businessPage.listViewButton);
@@ -42,25 +40,31 @@ public class BusinessDirectoryActions extends BaseAction {
         jsClick(businessPage.listViewButton);
     }
 
-
     public void validateListView() {
 
-        Assert.assertTrue(isDisplayed(businessPage.businessCards));
+        waitForVisibility(businessPage.activeListView);
+
+        Assert.assertTrue(
+                isDisplayed(businessPage.activeListView));
     }
 
     public void clickTiledView() {
 
         scrollIntoView(businessPage.tiledViewButton);
 
+        waitForClickable(businessPage.tiledViewButton);
+
         jsClick(businessPage.tiledViewButton);
     }
-   
+
     public void validateTiledView() {
 
-        Assert.assertTrue(isDisplayed(businessPage.businessCards));
+        waitForVisibility(businessPage.activeTiledView);
+
+        Assert.assertTrue(
+                isDisplayed(businessPage.activeTiledView));
     }
 
-  
     public void selectAscendingOrder() {
 
         click(businessPage.orderDropdown);
@@ -68,12 +72,13 @@ public class BusinessDirectoryActions extends BaseAction {
         click(businessPage.ascendingOrder);
     }
 
-   
     public void validateAscendingOrder() {
 
-        Assert.assertTrue(isDisplayed(businessPage.businessCards));
-    }
+        waitForVisibility(businessPage.businessCards);
 
+        Assert.assertTrue(
+                isDisplayed(businessPage.businessCards));
+    }
 
     public void selectDescendingOrder() {
 
@@ -84,6 +89,9 @@ public class BusinessDirectoryActions extends BaseAction {
 
     public void validateDescendingOrder() {
 
-        Assert.assertTrue(isDisplayed(businessPage.businessCards));
+        waitForVisibility(businessPage.businessCards);
+
+        Assert.assertTrue(
+                isDisplayed(businessPage.businessCards));
     }
 }

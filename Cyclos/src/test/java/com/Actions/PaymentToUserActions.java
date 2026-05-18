@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import com.Pages.PaymentToUserPage;
 import com.Utilities.ConfigureClass;
+import com.Utilities.HelperClass;
 
 public class PaymentToUserActions extends BaseAction {
 	PaymentToUserPage paymentpage = new PaymentToUserPage();
@@ -13,12 +14,10 @@ public class PaymentToUserActions extends BaseAction {
 		click(paymentpage.nextBtn);
 	}
 	public void clickPayUser() {
-
-	    waitForClickable(paymentpage.payuser);
-
-	    scrollIntoView(paymentpage.payuser);
-
-	    jsClick(paymentpage.payuser);
+		
+		waitForVisibility(paymentpage.payuser);
+		
+		click(paymentpage.payuser);
 	}
 
 	public void enterUser(String value) {
@@ -39,39 +38,31 @@ public class PaymentToUserActions extends BaseAction {
 	public String validateErrorMessage() {
 		
 		waitForVisibility(paymentpage.errormsg);
-		
 		return  getText(paymentpage.errormsg);
-		
 	}
 	public void enterAmount(String amount) {
 
-	    waitForVisibility(paymentpage.amountField);
-
-	   
-
-	    sendKeys(paymentpage.amountField, amount);
-
-	    click(paymentpage.descriptionField);
+		waitForVisibility(paymentpage.amountField);
+		sendKeys(paymentpage.amountField, amount);
 	}
+
 	public String validatePaymentConfirmationTitle() {
 
 	    waitForVisibility(paymentpage.paymentConfirmationTitle);
-	    return getText(paymentpage.paymentConfirmationTitle);
+
+	    return HelperClass.getDriver().findElement(paymentpage.paymentConfirmationTitle).getText();
 	}
 
 	public String validateLimitExceededMessage() {
 
-	    waitForVisibility(paymentpage.limitExceededMsg);
-
-	    scrollIntoView(paymentpage.limitExceededMsg);
-
-	    return getText(paymentpage.limitExceededMsg);
+		waitForVisibility(paymentpage.limitExceededMsg);
+		return getText(paymentpage.limitExceededMsg);
 	}
 	public void selectSchedulingType(String type) {
 
-	    scrollIntoView(paymentpage.dropdown);
-
 	    waitForVisibility(paymentpage.dropdown);
+
+	    scrollIntoView(paymentpage.dropdown);
 
 	    click(paymentpage.dropdown);
 
@@ -127,11 +118,3 @@ public class PaymentToUserActions extends BaseAction {
 	    sendKeys(paymentpage.numberOfInstallments, value);
 	}
 }
-
-
-
-
-
-
-
-
