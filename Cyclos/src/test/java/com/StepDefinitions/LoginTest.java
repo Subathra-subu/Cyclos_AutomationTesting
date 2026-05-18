@@ -91,7 +91,7 @@ public class LoginTest {
 		
 		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
 
-	    String username = ExcelUtilities.getCellData(path,"Sheet1",2,0);
+	    String username = ExcelData.getCellData(path,"Sheet1",2,0);
 
 	    String password = ExcelUtilities.getCellData(path,"Sheet1",2,1);
 
