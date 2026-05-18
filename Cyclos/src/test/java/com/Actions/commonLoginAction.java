@@ -1,12 +1,12 @@
 package com.Actions;
 
-import com.Pages.LoginPage;
+import com.Pages.CommonLoginPage;
 import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
 
-public class LoginActions extends BaseAction {
+public class commonLoginAction extends BaseAction {
 
-    LoginPage loginPage = new LoginPage();
+    CommonLoginPage loginPage = new CommonLoginPage();
 
     public void loginToApplication() {
 

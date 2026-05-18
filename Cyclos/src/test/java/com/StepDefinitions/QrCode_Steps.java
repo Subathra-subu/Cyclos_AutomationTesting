@@ -13,7 +13,6 @@ public class QrCode_Steps {
 
     @Given("the user navigates to the QR Code page")
     public void the_user_navigates_to_the_qr_code_page() {
-
         qrPage.navigatetoBankingPage();
     }
 
