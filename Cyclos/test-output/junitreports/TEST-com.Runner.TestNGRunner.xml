@@ -47,7 +47,11 @@ at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
 at com.Actions.MyVoucherActions.assertion(MyVoucherActions.java:122)
 at com.StepDefinitions.MyVoucherTest.the_user_should_seen_the(MyVoucherTest.java:90)
 at ✽.the user should seen the "3,00 IU's"(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/MyVouchers.feature:29)
+ branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 ]]>
     </error>
   </testcase> <!-- runScenario -->
+  <testcase classname="com.Runner.TestNGRunner" name="runScenario" time="36.599"/>
+  <testcase classname="com.Runner.TestNGRunner" name="runScenario" time="36.459"/>
+  <testcase classname="com.Runner.TestNGRunner" name="runScenario" time="37.683"/>
 </testsuite> <!-- com.Runner.TestNGRunner -->
