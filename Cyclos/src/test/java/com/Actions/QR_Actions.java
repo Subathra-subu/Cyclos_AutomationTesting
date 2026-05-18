@@ -2,7 +2,12 @@ package com.Actions;
 
 import org.openqa.selenium.By;
 
+import com.Pages.QRcode_page;
+
 public class QR_Actions extends BaseAction {
+	
+	
+	
 	public void l_click(By locator) {
 		click(locator);
 	}
