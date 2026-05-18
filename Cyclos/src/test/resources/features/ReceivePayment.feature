@@ -17,17 +17,15 @@ Background:
     Examples:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
+      | The Irish Pub      | 3      | Checking a payment     | 1234      |
+      | Business One       | 5      | Checking a payment     | 1234      |
       
 @ReceivePaymentWithInvalidName
- Scenario Outline: Verify failure message for blank user field
+ Scenario: Verify failure message for blank user field
  
-    And User leaves name field blank and enter details with "<Amount>"
+    And User leaves name field blank and enter only amount detail 
     And User clicks on the next button
     Then Appropriate error message for invalid user should be displayed
-
-    Examples:
-      | Amount |   
-      | 1      | 
 
 @ReceivePaymentWithInvalidAmount
   Scenario Outline: Verify failure message for blank amount field
@@ -39,6 +37,8 @@ Background:
     Examples:
       | Name             | Amount | Description               |   
       | The Bakery shop  | 00     | Making an Invalid Payment |
+      | The Irish Pub    | 3      | Checking a payment        |
+      | Business One     | 5      | Checking a payment        |
 
 
  @ReceivePaymentWithBlankDetails
@@ -58,4 +58,6 @@ Background:
     Examples:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
+      | The Irish Pub      | 3      | Checking a payment     | 1234      |
+      | Business One       | 5      | Checking a payment     | 1234      |
  

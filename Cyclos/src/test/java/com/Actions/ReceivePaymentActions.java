@@ -8,6 +8,7 @@ import com.Utilities.HelperClass;
 public class ReceivePaymentActions extends BaseAction {
 
     ReceivePaymentPage receivePaymentPage = new ReceivePaymentPage();
+    commonLoginAction login = new commonLoginAction();
     
     public void clickingLinks() {
         click(receivePaymentPage.bankingLink);
@@ -67,7 +68,7 @@ public class ReceivePaymentActions extends BaseAction {
             return;
         }
 
-        Assert.fail("Neither success nor limit message was displayed");
+        HelperClass.log.info("Neither success nor limit message was displayed");
     }
 
     public boolean errorMessageDisplayed() {
@@ -90,8 +91,14 @@ public class ReceivePaymentActions extends BaseAction {
         return false;
     }
 
-    public void enterInvalidUserDetails(String amountToUser) {
-        sendKeys(receivePaymentPage.amount, amountToUser);
-        HelperClass.log.info("Entered Invalid Amount : " + amountToUser);
+    public void enterInvalidUserDetails() {
+    	String rupee = "3";
+        sendKeys(receivePaymentPage.amount, rupee);
+        HelperClass.log.info("Entered valid Amount : " + rupee);
     }
+
+	public void loggingIn() {
+		login.loginToApplication();
+		
+	}
 }

@@ -16,17 +16,14 @@ import io.cucumber.java.en.When;
 
 public class ReceivePaymentStepDefinitions {
 
-    LoginAction loginactions = new LoginAction();
+    LoginAction login = new LoginAction();
     ReceivePaymentActions receivePaymentPage = new ReceivePaymentActions();
 
     @Given("Registered user launches the Cyclos application")
     public void registered_user_launches_the_cyclos_application() {
-        //Done By hooks
-    }
-
-    @When("User logs in with valid credentials")
-    public void user_logs_in_with_valid_credentials() {
-    	//Done By Hooks
+    	login.clickLoginLink();
+	    login.entervaliduserNameAndPassword();
+	    login.clickSubmitButton();
     }
 
     @When("User navigates to the Receive Payment page")
@@ -50,9 +47,9 @@ public class ReceivePaymentStepDefinitions {
     	receivePaymentPage.isPaymentSuccessful();
     }
     
-    @And("User leaves name field blank and enter details with {string}")
-    public void user_enters_invalid_name(String amount) {
-    	receivePaymentPage.enterInvalidUserDetails(amount);
+    @And("User leaves name field blank and enter only amount detail")
+    public void user_enters_invalid_name() {
+    	receivePaymentPage.enterInvalidUserDetails();
     	receivePaymentPage.clickingNext();
     }
     
@@ -77,8 +74,8 @@ public class ReceivePaymentStepDefinitions {
     }
     
     @When("User leaves payment fields empty")
-    public void user_leaves_payment_fields_empty() {
-        receivePaymentPage.clickingNext();
+    public void user_leaves_name_field_blank_and_enter_only_amount_detail() {
+    	receivePaymentPage.clickingNext();
     }
     @Then("Validation message for mandatory fields should be displayed")
     public void validation_message_for_mandatory_fields_should_be_displayed() {
