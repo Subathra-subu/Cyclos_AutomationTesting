@@ -20,7 +20,7 @@ public class PaymentToUserStepDefinition {
 
 	    private final LoginAction loginAction =
 	            new LoginAction();
-    @Given("User should be logged into the cyclos application and must on home page")
+    @Given("User should be logged into the application and must on home page")
     public void user_should_be_logged_into_the_application_and_must_on_home_page() {
     	HelperClass.openPage();
 
@@ -68,8 +68,8 @@ public class PaymentToUserStepDefinition {
     @Then("User clicks the next button and should validate limit exceeded message")
     public void user_clicks_the_next_button_and_should_validate_limit_exceeded_message() {
 
-    	actions.clickNext();
 
+    	actions.clickNext();
     	Assert.assertTrue(actions.validateLimitExceededMessage().contains("Amount"));
     }
     @When("User enters scheduled payment details")

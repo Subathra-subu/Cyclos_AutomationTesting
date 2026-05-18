@@ -39,14 +39,20 @@ public class PaymentToUserActions extends BaseAction {
 	public String validateErrorMessage() {
 		
 		waitForVisibility(paymentpage.errormsg);
+		
 		return  getText(paymentpage.errormsg);
+		
 	}
 	public void enterAmount(String amount) {
 
-		waitForVisibility(paymentpage.amountField);
-		sendKeys(paymentpage.amountField, amount);
-	}
+	    waitForVisibility(paymentpage.amountField);
 
+	   
+
+	    sendKeys(paymentpage.amountField, amount);
+
+	    click(paymentpage.descriptionField);
+	}
 	public String validatePaymentConfirmationTitle() {
 
 	    waitForVisibility(paymentpage.paymentConfirmationTitle);

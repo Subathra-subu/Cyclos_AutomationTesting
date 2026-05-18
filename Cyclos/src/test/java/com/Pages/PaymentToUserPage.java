@@ -10,7 +10,8 @@ public class PaymentToUserPage {
     public By errormsg = By.xpath("//user-field[@class='form-field ng-pristine ng-invalid ng-touched']//div[@class='invalid-feedback'][normalize-space()='This field is required']");
     public By amountField = By.xpath("//input[@type='tel']");
     public By paymentConfirmationTitle =By.xpath("//div[@class='title-text flex-grow-1 d-flex align-items-center']"); 
-    public By limitExceededMsg =By.xpath("//div[contains(text(),'Amount')]");    public By schedulingType = By.xpath("//div[@class='w-100 mw-100 text-truncate pr-3']");
+    public By limitExceededMsg =By.xpath("//field-errors/div[contains(@class,'invalid-feedback')]");
+    public By schedulingType = By.xpath("//div[@class='w-100 mw-100 text-truncate pr-3']");
     public By futureDate = By.xpath("//input[@type='date']");
     public By descriptionField =  By.xpath("//textarea");
     public By dropdown = By.xpath("//button[contains(@class,'form-control')]");

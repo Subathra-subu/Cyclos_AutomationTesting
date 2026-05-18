@@ -1,79 +1,138 @@
 package com.Utilities;
 
+import java.io.File;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.WebDriver;
 
 public class HelperClass {
-	
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
-	
-	private static ThreadLocal<WebDriverWait> wait = new ThreadLocal<>();
 
-	private static HelperClass helperClass;
+    private static ThreadLocal<WebDriver> driver =
+            new ThreadLocal<>();
 
-	HelperClass() {
+    private static ThreadLocal<WebDriverWait> wait =
+            new ThreadLocal<>();
 
-		ChromeOptions options = new ChromeOptions();
+    private static HelperClass helperClass;
 
-		if (ConfigureClass.isHeadless()) {
-			options.addArguments("--headless=new");
-		}
+    public static Logger log = LogManager.getLogger(HelperClass.class);
 
-		WebDriver webDriver = null;
+    // Download Path
+    public static String getDownloadPath() {
 
-		if (ConfigureClass.getBrowser().equalsIgnoreCase("chrome")) {
+        return System.getProperty("user.dir")
+                + File.separator
+                + "Downloads";
+    }
 
-			webDriver = new ChromeDriver(options);
+    // Constructor
+    HelperClass() {
 
-		} else {
+        ChromeOptions options = new ChromeOptions();
 
-			System.out.println("Browser not supported");
-		}
+        // Download setup
+        String downloadPath = getDownloadPath();
 
-		driver.set(webDriver);
+        new File(downloadPath).mkdirs();
 
-		wait.set(new WebDriverWait(webDriver, Duration.ofSeconds(10)));
+        Map<String, Object> prefs = new HashMap<>();
 
-		webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        prefs.put("download.default_directory", downloadPath);
+        prefs.put("download.prompt_for_download", false);
+        prefs.put("download.directory_upgrade", true);
+        prefs.put("safebrowsing.enabled", true);
+        prefs.put("plugins.always_open_pdf_externally", true);
 
-		webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        options.setExperimentalOption("prefs", prefs);
 
-		webDriver.manage().window().maximize();
-	}
+        // Browser options
+        options.addArguments("--disable-pdf-viewer");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--window-size=1920,1080");
 
-	public static void openPage() {
-		getDriver().get(ConfigureClass.getUrl());
-	}
+        // Headless mode
+        if (ConfigureClass.isHeadless()) {
 
-	public static WebDriver getDriver() {
-		return driver.get();
-	}
+            options.addArguments("--headless=new");
+            options.addArguments("--disable-gpu");
+        }
 
-	public static WebDriverWait getWait() {
-		return wait.get();
-	}
+        WebDriver webDriver = null;
 
-	public static void setupDriver() {
+        // Browser setup
+        if (ConfigureClass.getBrowser().equalsIgnoreCase("chrome")) {
 
-		if (helperClass == null) {
-			helperClass = new HelperClass();
-		}
-	}
+            webDriver = new ChromeDriver(options);
 
-	public static void tearDown() {
+        } else {
 
-		if (getDriver() != null) {
+            throw new RuntimeException(
+                    "Browser not supported");
+        }
 
-			getDriver().quit();
+        driver.set(webDriver);
 
-			driver.remove();
-			wait.remove();
-		}
+        // Using direct values instead of ConfigureClass methods
+        wait.set(new WebDriverWait(
+                webDriver,
+                Duration.ofSeconds(10)));
 
-		helperClass = null;
-	}
+        webDriver.manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(20));
+
+        webDriver.manage().timeouts()
+                .pageLoadTimeout(Duration.ofSeconds(20));
+
+        webDriver.manage().window().maximize();
+    }
+
+    // Setup Driver
+    public static void setupDriver() {
+
+        if (helperClass == null) {
+
+            helperClass = new HelperClass();
+        }
+    }
+
+    // Open URL
+    public static void openPage() {
+
+        getDriver().get(ConfigureClass.getUrl());
+    }
+
+    // Get Driver
+    public static WebDriver getDriver() {
+
+        return driver.get();
+    }
+
+    // Get Wait
+    public static WebDriverWait getWait() {
+
+        return wait.get();
+    }
+
+    // Tear Down
+    public static void tearDown() {
+
+        if (getDriver() != null) {
+
+            getDriver().quit();
+
+            driver.remove();
+            wait.remove();
+        }
+
+        helperClass = null;
+    }
 }
