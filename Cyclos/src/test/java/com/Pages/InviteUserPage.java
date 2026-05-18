@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 
 
-public class InviteUserPage extends BasePage {
+public class InviteUserPage  {
 
     By loginButton = By.xpath("//*[@id=\"login-link\"]/div");
 
