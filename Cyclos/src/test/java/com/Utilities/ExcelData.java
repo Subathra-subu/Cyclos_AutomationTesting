@@ -20,26 +20,6 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "AddFeature_sriram_k");
     }
-    
-    @DataProvider(name = "LoginData", parallel = true)
-    
-    public Object[][] Datalogin() throws IOException {
-
-        return getExcelData(
-                "src/test/resources/testData/ExcelData.xlsx",
-                "UserLogin_Subathra");
-    }
-
-
-    @DataProvider(name = "validVoucher", parallel = true)
-
-    public Object[][] validVoucher() throws IOException {
-
-        return getExcelData(
-                "src/test/resources/testData/ExcelData.xlsx",
-                "valid_vovucher");
-    }
-
 
     private Object[][] getExcelData(String file, String sheet) {
 

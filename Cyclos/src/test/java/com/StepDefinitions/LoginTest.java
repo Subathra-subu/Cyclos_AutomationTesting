@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.Actions.DashBoardAction;
 import com.Actions.LoginAction;
-import com.Utilities.ExcelData;
+import com.Utilities.ExcelUtilities;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.en.Given;
@@ -70,9 +70,9 @@ public class LoginTest {
 		
 		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
 
-	    String username = ExcelData.getCellData(path,"Sheet1",1,0);
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",1,0);
 
-	    String password = ExcelData.getCellData(path,"Sheet1",1,1);
+	    String password = ExcelUtilities.getCellData(path,"Sheet1",1,1);
 
 	    loginAction.enterBlankUserName(username,password);
 	   
@@ -91,7 +91,7 @@ public class LoginTest {
 		
 		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
 
-	    String username = ExcelData.getCellData(path,"Sheet1",2,0);
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",2,0);
 
 	    String password = ExcelUtilities.getCellData(path,"Sheet1",2,1);
 
@@ -113,9 +113,9 @@ public class LoginTest {
 		
 		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
 
-	    String username = ExcelData.getCellData(path,"Sheet1",3,0);
+	    String username = ExcelUtilities.getCellData(path,"Sheet1",3,0);
 
-	    String password = ExcelData.getCellData(path,"Sheet1",3,1);
+	    String password = ExcelUtilities.getCellData(path,"Sheet1",3,1);
 
 	    loginAction.enterBlankInputs(username,password);
 	   

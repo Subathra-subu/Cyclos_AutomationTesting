@@ -102,7 +102,6 @@ public class BaseAction {
 			HelperClass.log.error("Failed to scroll into view: " + locator.toString() + " | Error: " + e.getMessage());
 			throw e;
 		}
-
 	}
 	
 	public boolean isSelected(By locator) {
@@ -137,7 +136,6 @@ public class BaseAction {
 
 	        return false;
 	    }
-
 	}
 
 	public boolean isDisplayed(By locator) {

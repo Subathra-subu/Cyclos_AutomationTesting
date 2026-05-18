@@ -28,4 +28,3 @@ public class CommonLoginPage  {
 
             By.xpath("//span[text()=\"Submit\"]");
 }
-
