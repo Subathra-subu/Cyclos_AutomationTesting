@@ -2,7 +2,7 @@ package com.Pages;
 
 import org.openqa.selenium.By;
 
-public class CommonLoginPage extends BasePage {
+public class CommonLoginPage  {
 
     
 
