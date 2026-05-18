@@ -2,6 +2,9 @@ package com.StepDefinitions;
 
 import java.util.List;
 
+
+import com.Actions.LoginAction;
+
 import com.Actions.MyVoucherActions;
 import com.Utilities.HelperClass;
 
@@ -16,12 +19,23 @@ public class MyVoucherTest
 
 	MyVoucherActions MyVouAcc = new MyVoucherActions();
 
-	@Given("the user in the Marketplace place page")
-	public void the_user_in_the_marketplace_place_page() {
-		// Write code here that turns the phrase above into concrete actions
+	
+	LoginAction login = new LoginAction();
+	
+	@Given("the user login with the valid data")
+	public void the_user_login_with_the_valid_data() {
+	    // Write code here that turns the phrase above into concrete actions
+	    login.clickLoginLink();
+	    login.entervaliduserNameAndPassword();
+	    login.clickSubmitButton();
+	}
 
+	@Given("the user navigate to the Marketplace place page")
+	public void the_user_navigate_to_the_marketplace_place_page() {
+	    // Write code here that turns the phrase above into concrete actions
 		MyVouAcc.clickMarkPlace();
 	}
+
 
 	@Given("the user click the MyVochers")
 	public void the_user_click_the_my_vochers() {

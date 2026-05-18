@@ -29,4 +29,5 @@ public class MyVouchersPages
 
 	public By restaurant = By.xpath("//a[text()=\" Restaurant voucher \"]");
 
+	public By assertPopUp = By.xpath("//*[contains(text(),'The voucher(s) has been bought.')]");
 }
