@@ -16,7 +16,8 @@ Then User should successfully complete the payment
 
 Examples:
 | username    | amount |
-| Active Walking | 100    |
+| Active Walking | 100 |
+|The Bakery shop | 6,40|
 
 @LimitValidation
 Scenario Outline: Verify validation message when payment amount exceeds available limit
@@ -27,6 +28,7 @@ Then User clicks the next button and should validate limit exceeded message
 Examples:
 | username    | amount |
 | Active Walking  | 999999 |
+|The Bakery shop   |  999  |
 
 @ScheduledPayment
 Scenario: Verify scheduled payment functionality
