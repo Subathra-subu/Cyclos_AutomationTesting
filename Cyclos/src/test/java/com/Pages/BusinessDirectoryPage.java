@@ -20,12 +20,9 @@ public class BusinessDirectoryPage {
 
     public By descendingOrder =By.xpath("//a[contains(text(),'Name (Z-A)')]");
     
-    public By activeListView =
-    		By.xpath("//label[contains(@class,'resultType-list') and contains(@class,'active')]");
+    public By activeListView =By.xpath("//label[contains(@class,'resultType-list') and contains(@class,'active')]");
 
-    		public By activeTiledView =
-    		By.xpath("//label[contains(@class,'resultType-tiles') and contains(@class,'active')]");
+    public By activeTiledView =By.xpath("//label[contains(@class,'resultType-tiles') and contains(@class,'active')]");
 
-    		public By firstBusinessName =
-    		By.xpath("(//div[contains(@class,'card-body')]//a)[1]");
+    public By firstBusinessName =By.xpath("(//div[contains(@class,'card-body')]//a)[1]");
 }
