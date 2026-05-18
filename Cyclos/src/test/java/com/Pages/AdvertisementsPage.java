@@ -8,65 +8,19 @@ import org.openqa.selenium.WebElement;
 
 public class AdvertisementsPage {
 
-    WebDriver driver;
+	public By marketPlaceLink = By.xpath("//div[@class='menu-text'][normalize-space()='Marketplace']");
+	public By advertisementsLink = By.xpath("//div[@class='main-container container-md d-flex flex-column flex-grow-1']//a[2]");
+    public By searching = By.id("id_48");
+    public By favtIcon = By.xpath("(//ad-favorite//button)[1]");
+    public By advertisementsMenu = By.id("menu_advertisements");
+    public By searchField = By.id("searchField");
+    public By searchButton = By.id("searchButton");
+    public By results = By.className("ad-item");
+    public By noResults = By.id("noResultsMessage");
+    public By favIcon = By.className("fav-icon");
+    public By successMsg = By.id("successMessage");
+    public By favouritesMenu = By.id("menu_favourites");
+    public By favItems = By.className("fav-item");
+    public By sortDropdown = By.id("sortDropdown");
 
-    public AdvertisementsPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    // Locators
-    By advertisementsMenu = By.id("menu_advertisements");
-    By searchField = By.id("searchField");
-    By searchButton = By.id("searchButton");
-    By results = By.className("ad-item");
-    By noResults = By.id("noResultsMessage");
-    By favIcon = By.className("fav-icon");
-    By successMsg = By.id("successMessage");
-    By favouritesMenu = By.id("menu_favourites");
-    By favItems = By.className("fav-item");
-    By sortDropdown = By.id("sortDropdown");
-
-    // Actions
-    public void clickAdvertisementsMenu() {
-        driver.findElement(advertisementsMenu).click();
-    }
-
-    public void enterSearch(String keyword) {
-        driver.findElement(searchField).clear();
-        driver.findElement(searchField).sendKeys(keyword);
-    }
-
-    public void clickSearch() {
-        driver.findElement(searchButton).click();
-    }
-
-    public int getResultsCount() {
-        List<WebElement> list = driver.findElements(results);
-        return list.size();
-    }
-
-    public String getNoResultMessage() {
-        return driver.findElement(noResults).getText();
-    }
-
-    public void clickFavouriteIcon() {
-        driver.findElement(favIcon).click();
-    }
-
-    public String getSuccessMessage() {
-        return driver.findElement(successMsg).getText();
-    }
-
-    public void clickFavouritesMenu() {
-        driver.findElement(favouritesMenu).click();
-    }
-
-    public int getFavouritesCount() {
-        return driver.findElements(favItems).size();
-    }
-
-    public void selectSort(String type) {
-        driver.findElement(sortDropdown).click();
-        driver.findElement(By.xpath("//option[text()='" + type + "']")).click();
-    }
 }

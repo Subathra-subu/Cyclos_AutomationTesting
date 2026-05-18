@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.Actions.LoginActions;
+import com.Actions.commonLogin;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.After;
@@ -19,7 +19,7 @@ public class Hooks {
 
     public static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    LoginActions loginActions = new LoginActions();
+    commonLogin loginActions = new commonLogin();
 
     @Before
     public void setUp(Scenario scenario) {
@@ -32,44 +32,40 @@ public class Hooks {
         logger.info("Setup complete. Browser ready.");
     }
 
+    // AI refer 
     @After
+  
     public void tearDown(Scenario scenario) {
+
         if (scenario.isFailed()) {
 
             try {
-                byte[] screenshotBytes =
-                        ((TakesScreenshot) HelperClass.getDriver())
-                                .getScreenshotAs(OutputType.BYTES);
 
-                
+                byte[] screenshotBytes = ((TakesScreenshot) HelperClass.getDriver())
+                        .getScreenshotAs(OutputType.BYTES);
+
                 scenario.attach(screenshotBytes, "image/png", "Failure Screenshot");
 
+                File screenshotFile = ((TakesScreenshot) HelperClass.getDriver())
+                        .getScreenshotAs(OutputType.FILE);
+
                 
-                File screenshotsDir = new File("screenshots");
-                if (!screenshotsDir.exists()) screenshotsDir.mkdirs();
+                String fileName = scenario.getName().replace(" ", "_");
 
-                File screenshotFile =
-                        ((TakesScreenshot) HelperClass.getDriver())
-                                .getScreenshotAs(OutputType.FILE);
+                FileUtils.copyFile(
+                        screenshotFile,
+                        new File("screenshots/" + fileName + ".png"));
 
-                File destinationFile = new File(
-                        "screenshots"
-                                + File.separator
-                                + scenario.getName().replaceAll("[^a-zA-Z0-9]", "_")
-                                + ".png");
-
-                FileUtils.copyFile(screenshotFile, destinationFile);
-
-                logger.error("=== Scenario FAILED: {} — screenshot saved ===",
-                        scenario.getName());
+                logger.error("Scenario Failed : " + scenario.getName());
 
             } catch (Exception e) {
-                logger.error("Failed to save screenshot for scenario '{}': {}",
-                        scenario.getName(), e.getMessage());
+
+                logger.error("Screenshot capture failed");
             }
 
         } else {
-            logger.info("=== Scenario PASSED: {} ===", scenario.getName());
+
+            logger.info("Scenario Passed : " + scenario.getName());
         }
 
         HelperClass.tearDown();

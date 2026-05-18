@@ -1,21 +1,29 @@
-Feature: Advertisements Module
+@AdvertisementsFeature
+Feature: Advertisements
+
+Description: This feature is used to verify features of MarketPlace's Advertisements
 
   Background:
     Given user is logged into the application
     And user navigates to advertisements page
-
+@ValidKeywordSearch
   Scenario Outline: Verify keyword search functionality
     When user searches for "<keyword>"
     Then matching advertisements should be displayed
 
     Examples:
       | keyword   |
+      | 5 star    |
+
+  Scenario Outline: Verify no result message for invalid keyword search
+    When user searches for "<invalidKeyword>"
+    Then no results message should be displayed
+    
+    Examples:
+      | keyword   |
       | mobile    |
       | laptop    |
-
-  Scenario: Verify no result message for invalid keyword search
-    When user searches for "invalidproduct123"
-    Then no results message should be displayed
+    
 
   Scenario: Verify user can add product to favourites
     When user adds a product to favourites
