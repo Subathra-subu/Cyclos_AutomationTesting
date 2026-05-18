@@ -4,8 +4,9 @@ import java.util.Map;
 
 import org.testng.Assert;
 
-import com.Actions.LoginAction;
+
 import com.Actions.PaymentToUserActions;
+import com.Actions.commonLoginAction;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -17,18 +18,13 @@ public class PaymentToUserStepDefinition {
 
 	 private final PaymentToUserActions actions =
 	            new PaymentToUserActions();
-
-	    private final LoginAction loginAction =
-	            new LoginAction();
+   commonLoginAction login=new commonLoginAction();
+	    
     @Given("User should be logged into the application and must on home page")
     public void user_should_be_logged_into_the_application_and_must_on_home_page() {
     	HelperClass.openPage();
-
-        loginAction.clickLoginLink();
-
-        loginAction.entervaliduserNameAndPassword();
-
-        loginAction.clickSubmitButton();
+        login.loginToApplication();
+       
     }
     @When("User clicks the payment to user button")
     public void user_clicks_the_payment_to_user_button() {
