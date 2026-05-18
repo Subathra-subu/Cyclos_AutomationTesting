@@ -6,23 +6,24 @@ Description: This feature is used to verify features of MarketPlace's Advertisem
   Background:
     Given user is logged into the application
     And user navigates to advertisements page
+    
 @ValidKeywordSearch
   Scenario Outline: Verify keyword search functionality
-    When user searches for "<keyword>"
+    When user searches for a valid keyword"<keyword>"
     Then matching advertisements should be displayed
 
     Examples:
       | keyword   |
       | 5 star    |
 
+@InvalidKeywordSearch
   Scenario Outline: Verify no result message for invalid keyword search
-    When user searches for "<invalidKeyword>"
+    When user searches for invalid keyword "<keyword>"
     Then no results message should be displayed
     
     Examples:
       | keyword   |
-      | mobile    |
-      | laptop    |
+      | red       |
     
 
   Scenario: Verify user can add product to favourites

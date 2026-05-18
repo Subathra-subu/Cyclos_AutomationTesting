@@ -22,7 +22,7 @@ public class AdvertisementsStepDefinition {
     	adsActions.clickingLinks();
     }
     
-    @When("user searches for {string}")
+    @When("user searches for a valid keyword{string}")
     public void user_searches_for_keyword(String keyword) {
     	adsActions.searchingProduct(keyword);
     }
@@ -31,4 +31,16 @@ public class AdvertisementsStepDefinition {
     public void matching_advertisements_should_be_displayed() {
         adsActions.favtIconCheck();
     }
+    
+    @When("user searches for invalid keyword {string}")
+    public void user_searches_for_invalid_keyword(String keyword) {
+    	adsActions.searchingProduct(keyword);
+    }
+    
+    @Then("no results message should be displayed")
+    public void no_results_message_should_be_displayed() {
+    	adsActions.noresultError();
+    }
+    
+    @When("user adds a product to favourites")
 }
