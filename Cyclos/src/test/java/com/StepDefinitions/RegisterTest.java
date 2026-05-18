@@ -81,7 +81,14 @@ public class RegisterTest {
 	@When("the user enters the already existing Login name")
 	public void the_user_enters_the_already_existing_login_name(io.cucumber.datatable.DataTable dataTable) {
 	    
+		List<Map<String, String>> data = dataTable.asMaps(String.class,String.class);
+
+		String name = data.get(0).get("name");
+
+		String loginName = data.get(0).get("loginName");
 		
+		
+		registerAction.enterExistingDetails(name,loginName);
 		
 		
 	}

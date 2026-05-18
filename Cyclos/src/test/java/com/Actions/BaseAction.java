@@ -103,6 +103,40 @@ public class BaseAction {
 			throw e;
 		}
 	}
+	
+	public boolean isSelected(By locator) {
+
+	    try {
+
+	        WebDriverWait wait =
+	                new WebDriverWait(HelperClass.getDriver(),
+	                        Duration.ofSeconds(2));
+
+	        return wait.until(
+	                ExpectedConditions.visibilityOfElementLocated(locator))
+	                .isSelected();
+
+	    } catch (Exception e) {
+
+	        return false;
+	    }
+	}public boolean isEnabled(By locator) {
+
+	    try {
+
+	        WebDriverWait wait =
+	                new WebDriverWait(HelperClass.getDriver(),
+	                        Duration.ofSeconds(2));
+
+	        return wait.until(
+	                ExpectedConditions.visibilityOfElementLocated(locator))
+	                .isEnabled();
+
+	    } catch (Exception e) {
+
+	        return false;
+	    }
+	}
 
 	public boolean isDisplayed(By locator) {
 

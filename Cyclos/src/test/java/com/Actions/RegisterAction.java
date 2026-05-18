@@ -191,6 +191,14 @@ public class RegisterAction extends BaseAction {
 			Assert.assertEquals(actual,expected);
 	}
 	
+	public void enterExistingDetails(String name,String loginName){
+		
+		enterName(name);
+
+		enterLoginName(loginName);
+		
+	}
+	
 	public void assertAlreadyExistMessage(String expected) {
 		
 		String actual = getText(registerPage.existMessage);

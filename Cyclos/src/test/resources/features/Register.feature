@@ -13,7 +13,7 @@ Background:
   	And the user clicks submit button
   	Then the user should be able to see the "Registration successful" message
   	
-  	@ExistRegsiter
+  	@ExistRegister
   	Scenario: Register with Existing credentials
   	When the user upload profile image
 	When the user enters the already existing Login name

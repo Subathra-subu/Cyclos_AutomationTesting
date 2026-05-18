@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 //		features = "@target/rerun.txt",
 		
 		glue = "com.StepDefinitions",
-//		tags="@BlankUsername",
+		tags="@ExistRegister",
 		plugin = {
 				"pretty",
 				"html:target/cucumber-reports.html",
