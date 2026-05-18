@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
@@ -7,3 +8,15 @@
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+=======
+
+<suite name="Cyclos Automation Suite" verbose="1">
+
+    <test name="Tickets Tests">
+        <classes>
+            <class name="com.Runner.TestNGRunner"/>
+        </classes>
+    </test>
+
+</suite>
+>>>>>>> 338a53298425b5f5311eb1554fe47cde9d544bdc

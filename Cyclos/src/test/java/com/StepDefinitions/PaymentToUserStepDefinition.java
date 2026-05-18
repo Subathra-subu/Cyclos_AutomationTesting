@@ -4,7 +4,7 @@ import java.util.Map;
 
 import org.testng.Assert;
 
-
+import com.Actions.LoginAction;
 import com.Actions.PaymentToUserActions;
 import com.Actions.commonLoginAction;
 import com.Utilities.HelperClass;
@@ -18,12 +18,22 @@ public class PaymentToUserStepDefinition {
 
 	 private final PaymentToUserActions actions =
 	            new PaymentToUserActions();
-   commonLoginAction login=new commonLoginAction();
-	    
-    @Given("User clicks the payment to user button")
-    public void user_clicks_the_payment_to_user_button() {
-    	actions.clickPayUser();
-    }
+	 LoginAction login = new LoginAction();	    
+	 @Given("User should be logged into application and must on home page")
+	 public void user_should_be_logged_into_application_and_must_on_home_page() {
+
+	     HelperClass.openPage();
+
+	     login.clickLoginLink();
+
+	     login.entervaliduserNameAndPassword();
+
+	     login.clickSubmitButton();
+	 }
+   @When("User clicks the payment to user button")
+   public void user_clicks_the_payment_to_user_button() {
+   	actions.clickPayUser();
+   }
     
     @When("User gives the empty user field {string}")
     public void user_gives_the_empty_user_field(String value) {
