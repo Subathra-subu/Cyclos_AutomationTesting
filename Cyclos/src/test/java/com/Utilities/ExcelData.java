@@ -11,6 +11,16 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class ExcelData {
+	
+	@DataProvider(name = "validLogin", parallel = true)
+
+    public Object[][] LoginData() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "UserLogin_Subathra");
+    }
+
 
     @DataProvider(name = "addNew", parallel = true)
 
