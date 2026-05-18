@@ -96,21 +96,29 @@ public class RegisterTest {
 	@When("the user clicks next button")
 	public void the_user_clicks_next_button() {
 	    
-		
+		registerAction.clickNextButton();
 		
 	}
 
 	@Then("the user should be able to see the {string} message under login name field")
 	public void the_user_should_be_able_to_see_the_message_under_login_name_field(String string) {
 	   
-		
+		registerAction.assertAlreadyExistMessage(string);
 		
 	}
 	
 	@When("the user leaves the name,loginName and email input field blank")
 	public void the_user_leaves_the_name_login_name_and_email_input_field_blank(io.cucumber.datatable.DataTable dataTable) {
 	   
+		List<Map<String, String>> data = dataTable.asMaps(String.class,String.class);
+
+		String name = data.get(0).get("name");
+
+		String loginName = data.get(0).get("loginName");
 		
+		String email = data.get(0).get(email);
+		
+		registerAction.enterBlankDetails(name,loginName,email);
 	}
 
 	@Then("the user should be able to see the {string} message under the blank fields")

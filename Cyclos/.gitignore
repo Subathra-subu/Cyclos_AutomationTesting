@@ -8,3 +8,4 @@ logs/
 screenshots/
 src/test/java/com/Runner/
 src/test/java/com/StepDefinitions/Hooks.java
+pom.xml/

@@ -205,5 +205,16 @@ public class RegisterAction extends BaseAction {
 		
 		Assert.assertEquals(actual, expected);
 	}
+	
+	public void enterBlankDetails(String name,String loginName,String email) {
+		
+		enterName(name);
+		
+		enterLoginName(loginName);
+		
+		enterEmail(email);
+	}
+	
+	
 
 }
