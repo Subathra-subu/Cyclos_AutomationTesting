@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @Test
 @CucumberOptions(
-		features = "src/test/resources/features/Login.feature",
+		features = "src/test/resources/features/Register.feature",
 		
 //		features = "@target/rerun.txt",
 		
