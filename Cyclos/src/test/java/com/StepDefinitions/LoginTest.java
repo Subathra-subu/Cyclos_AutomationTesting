@@ -68,11 +68,11 @@ public class LoginTest {
 	@When("the user enters a valid password and leaves the username field blank")
 	public void the_user_enters_a_valid_password_and_leaves_the_username_field_blank() throws IOException {
 		
-		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
+		String path = System.getProperty("user.dir") + "/src/test/resources/testData/ExcelData.xlsx";
 
-	    String username = ExcelUtilities.getCellData(path,"Sheet1",1,0);
+	    String username = ExcelUtilities.getCellData(path,"UserLogin_Subathra",1,0);
 
-	    String password = ExcelUtilities.getCellData(path,"Sheet1",1,1);
+	    String password = ExcelUtilities.getCellData(path,"UserLogin_Subathra",1,1);
 
 	    loginAction.enterBlankUserName(username,password);
 	   
@@ -89,11 +89,11 @@ public class LoginTest {
 	@When("the user enter a valid userName and leaves the password field blank")
 	public void the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank() throws IOException {
 		
-		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
+		String path = System.getProperty("user.dir") + "/src/test/resources/testData/ExcelData.xlsx";
 
-	    String username = ExcelUtilities.getCellData(path,"Sheet1",2,0);
+	    String username = ExcelUtilities.getCellData(path,"UserLogin_Subathra",2,0);
 
-	    String password = ExcelUtilities.getCellData(path,"Sheet1",2,1);
+	    String password = ExcelUtilities.getCellData(path,"UserLogin_Subathra",2,1);
 
 	    loginAction.enterBlankPassword(username,password);
 		
@@ -113,9 +113,9 @@ public class LoginTest {
 		
 		String path = System.getProperty("user.dir") + "/src/test/resources/testData/LoginData.xlsx";
 
-	    String username = ExcelUtilities.getCellData(path,"Sheet1",3,0);
+	    String username = ExcelUtilities.getCellData(path,"UserLogin_Subathra",3,0);
 
-	    String password = ExcelUtilities.getCellData(path,"Sheet1",3,1);
+	    String password = ExcelUtilities.getCellData(path,"UserLogin_Subathra",3,1);
 
 	    loginAction.enterBlankInputs(username,password);
 	   
