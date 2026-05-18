@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 17 16:17:45 IST 2026</td>
+<td>Started on:</td><td>Mon May 18 20:17:16 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>63 seconds (63385 ms)</td>
+<tr><td>Total time:</td><td>92 seconds (92041 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,37 +76,69 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;was created&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;was created&apos;)]&quot;}.
-(tried for 10 seconds with 500 milliseconds interval)
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the restaruant voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //label-value[2]//div[1]//div[1], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label-value[2]//div[1]//div[1]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51752}, goog:processID: 28660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51752/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3ecd6402587b4895ff40a4a40b355dd9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50646}, goog:processID: 2136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50646/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3518770454a76cc59cb6ba0fa6d55473
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
 	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
-	at com.Actions.AddInterestActions.assertPopup(AddInterestActions.java:240)
-	at com.StepDefinitions.AddInterestTest.the_user_should_see_the_popup_message(AddInterestTest.java:115)
-	at ✽.the user should see the popup message &quot;The ad interest was created&quot;(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/AdInterest.feature:18)
-</pre></div><a href='#' onClick='toggleBox("stack-trace355325641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace355325641'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;was created&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;was created&apos;)]&quot;}.
-(tried for 10 seconds with 500 milliseconds interval)
+	at com.Actions.MyVoucherActions.assertion(MyVoucherActions.java:122)
+	at com.StepDefinitions.MyVoucherTest.the_user_should_seen_the(MyVoucherTest.java:90)
+	at ✽.the user should seen the &quot;2,00 IU&apos;s&quot;(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/MyVouchers.feature:42)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1281248250", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1281248250'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //label-value[2]//div[1]//div[1], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label-value[2]//div[1]//div[1]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51752}, goog:processID: 28660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51752/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3ecd6402587b4895ff40a4a40b355dd9
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50646}, goog:processID: 2136, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50646/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3518770454a76cc59cb6ba0fa6d55473
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
 	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
-	at com.Actions.AddInterestActions.assertPopup(AddInterestActions.java:240)
-	at com.StepDefinitions.AddInterestTest.the_user_should_see_the_popup_message(AddInterestTest.java:115)
-	at ✽.the user should see the popup message &quot;The ad interest was created&quot;(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/AdInterest.feature:18)
+	at com.Actions.MyVoucherActions.assertion(MyVoucherActions.java:122)
+	at com.StepDefinitions.MyVoucherTest.the_user_should_seen_the(MyVoucherTest.java:90)
+	at ✽.the user should seen the &quot;2,00 IU&apos;s&quot;(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/MyVouchers.feature:42)
 </pre></div></td>
-<td>42</td>
-<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
+<td>38</td>
+<td>com.Runner.TestNGRunner@79c97cb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the gift voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //label-value[2]//div[1]//div[1], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label-value[2]//div[1]//div[1]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50064}, goog:processID: 10480, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50064/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f2cf42330730f898259eccd98877eb63
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.MyVoucherActions.assertion(MyVoucherActions.java:122)
+	at com.StepDefinitions.MyVoucherTest.the_user_should_seen_the(MyVoucherTest.java:90)
+	at ✽.the user should seen the &quot;3,00 IU&apos;s&quot;(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/MyVouchers.feature:29)
+</pre></div><a href='#' onClick='toggleBox("stack-trace369270319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace369270319'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //label-value[2]//div[1]//div[1], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label-value[2]//div[1]//div[1]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50064}, goog:processID: 10480, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50064/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f2cf42330730f898259eccd98877eb63
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.MyVoucherActions.assertion(MyVoucherActions.java:122)
+	at com.StepDefinitions.MyVoucherTest.the_user_should_seen_the(MyVoucherTest.java:90)
+	at ✽.the user should seen the &quot;3,00 IU&apos;s&quot;(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/MyVouchers.feature:29)
+</pre></div></td>
+<td>36</td>
+<td>com.Runner.TestNGRunner@79c97cb</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -117,15 +149,10 @@ Session ID: 3ecd6402587b4895ff40a4a40b355dd9
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement without Name Fields", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the Cinema voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
 <td></td>
-<td>42</td>
-<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete an Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
-<td></td>
-<td>57</td>
-<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
+<td>14</td>
+<td>com.Runner.TestNGRunner@79c97cb</td></tr>
 </table><p>
 </body>
 </html>
