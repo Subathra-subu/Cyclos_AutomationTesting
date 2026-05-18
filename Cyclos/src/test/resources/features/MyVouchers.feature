@@ -16,8 +16,8 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
     Then the user should seen the "<assert>"
 
     Examples:
-      | no | amount | assert    |
-      | 1  | 1      | 1,00 IU's |
+      | no | amount | assert                          |
+      | 1  | 1      | The voucher(s) has been bought. |
 
   @buyVouchers @gift
   Scenario Outline: To verify the gift voucher
@@ -29,8 +29,8 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
     Then the user should seen the "<assert>"
 
     Examples:
-      | no | amount | assert    |
-      | 3  | 3      | 3,00 IU's |
+      | no | amount | assert                          |
+      | 3  | 3      | The voucher(s) has been bought. |
 
   @buyVouchers @restaruant
   Scenario: To verify the restaruant voucher
@@ -42,5 +42,5 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
     Then the user should seen the "<assert>"
 
     Examples:
-      | no | amount | assert    |
-      | 2  | 2      | 2,00 IU's |
+      | no | amount | assert                          |
+      | 2  | 2      | The voucher(s) has been bought. |

@@ -2,7 +2,9 @@ package com.StepDefinitions;
 
 import java.util.List;
 
+
 import com.Actions.LoginAction;
+
 import com.Actions.MyVoucherActions;
 import com.Utilities.HelperClass;
 
@@ -16,6 +18,7 @@ public class MyVoucherTest
 //	List<String> data = 
 
 	MyVoucherActions MyVouAcc = new MyVoucherActions();
+
 	
 	LoginAction login = new LoginAction();
 	
@@ -32,7 +35,6 @@ public class MyVoucherTest
 	    // Write code here that turns the phrase above into concrete actions
 		MyVouAcc.clickMarkPlace();
 	}
-
 
 
 	@Given("the user click the MyVochers")
