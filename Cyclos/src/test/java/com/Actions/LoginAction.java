@@ -1,5 +1,5 @@
 package com.Actions;
-//login action
+//login actio
 import org.openqa.selenium.By;
 import org.testng.Assert;
 

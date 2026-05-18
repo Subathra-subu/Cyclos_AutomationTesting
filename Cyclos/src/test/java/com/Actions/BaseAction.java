@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.Utilities.HelperClass;
-//baseaction
+//basea
 public class BaseAction {
 
 	public void click(By locator) {

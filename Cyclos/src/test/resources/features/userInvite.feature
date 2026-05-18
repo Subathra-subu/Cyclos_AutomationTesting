@@ -3,7 +3,7 @@ Feature: Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionali
   Background:
     Given User loads the Cyclos application
     And user logs in to the application with valid credentials
-
+@validInvite
  Scenario Outline: Verify user can invite with valid email
     When User navigates to Invite Users page
     And User enters valid email "<email>"
