@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import com.Pages.PaymentToUserPage;
 import com.Utilities.ConfigureClass;
+import com.Utilities.HelperClass;
 
 public class PaymentToUserActions extends BaseAction {
 	PaymentToUserPage paymentpage = new PaymentToUserPage();
@@ -48,7 +49,8 @@ public class PaymentToUserActions extends BaseAction {
 	public String validatePaymentConfirmationTitle() {
 
 	    waitForVisibility(paymentpage.paymentConfirmationTitle);
-	    return getText(paymentpage.paymentConfirmationTitle);
+
+	    return HelperClass.getDriver().findElement(paymentpage.paymentConfirmationTitle).getText();
 	}
 
 	public String validateLimitExceededMessage() {
@@ -58,9 +60,9 @@ public class PaymentToUserActions extends BaseAction {
 	}
 	public void selectSchedulingType(String type) {
 
-	    scrollIntoView(paymentpage.dropdown);
-
 	    waitForVisibility(paymentpage.dropdown);
+
+	    scrollIntoView(paymentpage.dropdown);
 
 	    click(paymentpage.dropdown);
 

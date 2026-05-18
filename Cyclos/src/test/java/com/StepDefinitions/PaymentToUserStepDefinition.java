@@ -20,16 +20,11 @@ public class PaymentToUserStepDefinition {
 	            new PaymentToUserActions();
    commonLoginAction login=new commonLoginAction();
 	    
-    @Given("User should be logged into the application and must on home page")
-    public void user_should_be_logged_into_the_application_and_must_on_home_page() {
-    	HelperClass.openPage();
-        login.loginToApplication();
-       
-    }
-    @When("User clicks the payment to user button")
+    @Given("User clicks the payment to user button")
     public void user_clicks_the_payment_to_user_button() {
     	actions.clickPayUser();
     }
+    
     @When("User gives the empty user field {string}")
     public void user_gives_the_empty_user_field(String value) {
     	

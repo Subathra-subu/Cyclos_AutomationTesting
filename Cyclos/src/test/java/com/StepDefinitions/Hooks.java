@@ -21,19 +21,7 @@ public class Hooks {
 
     commonLoginAction loginActions = new commonLoginAction();
 
-    @Before
-    public void setUplogin(Scenario scenario) {
-    	
-        logger.info("=== Scenario STARTED: {} ===", scenario.getName());
-
-        HelperClass.setupDriver();
-        HelperClass.openPage();
-        
-        
-        
-
-        logger.info("Setup complete. Browser ready.");
-    }
+   
     @Before
     public void setUp(Scenario scenario) {
         logger.info("=== Scenario STARTED: {} ===", scenario.getName());

@@ -2,8 +2,8 @@ Feature: Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality
 Description:This feature file is used to verify the payment to user functionality
 
   Background:
-    Given User should be logged into the application and must on home page
-    When User clicks the payment to user button
+  
+    Given User clicks the payment to user button
 @BlankUserValidation
   Scenario: Verify validation message for blank user field
     When User gives the empty user field ""

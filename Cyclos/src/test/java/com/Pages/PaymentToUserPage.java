@@ -14,7 +14,7 @@ public class PaymentToUserPage {
     public By schedulingType = By.xpath("//div[@class='w-100 mw-100 text-truncate pr-3']");
     public By futureDate = By.xpath("//input[@type='date']");
     public By descriptionField =  By.xpath("//textarea");
-    public By dropdown =By.xpath("//button[contains(@class,'dropdown-toggle')]");
+    public By dropdown = By.xpath("//button[contains(@class,'form-control')]");
 
     public By scheduledOption =By.xpath("//a[normalize-space()='Scheduled']");
 
