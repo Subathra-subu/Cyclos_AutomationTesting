@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-allure-results/
-HtmlReport/
-PdfReport/
-Reports/
-test-output/
-target/
-logs/
-screenshots/
 
-=======
 # Maven Target Folder
 /target/
 
@@ -52,4 +42,4 @@ Downloads/
 # OS Files
 .DS_Store
 Thumbs.db
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+
