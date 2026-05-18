@@ -33,6 +33,16 @@ public class Hooks {
         logger.info("Setup complete. Browser ready.");
     }
 
+  @Before
+    public void setUp(Scenario scenario) {
+        logger.info("=== Scenario STARTED: {} ===", scenario.getName());
+
+        HelperClass.setupDriver();
+        HelperClass.openPage();
+        loginActions.loginToApplication();
+
+        logger.info("Setup complete. Browser ready.");
+    }
     // AI refer 
     @After
   
