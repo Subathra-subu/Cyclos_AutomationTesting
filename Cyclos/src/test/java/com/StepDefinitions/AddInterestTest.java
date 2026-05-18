@@ -114,8 +114,6 @@ public class AddInterestTest
 	    // Write code here that turns the phrase above into concrete actions
 	   addInterestActions.assertPopup(string);
 	}
-	
-	
 
 
 

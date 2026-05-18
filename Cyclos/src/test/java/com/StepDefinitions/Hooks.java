@@ -8,7 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.Actions.commonLoginAction;
+import com.Actions.LoginAction;
+
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.After;
@@ -19,15 +20,18 @@ public class Hooks {
 
     public static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    commonLoginAction loginActions = new commonLoginAction();
+    LoginAction loginActions = new LoginAction();
 
     @Before
-    public void setUp(Scenario scenario) {
+    public void setUplogin(Scenario scenario) {
+    	
         logger.info("=== Scenario STARTED: {} ===", scenario.getName());
 
         HelperClass.setupDriver();
         HelperClass.openPage();
-        loginActions.loginToApplication();
+        
+        
+        
 
         logger.info("Setup complete. Browser ready.");
     }
