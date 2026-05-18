@@ -20,19 +20,12 @@ public class Hooks {
 
     public static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    LoginAction loginActions = new LoginAction();
-
     @Before
-    public void setUplogin(Scenario scenario) {
-    	
+    public void setUp(Scenario scenario) {
         logger.info("=== Scenario STARTED: {} ===", scenario.getName());
 
         HelperClass.setupDriver();
         HelperClass.openPage();
-        
-        
-        
-
         logger.info("Setup complete. Browser ready.");
     }
 
