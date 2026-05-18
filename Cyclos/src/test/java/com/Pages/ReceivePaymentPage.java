@@ -17,8 +17,7 @@ public class ReceivePaymentPage {
     public By success = By.linkText("The payment was successfully processed");    
     public By positiveNumberError = By.xpath("//div[@class='invalid-feedback']");    
     public By requiredFieldError = By.xpath("//user-field[@class='form-field ng-pristine ng-invalid ng-touched']//div[@class='invalid-feedback'][normalize-space()='This field is required']");
-    public By exceededLimit =
-            By.xpath("//*[contains(text(),'You have exceeded the maximum of payments per day')]");
+    public By exceededLimit = By.xpath("//*[contains(text(),'You have exceeded the maximum of payments per day')]");
 
     
 }

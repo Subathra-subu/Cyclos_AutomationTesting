@@ -3,7 +3,7 @@ package com.StepDefinitions;
 import org.testng.Assert;
 
 import com.Pages.LoginPage;
-import com.Actions.LoginActions;
+import com.Actions.LoginAction;
 import com.Actions.ReceivePaymentActions;
 import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 
 public class ReceivePaymentStepDefinitions {
 
-    LoginActions loginactions = new LoginActions();
+    LoginAction loginactions = new LoginAction();
     ReceivePaymentActions receivePaymentPage = new ReceivePaymentActions();
 
     @Given("Registered user launches the Cyclos application")

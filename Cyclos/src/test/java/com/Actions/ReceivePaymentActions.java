@@ -41,9 +41,9 @@ public class ReceivePaymentActions extends BaseAction {
     	if (isDisplayed(receivePaymentPage.confirmationpass)) {
     		sendKeys(receivePaymentPage.confirmationpass, confirmpassword);
     		HelperClass.log.info("Entered Confirmation Password");
+    		click(receivePaymentPage.confirm);
+        	HelperClass.log.info("Clicked Confirm Button");
     	}
-//    	click(receivePaymentPage.confirm);
-//    	HelperClass.log.info("Clicked Confirm Button");
     }
 
     public void isPaymentSuccessful() {

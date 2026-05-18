@@ -1,6 +1,8 @@
 @RecievePaymentFeature
 Feature: Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature
 
+Description : Testing the receive payment feature in Banking
+
 Background:
     Given Registered user launches the Cyclos application
     When User navigates to the Receive Payment page
@@ -17,7 +19,7 @@ Background:
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
       
 @ReceivePaymentWithInvalidName
- Scenario Outline: Verify validation message for blank user field
+ Scenario Outline: Verify failure message for blank user field
  
     And User leaves name field blank and enter details with "<Amount>"
     And User clicks on the next button
@@ -28,7 +30,7 @@ Background:
       | 1      | 
 
 @ReceivePaymentWithInvalidAmount
-  Scenario Outline: Verify validation message for blank amount field
+  Scenario Outline: Verify failure message for blank amount field
 
     And User enters invalid payment details with "<Name>", "<Amount>" and "<Description>"
     And User clicks on the next button
@@ -40,7 +42,7 @@ Background:
 
 
  @ReceivePaymentWithBlankDetails
-  Scenario: Verify validation messages when both user and amount fields are blank
+  Scenario: Verify failure message when both user and amount fields are blank
 
     And User leaves payment fields empty
     And User clicks on the next button
