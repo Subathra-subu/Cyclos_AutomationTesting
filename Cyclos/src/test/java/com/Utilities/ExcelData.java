@@ -30,6 +30,17 @@ public class ExcelData {
                 "UserLogin_Subathra");
     }
 
+
+    @DataProvider(name = "validVoucher", parallel = true)
+
+    public Object[][] validVoucher() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "valid_vovucher");
+    }
+
+
     private Object[][] getExcelData(String file, String sheet) {
 
         String[][] data = null;
