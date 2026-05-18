@@ -116,7 +116,7 @@ public class RegisterTest {
 
 		String loginName = data.get(0).get("loginName");
 		
-		String email = data.get(0).get(email);
+		String email = data.get(0).get("email");
 		
 		registerAction.enterBlankDetails(name,loginName,email);
 	}
