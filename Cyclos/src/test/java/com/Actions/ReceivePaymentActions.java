@@ -42,43 +42,32 @@ public class ReceivePaymentActions extends BaseAction {
     		sendKeys(receivePaymentPage.confirmationpass, confirmpassword);
     		HelperClass.log.info("Entered Confirmation Password");
     	}
-    	click(receivePaymentPage.confirm);
-    	HelperClass.log.info("Clicked Confirm Button");
+//    	click(receivePaymentPage.confirm);
+//    	HelperClass.log.info("Clicked Confirm Button");
     }
 
     public void isPaymentSuccessful() {
 
-        try {
-
-            if (isDisplayed(receivePaymentPage.paymentconfirmation)) {
-
-                HelperClass.log.info("Payment Confirmation Page Displayed");
-
-                submit();
-            }
-
-            waitForVisibility(receivePaymentPage.success, 10);
-
-            String text = getText(receivePaymentPage.success);
-
-            Assert.assertEquals(text,
-                    "The payment was successfully processed");
-
-            HelperClass.log.info("Payment processed successfully");
-
-        } catch (Exception e) {
-
-            HelperClass.log.warn("Success message not displayed. Checking payment limit message");
-
-            waitForVisibility(receivePaymentPage.exceededLimit, 10);
-
-            String text = getText(receivePaymentPage.exceededLimit);
-
-            Assert.assertEquals(text,
-                    "You have exceeded the maximum of payments per day for the demo network");
-
-            HelperClass.log.warn("Payment Limit Exceeded");
+        if (isDisplayed(receivePaymentPage.paymentconfirmation)) {
+            HelperClass.log.info("Payment Confirmation Page Displayed");
+            submit();
         }
+
+        if (isDisplayed(receivePaymentPage.success)) {
+            String text = getText(receivePaymentPage.success);
+            Assert.assertEquals(text.trim(),"The payment was successfully processed");
+            HelperClass.log.info("Payment processed successfully");
+            return;
+        }
+
+        if (isDisplayed(receivePaymentPage.exceededLimit)) {
+            String text = getText(receivePaymentPage.exceededLimit);
+            Assert.assertEquals(text.trim(),"You have exceeded the maximum of payments per day for the demo network");
+            HelperClass.log.warn("Payment Limit Exceeded");
+            return;
+        }
+
+        Assert.fail("Neither success nor limit message was displayed");
     }
 
     public boolean errorMessageDisplayed() {
