@@ -2,6 +2,7 @@ package com.Pages;
 
 import org.openqa.selenium.By;
 
+
 public class LoginPage {
 	
 	public By loginLink = By.xpath("//div[text()=' Login ']");

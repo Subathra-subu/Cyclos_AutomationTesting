@@ -55,11 +55,23 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </tr><tr>
+<<<<<<< HEAD
 <td>Started on:</td><td>Mon May 18 14:21:19 IST 2026</td>
+=======
+<td>Started on:</td><td>Sun May 17 16:17:45 IST 2026</td>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </tr>
+<<<<<<< HEAD
 <tr><td>Total time:</td><td>26 seconds (26806 ms)</td>
+=======
+<tr><td>Total time:</td><td>63 seconds (63385 ms)</td>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +79,47 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;was created&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;was created&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51752}, goog:processID: 28660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51752/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ecd6402587b4895ff40a4a40b355dd9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.AddInterestActions.assertPopup(AddInterestActions.java:240)
+	at com.StepDefinitions.AddInterestTest.the_user_should_see_the_popup_message(AddInterestTest.java:115)
+	at ✽.the user should see the popup message &quot;The ad interest was created&quot;(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/AdInterest.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace355325641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace355325641'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;was created&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;was created&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51752}, goog:processID: 28660, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51752/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ecd6402587b4895ff40a4a40b355dd9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.AddInterestActions.assertPopup(AddInterestActions.java:240)
+	at com.StepDefinitions.AddInterestTest.the_user_should_see_the_popup_message(AddInterestTest.java:115)
+	at ✽.the user should see the popup message &quot;The ad interest was created&quot;(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/AdInterest.feature:18)
+</pre></div></td>
+<td>42</td>
+<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,6 +129,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
 <td></td>
 <td>22</td>
@@ -112,9 +166,22 @@ function toggleAllBoxes() {
 <td>com.Runner.TestNGRunner@1e81f160</td></tr>
 <tr>
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can perform logout functionality", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+=======
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement without Name Fields", "SRIRAM_K_15/05/2026_Advertisements"</td>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 <td></td>
+<<<<<<< HEAD
 <td>22</td>
 <td>com.Runner.TestNGRunner@1e81f160</td></tr>
+=======
+<td>42</td>
+<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete an Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td></td>
+<td>57</td>
+<td>com.Runner.TestNGRunner@4b5189ac</td></tr>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </table><p>
 </body>
 </html>

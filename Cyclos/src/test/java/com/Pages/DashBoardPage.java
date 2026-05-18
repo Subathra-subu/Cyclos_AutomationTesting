@@ -8,5 +8,4 @@ public class DashBoardPage {
 	
 	public By logout = By.cssSelector("#logout-trigger");
 
-
 }
