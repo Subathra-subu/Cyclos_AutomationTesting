@@ -24,8 +24,6 @@ public class TickesPage  {
 
 	public By filterStatusBtn = By.xpath("//button[@title='Open']");
 
-	public By clickOpen = By.xpath("//a[text()=\" Open \"]");
-
 	public By asserOpen = By.xpath("//tbody/tr[1]/td[3]");
 
 }
