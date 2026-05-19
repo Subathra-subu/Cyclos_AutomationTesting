@@ -102,4 +102,25 @@ public class MyVoucherTest
 	    // Write code here that turns the phrase above into concrete actions
 	    MyVouAcc.clickrestaurant();
 	}
+	
+	@When("the user enter the valid voucher code in the voucher code field")
+	public void the_user_enter_the_valid_voucher_code_in_the_voucher_code_field() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("the user click the result")
+	public void the_user_click_the_result() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("the user should seen the same valid voucher code")
+	public void the_user_should_seen_the_same_valid_voucher_code() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
 }
+

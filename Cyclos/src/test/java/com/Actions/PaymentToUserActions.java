@@ -1,120 +1,360 @@
 package com.Actions;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.Pages.PaymentToUserPage;
-import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
 
 public class PaymentToUserActions extends BaseAction {
-	PaymentToUserPage paymentpage = new PaymentToUserPage();
-	
-	public void clickNext() {
-		waitForVisibility(paymentpage.nextBtn);
-		click(paymentpage.nextBtn);
-	}
-	public void clickPayUser() {
-		
-		waitForVisibility(paymentpage.payuser);
-		
-		click(paymentpage.payuser);
-	}
 
-	public void enterUser(String value) {
+    PaymentToUserPage paymentpage = new PaymentToUserPage();
 
-	    waitForVisibility(paymentpage.userfield);
+    public void clickNext() {
 
-	    sendKeys(paymentpage.userfield, value);
-	    By suggestion = By.xpath("//a[contains(text(),\"" + value + "\")]");
-	    
-	    waitForVisibility(suggestion);
-	    
-	    click(suggestion);
-	}
+        try {
 
-	  
+            waitForVisibility(paymentpage.nextBtn);
 
+            scrollIntoView(paymentpage.nextBtn);
 
-	public String validateErrorMessage() {
-		
-		waitForVisibility(paymentpage.errormsg);
-		return  getText(paymentpage.errormsg);
-	}
-	public void enterAmount(String amount) {
+            jsClick(paymentpage.nextBtn);
 
-		waitForVisibility(paymentpage.amountField);
-		sendKeys(paymentpage.amountField, amount);
-	}
+            HelperClass.log.info(
+                    "Clicked Next button successfully");
 
-	public String validatePaymentConfirmationTitle() {
+        }
 
-	    waitForVisibility(paymentpage.paymentConfirmationTitle);
+        catch (Exception e) {
 
-	    return HelperClass.getDriver().findElement(paymentpage.paymentConfirmationTitle).getText();
-	}
+            HelperClass.log.error(
+                    "Failed to click next button : "
+                            + e.getMessage());
 
-	public String validateLimitExceededMessage() {
+            throw e;
+        }
+    }
+    public void clickPayUser() {
 
-		waitForVisibility(paymentpage.limitExceededMsg);
-		return getText(paymentpage.limitExceededMsg);
-	}
-	public void selectSchedulingType(String type) {
+        try {
 
-	    waitForVisibility(paymentpage.dropdown);
+            waitForVisibility(paymentpage.payuser);
 
-	    scrollIntoView(paymentpage.dropdown);
+            scrollIntoView(paymentpage.payuser);
 
-	    click(paymentpage.dropdown);
+            jsClick(paymentpage.payuser);
 
-	    if(type.equalsIgnoreCase("Scheduled")) {
+            HelperClass.log.info(
+                    "Clicked payment to user successfully");
 
-	        waitForVisibility(paymentpage.scheduledOption);
+        }
 
-	        click(paymentpage.scheduledOption);
-	    }
+        catch (Exception e) {
 
-	    else if(type.equalsIgnoreCase("Pay now")) {
+            HelperClass.log.error(
+                    "Failed to click payment to user : "
+                            + e.getMessage());
 
-	        waitForVisibility(paymentpage.payNowOption);
+            throw e;
+        }
+    }
+    public void enterUser(String value) {
 
-	        click(paymentpage.payNowOption);
-	    }
+        try {
 
-	    else if(type.equalsIgnoreCase("Monthly installments")) {
+            waitForVisibility(paymentpage.userfield);
 
-	        waitForVisibility(paymentpage.monthlyInstallmentOption);
+            sendKeys(paymentpage.userfield, value);
 
-	        click(paymentpage.monthlyInstallmentOption);
-	    }
+            By suggestion = By.xpath(
+                    "//a[contains(text(),\"" + value + "\")]");
 
-	    else if(type.equalsIgnoreCase("Recurring payments")) {
+            waitForClickable(suggestion);
 
-	        waitForVisibility(paymentpage.recurringPaymentOption);
+            click(suggestion);
 
-	        click(paymentpage.recurringPaymentOption);
-	    }
-	}
+            HelperClass.log.info(
+                    "Entered user successfully : " + value);
 
-	public void selectFutureDate(String date) {
+        }
 
-	    waitForVisibility(paymentpage.futureDate);
+        catch (Exception e) {
 
-	    click(paymentpage.futureDate);
+            HelperClass.log.error(
+                    "Failed to enter user : "
+                            + e.getMessage());
 
+            throw e;
+        }
+    }
 
-	    sendKeys(paymentpage.futureDate, date);
-	}
+    public void enterAmount(String amount) {
 
-	public void enterDescription(String description) {
+        try {
 
-	    waitForVisibility(paymentpage.descriptionField);
+            waitForVisibility(paymentpage.amountField);
 
-	    sendKeys(paymentpage.descriptionField, description);
-	}
-	public void enterNumberOfInstallments(String value) {
+            sendKeys(paymentpage.amountField, amount);
 
-	    waitForVisibility(paymentpage.numberOfInstallments);
+            HelperClass.log.info(
+                    "Entered amount successfully : "
+                            + amount);
 
-	    sendKeys(paymentpage.numberOfInstallments, value);
-	}
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to enter amount : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    
+
+    public void validateErrorMessage(
+            String expectedMessage) {
+
+        try {
+
+            waitForVisibility(paymentpage.errormsg);
+
+            String actualMessage =
+                    getText(paymentpage.errormsg);
+
+            Assert.assertEquals(
+                    actualMessage.trim(),
+                    expectedMessage.trim());
+
+            HelperClass.log.info(
+                    "Error message validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Error validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    public void validatePaymentConfirmationTitle() {
+
+        try {
+
+            waitForVisibility(
+                    paymentpage.paymentConfirmationTitle);
+
+            String actual =
+                    getText(paymentpage.paymentConfirmationTitle);
+
+            Assert.assertTrue(
+                    actual.contains("Payment"),
+                    "Expected Payment confirmation page but found : "
+                            + actual);
+
+            HelperClass.log.info(
+                    "Payment confirmation validated successfully");
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Payment confirmation validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+    public void validateLimitExceededMessage(
+            String expectedMessage) {
+
+        try {
+
+            String actualMessage = "";
+
+            if (expectedMessage.contains(
+                    "less or equal")) {
+
+                waitForVisibility(
+                        paymentpage.limitExceededMsg);
+
+                actualMessage =
+                        getText(paymentpage.limitExceededMsg);
+            }
+
+            else if (expectedMessage.contains(
+                    "positive number")) {
+
+                waitForVisibility(
+                        paymentpage.positiveNumberMsg);
+
+                actualMessage =
+                        getText(paymentpage.positiveNumberMsg);
+            }
+
+            Assert.assertEquals(
+                    actualMessage.trim(),
+                    expectedMessage.trim());
+
+            HelperClass.log.info(
+                    "Limit validation successful");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Limit validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    public void selectSchedulingType(
+            String type) {
+
+        try {
+
+            waitForClickable(paymentpage.dropdown);
+
+            scrollIntoView(paymentpage.dropdown);
+
+            click(paymentpage.dropdown);
+
+            if (type.equalsIgnoreCase(
+                    "Scheduled")) {
+
+                waitForClickable(
+                        paymentpage.scheduledOption);
+
+                click(paymentpage.scheduledOption);
+            }
+
+            else if (type.equalsIgnoreCase(
+                    "Pay now")) {
+
+                waitForClickable(
+                        paymentpage.payNowOption);
+
+                click(paymentpage.payNowOption);
+            }
+
+            else if (type.equalsIgnoreCase(
+                    "Monthly installments")) {
+
+                waitForClickable(
+                        paymentpage.monthlyInstallmentOption);
+
+                click(paymentpage.monthlyInstallmentOption);
+            }
+
+            else if (type.equalsIgnoreCase(
+                    "Recurring payments")) {
+
+                waitForClickable(
+                        paymentpage.recurringPaymentOption);
+
+                click(paymentpage.recurringPaymentOption);
+            }
+
+            HelperClass.log.info(
+                    "Selected scheduling type successfully : "
+                            + type);
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to select scheduling type : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    public void selectFutureDate(
+            String date) {
+
+        try {
+
+            waitForVisibility(paymentpage.futureDate);
+
+            sendKeys(paymentpage.futureDate, date);
+
+            HelperClass.log.info(
+                    "Selected future date successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to select future date : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    public void enterDescription(
+            String description) {
+
+        try {
+
+            waitForVisibility(
+                    paymentpage.descriptionField);
+
+            sendKeys(
+                    paymentpage.descriptionField,
+                    description);
+
+            HelperClass.log.info(
+                    "Entered description successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to enter description : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+
+    public void enterNumberOfInstallments(
+            String value) {
+
+        try {
+
+            waitForVisibility(
+                    paymentpage.numberOfInstallments);
+
+            sendKeys(
+                    paymentpage.numberOfInstallments,
+                    value);
+
+            HelperClass.log.info(
+                    "Entered installments successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to enter installments : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
 }

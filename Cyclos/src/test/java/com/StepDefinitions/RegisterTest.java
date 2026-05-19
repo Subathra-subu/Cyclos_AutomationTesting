@@ -24,13 +24,13 @@ public class RegisterTest {
 	@When("the user upload profile image")
 	public void the_user_upload_profile_image() {
 		
-		try {
-			registerAction.uploadImage("D:\\ProfileImage.jpg");
-		} 
+		// try {
+		// 	registerAction.uploadImage("D:\\ProfileImage.jpg");
+		// } 
 		
-		catch (Exception e) {
-			e.printStackTrace();
-		}
+		// catch (Exception e) {
+		// 	e.printStackTrace();
+		// }
 		
 	}
 

@@ -18,113 +18,337 @@ public class BusinessDirectoryActions extends BaseAction {
 
     public void navigateBusinessDirectory() {
 
-        waitForVisibility(businessPage.businessDirectoryMenu);
+        try {
 
-        click(businessPage.businessDirectoryMenu);
+            waitForVisibility(
+                    businessPage.businessDirectoryMenu);
+
+            scrollIntoView(
+                    businessPage.businessDirectoryMenu);
+
+            jsClick(
+                    businessPage.businessDirectoryMenu);
+
+            HelperClass.log.info(
+                    "Navigated to business directory successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to navigate business directory : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
-    public void enterKeyword(String keyword) {
+    public void enterKeyword(
+            String keyword) {
 
-        waitForVisibility(businessPage.keywordField);
+        try {
 
-        sendKeys(businessPage.keywordField, keyword);
+            waitForVisibility(
+                    businessPage.keywordField);
+
+            sendKeys(
+                    businessPage.keywordField,
+                    keyword);
+
+            HelperClass.log.info(
+                    "Entered keyword successfully : "
+                            + keyword);
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to enter keyword : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void validateSearchResults() {
 
-        waitForVisibility(businessPage.businessCards);
+        try {
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.businessCards));
+            waitForVisibility(
+                    businessPage.businessCards);
+
+            Assert.assertTrue(
+                    isDisplayed(
+                            businessPage.businessCards));
+
+            HelperClass.log.info(
+                    "Business search results validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Business search result validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void clickListView() {
 
-        waitForVisibility(businessPage.listViewButton);
+        try {
 
-        scrollIntoView(businessPage.listViewButton);
+            waitForVisibility(
+                    businessPage.listViewButton);
 
-        jsClick(businessPage.listViewButton);
+            scrollIntoView(
+                    businessPage.listViewButton);
+
+            jsClick(
+                    businessPage.listViewButton);
+
+            HelperClass.log.info(
+                    "Clicked list view successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to click list view : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void validateListView() {
 
-        waitForVisibility(businessPage.activeListView);
+        try {
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.activeListView));
+            waitForVisibility(
+                    businessPage.activeListView);
+
+            Assert.assertTrue(
+                    isDisplayed(
+                            businessPage.activeListView));
+
+            HelperClass.log.info(
+                    "List view validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "List view validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void clickTiledView() {
 
-        waitForVisibility(businessPage.tiledViewButton);
+        try {
 
-        scrollIntoView(businessPage.tiledViewButton);
+            waitForVisibility(
+                    businessPage.tiledViewButton);
 
-        jsClick(businessPage.tiledViewButton);
+            scrollIntoView(
+                    businessPage.tiledViewButton);
+
+            jsClick(
+                    businessPage.tiledViewButton);
+
+            HelperClass.log.info(
+                    "Clicked tiled view successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to click tiled view : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void validateTiledView() {
 
-        waitForVisibility(businessPage.activeTiledView);
+        try {
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.activeTiledView));
+            waitForVisibility(
+                    businessPage.activeTiledView);
+
+            Assert.assertTrue(
+                    isDisplayed(
+                            businessPage.activeTiledView));
+
+            HelperClass.log.info(
+                    "Tiled view validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Tiled view validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void selectAscendingOrder() {
 
-        click(businessPage.orderDropdown);
+        try {
 
-        click(businessPage.ascendingOrder);
+            waitForClickable(
+                    businessPage.orderDropdown);
+
+            click(
+                    businessPage.orderDropdown);
+
+            waitForClickable(
+                    businessPage.ascendingOrder);
+
+            click(
+                    businessPage.ascendingOrder);
+
+            HelperClass.log.info(
+                    "Ascending order selected successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to select ascending order : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void validateAscendingOrder() {
 
-        waitForVisibility(businessPage.businessCards);
+        try {
 
-        List<WebElement> elements =
-                HelperClass.getDriver()
-                           .findElements(businessPage.businessNames);
+            waitForVisibility(
+                    businessPage.businessCards);
 
-        List<String> actualNames =
-                elements.stream()
-                        .map(WebElement::getText)
-                        .collect(Collectors.toList());
+            List<WebElement> elements =
+                    HelperClass.getDriver()
+                               .findElements(
+                                       businessPage.businessNames);
 
-        List<String> sortedNames =
-                new ArrayList<>(actualNames);
+            List<String> actualNames =
+                    elements.stream()
+                            .map(WebElement::getText)
+                            .collect(Collectors.toList());
 
-        Collections.sort(sortedNames);
+            List<String> sortedNames =
+                    new ArrayList<>(actualNames);
 
-        Assert.assertEquals(actualNames, sortedNames);
+            Collections.sort(sortedNames);
+
+            Assert.assertEquals(
+                    actualNames,
+                    sortedNames);
+
+            HelperClass.log.info(
+                    "Ascending order validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Ascending order validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void selectDescendingOrder() {
 
-        click(businessPage.orderDropdown);
+        try {
 
-        click(businessPage.descendingOrder);
+            waitForClickable(
+                    businessPage.orderDropdown);
+
+            click(
+                    businessPage.orderDropdown);
+
+            waitForClickable(
+                    businessPage.descendingOrder);
+
+            click(
+                    businessPage.descendingOrder);
+
+            HelperClass.log.info(
+                    "Descending order selected successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to select descending order : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 
     public void validateDescendingOrder() {
 
-        waitForVisibility(businessPage.businessCards);
+        try {
 
-        List<WebElement> elements =
-                HelperClass.getDriver()
-                           .findElements(businessPage.businessNames);
+            waitForVisibility(
+                    businessPage.businessCards);
 
-        List<String> actualNames =
-                elements.stream()
-                        .map(WebElement::getText)
-                        .collect(Collectors.toList());
+            List<WebElement> elements =
+                    HelperClass.getDriver()
+                               .findElements(
+                                       businessPage.businessNames);
 
-        List<String> sortedNames =
-                new ArrayList<>(actualNames);
+            List<String> actualNames =
+                    elements.stream()
+                            .map(WebElement::getText)
+                            .collect(Collectors.toList());
 
-        Collections.sort(sortedNames, Collections.reverseOrder());
+            List<String> sortedNames =
+                    new ArrayList<>(actualNames);
 
-        Assert.assertEquals(actualNames, sortedNames);
+            Collections.sort(
+                    sortedNames,
+                    Collections.reverseOrder());
+
+            Assert.assertEquals(
+                    actualNames,
+                    sortedNames);
+
+            HelperClass.log.info(
+                    "Descending order validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Descending order validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
     }
 }

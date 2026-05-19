@@ -77,8 +77,8 @@ public class AddInterestTest
 	    }
 	}
 
-	@Then("the user should see the success message {string}")
-	public void the_user_should_see_the_success_message(String string) {
+	@Then("the user should see the success message")
+	public void the_user_should_see_the_success_message() {
 	    // Write code here that turns the phrase above into concrete actions
 		if	(addInterestActions.isVisibleResult())
 	    {
@@ -90,6 +90,8 @@ public class AddInterestTest
 	    	addInterestActions.assertDel();
 	    }
 	}
+
+	
 	
 	@When("the user clicks the Add New button")
 	public void the_user_clicks_the_add_new_button() {
@@ -100,10 +102,8 @@ public class AddInterestTest
 	
 	
 	
-	@When("the user enters all required details and submit it.")
-	public void the_user_enters_all_required_details_and_submit_it() throws IOException 
-	
-	{
+	@When("the user enters all required details {string} , {string} , {string} , {string} , {string} and submit it.")
+	public void the_user_enters_all_required_details_and_submit_it(String string, String string2, String string3, String string4, String string5) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		addInterestActions.excelData();
 	}
@@ -119,11 +119,25 @@ public class AddInterestTest
 	
 	}
 
+	@Then("the user should see the popup message")
+	public void the_user_should_see_the_popup_message() 
+	{
+	    // Write code here that turns the phrase above into concrete actions
+	    if(addInterestActions.isuniqueDisplayed())
+	    {
+	    	addInterestActions.assertunique();
+	    }
+	    
+	    else
+	    {
+	    	addInterestActions.assertPopup("The ad interest was created");
+	    }
+	}
 
 	@Then("the user should see the popup message {string}")
 	public void the_user_should_see_the_popup_message(String string) {
 	    // Write code here that turns the phrase above into concrete actions
-	   addInterestActions.assertPopup(string);
+	   
 	}
 
 

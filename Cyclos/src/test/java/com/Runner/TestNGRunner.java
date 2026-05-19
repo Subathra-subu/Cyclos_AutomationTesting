@@ -11,9 +11,10 @@ import io.cucumber.testng.CucumberOptions;
 
 
 
-		features = "src/test/resources/Features/businessDirectory.feature",
 
-		tags="@BusinessDirectory_Shobana",
+		features = "src/test/resources/Features",
+
+	
 
 
 
@@ -23,9 +24,7 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
-        
-        
-
+    
 
         plugin = {
 
@@ -48,3 +47,8 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}}
+
+
+
+
+
