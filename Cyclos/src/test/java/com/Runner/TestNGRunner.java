@@ -21,11 +21,7 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
-        
-
-        tags = "@PaymentToUser_Shobana",
-
-
+    
 
         plugin = {
 
