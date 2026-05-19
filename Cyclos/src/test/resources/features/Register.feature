@@ -9,7 +9,7 @@ Background:
 	When the user upload profile image
 	When the user enters the valid credentials and click next button
 	| name    | loginName | email          | website     | mobile         | landline       | address   | zip   | city    | region    | password |
-  	| sham    | Sham123   | sham@yahoo.com | www.test.com| +91 9876543213 | (201)555-0123  | Chennai   | 636001| Chennai | TamilNadu | sham@123 |
+  	| John    | John_Doe  | john@yahoo.com | www.test.com| +91 9876543213 | (201)555-0123  | Chennai   | 636001| Chennai | TamilNadu | john@123 |
   	And the user clicks submit button
   	Then the user should be able to see the "Registration successful" message
   	
@@ -35,8 +35,8 @@ Background:
   	Scenario: Register with only Mandatory Fields
   	When the user upload profile image
 	When the user enters the mandatory credentials and click next button
-	| name    | loginName | email          | address   |password |
-  	| sham    | Sham123   | sham@yahoo.com | Chennai   |sham@123 |
+	| name    | loginName   | email          |password |
+  	| Ram     | Ram_Kumar   | ram@yahoo.com  |ram@123 |
   	And the user clicks submit button
   	Then the user should be able to see the "Registration successful" message
   	

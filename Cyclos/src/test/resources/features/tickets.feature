@@ -2,7 +2,10 @@
 Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
 
   Background:
-    Given user in the Tickets Page
+  
+  	Given the user Login with the valid data 
+    And the user click the Banking menu 
+    And the user navigate to  the Tickets Page
 
   @ticketStatus
   Scenario Outline: Verify ticket transactions for different status filters

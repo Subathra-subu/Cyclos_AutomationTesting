@@ -11,6 +11,16 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class ExcelData {
+	
+	@DataProvider(name = "validLogin", parallel = true)
+
+    public Object[][] LoginData() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "UserLogin_Subathra");
+    }
+
 
     @DataProvider(name = "addNew", parallel = true)
 
@@ -20,6 +30,17 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "AddFeature_sriram_k");
     }
+
+
+    @DataProvider(name = "validVoucher", parallel = true)
+
+    public Object[][] validVoucher() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "valid_vovucher");
+    }
+
 
     private Object[][] getExcelData(String file, String sheet) {
 

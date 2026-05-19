@@ -38,6 +38,8 @@ public class ReqpaymentActions extends BaseAction {
             enterPaymentDetails(receiver, amount, date);
         }
 
+
+    }
     public void confirmRequest() {
         click(paypage.confirm);
     }

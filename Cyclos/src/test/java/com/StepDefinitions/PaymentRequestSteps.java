@@ -42,6 +42,7 @@ public class PaymentRequestSteps {
 			    action.enterPaymentDetails(receiver, amount, date);
 			}	    }
 
+
 	@When("the user clicks on the Confirm button")
 	public void the_user_clicks_on_the_confirm_button() {
 	    // Write code here that turns the phrase above into concrete actions
