@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import com.Pages.AdvertisementPage;
-import com.Utilities.ExcelUtilities;
+import com.Utilities.ExcelData;
 import com.Utilities.HelperClass;
 
 public class AdvertisementAction extends BaseAction {
@@ -63,11 +63,11 @@ public class AdvertisementAction extends BaseAction {
 
         String path = "src/test/resources/TestData/AdvertisementsData.xlsx";
 
-        String product1 = ExcelUtilities.getCellData(path, "Favourites", 1, 0);
-        String product2 = ExcelUtilities.getCellData(path, "Favourites", 2, 0);
+//        String product1 = ExcelUtilities.getCellData(path, "Favourites", 1, 0);
+//        String product2 = ExcelUtilities.getCellData(path, "Favourites", 2, 0);
 
-        addProductToFavourite(product1);
-        addProductToFavourite(product2);
+//        addProductToFavourite(product1);
+//        addProductToFavourite(product2);
     }
 
     public void addProductToFavourite(String product) {

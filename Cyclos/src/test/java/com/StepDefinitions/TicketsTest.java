@@ -1,5 +1,6 @@
 package com.StepDefinitions;
 
+import com.Actions.LoginAction;
 import com.Actions.TicketsActions;
 import com.Utilities.HelperClass;
 
@@ -11,10 +12,26 @@ public class TicketsTest {
 
 	TicketsActions ticketsActions = new TicketsActions();
 
-	@Given("user in the Tickets Page")
-	public void user_in_the_tickets_page() {
+
+	LoginAction login = new LoginAction();
+
+	@Given("the user Login with the valid data")
+	public void the_user_login_with_the_valid_data() {
+	    // Write code here that turns the phrase above into concrete actions
+		login.clickLoginLink();
+	    login.entervaliduserNameAndPassword();
+	    login.clickSubmitButton();
+	}
+
+	@Given("the user click the Banking menu")
+	public void the_user_click_the_banking_menu() {
 	    // Write code here that turns the phrase above into concrete actions
 		ticketsActions.clickOnBankingMenu();
+	}
+
+	@Given("the user navigate to  the Tickets Page")
+	public void the_user_navigate_to_the_tickets_page() {
+	    // Write code here that turns the phrase above into concrete actions
 		ticketsActions.clickOnTicketsMenu();
 	}
 
