@@ -72,7 +72,7 @@ public class RegisterAction extends BaseAction {
 
 	public void selectBusinessType() {
 
-		click(registerPage.businessTypeButton);
+		jsClick(registerPage.businessTypeButton);
 
 		click(registerPage.businessType);
 	}
@@ -215,6 +215,36 @@ public class RegisterAction extends BaseAction {
 		enterEmail(email);
 	}
 	
+	public void assertRequiredMessage(String expected) {
+		
+		Assert.assertTrue(isDisplayed(registerPage.requiredMessage_name));
+
+		Assert.assertTrue(isDisplayed(registerPage.requiredMessage_login));
+
+		Assert.assertTrue(isDisplayed(registerPage.requiredMessage_email));
+		
+		
+	}
+	
+	public void enterMandatoryDetails(String name,String loginName,String email,String password) throws InterruptedException {
+	
+		enterName(name);
+
+		enterLoginName(loginName);
+
+		enterEmail(email);
+		
+		clickNextButton();
+
+		enterNewPassword(password);
+
+		enterConfirmPassword(password);
+
+		clickAgreement();
+
+		clickRecaptcha();
+
+	}
 	
 
 }
