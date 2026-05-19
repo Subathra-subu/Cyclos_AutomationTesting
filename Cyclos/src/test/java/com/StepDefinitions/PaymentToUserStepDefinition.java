@@ -6,7 +6,7 @@ import org.testng.Assert;
 
 import com.Actions.LoginAction;
 import com.Actions.PaymentToUserActions;
-import com.Actions.commonLoginAction;
+
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -150,16 +150,3 @@ public class PaymentToUserStepDefinition {
         );
     }
 }
-
-
-
-
-
-
-
-
-
-
-
- 
-
