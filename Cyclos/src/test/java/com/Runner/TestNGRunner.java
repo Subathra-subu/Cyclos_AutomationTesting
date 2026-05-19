@@ -20,7 +20,6 @@ import io.cucumber.testng.CucumberOptions;
         
         tags = "@Register_Subathra",
 
-
         plugin = {
 
 
@@ -42,5 +41,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}
-
 }
+
+
+

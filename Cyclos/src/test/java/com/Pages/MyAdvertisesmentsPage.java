@@ -6,7 +6,7 @@ public class MyAdvertisesmentsPage {
 	
 		public By marketPlaceMenu = By.xpath("//div[@class='menu-text'][normalize-space()='Marketplace']");
 		
-	    public By myAdvertisements =  By.xpath("//div[normalize-space()='My advertisements']");
+	    public By myAdvertisements =  By.xpath("//div[text()='My advertisements']");
 
 	    public By newAdvertisementBtn = By.xpath("//div[contains(text(),'Add new')]");
 
@@ -26,8 +26,6 @@ public class MyAdvertisesmentsPage {
 	    public By toDate = By.xpath("(//input[@type='date'])[2]");
 
 	    public By descriptionFrame = By.xpath("//div[contains(@class,'editor')]");
-
-	    public By uploadImageBtn = By.xpath("//input[@type='file']");
 
 	    public By saveBtn = By.xpath("//button[contains(text(),'Save')]");
 
