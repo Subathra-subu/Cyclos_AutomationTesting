@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features/userInvite.feature",
+		features = "src/test/resources/Features/QR_Code.feature",
 
 
         glue = "com.StepDefinitions",
