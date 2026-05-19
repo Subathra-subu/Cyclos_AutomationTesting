@@ -1,7 +1,6 @@
 package com.Actions;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 import com.Pages.MyAdvertisesmentsPage;
 import com.StepDefinitions.Hooks;
@@ -124,7 +123,7 @@ public class MyAdvertisementsAction extends BaseAction {
         }
     }
 
-    public String validateMessage() {
+    public String validateSuccessMessage() {
 
         try {
             return getText(advertisementPage.Message);
