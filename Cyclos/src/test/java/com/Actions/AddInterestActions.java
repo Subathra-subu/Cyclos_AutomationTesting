@@ -115,6 +115,7 @@ public class AddInterestActions extends BaseAction {
 
 			clickSubmit();
 
+			
 			HelperClass.log.info("Entered all add details successfully");
 		}
 
