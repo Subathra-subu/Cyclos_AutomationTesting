@@ -27,21 +27,21 @@ public class MyAdvertisesmentsPage {
 
 	    public By descriptionFrame = By.xpath("//div[contains(@class,'editor')]");
 
-	    public By uploadImageBtn = By.xpath("//input[@type='file']");
-
 	    public By saveBtn = By.xpath("//span[text()='Save']");
 
 	    public By Message = By.xpath("//ui-root[@class='flex-grow-1 d-flex root']/child::snack-bar");
 
-	    public By searchField = By.xpath("//input[@placeholder='Search']");
+	    public By searchField = By.xpath("//input[@class='form-control w-100 ng-untouched ng-pristine ng-valid']");
+	    
+	    public By item = By.xpath("(//div[@class='avatar-container full-size'])[1]");
 
 	    public By editBtn = By.xpath("//div[text()='Edit']");
 
 	    public By removeBtn = By.xpath("//div[text()='Remove']");
 
-	    public By confirmPopup = By.xpath("//div[contains(text(),'Are you sure')]");
+	    public By confirmPopup = By.xpath("//div[@class='modal-content']/child::*");
 
-	    public By confirmRemoveBtn = By.xpath("//button[contains(text(),'Remove')]");
+	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
 	    
 	}
 
