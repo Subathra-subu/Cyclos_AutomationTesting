@@ -14,7 +14,7 @@ Scenario Outline: Verify user can generate QR-code with valid amount
 
 Examples:
     | amount |
-    | 100    |
+    | 100     |
    
 
 
