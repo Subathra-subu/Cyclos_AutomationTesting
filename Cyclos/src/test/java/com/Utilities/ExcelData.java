@@ -58,6 +58,13 @@ public class ExcelData {
                 "BusinessDirectory");
     }
 
+    @DataProvider(name = "paymentRequestKrishna")
+    public Object[][] paymentRequestKrishnaData() throws IOException {
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "PaymentRequest_Krishna");
+    }
+    
     private Object[][] getExcelData(String file, String sheet) {
 
         String[][] data = null;
