@@ -9,7 +9,17 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
+<<<<<<< HEAD
 		features = "src/test/resources/Features/paymentToUser.feature",
+=======
+
+
+		features = "src/test/resources/Features/businessDirectory.feature",
+
+		tags="@BusinessDirectory_Shobana",
+
+
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 
         glue = "com.StepDefinitions",
 
@@ -17,6 +27,8 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
+        
+        
 
 
         plugin = {
@@ -39,6 +51,10 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 	    return super.scenarios();
+<<<<<<< HEAD
 	}
 
 }
+=======
+	}}
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git

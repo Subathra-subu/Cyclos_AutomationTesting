@@ -1,6 +1,7 @@
 package com.Actions;
 
 import com.Pages.RegisterPage;
+import com.Utilities.HelperClass;
 
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -134,11 +135,11 @@ public class RegisterAction extends BaseAction {
 
 	public void clickRecaptcha() throws InterruptedException {
 
-		Thread.sleep(20000);
+		jsClick(registerPage.recaptcha);
 
-		click(registerPage.recaptcha);
+
 	}
-	
+
 	public void enterValidDetails(String name,String loginName,String email,String website,String mobile,String landline,String address,String zip,String city,String region,String password) throws InterruptedException {
 
 		enterName(name);
