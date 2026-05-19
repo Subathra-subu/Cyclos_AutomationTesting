@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features/MyVouchers.feature",
+		features = "src/test/resources/Features",
 
         glue = "com.StepDefinitions",
 
