@@ -13,7 +13,7 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
     And the user confirms the deletion popup
     Then the user should see the success message "The item was removed"
 
-  @addNew
+  @addNew @smoke
   Scenario: Add a New Advertisement Interest
     When the user clicks the Add New button
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.
