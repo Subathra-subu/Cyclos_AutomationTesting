@@ -1,3 +1,4 @@
+
 package com.StepDefinitions;
 //
 import org.testng.Assert;
@@ -57,3 +58,4 @@ public class UserInviteSteps {
         Assert.assertTrue(inviteActions.isValidationMessageDisplayed());
     }
 }
+
