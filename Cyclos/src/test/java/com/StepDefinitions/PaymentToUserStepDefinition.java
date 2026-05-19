@@ -97,4 +97,99 @@ public class PaymentToUserStepDefinition {
         actions.validateLimitExceededMessage(
                 expectedMessage);
     }
+    @When("User enters scheduled payment details")
+    public void user_enters_scheduled_payment_details(
+            DataTable dataTable) {
+
+        Map<String, String> data =
+                dataTable.asMaps(
+                        String.class,
+                        String.class).get(0);
+
+        actions.enterUser(
+                data.get("username"));
+
+        actions.enterAmount(
+                data.get("amount"));
+
+        actions.selectSchedulingType(
+                data.get("type"));
+
+        actions.selectFutureDate(
+                data.get("date"));
+
+        actions.enterDescription(
+                data.get("description"));
+    }
+
+    @Then("User should successfully schedule the payment")
+    public void user_should_successfully_schedule_the_payment() {
+
+        actions.clickNext();
+
+        actions.validatePaymentConfirmationTitle();
+    }
+
+    @When("User enters recurring payment details")
+    public void user_enters_recurring_payment_details(
+            DataTable dataTable) {
+
+        Map<String, String> data =
+                dataTable.asMaps(
+                        String.class,
+                        String.class).get(0);
+
+        actions.enterUser(
+                data.get("username"));
+
+        actions.enterAmount(
+                data.get("amount"));
+
+        actions.selectSchedulingType(
+                data.get("type"));
+
+        actions.enterDescription(
+                data.get("description"));
+    }
+
+    @Then("Recurring payment should be scheduled successfully")
+    public void recurring_payment_should_be_scheduled_successfully() {
+
+        actions.clickNext();
+
+        actions.validatePaymentConfirmationTitle();
+    }
+
+    @When("User enters monthly installment payment details")
+    public void user_enters_monthly_installment_payment_details(
+            DataTable dataTable) {
+
+        Map<String, String> data =
+                dataTable.asMaps(
+                        String.class,
+                        String.class).get(0);
+
+        actions.enterUser(
+                data.get("username"));
+
+        actions.enterAmount(
+                data.get("amount"));
+
+        actions.selectSchedulingType(
+                data.get("type"));
+
+        actions.enterNumberOfInstallments(
+                data.get("installments"));
+
+        actions.enterDescription(
+                data.get("description"));
+    }
+
+    @Then("Monthly installment payment should be scheduled successfully")
+    public void monthly_installment_payment_should_be_scheduled_successfully() {
+
+        actions.clickNext();
+
+        actions.validatePaymentConfirmationTitle();
+    }
 }

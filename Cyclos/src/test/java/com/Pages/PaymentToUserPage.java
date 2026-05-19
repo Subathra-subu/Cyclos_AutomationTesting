@@ -24,8 +24,8 @@ public class PaymentToUserPage {
     public By limitExceededMsg = By.xpath(
             "//div[contains(@class,'invalid-feedback') and contains(text(),'less or equal')]");
 
-    public By positiveNumberMsg = By.xpath(
-            "//div[contains(@class,'invalid-feedback') and contains(text(),'positive number')]");
+     public  By positiveNumberMsg =
+    		By.xpath("//div[contains(@class,'invalid-feedback') and contains(normalize-space(),'positive number')]");
 
     public By futureDate = By.xpath(
             "//input[@type='date']");

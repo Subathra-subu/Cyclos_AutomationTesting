@@ -9,79 +9,43 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">106,067</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">129,617</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="3">1779190470006</td><td rowspan="3">10669</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">com.Runner.TestNGRunner</td><td><a href="#m3">runScenario</a></td><td rowspan="4">1779190420419</td><td rowspan="4">16660</td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779191280092</td><td rowspan="1">27167</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.Runner.TestNGRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="6">1779191264509</td><td rowspan="6">15580</td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify scheduled payment functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;User enters scheduled payment details&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;User enters scheduled payment details&quot;)
-public void user_enters_scheduled_payment_details(io.cucumber.datatable.DataTable dataTable) {
-    // Write code here that turns the phrase above into concrete actions
-    // For automatic transformation, change DataTable to one of
-    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
-    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
-    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-    //
-    // For other transformations you can register a DataTableType.
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;User should successfully schedule the payment&quot;)
-public void user_should_successfully_schedule_the_payment() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User enters scheduled payment details(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:34)
+<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b067917ace34166bb48d683a6cf5cc0e, findElement {using=xpath, value=//div[@class=&apos;invalid-feedback&apos; and contains(text(),&quot; Amount must be a positive number.&quot;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\Hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53669}, goog:processID: 28740, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53669/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b067917ace34166bb48d683a6cf5cc0e
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:429)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:423)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:222)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:215)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:210)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.PaymentToUserActions.validateLimitExceededMessage(PaymentToUserActions.java:183)
+	at com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_limit_exceeded_message(PaymentToUserStepDefinition.java:97)
+	at ✽.User clicks the next button and should validate limit exceeded message &quot;Amount must be a positive number.&quot;(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:25)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can schedule monthly installment payment&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;User enters monthly installment payment details&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;User enters monthly installment payment details&quot;)
-public void user_enters_monthly_installment_payment_details(io.cucumber.datatable.DataTable dataTable) {
-    // Write code here that turns the phrase above into concrete actions
-    // For automatic transformation, change DataTable to one of
-    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
-    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
-    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-    //
-    // For other transformations you can register a DataTableType.
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;Monthly installment payment should be scheduled successfully&quot;)
-public void monthly_installment_payment_should_be_scheduled_successfully() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User enters monthly installment payment details(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:48)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify recurring payment scheduling functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">io.cucumber.testng.UndefinedStepException: The step &apos;User enters recurring payment details&apos; and 1 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@When(&quot;User enters recurring payment details&quot;)
-public void user_enters_recurring_payment_details(io.cucumber.datatable.DataTable dataTable) {
-    // Write code here that turns the phrase above into concrete actions
-    // For automatic transformation, change DataTable to one of
-    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
-    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
-    // Double, Byte, Short, Long, BigInteger or BigDecimal.
-    //
-    // For other transformations you can register a DataTableType.
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;Recurring payment should be scheduled successfully&quot;)
-public void recurring_payment_should_be_scheduled_successfully() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at ✽.User enters recurring payment details(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:41)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Payment Confirmation using pay now functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message for blank user field&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message for blank user field&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify recurring payment scheduling functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can schedule monthly installment payment&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Payment Confirmation using pay now functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify scheduled payment functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -8,30 +8,56 @@ import com.Utilities.HelperClass;
 
 public class PaymentToUserActions extends BaseAction {
 
-    PaymentToUserPage paymentpage =
-            new PaymentToUserPage();
+    PaymentToUserPage paymentpage = new PaymentToUserPage();
 
+    public void clickNext() {
+
+        try {
+
+            waitForVisibility(paymentpage.nextBtn);
+
+            scrollIntoView(paymentpage.nextBtn);
+
+            jsClick(paymentpage.nextBtn);
+
+            HelperClass.log.info(
+                    "Clicked Next button successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Failed to click next button : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
     public void clickPayUser() {
 
         try {
 
             waitForVisibility(paymentpage.payuser);
 
-            click(paymentpage.payuser);
+            scrollIntoView(paymentpage.payuser);
+
+            jsClick(paymentpage.payuser);
 
             HelperClass.log.info(
-                    "Clicked payment to user");
+                    "Clicked payment to user successfully");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Failed to click payment user : "
+                    "Failed to click payment to user : "
                             + e.getMessage());
 
             throw e;
         }
     }
-
     public void enterUser(String value) {
 
         try {
@@ -40,18 +66,19 @@ public class PaymentToUserActions extends BaseAction {
 
             sendKeys(paymentpage.userfield, value);
 
-            By suggestion =
-                    By.xpath("//a[contains(text(),'"
-                            + value + "')]");
+            By suggestion = By.xpath(
+                    "//a[contains(text(),\"" + value + "\")]");
 
-            waitForVisibility(suggestion);
+            waitForClickable(suggestion);
 
             click(suggestion);
 
             HelperClass.log.info(
-                    "Entered user : " + value);
+                    "Entered user successfully : " + value);
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
                     "Failed to enter user : "
@@ -70,9 +97,12 @@ public class PaymentToUserActions extends BaseAction {
             sendKeys(paymentpage.amountField, amount);
 
             HelperClass.log.info(
-                    "Entered amount : " + amount);
+                    "Entered amount successfully : "
+                            + amount);
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
                     "Failed to enter amount : "
@@ -82,28 +112,7 @@ public class PaymentToUserActions extends BaseAction {
         }
     }
 
-    public void clickNext() {
-
-        try {
-
-            waitForVisibility(paymentpage.nextBtn);
-
-            scrollIntoView(paymentpage.nextBtn);
-
-            jsClick(paymentpage.nextBtn);
-
-            HelperClass.log.info(
-                    "Clicked next button");
-
-        } catch (Exception e) {
-
-            HelperClass.log.error(
-                    "Failed to click next : "
-                            + e.getMessage());
-
-            throw e;
-        }
-    }
+    
 
     public void validateErrorMessage(
             String expectedMessage) {
@@ -120,12 +129,14 @@ public class PaymentToUserActions extends BaseAction {
                     expectedMessage.trim());
 
             HelperClass.log.info(
-                    "Error validated successfully");
+                    "Error message validated successfully");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Validation failed : "
+                    "Error validation failed : "
                             + e.getMessage());
 
             throw e;
@@ -140,25 +151,26 @@ public class PaymentToUserActions extends BaseAction {
                     paymentpage.paymentConfirmationTitle);
 
             String actual =
-                    getText(
-                            paymentpage.paymentConfirmationTitle);
+                    getText(paymentpage.paymentConfirmationTitle);
 
             Assert.assertTrue(
-                    actual.contains("Payment"));
+                    actual.contains("Payment"),
+                    "Expected Payment confirmation page but found : "
+                            + actual);
 
             HelperClass.log.info(
-                    "Payment confirmation validated");
+                    "Payment confirmation validated successfully");
+        }
 
-        } catch (Exception e) {
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Payment validation failed : "
+                    "Payment confirmation validation failed : "
                             + e.getMessage());
 
             throw e;
         }
     }
-
     public void validateLimitExceededMessage(
             String expectedMessage) {
 
@@ -173,8 +185,7 @@ public class PaymentToUserActions extends BaseAction {
                         paymentpage.limitExceededMsg);
 
                 actualMessage =
-                        getText(
-                                paymentpage.limitExceededMsg);
+                        getText(paymentpage.limitExceededMsg);
             }
 
             else if (expectedMessage.contains(
@@ -184,8 +195,7 @@ public class PaymentToUserActions extends BaseAction {
                         paymentpage.positiveNumberMsg);
 
                 actualMessage =
-                        getText(
-                                paymentpage.positiveNumberMsg);
+                        getText(paymentpage.positiveNumberMsg);
             }
 
             Assert.assertEquals(
@@ -195,7 +205,9 @@ public class PaymentToUserActions extends BaseAction {
             HelperClass.log.info(
                     "Limit validation successful");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
                     "Limit validation failed : "
@@ -210,12 +222,17 @@ public class PaymentToUserActions extends BaseAction {
 
         try {
 
-            waitForVisibility(paymentpage.dropdown);
+            waitForClickable(paymentpage.dropdown);
+
+            scrollIntoView(paymentpage.dropdown);
 
             click(paymentpage.dropdown);
 
             if (type.equalsIgnoreCase(
                     "Scheduled")) {
+
+                waitForClickable(
+                        paymentpage.scheduledOption);
 
                 click(paymentpage.scheduledOption);
             }
@@ -223,37 +240,48 @@ public class PaymentToUserActions extends BaseAction {
             else if (type.equalsIgnoreCase(
                     "Pay now")) {
 
+                waitForClickable(
+                        paymentpage.payNowOption);
+
                 click(paymentpage.payNowOption);
             }
 
             else if (type.equalsIgnoreCase(
                     "Monthly installments")) {
 
-                click(
+                waitForClickable(
                         paymentpage.monthlyInstallmentOption);
+
+                click(paymentpage.monthlyInstallmentOption);
             }
 
             else if (type.equalsIgnoreCase(
                     "Recurring payments")) {
 
-                click(
+                waitForClickable(
                         paymentpage.recurringPaymentOption);
+
+                click(paymentpage.recurringPaymentOption);
             }
 
             HelperClass.log.info(
-                    "Scheduling selected : " + type);
+                    "Selected scheduling type successfully : "
+                            + type);
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Scheduling selection failed : "
+                    "Failed to select scheduling type : "
                             + e.getMessage());
 
             throw e;
         }
     }
 
-    public void selectFutureDate(String date) {
+    public void selectFutureDate(
+            String date) {
 
         try {
 
@@ -262,12 +290,14 @@ public class PaymentToUserActions extends BaseAction {
             sendKeys(paymentpage.futureDate, date);
 
             HelperClass.log.info(
-                    "Date entered");
+                    "Selected future date successfully");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Date selection failed : "
+                    "Failed to select future date : "
                             + e.getMessage());
 
             throw e;
@@ -287,12 +317,14 @@ public class PaymentToUserActions extends BaseAction {
                     description);
 
             HelperClass.log.info(
-                    "Description entered");
+                    "Entered description successfully");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Description failed : "
+                    "Failed to enter description : "
                             + e.getMessage());
 
             throw e;
@@ -312,12 +344,14 @@ public class PaymentToUserActions extends BaseAction {
                     value);
 
             HelperClass.log.info(
-                    "Installments entered");
+                    "Entered installments successfully");
 
-        } catch (Exception e) {
+        }
+
+        catch (Exception e) {
 
             HelperClass.log.error(
-                    "Installments failed : "
+                    "Failed to enter installments : "
                             + e.getMessage());
 
             throw e;
