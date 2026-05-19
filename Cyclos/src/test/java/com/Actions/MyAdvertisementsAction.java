@@ -33,7 +33,6 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to click my advertisements", e);
         }
 
-    
     }
 
     public void clickNewAdvertisement() {

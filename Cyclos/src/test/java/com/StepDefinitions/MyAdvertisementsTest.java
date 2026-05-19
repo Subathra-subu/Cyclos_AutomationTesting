@@ -134,5 +134,7 @@ public class MyAdvertisementsTest {
 
 		Assert.assertTrue(actions.validateMessage().contains("was removed"));
 
+		actions.assertRemovalMessage();
+		
 	}
 }
