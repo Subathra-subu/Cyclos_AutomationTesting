@@ -8,7 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
+		features = "src/test/resources/Features/req_payment.feature",
+
 
 		glue = "com.StepDefinitions",
 
@@ -24,6 +25,8 @@ import io.cucumber.testng.CucumberOptions;
 
 				"html:target/CucumberReports/Cucumber.html",
 
+        
+ 
 				"json:target/CucumberReports/Cucumber.json",
 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
