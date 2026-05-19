@@ -9,7 +9,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features/MyVouchers.feature",
+
+		features = "src/test/resources/Features/userInvite.feature",
+
 
         glue = "com.StepDefinitions",
 
@@ -17,6 +19,8 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
+        
+        
 
 
         plugin = {
@@ -35,5 +39,12 @@ import io.cucumber.testng.CucumberOptions;
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
-	
+	@Override
+	@DataProvider(parallel = true)
+	public Object[][] scenarios() {
+	    return super.scenarios();
+	}
 }
+
+
+
