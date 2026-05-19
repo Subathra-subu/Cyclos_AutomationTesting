@@ -9,9 +9,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features/businessDirectory.feature",
 
-		tags="@BusinessDirectory_Shobana",
+		features = "src/test/resources/Features/userInvite.feature",
+
 
         glue = "com.StepDefinitions",
 
@@ -44,5 +44,6 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}
-
 }
+
+
