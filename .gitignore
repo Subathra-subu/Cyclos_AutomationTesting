@@ -1,3 +1,9 @@
 .metadata/
 target/
 *.log
+allure-results/
+HtmlReport/
+PdfReport/
+Reports/
+test-output/
+screenshots/
