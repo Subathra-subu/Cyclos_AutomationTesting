@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 15, 2026 12:37:49 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 19, 2026 05:03:21 pm</span></a>
 </li>
 </ul>
 </div>
@@ -71,7 +71,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,75 +79,65 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@generate</a><a class="dropdown-item" href="#">@valid</a><a class="dropdown-item" href="#">@blank</a>
+<a class="dropdown-item" href="#">@PaymentConfirmation</a><a class="dropdown-item" href="#">@MonthlyInstallment</a><a class="dropdown-item" href="#">@BlankUserValidation</a><a class="dropdown-item" href="#">@LimitValidation</a><a class="dropdown-item" href="#">@RecurringPayment</a><a class="dropdown-item" href="#">@PaymentToUser_Shobana</a><a class="dropdown-item" href="#">@ScheduledPayment</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality</p>
+            <p class="name">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality</p>
             <p class="text-sm">
-              <span>12:37:50 pm</span> / <span>00:00:18:107</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>5:03:23 pm</span> / <span>00:01:38:946</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality</h5>
-<span class='badge badge-success'>05.15.2026 12:37:50 pm</span>
-<span class='badge badge-danger'>05.15.2026 12:38:08 pm</span>
-<span class='badge badge-default'>00:00:18:107</span>
+<h5 class="test-status text-fail">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality</h5>
+<span class='badge badge-success'>05.19.2026 5:03:23 pm</span>
+<span class='badge badge-danger'>05.19.2026 5:05:02 pm</span>
+<span class='badge badge-default'>00:01:38:946</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5"></div>
+<div class="m-t-10 m-l-5">Description:This feature file is used to verify the payment to user functionality</div>
 </div>
 </div>
 <div class="accordion mt-4">
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify user can generate QR-code with valid amount</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify validation message for blank user field</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application()">
-                <span>Given the user launches the Cyclos application</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()">
+                <span>Given User should be logged into application and must on home page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials()">
-                <span>And the user logs in with valid credentials</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()">
+                <span>When User clicks the payment to user button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page()">
-                <span>And the user navigates to the QR Code page</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_gives_the_empty_user_field(java.lang.String)">
+                <span>When User gives the empty user field ""</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount(java.lang.String)">
-                <span>When the user enters a valid amount "100"</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button()">
-                <span>And the user clicks on the generate QR code button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_qr_code_should_be_generated_successfully()">
-                <span>Then the QR code should be generated successfully</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_the_error_message_is_displayed()">
+                <span>Then User clicks the next button and should validate the error message is displayed</span>
       <div>
       </div>
               </div>
@@ -157,38 +147,30 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verify validation message for blank amount field</div>
+        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Verify Payment Confirmation using pay now functionality</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application()">
-                <span>Given the user launches the Cyclos application</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()">
+                <span>Given User should be logged into application and must on home page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials()">
-                <span>And the user logs in with valid credentials</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()">
+                <span>When User clicks the payment to user button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page()">
-                <span>And the user navigates to the QR Code page</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_enters_payment_details(io.cucumber.datatable.DataTable)">
+                <span>When User enters payment details</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>amount</td></tr><tr><td>Active Walking</td><td>100</td></tr></table>
+      </div>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount_empty()">
-                <span>When the user enters a valid amount empty</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button()">
-                <span>And the user clicks on the generate QR code button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.a_field_level_validation_error_message_should_be_displayed()">
-                <span>Then a Field-level validation error message should be displayed</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_successfully_complete_the_payment()">
+                <span>Then User should successfully complete the payment</span>
       <div>
       </div>
               </div>
@@ -198,44 +180,174 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Verify user can generate a new QR code successfully</div>
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Verify validation message when payment amount exceeds available limit</div>
       </div>
     </div>
-        <div class="collapse">
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify validation message when payment amount exceeds available limit</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User should be logged into application and must on home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks the payment to user button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters valid user "Active Walking"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters amount "999999"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User clicks the next button and should validate limit exceeded message "Amount must be less or equal to 500,00 IU's."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="25"><span class="badge log pass-bg mr-2">Pass</span>Verify validation message when payment amount exceeds available limit</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User should be logged into application and must on home page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks the payment to user button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters valid user "The Bakery shop"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters amount "0"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User clicks the next button and should validate limit exceeded message "Amount must be a positive number."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>Verify scheduled payment functionality</div>
+      </div>
+    </div>
+        <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application()">
-                <span>Given the user launches the Cyclos application</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()">
+                <span>Given User should be logged into application and must on home page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials()">
-                <span>And the user logs in with valid credentials</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()">
+                <span>When User clicks the payment to user button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page()">
-                <span>And the user navigates to the QR Code page</span>
+              <div class="step fail-bg" >
+                <span>When User enters scheduled payment details</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>date</td><td>description</td></tr><tr><td>Active Walking</td><td>150</td><td>Scheduled</td><td>20-05-2026</td><td>Scheduled payment</td></tr></table>
+      </div>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then User should successfully schedule the payment</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="40"><span class="badge log fail-bg mr-2">Fail</span>Verify recurring payment scheduling functionality</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()">
+                <span>Given User should be logged into application and must on home page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount(java.lang.String)">
-                <span>When the user enters a valid amount "100"</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()">
+                <span>When User clicks the payment to user button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button()">
-                <span>And the user clicks on the generate QR code button</span>
+              <div class="step fail-bg" >
+                <span>When User enters recurring payment details</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>description</td></tr><tr><td>Active Walking</td><td>200</td><td>Recurring payments</td><td>Recurring monthly payment</td></tr></table>
+      </div>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Recurring payment should be scheduled successfully</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="47"><span class="badge log fail-bg mr-2">Fail</span>Verify user can schedule monthly installment payment</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()">
+                <span>Given User should be logged into application and must on home page</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_new_qr_code_button()">
-                <span>And the user clicks on the Generate New QR Code button</span>
+              <div class="step pass-bg" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()">
+                <span>When User clicks the payment to user button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="com.StepDefinitions.QrCode_Steps.the_user_should_be_redirected_to_the_receive_qr_code_page()">
-                <span>Then the user should be redirected to the Receive QR Code page</span>
-      <div>
+              <div class="step fail-bg" >
+                <span>When User enters monthly installment payment details</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>installments</td><td>description</td></tr><tr><td>Active Walking</td><td>200</td><td>Monthly installments</td><td>5</td><td>Monthly installment payment</td></tr></table>
+      </div>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then Monthly installment payment should be scheduled successfully</span>
+      <div>Step skipped
       </div>
               </div>
           </div>
@@ -257,7 +369,7 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -266,12 +378,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@generate</p>
+<p class="name">@PaymentConfirmation</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@generate</h4>
+<h4>@PaymentConfirmation</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -285,11 +397,47 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:37:50 pm</td>
+<td>17:03:40 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='4'>Verify user can generate a new QR code successfully</a>
+<a href="#" class="linked" test-id='1' id='9'>Verify Payment Confirmation using pay now functionality</a>
 <div class="">
-<span class="badge badge-default">Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality.Verify user can generate a new QR code successfully</span>
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify Payment Confirmation using pay now functionality</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@MonthlyInstallment</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@MonthlyInstallment</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify user can schedule monthly installment payment</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify user can schedule monthly installment payment</span>
 </div>
 </td>
 </tr>
@@ -302,12 +450,12 @@
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@valid</p>
+<p class="name">@BlankUserValidation</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@valid</h4>
+<h4>@BlankUserValidation</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -321,11 +469,11 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:37:50 pm</td>
+<td>17:03:23 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Verify user can generate QR-code with valid amount</a>
+<a href="#" class="linked" test-id='1' id='2'>Verify validation message for blank user field</a>
 <div class="">
-<span class="badge badge-default">Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality.Verify user can generate QR-code with valid amount</span>
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message for blank user field</span>
 </div>
 </td>
 </tr>
@@ -336,15 +484,15 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>2</span>
 </span>
-<p class="name">@blank</p>
-<p class="duration text-sm">1 tests</p>
+<p class="name">@LimitValidation</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@blank</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<h4>@LimitValidation</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -357,11 +505,191 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>12:37:50 pm</td>
+<td>17:03:57 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='3'>Verify validation message for blank amount field</a>
+<a href="#" class="linked" test-id='1' id='17'>Verify validation message when payment amount exceeds available limit</a>
 <div class="">
-<span class="badge badge-default">Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality.Verify validation message for blank amount field</span>
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message when payment amount exceeds available limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:04:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>Verify validation message when payment amount exceeds available limit</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message when payment amount exceeds available limit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@RecurringPayment</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RecurringPayment</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:40 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>Verify recurring payment scheduling functionality</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify recurring payment scheduling functionality</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+<span class='badge log badge-danger'>3</span>
+</span>
+<p class="name">@PaymentToUser_Shobana</p>
+<p class="duration text-sm">7 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@PaymentToUser_Shobana</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:03:23 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify validation message for blank user field</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message for blank user field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:03:40 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='9'>Verify Payment Confirmation using pay now functionality</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify Payment Confirmation using pay now functionality</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:03:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='17'>Verify validation message when payment amount exceeds available limit</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message when payment amount exceeds available limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>17:04:13 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='25'>Verify validation message when payment amount exceeds available limit</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify validation message when payment amount exceeds available limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:30 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Verify scheduled payment functionality</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify scheduled payment functionality</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:40 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='40'>Verify recurring payment scheduling functionality</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify recurring payment scheduling functionality</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='47'>Verify user can schedule monthly installment payment</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify user can schedule monthly installment payment</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@ScheduledPayment</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ScheduledPayment</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>17:04:30 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>Verify scheduled payment functionality</a>
+<div class="">
+<span class="badge badge-default">Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality.Verify scheduled payment functionality</span>
 </div>
 </td>
 </tr>
@@ -382,25 +710,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 15, 2026 12:37:49 pm</h3>
+<h3>May 19, 2026 05:03:21 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 15, 2026 12:38:08 pm</h3>
+<h3>May 19, 2026 05:05:02 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -416,12 +744,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='100%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -439,9 +767,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='57%'><b>4</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='42%'><b>3</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -459,10 +787,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>19</b> steps passed</small></div>
+<div><small data-tooltip='80%'><b>24</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='10%'><b>3</b> steps failed,
+<b>3</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -478,7 +806,7 @@
 </div></div>
 <script>
 var timeline = {
-"Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality":18.107
+"Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality":98.946
 };
 </script>
 <div class="row">
@@ -488,7 +816,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@generate</td>
+<td>@PaymentConfirmation</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -496,7 +824,15 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@valid</td>
+<td>@MonthlyInstallment</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@BlankUserValidation</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -504,12 +840,36 @@ var timeline = {
 <td>100%</td>
 </tr>
 <tr>
-<td>@blank</td>
-<td>1</td>
+<td>@LimitValidation</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
+</tr>
+<tr>
+<td>@RecurringPayment</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@PaymentToUser_Shobana</td>
+<td>4</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>57.143%</td>
+</tr>
+<tr>
+<td>@ScheduledPayment</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
 </tr>
 </tbody>
 </table></div>
@@ -538,21 +898,21 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 0,
+passParent: 0,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 4,
+failChild: 3,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 19,
-failGrandChild: 0,
+passGrandChild: 24,
+failGrandChild: 3,
 warningGrandChild: 0,
-skipGrandChild: 0,
+skipGrandChild: 3,
 infoGrandChild: 0,
 eventsCount: 5,
 };

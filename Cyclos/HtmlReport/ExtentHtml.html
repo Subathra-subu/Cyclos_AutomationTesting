@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>May 15, 2026 12:37:49 pm</span>
+			<span class='label blue darken-3 suite-start-time'>May 19, 2026 05:03:21 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +64,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,9 +76,13 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@generate</a></li>
-					<li><a href='#'>@valid</a></li>
-					<li><a href='#'>@blank</a></li>
+					<li><a href='#'>@PaymentConfirmation</a></li>
+					<li><a href='#'>@MonthlyInstallment</a></li>
+					<li><a href='#'>@BlankUserValidation</a></li>
+					<li><a href='#'>@LimitValidation</a></li>
+					<li><a href='#'>@RecurringPayment</a></li>
+					<li><a href='#'>@PaymentToUser_Shobana</a></li>
+					<li><a href='#'>@ScheduledPayment</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -120,12 +124,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -138,12 +142,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>3</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='57%'>
+                    <span class='strong'>4</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='42%'>
+                    3</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -158,14 +162,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>19</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='80%'>
+                    <span class='strong'>24</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>
+                    3</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='10%'>
+                    3</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -186,11 +190,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality</span>
-						<span class='test-time'>May 15, 2026 12:37:50 pm</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-name'>Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality</span>
+						<span class='test-time'>May 19, 2026 05:03:23 pm</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -199,144 +203,270 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
+	<div class='test-desc'>Description:This feature file is used to verify the payment to user functionality</div>
 
 <div class='scenario node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 18.101</span>
+	<span class='duration right label'>00 00 16.550</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify user can generate QR-code with valid amount</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify validation message for blank user field</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@valid</span>
+				<span class='category label'>@BlankUserValidation</span>
+				<span class='category label'>@PaymentToUser_Shobana</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='4' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</div>
+
+
+		</li>
+		<li test-id='5' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</div>
+
+
+		</li>
+		<li test-id='6' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_gives_the_empty_user_field(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User gives the empty user field ""</div>
+
+
+		</li>
+		<li test-id='7' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_the_error_message_is_displayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User clicks the next button and should validate the error message is displayed</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='9' status='pass'>
+
+	<span class='duration right label'>00 00 16.627</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify Payment Confirmation using pay now functionality</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PaymentConfirmation</span>
+				<span class='category label'>@PaymentToUser_Shobana</span>
 		</div>
 	
 	<ul class='steps'>
 		<li test-id='11' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user launches the Cyclos application</div>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</div>
 
 
 		</li>
-		<li test-id='15' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user logs in with valid credentials</div>
+		<li test-id='12' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</div>
 
 
 		</li>
-		<li test-id='18' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user navigates to the QR Code page</div>
+		<li test-id='13' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_enters_payment_details(io.cucumber.datatable.DataTable))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User enters payment details</div>
 
 
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>amount</td></tr><tr><td>Active Walking</td><td>100</td></tr></table></div>
 		</li>
-		<li test-id='21' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters a valid amount "100"</div>
-
-
-		</li>
-		<li test-id='24' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user clicks on the generate QR code button</div>
-
-
-		</li>
-		<li test-id='28' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_qr_code_should_be_generated_successfully())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the QR code should be generated successfully</div>
+		<li test-id='14' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_successfully_complete_the_payment())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User should successfully complete the payment</div>
 
 
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='3' status='pass'>
+<div class='scenario outline node' test-id='16' status='pass'>
 
-	<span class='duration right label'>00 00 16.797</span>
+	<span class='duration right label'>00 00 32.908</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify validation message for blank amount field</div>
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verify validation message when payment amount exceeds available limit</div>
 	</div>
 	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>username</td><td>amount</td><td>message</td></tr><tr><td>Active Walking</td><td>999999</td><td>Amount must be less or equal to 500,00 IU's.</td></tr><tr><td>The Bakery shop</td><td>0</td><td>Amount must be a positive number.</td></tr></table></div>
 	
-		<div class='category-list'>
-				<span class='category label'>@blank</span>
-		</div>
 	
 	<ul class='steps'>
-		<li test-id='12' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user launches the Cyclos application</div>
+		<li test-id='17' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify validation message when payment amount exceeds available limit</div>
 
+				<div class='category-list'>
+						<span class='category label'>@LimitValidation</span>
+						<span class='category label'>@PaymentToUser_Shobana</span>
+				</div>
 
+			<ul class='gc steps'>
+				<li test-id='19' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</h6>
+
+				</li>
+				<li test-id='20' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</h6>
+
+				</li>
+				<li test-id='21' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_enters_valid_user(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters valid user "Active Walking"</h6>
+
+				</li>
+				<li test-id='22' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_enters_amount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters amount "999999"</h6>
+
+				</li>
+				<li test-id='23' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_limit_exceeded_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User clicks the next button and should validate limit exceeded message "Amount must be less or equal to 500,00 IU's."</h6>
+
+				</li>
+			</ul>
 		</li>
-		<li test-id='14' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user logs in with valid credentials</div>
+		<li test-id='25' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Verify validation message when payment amount exceeds available limit</div>
 
+				<div class='category-list'>
+						<span class='category label'>@LimitValidation</span>
+						<span class='category label'>@PaymentToUser_Shobana</span>
+				</div>
 
-		</li>
-		<li test-id='17' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user navigates to the QR Code page</div>
+			<ul class='gc steps'>
+				<li test-id='27' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</h6>
 
+				</li>
+				<li test-id='28' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</h6>
 
-		</li>
-		<li test-id='20' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount_empty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters a valid amount empty</div>
+				</li>
+				<li test-id='29' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_enters_valid_user(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters valid user "The Bakery shop"</h6>
 
+				</li>
+				<li test-id='30' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_enters_amount(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User enters amount "0"</h6>
 
-		</li>
-		<li test-id='22' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user clicks on the generate QR code button</div>
+				</li>
+				<li test-id='31' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_limit_exceeded_message(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then User clicks the next button and should validate limit exceeded message "Amount must be a positive number."</h6>
 
-
-		</li>
-		<li test-id='25' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.a_field_level_validation_error_message_should_be_displayed())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then a Field-level validation error message should be displayed</div>
-
-
+				</li>
+			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='4' status='pass'>
+<div class='scenario node' test-id='33' status='fail'>
 
-	<span class='duration right label'>00 00 17.983</span>
+	<span class='duration right label'>00 00 10.551</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify user can generate a new QR code successfully</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify scheduled payment functionality</div>
 	</div>
 	
 	
 		<div class='category-list'>
-				<span class='category label'>@generate</span>
+				<span class='category label'>@ScheduledPayment</span>
+				<span class='category label'>@PaymentToUser_Shobana</span>
 		</div>
 	
 	<ul class='steps'>
-		<li test-id='13' class='node given Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_launches_the_cyclos_application())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user launches the Cyclos application</div>
+		<li test-id='35' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</div>
 
 
 		</li>
-		<li test-id='16' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_logs_in_with_valid_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user logs in with valid credentials</div>
+		<li test-id='36' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</div>
 
 
 		</li>
-		<li test-id='19' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_navigates_to_the_qr_code_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user navigates to the QR Code page</div>
+		<li test-id='37' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When User enters scheduled payment details</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>date</td><td>description</td></tr><tr><td>Active Walking</td><td>150</td><td>Scheduled</td><td>20-05-2026</td><td>Scheduled payment</td></tr></table></div>
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='38' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then User should successfully schedule the payment</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='40' status='fail'>
+
+	<span class='duration right label'>00 00 10.540</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify recurring payment scheduling functionality</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@RecurringPayment</span>
+				<span class='category label'>@PaymentToUser_Shobana</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='42' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</div>
 
 
 		</li>
-		<li test-id='23' class='node when Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_enters_a_valid_amount(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters a valid amount "100"</div>
+		<li test-id='43' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</div>
 
 
 		</li>
-		<li test-id='26' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_qr_code_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user clicks on the generate QR code button</div>
+		<li test-id='44' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When User enters recurring payment details</div>
+
+
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>description</td></tr><tr><td>Active Walking</td><td>200</td><td>Recurring payments</td><td>Recurring monthly payment</td></tr></table></div>
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='45' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Recurring payment should be scheduled successfully</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='47' status='fail'>
+
+	<span class='duration right label'>00 00 11.515</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Verify user can schedule monthly installment payment</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@PaymentToUser_Shobana</span>
+				<span class='category label'>@MonthlyInstallment</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='49' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_should_be_logged_into_application_and_must_on_home_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User should be logged into application and must on home page</div>
 
 
 		</li>
-		<li test-id='29' class='node and Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_clicks_on_the_generate_new_qr_code_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And the user clicks on the Generate New QR Code button</div>
+		<li test-id='50' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_payment_to_user_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the payment to user button</div>
 
 
 		</li>
-		<li test-id='31' class='node then Pass' status='Pass'>
-			<div class="step-name" title="(com.StepDefinitions.QrCode_Steps.the_user_should_be_redirected_to_the_receive_qr_code_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be redirected to the Receive QR Code page</div>
+		<li test-id='51' class='node when Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When User enters monthly installment payment details</div>
 
 
+					<div class="node-step"><table class='markup-table table '><tr><td>username</td><td>amount</td><td>type</td><td>installments</td><td>description</td></tr><tr><td>Active Walking</td><td>200</td><td>Monthly installments</td><td>5</td><td>Monthly installment payment</td></tr></table></div>
+					<div class="node-step">Step undefined</div>
+		</li>
+		<li test-id='52' class='node then Skip' status='Skip'>
+			<div class="step-name" title="()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Monthly installment payment should be scheduled successfully</div>
+
+
+					<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -384,7 +514,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@generate</span>
+						<span class='category-name'>@PaymentConfirmation</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -406,8 +536,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 15, 2026 12:37:50 pm</td>
-										<td class='linked' test-id='4'>Verify user can generate a new QR code successfully</td>
+										<td>May 19, 2026 05:03:40 pm</td>
+										<td class='linked' test-id='9'>Verify Payment Confirmation using pay now functionality</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -417,7 +547,40 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@valid</span>
+						<span class='category-name'>@MonthlyInstallment</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2026 05:04:51 pm</td>
+										<td class='linked' test-id='47'>Verify user can schedule monthly installment payment</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@BlankUserValidation</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -439,8 +602,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 15, 2026 12:37:50 pm</td>
-										<td class='linked' test-id='2'>Verify user can generate QR-code with valid amount</td>
+										<td>May 19, 2026 05:03:23 pm</td>
+										<td class='linked' test-id='2'>Verify validation message for blank user field</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -450,14 +613,14 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@blank</span>
+						<span class='category-name'>@LimitValidation</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -472,9 +635,144 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 15, 2026 12:37:50 pm</td>
-										<td class='linked' test-id='3'>Verify validation message for blank amount field</td>
+										<td>May 19, 2026 05:03:57 pm</td>
+										<td class='linked' test-id='17'>Verify validation message when payment amount exceeds available limit</td>
 										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:04:13 pm</td>
+										<td class='linked' test-id='25'>Verify validation message when payment amount exceeds available limit</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@RecurringPayment</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2026 05:04:40 pm</td>
+										<td class='linked' test-id='40'>Verify recurring payment scheduling functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@PaymentToUser_Shobana</span>
+						<span class='category-status right'>
+						<span class='label pass'>4</span>
+						<span class='label fail'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 4</span>
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 3</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2026 05:03:23 pm</td>
+										<td class='linked' test-id='2'>Verify validation message for blank user field</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:03:40 pm</td>
+										<td class='linked' test-id='9'>Verify Payment Confirmation using pay now functionality</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:03:57 pm</td>
+										<td class='linked' test-id='17'>Verify validation message when payment amount exceeds available limit</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:04:13 pm</td>
+										<td class='linked' test-id='25'>Verify validation message when payment amount exceeds available limit</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:04:30 pm</td>
+										<td class='linked' test-id='33'>Verify scheduled payment functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:04:40 pm</td>
+										<td class='linked' test-id='40'>Verify recurring payment scheduling functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+									<tr>
+										<td>May 19, 2026 05:04:51 pm</td>
+										<td class='linked' test-id='47'>Verify user can schedule monthly installment payment</td>
+										<td><span class='test-status Fail'>Fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@ScheduledPayment</span>
+						<span class='category-status right'>
+						<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 19, 2026 05:04:30 pm</td>
+										<td class='linked' test-id='33'>Verify scheduled payment functionality</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -504,31 +802,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>19</div>
+					<div class='panel-lead'>30</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 15, 2026 12:37:49 pm</div>
+					<div class='panel-lead'>May 19, 2026 05:03:21 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 15, 2026 12:38:08 pm</div>
+			 		<div class='panel-lead'>May 19, 2026 05:05:02 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 19.283</div>
+					<div class='panel-lead'>00 01 41.044</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -564,7 +862,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@generate</td>
+							<td>@PaymentConfirmation</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -573,7 +871,16 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@valid</td>
+							<td>@MonthlyInstallment</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@BlankUserValidation</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -582,12 +889,39 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@blank</td>
-							<td>1</td>
+							<td>@LimitValidation</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
 									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@RecurringPayment</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@PaymentToUser_Shobana</td>
+							<td>4</td>
+							<td>3</td>
+							<td>0</td>
+							<td>
+									57.143%
+							</td>
+						</tr>
+						<tr>
+							<td>@ScheduledPayment</td>
+							<td>0</td>
+							<td>1</td>
+							<td>0</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -602,34 +936,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				childCount: 3,
-				passChild: 3,
-				failChild: 0,
+				childCount: 7,
+				passChild: 4,
+				failChild: 3,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 19,
-				passGrandChild: 19,
-				failGrandChild: 0,
+				grandChildCount: 30,
+				passGrandChild: 24,
+				failGrandChild: 3,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receivee Qr Code Functionality":18.107
+			        "Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality":98.946
 			};
 		</script>
 		
