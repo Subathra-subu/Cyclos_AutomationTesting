@@ -11,7 +11,7 @@ public class RegisterPage {
 	public By email = By.xpath("(//input[@type='text'])[3]");
 	public By website = By.xpath("//input[@id='website']");
 	public By gender = By.xpath("//label[text()=' Female ']");
-	public By businessTypeButton = By.xpath("(//button[@type='button'])[6]");
+	public By businessTypeButton = By.xpath("//button[@id='business_type']");
 	public By businessType = By.xpath("//a[@id='business_type_restaurants']");
 	public By mobile = By.xpath("(//input[@placeholder=\"(201) 555-0123\"])[1]");
 	public By landLine = By.xpath("(//input[@placeholder=\"(201) 555-0123\"])[2]");
@@ -27,12 +27,18 @@ public class RegisterPage {
 	
 	public By agreement = By.cssSelector(".custom-control-label");
 	
-	public By recaptcha = By.cssSelector(".recaptcha-checkbox-border");
+	public By recaptcha = By.xpath("//div[@class='recaptcha-checkbox-border']");
 	
 	public By submit = By.xpath("//span[text()='Submit']");
 	
 	public By registration = By.xpath("//div[text()=' Registration successful ']");
 	
 	public By existMessage = By.xpath("//div[contains(text(),'Login name must be unique.')]");
+	
+	public By requiredMessage_name = By.xpath("(//div[@class='d-flex label-value-value']/descendant::div)[1]");
+	
+	public By requiredMessage_login = By.xpath("(//div[@class='d-flex label-value-value']/descendant::div)[2]");
+	
+	public By requiredMessage_email = By.xpath("(//div[@class='d-flex label-value-value']/descendant::div)[3]");
 
 }

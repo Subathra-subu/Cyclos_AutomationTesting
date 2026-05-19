@@ -1,8 +1,15 @@
 package com.Actions;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.Pages.BusinessDirectoryPage;
+import com.Utilities.HelperClass;
 
 public class BusinessDirectoryActions extends BaseAction {
 
@@ -33,9 +40,9 @@ public class BusinessDirectoryActions extends BaseAction {
 
     public void clickListView() {
 
-        scrollIntoView(businessPage.listViewButton);
+        waitForVisibility(businessPage.listViewButton);
 
-        waitForClickable(businessPage.listViewButton);
+        scrollIntoView(businessPage.listViewButton);
 
         jsClick(businessPage.listViewButton);
     }
@@ -50,9 +57,9 @@ public class BusinessDirectoryActions extends BaseAction {
 
     public void clickTiledView() {
 
-        scrollIntoView(businessPage.tiledViewButton);
+        waitForVisibility(businessPage.tiledViewButton);
 
-        waitForClickable(businessPage.tiledViewButton);
+        scrollIntoView(businessPage.tiledViewButton);
 
         jsClick(businessPage.tiledViewButton);
     }
@@ -76,8 +83,21 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.businessCards);
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.businessCards));
+        List<WebElement> elements =
+                HelperClass.getDriver()
+                           .findElements(businessPage.businessNames);
+
+        List<String> actualNames =
+                elements.stream()
+                        .map(WebElement::getText)
+                        .collect(Collectors.toList());
+
+        List<String> sortedNames =
+                new ArrayList<>(actualNames);
+
+        Collections.sort(sortedNames);
+
+        Assert.assertEquals(actualNames, sortedNames);
     }
 
     public void selectDescendingOrder() {
@@ -91,7 +111,20 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.businessCards);
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.businessCards));
+        List<WebElement> elements =
+                HelperClass.getDriver()
+                           .findElements(businessPage.businessNames);
+
+        List<String> actualNames =
+                elements.stream()
+                        .map(WebElement::getText)
+                        .collect(Collectors.toList());
+
+        List<String> sortedNames =
+                new ArrayList<>(actualNames);
+
+        Collections.sort(sortedNames, Collections.reverseOrder());
+
+        Assert.assertEquals(actualNames, sortedNames);
     }
 }

@@ -119,9 +119,9 @@ public class MyVoucherActions extends BaseAction {
 
 	public void assertion(String expected) {
 		try {
-			waitForVisibility(myvov.assertAmount);
+			waitForVisibility(myvov.assertPopUp);
 
-			String actual = getText(myvov.assertAmount);
+			String actual = getText(myvov.assertPopUp);
 
 			Assert.assertEquals(actual, expected);
 

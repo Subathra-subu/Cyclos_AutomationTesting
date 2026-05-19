@@ -46,14 +46,13 @@ public class BusinessDirectoryStepDefinition {
                 new ExcelData();
 
         Object[][] data =
-                excel.validData();
+                excel.businessDirectoryData();
 
         String keyword =
                 data[0][0].toString();
 
         actions.enterKeyword(keyword);
     }
-
     @Then("Matching business records should be displayed")
     public void matching_business_records_should_be_displayed() {
 
@@ -64,7 +63,7 @@ public class BusinessDirectoryStepDefinition {
     public void user_selects_list_view_option(DataTable dataTable) {
 
         List<Map<String, String>> data =
-                dataTable.asMaps();
+                dataTable.asMaps(String.class, String.class);
 
         String view =
                 data.get(0).get("view");
@@ -85,7 +84,7 @@ public class BusinessDirectoryStepDefinition {
     public void user_selects_tiled_view_option(DataTable dataTable) {
 
         List<Map<String, String>> data =
-                dataTable.asMaps();
+                dataTable.asMaps(String.class, String.class);
 
         String view =
                 data.get(0).get("view");

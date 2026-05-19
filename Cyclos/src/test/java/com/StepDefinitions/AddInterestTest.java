@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import com.Actions.AddInterestActions;
+import com.Actions.LoginAction;
 import com.Utilities.ExcelData;
 import com.Utilities.HelperClass;
 
@@ -18,17 +19,27 @@ public class AddInterestTest
 	
 	AddInterestActions addInterestActions = new AddInterestActions();
 	
+
+	LoginAction login = new LoginAction();
 	
-	
-	@Given("the user in the Marketplace menu")
-	public void the_user_in_the_marketplace_menu() 
+	@Given("the user login with valid credentials")
+	public void the_user_login_with_valid_credentials() 
 	{
 	    // Write code here that turns the phrase above into concrete actions
-	    
-		addInterestActions.clickMarketPlace();
-		
+		login.clickLoginLink();
+	    login.entervaliduserNameAndPassword();
+	    login.clickSubmitButton();
 		
 	}
+
+	@Given("the user click the Marketplace menu")
+	public void the_user_click_the_marketplace_menu() {
+	    // Write code here that turns the phrase above into concrete actions
+		addInterestActions.clickMarketPlace();
+	}
+
+
+	
 
 	@When("the user clicks the Advertisement Interests button")
 	public void the_user_clicks_the_advertisement_interests_option() 
