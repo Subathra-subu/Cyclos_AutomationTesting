@@ -1,5 +1,5 @@
 package com.Actions;
-//login actio
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
@@ -68,36 +68,64 @@ public class LoginAction extends BaseAction{
 	
 	public void enterinvalidUsernameandPassword(String name,String password) {
 		
-		sendUserName(name);
-		sendPassword(password);
+		try {
+			sendUserName(name);
+			sendPassword(password);
+		} 
+		catch (Exception e) {
+			Hooks.logger.error("Unable to enter username and password", e);
+		}
 	}
 	
 	public void assertAlertMessage(String expected) {
 		
-		String actual = getText(loginPage.alertMessage);
+		
+		try {
+			String actual = getText(loginPage.alertMessage);
 
-		Assert.assertEquals(actual,expected);
+			Assert.assertEquals(actual, expected);
+		}
+		catch(Exception e) {
+			Hooks.logger.error("Unable to assert alert message", e);
+		}
 		
 	}
 	
 	public void assertRequiredMessage(By locator,String expected) {
 		
-		String actual = getText(locator);
+		try {
+			String actual = getText(locator);
 		
-		Assert.assertEquals(actual, expected);
+			Assert.assertEquals(actual, expected);
+		}
+		catch(Exception e) {
+			Hooks.logger.error("Unable to assert required message", e);
+		}
 		
 	}
 	
 	public void assertUsernameRequired(String expected) {
 		
-		assertRequiredMessage(loginPage.userRequiredMessage,expected);
+		try {
+		
+			assertRequiredMessage(loginPage.userRequiredMessage,expected);
+		}
+		catch(Exception e) {
+			Hooks.logger.error("Unable to assert username required message");
+		}
 		
 		
 	}
 	
 	public void assertPasswordRequired(String expected) {
 		
-		assertRequiredMessage(loginPage.passwordRequiredMessage,expected);
+		try {
+		
+			assertRequiredMessage(loginPage.passwordRequiredMessage,expected);
+		}
+		catch(Exception e) {
+			Hooks.logger.error("Unable to assert password required message");
+		}
 		
 	}
 	

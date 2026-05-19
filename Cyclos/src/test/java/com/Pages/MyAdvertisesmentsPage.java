@@ -29,18 +29,19 @@ public class MyAdvertisesmentsPage {
 
 	    public By uploadImageBtn = By.xpath("//input[@type='file']");
 
-	    public By saveBtn = By.xpath("//button[contains(text(),'Save')]");
+	    public By saveBtn = By.xpath("//span[text()='Save']");
 
-	    public By successMessage = By.xpath("//div[contains(@class,'notification-message')]");
+	    public By Message = By.xpath("//ui-root[@class='flex-grow-1 d-flex root']/child::snack-bar");
 
 	    public By searchField = By.xpath("//input[@placeholder='Search']");
 
-	    public By editBtn = By.xpath("//div[contains(text(),'Edit')]");
+	    public By editBtn = By.xpath("//div[text()='Edit']");
 
-	    public By removeBtn = By.xpath("//div[contains(text(),'Remove')]");
+	    public By removeBtn = By.xpath("//div[text()='Remove']");
 
 	    public By confirmPopup = By.xpath("//div[contains(text(),'Are you sure')]");
 
 	    public By confirmRemoveBtn = By.xpath("//button[contains(text(),'Remove')]");
+	    
 	}
 
