@@ -9,8 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
-	    tags = "@RecievePaymentFeature",
+		features = "src/test/resources/features/ReceivePayment.feature",
 
         glue = "com.StepDefinitions",
 
@@ -37,7 +36,7 @@ import io.cucumber.testng.CucumberOptions;
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}

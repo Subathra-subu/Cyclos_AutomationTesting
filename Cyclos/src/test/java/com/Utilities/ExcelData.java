@@ -39,11 +39,14 @@ public class ExcelData {
                 "valid_vovucher");
     }
     
-    @DataProvider(name = "Advertisements", parallel = true)
-    public Object[][] getFavoritesData() throws IOException {
+    @DataProvider(name = "advertisementFavourites", parallel = true)
 
-        String path = "src/test/resources/testData/ExcelData.xlsx";
-        return getExcelData(path, "Advertisement_akksheetha");
+    public Object[][] advertisementFavourites()
+            throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "AdvertisementFavourites");
     }
 
     @DataProvider(name = "businessDirectory", parallel = true)

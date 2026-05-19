@@ -1,81 +1,45 @@
-@Akksheetha @AdvertisementsFeature
-Feature: Marketplace Advertisements Feature
+Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
 
   Description:
-  This feature validates Marketplace Advertisements functionality including search, favourites, sorting and listings.
+  Validate advertisement search functionality in Marketplace.
 
   Background:
-    Given user is logged into the application
-    And user navigates to advertisements page
+    Given the user login to the cyclos website
+    And the user navigates to Marketplace Advertisement module
 
-
-# 1. VALID SEARCH 
-@ValidKeywordSearch
-Scenario Outline: Verify keyword search functionality in advertisements
-
-    When user searches for keyword "<keyword>"
-    Then matching advertisements should be displayed
-
-    Examples:
+  @AdvertisementSearch
+  Scenario: Search advertisements with valid keywords
+    When the user searches advertisements using the following details
       | keyword |
-      | 5 star  |
       | orange  |
+    Then relevant advertisements should be displayed
+    
+  @InvalidAdvertisementSearch
+Scenario: Verify invalid advertisement keyword search
 
+  When user searches for keyword "xyz123"
+  Then no matching advertisements should be displayed
+  
+  @AddAdvertisementFavourites
+  Scenario: Add advertisements to favourites
 
-# 2. INVALID SEARCH
-@InvalidKeywordSearch
-Scenario Outline: Verify no results message for invalid keyword search
+  When user adds advertisements to favourites using excel data
+  Then selected advertisements should be added to favourites
+  
+  @AdvertisementPriceFilter
+Scenario: Verify advertisement filter by price range
 
-    When user searches for keyword "<keyword>"
-    Then no results message should be displayed
+  When user filters advertisements with minimum price "10" and maximum price "500"
+  Then filtered advertisements should be displayed
+  
+  @AdvertisementImageFilter
+Scenario: Verify advertisements with images filter
 
-    Examples:
-      | keyword |
-      | red     |
-      | xyz123  |
-
-
-# 3. ADD TO FAVOURITES
-@AddToFavourites
-Scenario: Verify user can add product to favourites
-
-    When user adds product to favourites using test data
-    Then product should be added to favourites successfully
-
-
-# 4. LIST FAVOURITES
-@ListFavourites
-Scenario: Verify user can list all favourite products
-
-    Given user adds below products to favourites
-      | product |
-      | Laptop  |
-      | Bike    |
-      | Mobile  |
-
-    When user navigates to favourites section
-    Then all favourite products should be displayed
-
-
-# 5. SORT - LOWEST PRICE
-@LowestPriceSort
-Scenario: Verify products sorted by lowest price
-
-    When user sorts products by "Lowest Price"
-    Then products should be displayed in ascending price order
-
-
-# 6. SORT - HIGHEST PRICE
-@HighestPriceSort
-Scenario: Verify products sorted by highest price
-
-    When user sorts products by "Highest Price"
-    Then products should be displayed in descending price order
-
-
-# 7. SORT - LATEST PRODUCTS
-@LatestProducts
-Scenario: Verify latest products are displayed first
-
-    When user sorts products by "Latest"
-    Then latest products should be displayed at the top
+  When user filters advertisements with images
+  Then advertisements containing images should be displayed
+  
+  
+  @AdvertisementFavouriteFilter
+  Scenario: Verify favourite advertisements filter
+  When user filters favourite advertisements
+  Then only favourite advertisements should be displayed

@@ -1,107 +1,116 @@
 package com.StepDefinitions;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 import com.Actions.AdvertisementAction;
 import com.Actions.LoginAction;
-import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class AdvertisementTest {
 
-    AdvertisementAction action = new AdvertisementAction();
-    LoginAction login = new LoginAction();
+    AdvertisementAction advertisementAction =
+            new AdvertisementAction();
 
-    @Given("user is logged into the application")
-    public void user_logged_in() {
-        login.clickLoginLink();
-        login.entervaliduserNameAndPassword();
-        login.clickSubmitButton();
+    LoginAction loginAction =
+            new LoginAction();
+
+    @Given("the user login to the cyclos website")
+    public void the_user_login_to_the_cyclos_website() {
+
+        loginAction.clickLoginLink();
+        loginAction.entervaliduserNameAndPassword();
+        loginAction.clickSubmitButton();
     }
 
-    @And("user navigates to advertisements page")
-    public void navigate_ads_page() {
-        action.clickingLinks();
+    @And("the user navigates to Marketplace Advertisement module")
+    public void the_user_navigates_to_marketplace_advertisement_module() {
+
+        advertisementAction.clickMarketplace();
+        advertisementAction.navigateToAdvertisement();
     }
 
-    @When("user searches for a valid keyword {string}")
-    public void valid_search(String keyword) {
-        action.searchValidKeyword(keyword);
+    @When("the user searches advertisements using the following details")
+    public void the_user_searches_advertisements_using_the_following_details(
+            DataTable dataTable) {
+
+        advertisementAction.searchAdvertisement(
+                dataTable);
     }
 
-    @Then("matching advertisements should be displayed")
-    public void verify_valid() {
-        action.verifySearchResult();
+    @Then("relevant advertisements should be displayed")
+    public void relevant_advertisements_should_be_displayed() {
+
+        advertisementAction.verifySearchResults();
+    }
+    
+    @When("user searches for keyword {string}")
+    public void user_searches_for_keyword(
+            String keyword) {
+
+        //advertisementAction.searchByKeyword(keyword);
     }
 
-    // INVALID
-    @When("user searches for invalid keyword {string}")
-    public void invalid_search(String keyword) {
-        action.searchInvalidKeyword(keyword);
+    @Then("no matching advertisements should be displayed")
+    public void no_matching_advertisements_should_be_displayed() {
+
+//        advertisementAction.verifyNoSearchResults();
+    }
+    @When("user adds advertisements to favourites using excel data")
+    public void user_adds_advertisements_to_favourites_using_excel_data()
+            throws IOException {
+
+        advertisementAction.addAdvertisementToFavourites();
     }
 
-    @Then("no results message should be displayed")
-    public void verify_invalid() {
-        action.verifyNoResult();
+    @Then("selected advertisements should be added to favourites")
+    public void selected_advertisements_should_be_added_to_favourites() {
+
+        advertisementAction.verifyAdvertisementAddedToFavourites();
+    }
+    @When("user filters advertisements with minimum price {string} and maximum price {string}")
+    public void user_filters_advertisements_with_minimum_price_and_maximum_price(
+            String minPrice,
+            String maxPrice) {
+
+        advertisementAction
+                .filterByPriceRange(
+                        minPrice,
+                        maxPrice);
     }
 
-    // EXCEL
-    @When("user adds a product to favourites using excel data")
-    public void excel_fav() throws IOException {
-        action.addProductToFavouritesUsingExcel();
+    @Then("filtered advertisements should be displayed")
+    public void filtered_advertisements_should_be_displayed() {
+
+        advertisementAction
+                .verifyFilteredAdvertisements();
+    }
+    @When("user filters advertisements with images")
+    public void user_filters_advertisements_with_images() {
+
+        advertisementAction
+                .filterAdvertisementsWithImages();
     }
 
-    @Then("product should be added to favourites successfully")
-    public void verify_fav() {
-        action.verifyProductAddedToFav();
+    @Then("advertisements containing images should be displayed")
+    public void advertisements_containing_images_should_be_displayed() {
+
+        advertisementAction
+                .verifyAdvertisementsWithImages();
+    }
+    @When("user filters favourite advertisements")
+    public void user_filters_favourite_advertisements() {
+
+        advertisementAction.filterFavouriteAdvertisements();
     }
 
-    // DATATABLE
-    @Given("user has added below products to favourites")
-    public void datatable(DataTable table) {
+    @Then("only favourite advertisements should be displayed")
+    public void only_favourite_advertisements_should_be_displayed() {
 
-        List<Map<String, String>> data = table.asMaps(String.class, String.class);
-
-        for (Map<String, String> row : data) {
-            action.addProductToFavourite(row.get("product"));
-        }
-    }
-
-    @When("user navigates to favourites page")
-    public void nav_fav() {}
-
-    @Then("favourite products should be displayed")
-    public void verify_list() {
-        action.verifySearchResult();
-    }
-
-    // SORT
-    @When("user sorts products using csv data {string}")
-    public void sort_csv(String type) {
-        action.sortProduct(type);
-    }
-
-    @When("user sorts products by {string}")
-    public void sort(String type) {
-        action.sortProduct(type);
-    }
-
-    @Then("products should be displayed in lowest to highest price order")
-    public void low() {
-        action.verifyLowestPrice();
-    }
-
-    @Then("products should be displayed in highest to lowest price order")
-    public void high() {
-        action.verifyHighestPrice();
-    }
-
-    @Then("latest products should be displayed first")
-    public void latest() {
-        action.verifyLatestProducts();
+        advertisementAction.verifyFavouriteFilteredAdvertisements();
     }
 }
