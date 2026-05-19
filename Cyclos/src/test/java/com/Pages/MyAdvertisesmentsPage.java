@@ -42,6 +42,6 @@ public class MyAdvertisesmentsPage {
 	    public By confirmPopup = By.xpath("//div[@class='modal-content']/child::*");
 
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
-	    
+
 	}
 

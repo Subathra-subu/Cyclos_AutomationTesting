@@ -70,7 +70,7 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		actions.assertSuccessfullMessage();
+		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
 	@When("User searches advertisement {string}")
@@ -107,6 +107,7 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
+		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
 	@When("User clicks remove advertisement")
@@ -125,7 +126,13 @@ public class MyAdvertisementsTest {
 	@Then("User confirms advertisement removal")
 	public void user_confirms_advertisement_removal() {
 
-		actions.assertRemovalMessage();
-		
+		actions.confirmRemoveAdvertisement();
+	}
+
+	@Then("Advertisement should be removed successfully")
+	public void advertisement_should_be_removed_successfully() {
+
+		Assert.assertTrue(actions.validateMessage().contains("was removed"));
+
 	}
 }

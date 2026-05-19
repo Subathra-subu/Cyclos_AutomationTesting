@@ -32,6 +32,8 @@ public class MyAdvertisementsAction extends BaseAction {
         catch (Exception e) {
             Hooks.logger.error("Unable to click my advertisements", e);
         }
+
+    
     }
 
     public void clickNewAdvertisement() {
@@ -222,6 +224,6 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
+   }
 
-}
 

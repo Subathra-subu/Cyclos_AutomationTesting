@@ -8,35 +8,26 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-
-		features = "src/test/resources/Features",
-
-
-        glue = "com.StepDefinitions",
-
-        monochrome = true,
-
-        
-        publish = false,
-        
-
-        plugin = {
+		features = "src/test/resources/Features/MyAdvertisements.feature",
 
 
-                "pretty",
+		glue = "com.StepDefinitions",
 
-                "html:target/CucumberReports/Cucumber.html",
+		monochrome = true,
 
-                "json:target/CucumberReports/Cucumber.json",
+		publish = false,
 
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+		plugin = {
 
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
-        }
-)
+				"pretty",
+
+				"html:target/CucumberReports/Cucumber.html",
+ 
+				"json:target/CucumberReports/Cucumber.json",
+
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 }
-
-
-
