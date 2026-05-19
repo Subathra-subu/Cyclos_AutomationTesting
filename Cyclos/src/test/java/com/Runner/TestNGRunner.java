@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features/businessDirectory.feature",
 
-		
+		tags="@BusinessDirectory_Shobana",
 
 
         glue = "com.StepDefinitions",
