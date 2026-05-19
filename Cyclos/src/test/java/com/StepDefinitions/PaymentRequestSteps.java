@@ -1,4 +1,4 @@
-package com.StepDefinitions;
+/*package com.StepDefinitions;
 
 import com.Actions.LoginAction;
 import com.Actions.ReqpaymentActions;
@@ -33,7 +33,15 @@ public class PaymentRequestSteps {
 	  @When("the user enters payment request details {string} {string} {string}")
 	    public void the_user_enters_payment_request_details(String receiver, String amount, String date) {
 
-		   }
+		  for (Object[] row : paymentData()) {
+
+			    String receiver = row[0].toString();
+			    String amount = row[1].toString();
+			    String date = row[2].toString();
+
+			    action.enterPaymentDetails(receiver, amount, date);
+			}	    }
+
 
 	@When("the user clicks on the Confirm button")
 	public void the_user_clicks_on_the_confirm_button() {
@@ -95,4 +103,4 @@ public class PaymentRequestSteps {
 	    throw new io.cucumber.java.PendingException();
 	}
 
-}
+}*/

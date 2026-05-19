@@ -1,4 +1,4 @@
-package com.Actions;
+/*package com.Actions;
 
 import java.io.IOException;
 
@@ -22,6 +22,23 @@ public class ReqpaymentActions extends BaseAction {
 
     public void excelPaymentData() throws IOException {
 
+        ExcelData excelData = new ExcelData();
+
+        Object[][] data = excelData.getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "PaymentRequest_Krishna"
+        );
+
+        for (Object[] row : data) {
+
+            String receiver = row[0].toString();
+            String amount = row[1].toString();
+            String date = row[2].toString();
+
+             enterPaymentDetails(receiver, amount, date);
+        }
+
+
     }
     public void confirmRequest() {
         click(paypage.confirm);
@@ -34,4 +51,4 @@ public class ReqpaymentActions extends BaseAction {
     public void cancelRequest() {
         click(paypage.cancel);
     }
-}
+}*/

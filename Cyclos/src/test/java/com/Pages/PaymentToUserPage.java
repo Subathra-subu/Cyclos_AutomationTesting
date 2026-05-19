@@ -24,10 +24,11 @@ public class PaymentToUserPage {
 
     public By recurringPaymentOption =By.xpath("//a[normalize-space()='Recurring payments']");
     public By numberOfInstallments =By.xpath("//input[ @type=\"number\"]");
+
     }
    
 
     
     
 
-    
+
