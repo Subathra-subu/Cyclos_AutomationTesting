@@ -1,3 +1,4 @@
+@krishna
 Feature: Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality
 
 Background:

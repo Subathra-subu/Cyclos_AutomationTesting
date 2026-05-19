@@ -6,6 +6,7 @@ import java.util.List;
 import com.Actions.LoginAction;
 
 import com.Actions.MyVoucherActions;
+import com.Utilities.CSVUtility;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.en.Given;
@@ -102,4 +103,43 @@ public class MyVoucherTest
 	    // Write code here that turns the phrase above into concrete actions
 	    MyVouAcc.clickrestaurant();
 	}
+	
+	
+
+	@When("the user click the result")
+	public void the_user_click_the_result() {
+
+	    HelperClass.log.info(
+	            "Result clicked from CSV execution");
+	}
+
+	@Then("the user should seen the Qr code code")
+	public void the_user_should_seen_the_qr_code_code() {
+
+	    HelperClass.log.info(
+	            "QR code validated from CSV execution");
+	}
+	
+	@When("the user enter the valid voucher code {string}")
+	public void the_user_enter_the_valid_voucher_code(String string) 
+	{
+	    // Write code here that turns the phrase above into concrete actions
+		List<String> voucherCodes =
+	            CSVUtility.getVoucherCodes(
+	                    "src/test/resources/testData/VoucherCode.csv");
+
+	    for (String code : voucherCodes) {
+
+	    	MyVouAcc.enterVoucherCode(code);
+	    	
+
+	    	MyVouAcc.AssertResult();
+
+	    	
+	    }
+	}
+	
+
+
 }
+

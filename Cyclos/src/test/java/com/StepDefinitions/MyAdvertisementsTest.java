@@ -78,10 +78,17 @@ public class MyAdvertisementsTest {
 
 		actions.searchAdvertisement(title);
 	}
+	
+	@When("the user click the advertisement")
+	public void the_user_click_the_advertisement() {
+	    
+		actions.clickItem();
+		
+	}
 
-	@When("User edits advertisement details")
-	public void user_edits_advertisement_details(DataTable dataTable) {
-
+	@When("User click the edit button and edits advertisement details")
+	public void user_click_the_edit_button_and_edits_advertisement_details(io.cucumber.datatable.DataTable dataTable) {
+		
 		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
 
 		actions.clickEditAdvertisement();
@@ -113,11 +120,13 @@ public class MyAdvertisementsTest {
 	public void user_validates_remove_confirmation_popup() {
 
 		Assert.assertTrue(actions.validateRemovePopup().contains("Are you sure"));
+		actions.confirmRemoveAdvertisement();
 	}
 
 	@Then("User confirms advertisement removal")
 	public void user_confirms_advertisement_removal() {
 
+<<<<<<< HEAD
 		actions.confirmRemoveAdvertisement();
 	}
 
@@ -125,5 +134,9 @@ public class MyAdvertisementsTest {
 	public void advertisement_should_be_removed_successfully() {
 
 		Assert.assertTrue(actions.validateSuccessMessage().contains("removed"));
+=======
+		actions.assertRemovalMessage();
+		
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 	}
 }

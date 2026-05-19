@@ -79,6 +79,32 @@ public class AddInterestActions extends BaseAction {
 			throw e;
 		}
 	}
+<<<<<<< HEAD
+=======
+	
+	public void assertuniqe() {
+
+		try {
+
+			waitForVisibility(addInterst.unique);
+
+			String actualMessage = getText(addInterst.unique);
+
+			HelperClass.log.info("Toast Message: " + actualMessage);
+
+			Assert.assertTrue(actualMessage.contains("unique"));
+
+			HelperClass.log.info("unique assertion successful");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("unique assertion failed: " + e.getMessage());
+
+			throw e;
+		}
+	}
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+
 
 	public void clickMarketPlace() {
 
@@ -115,6 +141,7 @@ public class AddInterestActions extends BaseAction {
 
 			clickSubmit();
 
+			
 			HelperClass.log.info("Entered all add details successfully");
 		}
 
@@ -235,6 +262,11 @@ public class AddInterestActions extends BaseAction {
 		return isDisplayed(addInterst.noResult);
 	}
 
+	
+	public boolean isUniqueVisible()
+	{
+		return isDisplayed(addInterst.unique);
+	}
 	public void assertPopup(String expectedMessage) {
 		try {
 			waitForVisibility(addInterst.popUp);
