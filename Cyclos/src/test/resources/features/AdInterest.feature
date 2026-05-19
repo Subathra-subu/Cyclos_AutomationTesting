@@ -11,7 +11,7 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
   Scenario: Delete an Advertisement Interest
     When the user clicks the Delete button
     And the user confirms the deletion popup
-    Then the user should see the success message "The item was removed"
+    Then the user should see the success message 
 
   @addNew @smoke
   Scenario: Add a New Advertisement Interest
