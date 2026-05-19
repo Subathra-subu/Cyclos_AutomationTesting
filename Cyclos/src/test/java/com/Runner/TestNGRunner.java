@@ -11,31 +11,23 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
-        glue = "com.StepDefinitions",
+		glue = "com.StepDefinitions",
 
-        monochrome = true,
-
-        
+		monochrome = true,
+		
         publish = false,
         
+		plugin = {
+				
+				"pretty",
 
-        plugin = {
+				"html:target/CucumberReports/Cucumber.html",
 
+				"json:target/CucumberReports/Cucumber.json",
 
-                "pretty",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-                "html:target/CucumberReports/Cucumber.html",
-
-                "json:target/CucumberReports/Cucumber.json",
-
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
-        }
-)
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 }
-
-
-
