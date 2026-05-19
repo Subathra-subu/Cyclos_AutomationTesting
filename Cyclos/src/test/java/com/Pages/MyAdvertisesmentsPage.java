@@ -6,10 +6,8 @@ public class MyAdvertisesmentsPage {
 	
 		public By marketPlaceMenu = By.xpath("//div[@class='menu-text'][normalize-space()='Marketplace']");
 		
-	    public By myAdvertisements =  By.xpath("//div[text()='My advertisements']");
-
-	    public By newAdvertisementBtn = By.xpath("//div[contains(text(),'Add new')]");
-
+		public By myAdvertisements =
+		        By.xpath("//*[contains(text(),'My advertisements')]");	    public By newAdvertisementBtn =By.xpath("//*[contains(text(),'Add new')]");
 	    public By titleField = By.xpath("//input[@type='text']");
 
 	    public By categoryDropdown = By.xpath("//button[contains(@class,'form-control')]");
@@ -29,8 +27,7 @@ public class MyAdvertisesmentsPage {
 
 	    public By saveBtn = By.xpath("//button[contains(text(),'Save')]");
 
-	    public By successMessage = By.xpath("//div[contains(@class,'notification-message')]");
-
+	    public By successMessage = By.xpath("//snack-bar[contains(.,'The advertisement was saved')]");
 	    public By searchField = By.xpath("//input[@placeholder='Search']");
 
 	    public By editBtn = By.xpath("//div[contains(text(),'Edit')]");

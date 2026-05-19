@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 19 11:26:55 IST 2026</td>
+<td>Started on:</td><td>Tue May 19 13:01:40 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>60 seconds (60032 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41369 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,91 +76,36 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with only Mandatory Fields", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@class=&apos;recaptcha-checkbox-border&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;recaptcha-checkbox-border&apos;]&quot;}.
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can add new Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;Add new&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Add new&apos;)]&quot;}.
 (tried for 20 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59848}, goog:processID: 20596, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59848/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a5793e985b31ac8690854faf93c2f046
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59487}, goog:processID: 20088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59487/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76c4d45a6ed6fee91ba49da33138b9dd
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:31)
-	at com.Actions.RegisterAction.clickRecaptcha(RegisterAction.java:138)
-	at com.Actions.RegisterAction.enterMandatoryDetails(RegisterAction.java:246)
-	at com.StepDefinitions.RegisterTest.the_user_enters_the_mandatory_credentials_and_click_next_button(RegisterTest.java:146)
-	at ✽.the user enters the mandatory credentials and click next button(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:38)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1588154917", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1588154917'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@class=&apos;recaptcha-checkbox-border&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;recaptcha-checkbox-border&apos;]&quot;}.
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.MyAdvertisementsAction.clickMyAdvertisements(MyAdvertisementsAction.java:21)
+	at com.StepDefinitions.MyAdvertisementsTest.user_clicks_advertisement_menu(MyAdvertisementsTest.java:44)
+	at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/MyAdvertisements.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1923112019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1923112019'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;Add new&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Add new&apos;)]&quot;}.
 (tried for 20 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59848}, goog:processID: 20596, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59848/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a5793e985b31ac8690854faf93c2f046
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59487}, goog:processID: 20088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59487/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76c4d45a6ed6fee91ba49da33138b9dd
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:31)
-	at com.Actions.RegisterAction.clickRecaptcha(RegisterAction.java:138)
-	at com.Actions.RegisterAction.enterMandatoryDetails(RegisterAction.java:246)
-	at com.StepDefinitions.RegisterTest.the_user_enters_the_mandatory_credentials_and_click_next_button(RegisterTest.java:146)
-	at ✽.the user enters the mandatory credentials and click next button(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:38)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.MyAdvertisementsAction.clickMyAdvertisements(MyAdvertisementsAction.java:21)
+	at com.StepDefinitions.MyAdvertisementsTest.user_clicks_advertisement_menu(MyAdvertisementsTest.java:44)
+	at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/MyAdvertisements.feature:8)
 </pre></div></td>
-<td>56</td>
-<td>com.Runner.TestNGRunner@6950ed69</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with valid credentials", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@class=&apos;recaptcha-checkbox-border&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;recaptcha-checkbox-border&apos;]&quot;}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59847}, goog:processID: 13016, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59847/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4cbc920ed8bbdb383ebbb39dd89862e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:31)
-	at com.Actions.RegisterAction.clickRecaptcha(RegisterAction.java:138)
-	at com.Actions.RegisterAction.enterValidDetails(RegisterAction.java:179)
-	at com.StepDefinitions.RegisterTest.hen_the_user_enters_the_valid_credentials_and_click_next_button(RegisterTest.java:64)
-	at ✽.the user enters the valid credentials and click next button(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:11)
-</pre></div><a href='#' onClick='toggleBox("stack-trace22313160", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace22313160'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //div[@class=&apos;recaptcha-checkbox-border&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;recaptcha-checkbox-border&apos;]&quot;}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59847}, goog:processID: 13016, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59847/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4cbc920ed8bbdb383ebbb39dd89862e3
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:31)
-	at com.Actions.RegisterAction.clickRecaptcha(RegisterAction.java:138)
-	at com.Actions.RegisterAction.enterValidDetails(RegisterAction.java:179)
-	at com.StepDefinitions.RegisterTest.hen_the_user_enters_the_valid_credentials_and_click_next_button(RegisterTest.java:64)
-	at ✽.the user enters the valid credentials and click next button(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:11)
-</pre></div></td>
-<td>56</td>
-<td>com.Runner.TestNGRunner@6950ed69</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Existing credentials", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
-<td></td>
-<td>34</td>
-<td>com.Runner.TestNGRunner@6950ed69</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Blank Field Validation", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
-<td></td>
-<td>32</td>
+<td>35</td>
 <td>com.Runner.TestNGRunner@6950ed69</td></tr>
 </table><p>
 </body>

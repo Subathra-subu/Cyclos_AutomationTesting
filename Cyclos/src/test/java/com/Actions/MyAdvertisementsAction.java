@@ -14,16 +14,22 @@ public class MyAdvertisementsAction extends BaseAction {
 		
 	}
 
-    public void clickMyAdvertisements() {
-    	
-    	scrollIntoView(advertisementPage.myAdvertisements);
+	public void clickMyAdvertisements() {
 
-        click(advertisementPage.myAdvertisements);
-    }
+	    scrollIntoView(advertisementPage.myAdvertisements);
+
+	    waitForClickable(advertisementPage.myAdvertisements);
+
+	    jsClick(advertisementPage.myAdvertisements);
+
+	    waitForVisibility(advertisementPage.newAdvertisementBtn);
+	}
 
     public void clickNewAdvertisement() {
 
-        click(advertisementPage.newAdvertisementBtn);
+        waitForVisibility(advertisementPage.newAdvertisementBtn);
+
+        jsClick(advertisementPage.newAdvertisementBtn);
     }
 
     public void enterTitle(String title) {

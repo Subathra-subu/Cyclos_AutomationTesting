@@ -118,11 +118,3 @@ public class PaymentToUserActions extends BaseAction {
 	    sendKeys(paymentpage.numberOfInstallments, value);
 	}
 }
-
-
-
-
-
-
-
-

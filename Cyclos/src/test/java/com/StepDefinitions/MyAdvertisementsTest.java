@@ -70,7 +70,7 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		Assert.assertTrue(actions.validateSuccessMessage().contains(""));
+		Assert.assertTrue(actions.validateSuccessMessage().contains("The advertisement was saved"));
 	}
 
 	@When("User searches advertisement {string}")

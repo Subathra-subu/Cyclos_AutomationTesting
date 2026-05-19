@@ -8,8 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @Test
 @CucumberOptions(
-
-		features = "src/test/resources/Features",
+		features = "src/test/resources/features/MyAdvertisements.feature",
 
         glue = "com.StepDefinitions",
 
@@ -18,7 +17,7 @@ import io.cucumber.testng.CucumberOptions;
         
         publish = false,
         
-        tags = "@Register_Subathra",
+        tags = "@AddAdvertisement",
 
         plugin = {
 
@@ -40,8 +39,4 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 	    return super.scenarios();
-	}
-}
-
-
-
+	}}
