@@ -139,15 +139,40 @@ public class TicketsActions extends BaseAction {
 		}
 	}
 
-	public void clickOpenSts() {
-		try {
-			waitForClickable(ticketsPage.clickOpen);
-			jsClick(ticketsPage.clickOpen);
-			HelperClass.log.info("Clicked Open Status successfully");
-		} catch (Exception e) {
-			HelperClass.log.error("Failed to click Open Status : " + e.getMessage());
-			throw new RuntimeException("Unable to click Open Status", e);
-		}
+//	public void clickOpenSts() {
+//		try {
+//			waitForClickable(ticketsPage.clickOpen);
+//			jsClick(ticketsPage.clickOpen);
+//			HelperClass.log.info("Clicked Open Status successfully");
+//		} catch (Exception e) {
+//			HelperClass.log.error("Failed to click Open Status : " + e.getMessage());
+//			throw new RuntimeException("Unable to click Open Status", e);
+//		}
+//	}
+	
+	public void clickStatus(String status) {
+
+	    try {
+
+	        By statusOption =
+	                By.xpath("//a[text()=' " + status + " ']");
+
+	        waitForClickable(statusOption);
+
+	        jsClick(statusOption);
+
+	        HelperClass.log.info("Clicked " + status + " status successfully");
+
+	    } catch (Exception e) {
+
+	        HelperClass.log.error("Failed to click "
+	                + status
+	                + " status : "
+	                + e.getMessage());
+
+	        throw new RuntimeException(
+	                "Unable to click " + status + " status", e);
+	    }
 	}
 
 	public void filterClick() {
