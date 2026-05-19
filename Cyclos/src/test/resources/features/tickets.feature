@@ -1,4 +1,4 @@
-@Tickets
+@SRIRAM
 Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
 
   Background:
