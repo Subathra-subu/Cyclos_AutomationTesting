@@ -1,52 +1,76 @@
 package com.Actions;
 
-import org.openqa.selenium.By;
-
 import com.Pages.QRcode_page;
 
 public class QR_Actions extends BaseAction {
-	
-	
-	
-	public void l_click(By locator) {
-		click(locator);
-	}
-	public void u_sendKeys(By locator,String username) {
-		sendKeys(locator,username);
-	}
-	public void p_sendKeys(By locator,String password) {
-		sendKeys(locator,password);
-	}
-	public void s_click(By locator) {
-		click(locator);
-	}
-       public void bank_click(By locator) {
-    	   click(locator);
-       }
-       public void  qr_click(By locator)  {
-    	  
-    	   click(locator);
-    	    try { Thread.sleep(1500); } catch (Exception e) {}
-       
-       }
-       
-       public void send_amount(By locator, String value) {
-    	   waitForVisibility(locator);
-    	   sendKeys(locator,value);
-       }
-       public void button_click(By locator) {
-    	   
-    	   click(locator);
-    	  
-       }
-       public Boolean qr_check(By locator) {
-    	   waitForVisibility(locator);
-    	  return  isDisplayed(locator);
-    	   
-       }
-       public String error_check(By locator) {
-    	   waitForVisibility(locator);
-    	   return  getText(locator);
-       }
-       
+
+    QRcode_page page = new QRcode_page();
+
+
+    // Navigate to QR Code page
+    public void navigateToQRPage() {
+        click(page.Banking);
+        click(page.QRcode);
+    }
+
+    // Enter amount (used for Scenario Outline)
+    public void enterAmount(String amount) {
+        try {
+            waitForVisibility(page.Amount);
+            sendKeys(page.Amount, amount);
+        } catch (Exception e) {
+            System.out.println("Failed to enter amount: " + e.getMessage());
+        }
+    }
+
+    // Click Generate QR code button
+    public void clickGenerate() {
+        try {
+            click(page.Generate);
+        } catch (Exception e) {
+            System.out.println("Failed to click Generate button: " + e.getMessage());
+        }
+    }
+
+    // Click Generate New QR code button
+    public void clickNewGenerate() {
+        try {
+            click(page.new_generate);
+        } catch (Exception e) {
+            System.out.println("Failed to click New Generate button: " + e.getMessage());
+        }
+    }
+
+    // Verify QR code is displayed
+    public boolean isQRGenerated() {
+        try {
+            waitForVisibility(page.Qrcode);
+            return isDisplayed(page.Qrcode);
+        } catch (Exception e) {
+            System.out.println("QR code not found: " + e.getMessage());
+            return false;
+        }
+    }
+
+    // Get validation error message
+    public String getErrorMessage() {
+        try {
+            waitForVisibility(page.errormsg);
+            return getText(page.errormsg);
+        } catch (Exception e) {
+            System.out.println("Error message not found: " + e.getMessage());
+            return "";
+        }
+    }
+
+    // Get button text for verification
+    public String getGenerateText() {
+        try {
+            waitForVisibility(page.Generate);
+            return getText(page.Generate);
+        } catch (Exception e) {
+            System.out.println("Generate text not found: " + e.getMessage());
+            return "";
+        }
+    }
 }
