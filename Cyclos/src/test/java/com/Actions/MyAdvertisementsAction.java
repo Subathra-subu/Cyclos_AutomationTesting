@@ -11,6 +11,8 @@ public class MyAdvertisementsAction extends BaseAction {
 	
 	public void clickMarketPlaceMenu() {
 		
+		waitForVisibility(advertisementPage.marketPlaceMenu);
+		
 		click(advertisementPage.marketPlaceMenu);
 		
 	}
