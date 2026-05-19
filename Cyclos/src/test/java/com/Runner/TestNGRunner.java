@@ -9,7 +9,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features/paymentToUser.feature",
+
+		features = "src/test/resources/Features",
+
 
         glue = "com.StepDefinitions",
 
@@ -40,5 +42,6 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 	    return super.scenarios();
 	}
-
 }
+
+
