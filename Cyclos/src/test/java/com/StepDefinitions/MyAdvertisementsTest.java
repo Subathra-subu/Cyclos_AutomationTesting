@@ -6,6 +6,7 @@ import org.testng.Assert;
 
 import com.Actions.MyAdvertisementsAction;
 import com.Actions.LoginAction;
+import com.Utilities.CSVUtility;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -73,10 +74,15 @@ public class MyAdvertisementsTest {
 		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
-	@When("User searches advertisement {string}")
-	public void user_searches_advertisement(String title) {
+	@When("User searches advertisement mentioned in the CSV file")
+	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
+		
+		String title = CSVUtility
+	            .getStatusData("src/test/resources/TestData/Advertisement.csv")
+	            .get(0);
 
-		actions.searchAdvertisement(title);
+	    actions.searchAdvertisement(title);
+
 	}
 	
 	@When("the user click the advertisement")
