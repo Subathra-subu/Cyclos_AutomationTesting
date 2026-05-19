@@ -10,9 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
+
 		features = "src/test/resources/Features/businessDirectory.feature",
 
 		tags="@BusinessDirectory_Shobana",
+
 
 
         glue = "com.StepDefinitions",
@@ -21,6 +23,8 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
+        
+        
 
 
         plugin = {
@@ -43,7 +47,4 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 	    return super.scenarios();
-	}
-
-
-}
+	}}
