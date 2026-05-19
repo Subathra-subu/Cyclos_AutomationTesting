@@ -1,15 +1,43 @@
-Feature: Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality
-    As a user,
-    I want to be able to make, view, and cancel payment requests
-    So that I can manage my pending transactions efficiently
+@krishna
+Feature: Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality
 
-    Background: 
-        Given the user has logged in with valid credentials
-        And the user navigates to the Payment Request page
+Background:
+    Given User launches the Cyclos application
+    And User logged in with valid credentials
+    And the user navigates to the QR Code page
 
-    @print
-    Scenario: Verify print functionality in the payment request details page
-        When the user selects an existing payment request from the list
-        And the user views the details of the selected payment request
-        And the user clicks on the print button
-        Then a PDF of the payment request should be generated successfully
+
+@requiresLogin @valid
+Scenario Outline: Verify user can generate QR-code with valid amount
+    When the user enters amount "<amount>"
+    And the user clicks on the generate QR code button
+    Then the QR code should be generated successfully
+
+Examples:
+    | amount |
+    | 100     |
+   
+
+
+@requiresLogin @blank
+Scenario Outline: Verify validation message for invalid or blank amount
+    When the user enters amount "<amount>"
+    And the user clicks on the generate QR code button
+    Then a Field-level validation error message should be displayed
+
+Examples:
+    | amount |
+    |        |
+  
+
+
+@requiresLogin @generate
+Scenario Outline: Verify user can regenerate a new QR code successfully
+    When the user enters amount "<amount>"
+    And the user clicks on the generate QR code button
+    And the user clicks on the Generate New QR Code button
+    Then the user should be redirected to the Receive QR Code page
+
+Examples:
+    | amount |
+    | 100    |
