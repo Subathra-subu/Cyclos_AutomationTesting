@@ -6,10 +6,7 @@
       <class name="com.Runner.TestNGRunner">
         <methods>
           <include name="setUpClass"/>
-<<<<<<< HEAD
-          <include name="runScenario" invocation-numbers="6"/>
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+
           <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="1 2"/>
         </methods>
