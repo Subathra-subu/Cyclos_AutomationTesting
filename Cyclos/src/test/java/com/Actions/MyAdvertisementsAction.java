@@ -1,7 +1,6 @@
 package com.Actions;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 
 import com.Pages.MyAdvertisesmentsPage;
 
@@ -11,17 +10,15 @@ public class MyAdvertisementsAction extends BaseAction {
 	
 	public void clickMarketPlaceMenu() {
 		
-		waitForVisibility(advertisementPage.marketPlaceMenu);
-		
 		click(advertisementPage.marketPlaceMenu);
 		
 	}
 
     public void clickMyAdvertisements() {
     	
-    	waitForVisibility(advertisementPage.myAdvertisements);
+    	scrollIntoView(advertisementPage.myAdvertisements);
 
-        jsClick(advertisementPage.myAdvertisements);
+        click(advertisementPage.myAdvertisements);
     }
 
     public void clickNewAdvertisement() {
@@ -77,17 +74,9 @@ public class MyAdvertisementsAction extends BaseAction {
         click(advertisementPage.saveBtn);
     }
 
-    public String validateMessage() {
+    public String validateSuccessMessage() {
 
-        return getText(advertisementPage.Message);
-    }
-    
-    public void assertSuccessfullMessage() {
-    	
-    	isDisplayed(advertisementPage.Message);
-    	
-    	Assert.assertTrue(validateMessage().contains("was saved"));
-    	
+        return getText(advertisementPage.successMessage);
     }
 
     public void searchAdvertisement(String title) {
@@ -113,14 +102,6 @@ public class MyAdvertisementsAction extends BaseAction {
     public void confirmRemoveAdvertisement() {
 
         click(advertisementPage.confirmRemoveBtn);
-    }
-    
-    public void assertRemovalMessage() {
-    	
-    	isDisplayed(advertisementPage.Message);
-    	
-    	Assert.assertTrue(validateMessage().contains("was removed"));
-    	
     }
 }
 

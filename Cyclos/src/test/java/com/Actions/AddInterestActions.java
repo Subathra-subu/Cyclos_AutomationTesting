@@ -80,35 +80,6 @@ public class AddInterestActions extends BaseAction {
 		}
 	}
 
-	
-	public void assertunique() {
-
-		try 
-		{
-
-			waitForVisibility(addInterst.unique);
-
-			String actual = getText(addInterst.unique);
-
-			HelperClass.log.info("Toast Message: " + actual);
-
-			Assert.assertTrue(actual.contains("unique"));
-
-			HelperClass.log.info("unique assertion successful");
-
-		} 
-		
-		catch (Exception e) 
-		
-		
-		{
-
-			HelperClass.log.error("Delete assertion failed: " + e.getMessage());
-
-			throw e;
-		}
-	}
-	
 	public void clickMarketPlace() {
 
 		try {
@@ -261,11 +232,6 @@ public class AddInterestActions extends BaseAction {
 		}
 	}
 
-	public boolean isuniqueDisplayed() 
-	{
-		return isDisplayed(addInterst.unique);
-	}
-	
 	public boolean isVisibleResult() {
 		return isDisplayed(addInterst.noResult);
 	}

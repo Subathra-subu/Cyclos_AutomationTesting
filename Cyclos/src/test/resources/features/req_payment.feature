@@ -11,3 +11,12 @@ Feature: Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Function
        When the user selects an existing payment request from the list
        And the user clicks on the print button
        Then a PDF of the payment request should be generated successfully
+       
+    
+    
+    @negativeValidation @dateCheck
+  Scenario: Verify system validation rule when leaving required payment field expiration date completely empty via Excel
+    When the user clicks the Send a new request button
+    And the user enters only the name and amount details from excel leaving the date empty
+    And clicks the form primary confirm button
+    Then the date field should display an error indicator text message saying "This field is required"

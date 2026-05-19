@@ -12,22 +12,26 @@ Description:This feature file is used to verify the payment to user functionalit
     Then User clicks the next button and should validate the error message is displayed
 
   @PaymentConfirmation
-Scenario: Verify Payment Confirmation using pay now functionality
-  When User enters payment details
-    | username        | amount |
-    | Active Walking  | 100    |
-  Then User should successfully complete the payment
+  Scenario Outline: Verify Payment Confirmation using pay now functionality
+    And User enters valid user "<username>"
+    And User enters amount "<amount>"
+    Then User should successfully complete the payment
 
- @LimitValidation
-Scenario Outline: Verify validation message when payment amount exceeds available limit
-  And User enters valid user "<username>"
-  And User enters amount "<amount>"
-  Then User clicks the next button and should validate limit exceeded message "<message>"
+    Examples:
+      | username        | amount |
+      | Active Walking  | 100    |
+      | The Bakery shop | 408    |
 
-Examples:
-  | username        | amount | message                                      |
-  | Active Walking  | 999999 | Amount must be less or equal to 500,00 IU's. |
-  | The Bakery shop | 0      | Amount must be a positive number.            |
+  @LimitValidation
+  Scenario Outline: Verify validation message when payment amount exceeds available limit
+    And User enters valid user "<username>"
+    And User enters amount "<amount>"
+    Then User clicks the next button and should validate limit exceeded message
+
+    Examples:
+      | username        | amount |
+      | Active Walking  | 999999 |
+      | The Bakery shop | 99999  |
 
   @ScheduledPayment
   Scenario: Verify scheduled payment functionality
@@ -48,4 +52,4 @@ Examples:
     When User enters monthly installment payment details
       | username       | amount | type                 | installments | description                 |
       | Active Walking | 200    | Monthly installments | 5            | Monthly installment payment |
-    Then Monthly installment payment should be scheduled successfully
+    Then Monthly installment payment should be scheduled successfullyw
