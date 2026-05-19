@@ -9,6 +9,19 @@ public class MyAdvertisementsAction extends BaseAction {
 	
 	MyAdvertisesmentsPage advertisementPage = new MyAdvertisesmentsPage();
 	
+<<<<<<< HEAD
+	public void clickMarketPlaceMenu() {
+		
+		click(advertisementPage.marketPlaceMenu);
+		
+	}
+
+    public void clickMyAdvertisements() {
+    	
+    	scrollIntoView(advertisementPage.myAdvertisements);
+
+        click(advertisementPage.myAdvertisements);
+=======
     public void clickMarketPlaceMenu() {
 
         try {
@@ -31,6 +44,7 @@ public class MyAdvertisementsAction extends BaseAction {
         catch (Exception e) {
             Hooks.logger.error("Unable to click my advertisements", e);
         }
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
     }
 
     public void clickNewAdvertisement() {
@@ -125,6 +139,9 @@ public class MyAdvertisementsAction extends BaseAction {
 
     public String validateSuccessMessage() {
 
+<<<<<<< HEAD
+        return getText(advertisementPage.successMessage);
+=======
         try {
             return getText(advertisementPage.Message);
         } 
@@ -145,6 +162,7 @@ public class MyAdvertisementsAction extends BaseAction {
         catch (Exception e) {
             Hooks.logger.error("Unable to assert successful message", e);
         }
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
     }
 
     public void searchAdvertisement(String title) {
@@ -209,6 +227,8 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to confirm remove advertisement", e);
         }
     }
+<<<<<<< HEAD
+=======
 
     public void assertRemovalMessage() {
 
@@ -222,5 +242,6 @@ public class MyAdvertisementsAction extends BaseAction {
         }
     }
 
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 }
 

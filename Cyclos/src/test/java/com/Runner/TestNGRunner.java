@@ -10,6 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
+
 		glue = "com.StepDefinitions",
 
 		monochrome = true,
@@ -22,6 +23,8 @@ import io.cucumber.testng.CucumberOptions;
 
 				"html:target/CucumberReports/Cucumber.html",
 
+        
+ 
 				"json:target/CucumberReports/Cucumber.json",
 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",

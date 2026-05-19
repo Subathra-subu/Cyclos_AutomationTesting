@@ -126,7 +126,17 @@ public class MyAdvertisementsTest {
 	@Then("User confirms advertisement removal")
 	public void user_confirms_advertisement_removal() {
 
+<<<<<<< HEAD
+		actions.confirmRemoveAdvertisement();
+	}
+
+	@Then("Advertisement should be removed successfully")
+	public void advertisement_should_be_removed_successfully() {
+
+		Assert.assertTrue(actions.validateSuccessMessage().contains("removed"));
+=======
 		actions.assertRemovalMessage();
 		
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 	}
 }

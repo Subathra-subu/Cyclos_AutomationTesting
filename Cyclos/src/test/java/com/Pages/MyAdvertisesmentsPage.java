@@ -27,7 +27,13 @@ public class MyAdvertisesmentsPage {
 
 	    public By descriptionFrame = By.xpath("//div[contains(@class,'editor')]");
 
+<<<<<<< HEAD
+	    public By uploadImageBtn = By.xpath("//input[@type='file']");
+
+	    public By saveBtn = By.xpath("//button[contains(text(),'Save')]");
+=======
 	    public By saveBtn = By.xpath("//span[text()='Save']");
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 
 	    public By successMessage = By.xpath("//div[contains(@class,'notification-message')]");
 
@@ -41,7 +47,11 @@ public class MyAdvertisesmentsPage {
 
 	    public By confirmPopup = By.xpath("//div[@class='modal-content']/child::*");
 
+<<<<<<< HEAD
+	    public By confirmRemoveBtn = By.xpath("//button[contains(text(),'Remove')]");
+=======
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
 	    
+>>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 	}
 
