@@ -18,7 +18,7 @@ import io.cucumber.testng.CucumberOptions;
         
         publish = false,
         
-        tags = "@Subathra",
+        tags = "@Register_Subathra",
 
 
         plugin = {
