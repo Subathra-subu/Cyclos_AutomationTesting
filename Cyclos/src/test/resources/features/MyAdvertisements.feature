@@ -19,7 +19,7 @@ This feature file is used to verify Advertisement functionality
     When User searches advertisement "race bike"
     And User edits advertisement details
       | title          | category | price | description                |
-      | race bike edit | Politics | 200   | Updated bike advertisement |
+      | race bike 		| Politics | 200   | Updated bike advertisement |
     Then User should successfully update advertisement
 
   @RemoveAdvertisement
