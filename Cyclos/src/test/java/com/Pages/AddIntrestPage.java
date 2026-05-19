@@ -57,6 +57,4 @@ public class AddIntrestPage {
     
     public By requiredMessage =
             By.xpath("//div[contains(text(),\" This field is required\")]");
-    
-    public By unique = By.xpath("//div[contains(text(),\"unique\")]");
 }

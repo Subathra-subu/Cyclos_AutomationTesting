@@ -116,7 +116,6 @@ public class AddInterestActions extends BaseAction {
 			clickSubmit();
 
 			
-			
 			HelperClass.log.info("Entered all add details successfully");
 		}
 
@@ -233,37 +232,7 @@ public class AddInterestActions extends BaseAction {
 		}
 	}
 
-	
-	public boolean uniqueDisplay()
-	{
-		return isDisplayed(addInterst.unique);
-		
-	}
-	
-	public void assertUnique()
-	{
-		try {
-			waitForVisibility(addInterst.unique);
-
-			String actual = getText(addInterst.unique);
-
-			String expect = "unique";
-			
-			HelperClass.log.info("Actual unique Message: " + actual);
-
-			Assert.assertTrue(actual.contains(expect));
-
-			HelperClass.log.info("Popup assertion successful");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Popup assertion failed: " + e.getMessage());
-
-			throw e;
-		}
-	}
-	public boolean isVisibleResult() 
-	{
+	public boolean isVisibleResult() {
 		return isDisplayed(addInterst.noResult);
 	}
 
@@ -292,7 +261,7 @@ public class AddInterestActions extends BaseAction {
 			List<List<String>> data = table.asLists(String.class);
 
 			for (int i = 1; i < data.size(); i++) {
-				
+				// First iteration already opened from feature file
 				if (i > 1) {
 					HelperClass.getDriver().navigate().back();
 
@@ -309,7 +278,7 @@ public class AddInterestActions extends BaseAction {
 
 				String max = row.get(3);
 
-				
+				// Name field intentionally skipped
 
 				if (!keyword.trim().isEmpty()) {
 					sendKeys(addInterst.keyWord, keyword);
