@@ -14,7 +14,7 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
     And the user confirms the deletion popup
     Then the user should see the success message "The item was removed"
 
-  @addNew
+  @addNew @smoke
   Scenario: Add a New Advertisement Interest
     When the user clicks the Add New button
 <<<<<<< HEAD
@@ -24,6 +24,7 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.
     Then the user should see the popup message
 >>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+
 
   @withoutName
   Scenario: Add a New Advertisement without Name Fields

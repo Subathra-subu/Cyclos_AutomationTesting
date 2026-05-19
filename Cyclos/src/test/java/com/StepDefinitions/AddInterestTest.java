@@ -117,14 +117,6 @@ public class AddInterestTest
 	
 	}
 
-<<<<<<< HEAD
-
-	@Then("the user should see the popup message {string}")
-	public void the_user_should_see_the_popup_message(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	   addInterestActions.assertPopup(string);
-	}
-=======
 
 	@Then("the user should see the popup message")
 	public void the_user_should_see_the_popup_message() {
@@ -143,8 +135,24 @@ public class AddInterestTest
 		
 	}
 
-	
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+	@Then("the user should see the popup message")
+	public void the_user_should_see_the_popup_message() {
+	    // Write code here that turns the phrase above into concrete actions
+		
+		if (addInterestActions.isUniqueVisible())
+		{
+			addInterestActions.assertuniqe();
+		}
+		
+		else
+		{
+		addInterestActions.assertPopup("The ad interest was created");
+		
+		}
+		
+	}
+
+
 
 
 

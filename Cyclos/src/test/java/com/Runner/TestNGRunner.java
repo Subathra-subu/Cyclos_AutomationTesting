@@ -17,6 +17,8 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
+		
+	
 		plugin = {
 
 				"pretty",
