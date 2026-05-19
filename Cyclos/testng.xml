@@ -8,15 +8,3 @@
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-=======
-
-<suite name="Cyclos Automation Suite" verbose="1">
-
-    <test name="Tickets Tests">
-        <classes>
-            <class name="com.Runner.TestNGRunner"/>
-        </classes>
-    </test>
-
-</suite>
->>>>>>> 338a53298425b5f5311eb1554fe47cde9d544bdc
