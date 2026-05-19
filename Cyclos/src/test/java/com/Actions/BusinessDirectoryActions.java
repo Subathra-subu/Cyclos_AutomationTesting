@@ -13,8 +13,7 @@ import com.Utilities.HelperClass;
 
 public class BusinessDirectoryActions extends BaseAction {
 
-    BusinessDirectoryPage businessPage =
-            new BusinessDirectoryPage();
+    BusinessDirectoryPage businessPage =new BusinessDirectoryPage();
 
     public void navigateBusinessDirectory() {
 
@@ -34,8 +33,7 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.businessCards);
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.businessCards));
+        Assert.assertTrue(isDisplayed(businessPage.businessCards));
     }
 
     public void clickListView() {
@@ -51,8 +49,7 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.activeListView);
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.activeListView));
+        Assert.assertTrue(isDisplayed(businessPage.activeListView));
     }
 
     public void clickTiledView() {
@@ -68,8 +65,7 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.activeTiledView);
 
-        Assert.assertTrue(
-                isDisplayed(businessPage.activeTiledView));
+        Assert.assertTrue(isDisplayed(businessPage.activeTiledView));
     }
 
     public void selectAscendingOrder() {
@@ -83,9 +79,8 @@ public class BusinessDirectoryActions extends BaseAction {
 
         waitForVisibility(businessPage.businessCards);
 
-        List<WebElement> elements =
-                HelperClass.getDriver()
-                           .findElements(businessPage.businessNames);
+        List<WebElement> elements =HelperClass.getDriver()
+                 .findElements(businessPage.businessNames);
 
         List<String> actualNames =
                 elements.stream()

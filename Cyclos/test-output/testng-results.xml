@@ -1,36 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+=======
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2026-05-19T13:01:40 IST" name="Default suite" finished-at="2026-05-19T13:02:21 IST" duration-ms="41369">
+=======
+  <suite started-at="2026-05-19T15:21:16 IST" name="Default suite" finished-at="2026-05-19T15:21:36 IST" duration-ms="19300">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-05-19T13:01:40 IST" name="Default test" finished-at="2026-05-19T13:02:21 IST" duration-ms="41369">
+=======
+    <test started-at="2026-05-19T15:21:16 IST" name="Default test" finished-at="2026-05-19T15:21:36 IST" duration-ms="19300">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
       <class name="com.Runner.TestNGRunner">
+<<<<<<< HEAD
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:01:40 IST" name="setUpClass" finished-at="2026-05-19T13:01:42 IST" duration-ms="1627" status="PASS">
+=======
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:16 IST" name="setUpClass" finished-at="2026-05-19T15:21:17 IST" duration-ms="957" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA[org.testng.TestRunner@61f377d1]]>
+=======
+                <![CDATA[org.testng.TestRunner@36c7cbe1]]>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:01:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:02:18 IST" duration-ms="35813" status="FAIL">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T15:21:33 IST" duration-ms="16190" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
           <params>
             <param index="0">
               <value>
+<<<<<<< HEAD
                 <![CDATA["Verify user can add new Advertisement"]]>
+=======
+                <![CDATA["Verify print functionality in payment request details page"]]>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+=======
+                <![CDATA["Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
               </value>
             </param>
           </params>
@@ -64,7 +96,11 @@ at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclo
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:02:18 IST" name="tearDownClass" finished-at="2026-05-19T13:02:21 IST" duration-ms="3774" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:33 IST" name="tearDownClass" finished-at="2026-05-19T15:21:36 IST" duration-ms="2083" status="PASS">
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

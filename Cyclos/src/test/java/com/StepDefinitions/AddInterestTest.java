@@ -100,10 +100,8 @@ public class AddInterestTest
 	
 	
 	
-	@When("the user enters all required details and submit it.")
-	public void the_user_enters_all_required_details_and_submit_it() throws IOException 
-	
-	{
+	@When("the user enters all required details {string} , {string} , {string} , {string} , {string} and submit it.")
+	public void the_user_enters_all_required_details_and_submit_it(String string, String string2, String string3, String string4, String string5) throws IOException {
 	    // Write code here that turns the phrase above into concrete actions
 		addInterestActions.excelData();
 	}

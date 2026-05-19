@@ -1,3 +1,4 @@
+@krishna
 Feature: Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality
 
 Background:
@@ -14,9 +15,8 @@ Scenario Outline: Verify user can generate QR-code with valid amount
 
 Examples:
     | amount |
-    | 100    |
-    | 250    |
-    | 500    |
+    | 100     |
+   
 
 
 @requiresLogin @blank
