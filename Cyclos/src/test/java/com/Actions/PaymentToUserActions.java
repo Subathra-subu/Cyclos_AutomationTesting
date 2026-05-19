@@ -1,0 +1,128 @@
+package com.Actions;
+
+import org.openqa.selenium.By;
+
+import com.Pages.PaymentToUserPage;
+import com.Utilities.ConfigureClass;
+import com.Utilities.HelperClass;
+
+public class PaymentToUserActions extends BaseAction {
+	PaymentToUserPage paymentpage = new PaymentToUserPage();
+	
+	public void clickNext() {
+		waitForVisibility(paymentpage.nextBtn);
+		click(paymentpage.nextBtn);
+	}
+	public void clickPayUser() {
+		
+		waitForVisibility(paymentpage.payuser);
+		
+		click(paymentpage.payuser);
+	}
+
+	public void enterUser(String value) {
+
+	    waitForVisibility(paymentpage.userfield);
+
+	    sendKeys(paymentpage.userfield, value);
+	    By suggestion = By.xpath("//a[contains(text(),\"" + value + "\")]");
+	    
+	    waitForVisibility(suggestion);
+	    
+	    click(suggestion);
+	}
+
+	  
+
+
+	public String validateErrorMessage() {
+		
+		waitForVisibility(paymentpage.errormsg);
+		return  getText(paymentpage.errormsg);
+	}
+	public void enterAmount(String amount) {
+
+		waitForVisibility(paymentpage.amountField);
+		sendKeys(paymentpage.amountField, amount);
+	}
+
+	public String validatePaymentConfirmationTitle() {
+
+	    waitForVisibility(paymentpage.paymentConfirmationTitle);
+
+	    return HelperClass.getDriver().findElement(paymentpage.paymentConfirmationTitle).getText();
+	}
+
+	public String validateLimitExceededMessage() {
+
+		waitForVisibility(paymentpage.limitExceededMsg);
+		return getText(paymentpage.limitExceededMsg);
+	}
+	public void selectSchedulingType(String type) {
+
+	    waitForVisibility(paymentpage.dropdown);
+
+	    scrollIntoView(paymentpage.dropdown);
+
+	    click(paymentpage.dropdown);
+
+	    if(type.equalsIgnoreCase("Scheduled")) {
+
+	        waitForVisibility(paymentpage.scheduledOption);
+
+	        click(paymentpage.scheduledOption);
+	    }
+
+	    else if(type.equalsIgnoreCase("Pay now")) {
+
+	        waitForVisibility(paymentpage.payNowOption);
+
+	        click(paymentpage.payNowOption);
+	    }
+
+	    else if(type.equalsIgnoreCase("Monthly installments")) {
+
+	        waitForVisibility(paymentpage.monthlyInstallmentOption);
+
+	        click(paymentpage.monthlyInstallmentOption);
+	    }
+
+	    else if(type.equalsIgnoreCase("Recurring payments")) {
+
+	        waitForVisibility(paymentpage.recurringPaymentOption);
+
+	        click(paymentpage.recurringPaymentOption);
+	    }
+	}
+
+	public void selectFutureDate(String date) {
+
+	    waitForVisibility(paymentpage.futureDate);
+
+	    click(paymentpage.futureDate);
+
+
+	    sendKeys(paymentpage.futureDate, date);
+	}
+
+	public void enterDescription(String description) {
+
+	    waitForVisibility(paymentpage.descriptionField);
+
+	    sendKeys(paymentpage.descriptionField, description);
+	}
+	public void enterNumberOfInstallments(String value) {
+
+	    waitForVisibility(paymentpage.numberOfInstallments);
+
+	    sendKeys(paymentpage.numberOfInstallments, value);
+	}
+}
+
+
+
+
+
+
+
+
