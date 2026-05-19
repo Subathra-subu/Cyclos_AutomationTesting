@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features/req_payment.feature",
+		features = "src/test/resources/Features",
 
 
         glue = "com.StepDefinitions",
@@ -20,8 +20,7 @@ import io.cucumber.testng.CucumberOptions;
         
         publish = false,
         
-        tags = "@SRIRAM",
-
+        
 
         plugin = {
 
