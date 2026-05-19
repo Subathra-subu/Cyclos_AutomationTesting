@@ -10,7 +10,9 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
+
 		features = "src/test/resources/Features/paymentToUser.feature",
+
 
 
         glue = "com.StepDefinitions",
@@ -20,7 +22,9 @@ import io.cucumber.testng.CucumberOptions;
         
         publish = false,
         
+
         tags = "@PaymentToUser_Shobana",
+
 
 
         plugin = {
