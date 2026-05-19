@@ -35,7 +35,7 @@ public class ReqpaymentActions extends BaseAction {
             String amount = row[1].toString();
             String date = row[2].toString();
 
-            enterPaymentDetails(receiver, amount, date);
+             enterPaymentDetails(receiver, amount, date);
         }
 
 

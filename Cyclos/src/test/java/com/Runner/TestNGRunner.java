@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features/QR_Code.feature",
+		features = "src/test/resources/Features/userInvite.feature",
 
 
         glue = "com.StepDefinitions",
@@ -19,6 +19,8 @@ import io.cucumber.testng.CucumberOptions;
 
         
         publish = false,
+        
+        
 
 
         plugin = {
