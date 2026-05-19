@@ -92,10 +92,10 @@ public class TicketsTest {
 
 	}
 
-	@When("user select the Open in the status")
-	public void user_select_the_open_in_the_status() {
-		// Write code here that turns the phrase above into concrete actions
-		ticketsActions.clickOpenSts();
+	@When("user select the {string} status")
+	public void user_select_the_status(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    ticketsActions.clickStatus(string);
 	}
 
 	@Then("the user should see the transactions with {string} status")
