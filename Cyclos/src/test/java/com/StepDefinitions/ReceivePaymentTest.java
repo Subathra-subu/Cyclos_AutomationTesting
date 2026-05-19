@@ -14,7 +14,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ReceivePaymentStepDefinitions {
+public class ReceivePaymentTest {
 
     LoginAction login = new LoginAction();
     ReceivePaymentActions receivePaymentPage = new ReceivePaymentActions();

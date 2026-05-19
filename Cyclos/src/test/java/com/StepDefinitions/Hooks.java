@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.Actions.commonLoginAction;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.After;

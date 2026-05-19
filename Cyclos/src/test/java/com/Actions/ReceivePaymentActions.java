@@ -8,7 +8,6 @@ import com.Utilities.HelperClass;
 public class ReceivePaymentActions extends BaseAction {
 
     ReceivePaymentPage receivePaymentPage = new ReceivePaymentPage();
-    commonLoginAction login = new commonLoginAction();
     
     public void clickingLinks() {
         click(receivePaymentPage.bankingLink);
@@ -97,8 +96,4 @@ public class ReceivePaymentActions extends BaseAction {
         HelperClass.log.info("Entered valid Amount : " + rupee);
     }
 
-	public void loggingIn() {
-		login.loginToApplication();
-		
-	}
 }
