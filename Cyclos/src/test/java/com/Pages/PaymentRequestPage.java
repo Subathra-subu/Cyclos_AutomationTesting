@@ -1,4 +1,4 @@
-package com.Pages;
+/*package com.Pages;
 
 import org.openqa.selenium.By;
 
@@ -16,3 +16,4 @@ public class PaymentRequestPage {
 	public By print = By.xpath("//div[contains(text(),'Print')]");
 	public By cancel = By.xpath("//div[contains(text(),'Cancel this payment request')]");
 }
+*/
