@@ -19,6 +19,7 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.
     Then the user should see the popup message
 
+
   @withoutName
   Scenario: Add a New Advertisement without Name Fields
     When the user clicks the Add New button

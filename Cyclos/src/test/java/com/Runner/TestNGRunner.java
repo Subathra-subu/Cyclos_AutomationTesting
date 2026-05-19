@@ -1,6 +1,5 @@
 package com.Runner;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -13,11 +12,13 @@ import io.cucumber.testng.CucumberOptions;
 
 		glue = "com.StepDefinitions",
 
+		glue = "com.StepDefinitions",
+
 		monochrome = true,
 
 		publish = false,
 
-		tags = "@SRIRAM",
+		
 	
 		plugin = {
 
@@ -25,6 +26,8 @@ import io.cucumber.testng.CucumberOptions;
 
 				"html:target/CucumberReports/Cucumber.html",
 
+        
+ 
 				"json:target/CucumberReports/Cucumber.json",
 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
