@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+
+
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.Runner.TestNGRunner"/>
     </classes>
+
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-<<<<<<< HEAD
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-
-
-
-<<<<<<< HEAD
-=======
-</suite>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-

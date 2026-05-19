@@ -1,4 +1,4 @@
-package com.Pages;
+/*package com.Pages;
 
 import org.openqa.selenium.By;
 
@@ -22,3 +22,4 @@ public class PaymentRequestPage {
 	
 	
 }
+*/

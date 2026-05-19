@@ -1,4 +1,4 @@
-package com.StepDefinitions;
+/*package com.StepDefinitions;
 
 import java.io.File;
 import org.testng.Assert;
@@ -77,7 +77,54 @@ public class PaymentRequestSteps {
 
         HelperClass.log.info("PDF Download validation successful! File size and presence verified.");
 
+<<<<<<< HEAD
         // 6. CLEANUP: Delete the file so it doesn't leak state into the next test run
         downloadedPdf.delete();
     }
 }
+=======
+	@Then("a warning message should be displayed")
+	public void a_warning_message_should_be_displayed() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("the user selects an existing payment request")
+	public void the_user_selects_an_existing_payment_request() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("the user clicks on cancel payment request")
+	public void the_user_clicks_on_cancel_payment_request() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("the payment request should be cancelled successfully")
+	public void the_payment_request_should_be_cancelled_successfully() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("the user opens the payment request details page")
+	public void the_user_opens_the_payment_request_details_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@When("the user clicks on the Print button")
+	public void the_user_clicks_on_the_print_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("the payment request PDF should be generated successfully")
+	public void the_payment_request_pdf_should_be_generated_successfully() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+}
+*/
+
