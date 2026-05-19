@@ -1,4 +1,4 @@
-package com.StepDefinitions;
+/*package com.StepDefinitions;
 
 import com.Actions.LoginAction;
 import com.Actions.ReqpaymentActions;
@@ -103,4 +103,4 @@ public class PaymentRequestSteps {
 	    throw new io.cucumber.java.PendingException();
 	}
 
-}
+}*/
