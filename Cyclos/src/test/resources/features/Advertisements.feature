@@ -1,31 +1,32 @@
-@AdvertisementsFeature
-Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisements.feature
+@Akksheetha @AdvertisementsFeature
+Feature: Marketplace Advertisements Feature
 
-Description: This feature is used to verify features of Marketplace Advertisements
+  Description:
+  This feature validates Marketplace Advertisements functionality including search, favourites, sorting and listings.
 
   Background:
     Given user is logged into the application
     And user navigates to advertisements page
 
 
-# 1. SCENARIO OUTLINE
+# 1. VALID SEARCH 
 @ValidKeywordSearch
-Scenario Outline: Verify keyword search functionality
+Scenario Outline: Verify keyword search functionality in advertisements
 
-    When user searches for a valid keyword "<keyword>"
+    When user searches for keyword "<keyword>"
     Then matching advertisements should be displayed
 
     Examples:
       | keyword |
       | 5 star  |
-      | orange    |
+      | orange  |
 
 
-# 2. SCENARIO OUTLINE
+# 2. INVALID SEARCH
 @InvalidKeywordSearch
-Scenario Outline: Verify no result message for invalid keyword search
+Scenario Outline: Verify no results message for invalid keyword search
 
-    When user searches for invalid keyword "<keyword>"
+    When user searches for keyword "<keyword>"
     Then no results message should be displayed
 
     Examples:
@@ -34,59 +35,47 @@ Scenario Outline: Verify no result message for invalid keyword search
       | xyz123  |
 
 
-# 3. NORMAL SCENARIO + EXCEL
+# 3. ADD TO FAVOURITES
 @AddToFavourites
 Scenario: Verify user can add product to favourites
 
-    When user adds a product to favourites using excel data
+    When user adds product to favourites using test data
     Then product should be added to favourites successfully
 
 
-# 4. DATATABLE
+# 4. LIST FAVOURITES
 @ListFavourites
-Scenario: Verify user can list out the favourites
+Scenario: Verify user can list all favourite products
 
-    Given user has added below products to favourites
+    Given user adds below products to favourites
       | product |
       | Laptop  |
       | Bike    |
-      | abc     |
+      | Mobile  |
 
-    When user navigates to favourites page
-    Then favourite products should be displayed
+    When user navigates to favourites section
+    Then all favourite products should be displayed
 
 
-# 5. SCENARIO OUTLINE
+# 5. SORT - LOWEST PRICE
 @LowestPriceSort
-Scenario Outline: Verify product records sorted by lowest price
+Scenario: Verify products sorted by lowest price
 
-    When user sorts products using csv data "<sortType>"
-    Then products should be displayed in lowest to highest price order
-
-    Examples:
-      | sortType     |
-      | Lowest Price |
+    When user sorts products by "Lowest Price"
+    Then products should be displayed in ascending price order
 
 
-# 6. SCENARIO OUTLINE
+# 6. SORT - HIGHEST PRICE
 @HighestPriceSort
-Scenario Outline: Verify product records sorted by highest price
+Scenario: Verify products sorted by highest price
 
-    When user sorts products by "<sortType>"
-    Then products should be displayed in highest to lowest price order
-
-    Examples:
-      | sortType      |
-      | Highest Price |
+    When user sorts products by "Highest Price"
+    Then products should be displayed in descending price order
 
 
-# 7. SCENARIO OUTLINE
+# 7. SORT - LATEST PRODUCTS
 @LatestProducts
-Scenario Outline: Verify product records sorted by latest published items
+Scenario: Verify latest products are displayed first
 
-    When user sorts products by "<sortType>"
-    Then latest products should be displayed first
-
-    Examples:
-      | sortType |
-      | Latest   |
+    When user sorts products by "Latest"
+    Then latest products should be displayed at the top

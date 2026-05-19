@@ -40,6 +40,13 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "valid_vovucher");
     }
+    
+    @DataProvider(name = "Advertisements", parallel = true)
+    public Object[][] getFavoritesData() throws IOException {
+
+        String path = "src/test/resources/testData/ExcelData.xlsx";
+        return getExcelData(path, "Advertisement_akksheetha");
+    }
 
 
     private Object[][] getExcelData(String file, String sheet) {

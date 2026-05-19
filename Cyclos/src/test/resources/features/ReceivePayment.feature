@@ -1,4 +1,4 @@
-@RecievePaymentFeature
+@Akksheetha @RecievePaymentFeature
 Feature: Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature
 
 Description : Testing the receive payment feature in Banking

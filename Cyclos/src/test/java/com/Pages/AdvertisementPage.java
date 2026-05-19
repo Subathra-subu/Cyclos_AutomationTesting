@@ -4,39 +4,18 @@ import org.openqa.selenium.By;
 
 public class AdvertisementPage {
 
-    public By marketplaceMenu =
-    		By.xpath("//a[.//span[text()='Marketplace']]");
+	public By marketPlace = By.xpath("//div[@class='menu-text'][normalize-space()='Marketplace']");
+	public By advertisement = By.xpath("//div[normalize-space()='Advertisements']");
+    public By searchBox = By.xpath("(//search-ads//input)[1]");
+    public By searchBtn = By.xpath("//button[@type='submit']");
+    public By favt = By.xpath("(//ad-favorite//button)[1]");
+    public By noResultMsg =	By.xpath("//search-ads//*[contains(text(),'No results') or contains(text(),'No advertisements')]");
 
-    public By advertisementsMenu =
-            By.xpath("//div[contains(normalize-space(),'Advertisements')]");
+    public By favouriteIcon = By.xpath("(//button[contains(@class,'favorite')])[1]");
 
-    public By searchBox =
-            By.xpath("//input[@type='search']");
+    public By sortDropdown = By.xpath("//select");
 
-    public By searchButton =
-            By.xpath("//button[contains(@class,'search-button')]");
-
-    public By searchResult =
-            By.xpath("//div[contains(@class,'card')]");
-
-    public By noResultsMessage =
-            By.xpath("//*[contains(text(),'No advertisements found')]");
-
-    public By favouriteIcon =
-            By.xpath("//button[contains(@class,'favorite')]");
-
-    public By favouriteSuccessMessage =
-            By.xpath("//*[contains(text(),'added to favorites')]");
-
-    public By favouritesMenu =
-            By.xpath("//*[contains(text(),'Favorites')]");
-
-    public By favouriteProductsList =
-            By.xpath("//div[contains(@class,'card')]");
-
-    public By sortDropdown =
-            By.xpath("//select");
-
-    public By productList =
-            By.xpath("//div[contains(@class,'card')]");
+    public By sortOption(String value) {
+        return By.xpath("//option[text()='" + value + "']");
+    }
 }
