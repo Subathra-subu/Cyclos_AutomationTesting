@@ -13,7 +13,7 @@ public class MyAdvertisementsAction extends BaseAction {
 		
 		waitForVisibility(advertisementPage.marketPlaceMenu);
 		
-		click(advertisementPage.marketPlaceMenu);
+		jsClick(advertisementPage.marketPlaceMenu);
 		
 	}
 
