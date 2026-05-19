@@ -79,8 +79,6 @@ public class AddInterestActions extends BaseAction {
 			throw e;
 		}
 	}
-<<<<<<< HEAD
-=======
 	
 	public void assertuniqe() {
 
@@ -103,7 +101,7 @@ public class AddInterestActions extends BaseAction {
 			throw e;
 		}
 	}
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+
 
 	public void clickMarketPlace() {
 
