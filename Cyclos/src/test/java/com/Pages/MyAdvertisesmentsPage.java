@@ -43,4 +43,5 @@ public class MyAdvertisesmentsPage {
 
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
 
+
 	}
