@@ -56,6 +56,9 @@ function toggleAllBoxes() {
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
 <<<<<<< HEAD
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+=======
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>5/2/0</td>
 </tr><tr>
 <td>Started on:</td><td>Wed May 20 06:19:52 IST 2026</td>
@@ -176,10 +179,11 @@ Session ID: 9359584f74e6c5d2cc7687d5ef895fa8
 <td>com.Runner.TestNGRunner@1787bc24</td></tr>
 =======
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </tr><tr>
-<td>Started on:</td><td>Tue May 19 15:21:16 IST 2026</td>
+<td>Started on:</td><td>Wed May 20 06:52:35 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19300 ms)</td>
+<tr><td>Total time:</td><td>95 seconds (95684 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -187,6 +191,59 @@ Session ID: 9359584f74e6c5d2cc7687d5ef895fa8
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can Edit Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.StepDefinitions.MyAdvertisementsTest.user_searches_advertisement_mentioned_in_the_CSV_file(MyAdvertisementsTest.java:82)
+	at ✽.User searches advertisement mentioned in the CSV file(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1884890921", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1884890921'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.StepDefinitions.MyAdvertisementsTest.user_searches_advertisement_mentioned_in_the_CSV_file(MyAdvertisementsTest.java:82)
+	at ✽.User searches advertisement mentioned in the CSV file(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:19)
+</pre></div></td>
+<td>25</td>
+<td>com.Runner.TestNGRunner@6950ed69</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can remove Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.StepDefinitions.MyAdvertisementsTest.user_searches_advertisement_mentioned_in_the_CSV_file(MyAdvertisementsTest.java:82)
+	at ✽.User searches advertisement mentioned in the CSV file(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:28)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1212897825", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1212897825'><pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.StepDefinitions.MyAdvertisementsTest.user_searches_advertisement_mentioned_in_the_CSV_file(MyAdvertisementsTest.java:82)
+	at ✽.User searches advertisement mentioned in the CSV file(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:28)
+</pre></div></td>
+<td>27</td>
+<td>com.Runner.TestNGRunner@6950ed69</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -196,9 +253,9 @@ Session ID: 9359584f74e6c5d2cc7687d5ef895fa8
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify print functionality in payment request details page", "Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality"</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can add new Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
 <td></td>
-<td>16</td>
+<td>36</td>
 <td>com.Runner.TestNGRunner@6950ed69</td></tr>
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </table><p>
