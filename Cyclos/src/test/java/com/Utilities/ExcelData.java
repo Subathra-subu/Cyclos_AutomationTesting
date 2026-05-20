@@ -39,16 +39,7 @@ public class ExcelData {
                 "validVoucher");
     }
     
-    @DataProvider(name = "advertisementFavourites", parallel = true)
-
-    public Object[][] advertisementFavourites()
-            throws IOException {
-
-        return getExcelData(
-                "src/test/resources/testData/ExcelData.xlsx",
-                "AdvertisementFavourites");
-    }
-
+    
     @DataProvider(name = "businessDirectory", parallel = true)
 
     public Object[][] businessDirectoryData() throws IOException {
