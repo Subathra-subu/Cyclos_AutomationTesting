@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
+		features = "src/test/resources/Features/MyAdvertisements.feature",
 
 		glue = "com.StepDefinitions",
 
@@ -17,7 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
-		tags = "@SRIRAM",
+		
 		plugin = {
 
 				"pretty",
