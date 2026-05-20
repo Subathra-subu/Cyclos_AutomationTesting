@@ -9,28 +9,29 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/features/ReceivePayment.feature",
+        features = "src/test/resources/Features",
 
-	    tags = "@RecievePaymentFeature",
+        glue = "com.StepDefinitions",
 
-		glue = "com.StepDefinitions",
+        monochrome = true,
 
-		monochrome = true,
+        publish = false,
 
-		publish = false,
+        
+        
+        plugin = {
 
-		plugin = {
+                "pretty",
 
-				"pretty",
+                "html:target/CucumberReports/Cucumber.html",
 
-				"html:target/CucumberReports/Cucumber.html", "json:target/CucumberReports/Cucumber.json",
+                "json:target/CucumberReports/Cucumber.json",
 
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-				
-				"rerun:target/failedrerun.txt"})
-public class TestNGRunner extends AbstractTestNGCucumberTests {
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+
+                "rerun:target/failedrerun.txt"
 
 	@Override
 	@DataProvider(parallel = false)
@@ -40,6 +41,6 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 }
 
-
+  
 
 
