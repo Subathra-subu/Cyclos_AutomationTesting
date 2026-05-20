@@ -8,13 +8,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 		features = "src/test/resources/Features",
-       
+        tags="@PaymentToUser_Shobana",
 
 		glue = "com.StepDefinitions",
 
