@@ -6,6 +6,7 @@ import org.testng.Assert;
 
 import com.Actions.MyAdvertisementsAction;
 import com.Actions.LoginAction;
+import com.Utilities.CSVUtility;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -30,6 +31,7 @@ public class MyAdvertisementsTest {
 
 		login.clickSubmitButton();
 	}
+	
 	
 	@When("User clicks Marketplace menu")
 	public void user_clicks_marketplace_menu() {
@@ -61,6 +63,7 @@ public class MyAdvertisementsTest {
 		actions.selectToDate(data.get("toDate"));
 
 		actions.enterDescription(data.get("description"));
+
 	}
 
 	@Then("User should successfully add advertisement")
@@ -68,19 +71,25 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		actions.assertSuccessfullMessage();
+		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
-	@When("User searches advertisement {string}")
-	public void user_searches_advertisement(String title) {
+	@When("User searches advertisement mentioned in the CSV file")
+	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
+		
+		String title = CSVUtility
+	            . getVoucherCodes("src/test/resources/TestData/InputData.csv")
+	            .get(0);
 
-		actions.searchAdvertisement(title);
+	    actions.searchAdvertisement(title);
+
 	}
 	
 	@When("the user click the advertisement")
 	public void the_user_click_the_advertisement() {
 	    
 		actions.clickItem();
+		
 	}
 
 	@When("User click the edit button and edits advertisement details")
@@ -104,7 +113,7 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		actions.assertSuccessfullMessage();
+		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
 	@When("User clicks remove advertisement")
@@ -117,12 +126,21 @@ public class MyAdvertisementsTest {
 	public void user_validates_remove_confirmation_popup() {
 
 		Assert.assertTrue(actions.validateRemovePopup().contains("Are you sure"));
+		actions.confirmRemoveAdvertisement();
 	}
 
 	@Then("User confirms advertisement removal")
 	public void user_confirms_advertisement_removal() {
 
 		actions.confirmRemoveAdvertisement();
+	}
+
+	@Then("Advertisement should be removed successfully")
+	public void advertisement_should_be_removed_successfully() {
+
+		Assert.assertTrue(actions.validateMessage().contains("was removed"));
+
 		actions.assertRemovalMessage();
+		
 	}
 }
