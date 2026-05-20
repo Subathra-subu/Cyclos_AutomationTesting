@@ -38,7 +38,8 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "validVoucher");
     }
-
+    
+    
     @DataProvider(name = "businessDirectory", parallel = true)
 
     public Object[][] businessDirectoryData() throws IOException {
