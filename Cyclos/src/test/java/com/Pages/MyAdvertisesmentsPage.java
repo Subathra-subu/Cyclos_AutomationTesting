@@ -29,19 +29,18 @@ public class MyAdvertisesmentsPage {
 
 	    public By saveBtn = By.xpath("//span[text()='Save']");
 
-	    public By Message = By.xpath("//ui-root[@class='flex-grow-1 d-flex root']/child::snack-bar");
+	    public By Message = By.xpath("//div[@id='rootAlertContainer']/following-sibling::ui-root/child::snack-bar");
 
 	    public By searchField = By.xpath("//input[@class='form-control w-100 ng-untouched ng-pristine ng-valid']");
 	    
 	    public By item = By.xpath("(//div[@class='avatar-container full-size'])[1]");
 
-	    public By editBtn = By.xpath("//div[text()='Edit']");
+	    public By editBtn = By.xpath("//div[contains(text(),'Edit')]");
 
-	    public By removeBtn = By.xpath("//div[text()='Remove']");
+	    public By removeBtn = By.xpath("//div[contains(text(),'Remove')]");
 
 	    public By confirmPopup = By.xpath("//div[@class='modal-content']/child::*");
 
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
-
-
+	    
 	}

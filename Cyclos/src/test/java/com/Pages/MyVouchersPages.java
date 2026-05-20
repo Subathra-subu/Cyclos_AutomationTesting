@@ -30,13 +30,4 @@ public class MyVouchersPages
 	public By restaurant = By.xpath("//a[text()=\" Restaurant voucher \"]");
 
 	public By assertPopUp = By.xpath("//*[contains(text(),'The voucher(s) has been bought.')]");
-
-	public By voucherCode =
-	        By.xpath("//span[normalize-space()='Voucher code']"
-	                + "/following::input[@type='text'][1]");
-
-	public By result =
-	        By.xpath("//tbody/tr[1]/td[3]/a");
-
-	
 }
