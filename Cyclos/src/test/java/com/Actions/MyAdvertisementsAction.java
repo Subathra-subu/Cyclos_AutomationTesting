@@ -32,7 +32,6 @@ public class MyAdvertisementsAction extends BaseAction {
         catch (Exception e) {
             Hooks.logger.error("Unable to click my advertisements", e);
         }
-
     }
 
     public void clickNewAdvertisement() {
@@ -125,7 +124,7 @@ public class MyAdvertisementsAction extends BaseAction {
         }
     }
 
-    public String validateMessage() {
+    public String validateSuccessMessage() {
 
         try {
             return getText(advertisementPage.Message);
@@ -142,7 +141,7 @@ public class MyAdvertisementsAction extends BaseAction {
         try {
             isDisplayed(advertisementPage.Message);
 
-            Assert.assertTrue(validateMessage().contains("was saved"));
+            Assert.assertTrue(validateSuccessMessage().contains("was saved"));
         } 
         catch (Exception e) {
             Hooks.logger.error("Unable to assert successful message", e);
@@ -217,7 +216,7 @@ public class MyAdvertisementsAction extends BaseAction {
         try {
             isDisplayed(advertisementPage.Message);
 
-            Assert.assertTrue(validateMessage().contains("was removed"));
+            Assert.assertTrue(validateSuccessMessage().contains("was removed"));
         } 
         catch (Exception e) {
             Hooks.logger.error("Unable to assert removal message", e);

@@ -6,7 +6,6 @@ import org.testng.Assert;
 
 import com.Actions.MyAdvertisementsAction;
 import com.Actions.LoginAction;
-import com.Utilities.CSVUtility;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -71,18 +70,13 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		Assert.assertTrue(actions.validateMessage().contains("was saved"));
+		Assert.assertTrue(actions.validateSuccessMessage().contains("The advertisement was saved"));
 	}
 
-	@When("User searches advertisement mentioned in the CSV file")
-	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
-		
-		String title = CSVUtility
-	            . getVoucherCodes("src/test/resources/TestData/InputData.csv")
-	            .get(0);
+	@When("User searches advertisement {string}")
+	public void user_searches_advertisement(String title) {
 
-	    actions.searchAdvertisement(title);
-
+		actions.searchAdvertisement(title);
 	}
 	
 	@When("the user click the advertisement")
@@ -113,7 +107,7 @@ public class MyAdvertisementsTest {
 
 		actions.clickSave();
 
-		Assert.assertTrue(actions.validateMessage().contains("was saved"));
+		Assert.assertTrue(actions.validateSuccessMessage().contains("successful"));
 	}
 
 	@When("User clicks remove advertisement")
@@ -131,14 +125,6 @@ public class MyAdvertisementsTest {
 
 	@Then("User confirms advertisement removal")
 	public void user_confirms_advertisement_removal() {
-
-		actions.confirmRemoveAdvertisement();
-	}
-
-	@Then("Advertisement should be removed successfully")
-	public void advertisement_should_be_removed_successfully() {
-
-		Assert.assertTrue(actions.validateMessage().contains("was removed"));
 
 		actions.assertRemovalMessage();
 		

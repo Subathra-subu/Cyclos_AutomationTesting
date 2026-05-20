@@ -76,7 +76,6 @@ public class PaymentRequestSteps {
         Assert.assertTrue(fileSizeInBytes > 0, "Assertion Failed: The downloaded PDF file is completely empty (0 bytes)!");
         HelperClass.log.info("PDF Download validation successful! File size and presence verified.");
 
-
         downloadedPdf.delete();
     }
 
@@ -100,6 +99,4 @@ public class PaymentRequestSteps {
     public void the_date_field_should_display_an_error_indicator_text_message_saying(String expectedErrorText) {
        Assert.assertEquals(reqaction.assertDateValidationError(),expectedErrorText ); 
     }
-
 }
-

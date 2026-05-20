@@ -3,7 +3,6 @@ package com.Pages;
 import org.openqa.selenium.By;
 
 public class PaymentRequestPage {
-
     public By Banking = By.xpath("//div[@class='menu-text'][normalize-space()='Banking']");
     public By paymentrequest = By.xpath("//div[text()='Payment requests']");
     public By sendrequest = By.xpath("//div[normalize-space()='Send a new request']");
@@ -30,4 +29,3 @@ public class PaymentRequestPage {
     public By paypageAssert = By.xpath("//div[text()=' Payment request details ']");
     public By dateValidationError = By.xpath("//div[@class='invalid-feedback']");
 }
-
