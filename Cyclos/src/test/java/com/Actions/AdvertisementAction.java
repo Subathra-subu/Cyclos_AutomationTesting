@@ -20,8 +20,7 @@ import io.cucumber.datatable.DataTable;
 
 public class AdvertisementAction extends BaseAction {
 
-    AdvertisementPage advertisementPage =
-            new AdvertisementPage();
+    AdvertisementPage advertisementPage = new AdvertisementPage();
 
     public void clickMarketplace() {
 
