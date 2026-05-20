@@ -10,9 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 		features = "src/test/resources/Features",
-
+        
+        tags="@krishna",
+	
 		glue = "com.StepDefinitions",
-
+        
 		monochrome = true,
 
 		publish = false,
