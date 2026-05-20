@@ -1,4 +1,4 @@
-package com.StepDefinitions;
+/*package com.StepDefinitions;
 
 import java.util.Map;
 
@@ -140,3 +140,4 @@ public class MyAdvertisementsTest {
 >>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 	}
 }
+*/
