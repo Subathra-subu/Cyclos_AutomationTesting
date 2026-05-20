@@ -1,4 +1,4 @@
-package com.Pages;
+/*package com.Pages;
 
 import org.openqa.selenium.By;
 
@@ -54,4 +54,4 @@ public class MyAdvertisesmentsPage {
 	    
 >>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 	}
-
+*/
