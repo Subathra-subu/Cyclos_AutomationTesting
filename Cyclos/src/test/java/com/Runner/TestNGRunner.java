@@ -9,34 +9,38 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features/AdInterest.feature",
+        features = "src/test/resources/Features",
 
-		glue = "com.StepDefinitions",
+        glue = "com.StepDefinitions",
 
-		monochrome = true,
+        monochrome = true,
 
-		publish = false,
+        publish = false,
 
-		
-		plugin = {
+        tags = "@SRIRAM",
+        
+        plugin = {
 
-				"pretty",
+                "pretty",
 
-				"html:target/CucumberReports/Cucumber.html", "json:target/CucumberReports/Cucumber.json",
+                "html:target/CucumberReports/Cucumber.html",
 
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "json:target/CucumberReports/Cucumber.json",
 
-				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-				"rerun:target/failedrerun.txt"
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 
-		})
+                "rerun:target/failedrerun.txt"
+
+        })
 
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
-	@Override
-	@DataProvider(parallel = false)
-	public Object[][] scenarios() {
-		return super.scenarios();
-	}
+    @Override
+    @DataProvider(parallel = false)
+    public Object[][] scenarios() {
+
+        return super.scenarios();
+    }
 }

@@ -17,7 +17,7 @@ public class CSVUtility {
                     new BufferedReader(
                             new FileReader(filePath));
 
-            // Skip header row
+            
             br.readLine();
 
             String line;
