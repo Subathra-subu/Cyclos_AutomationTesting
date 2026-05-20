@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class InviteUserPage {
 
-    public By marketPlace = By.xpath("//div[@class='menu-text'][normalize-space()='Marketplace']");
+    public By marketPlace = By.xpath("//div[contains(text(),'Marketplace')][@class='menu-text']");
     public By inviteUsers = By.xpath("//div[text()='Invite users']");
     public By emailTextBox = By.xpath("//div[contains(@class,'input-fields')]//input[@type='text']");
     public By sendInvitationButton = By.xpath("//span[normalize-space()='Send']");

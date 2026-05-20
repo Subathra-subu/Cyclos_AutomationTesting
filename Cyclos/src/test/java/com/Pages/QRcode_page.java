@@ -6,7 +6,7 @@ import com.Actions.QR_Actions;
 
 public class QRcode_page  {
 
-	public By Banking = By.xpath("//div[@class='menu-text'][normalize-space()='Banking']");
+	public By Banking = By.cssSelector("a[id='menu_banking'] ");
 	public By QRcode = By.xpath("//div[text()='Receive QR-code']");
 	public By Amount = By.xpath("//input[contains(@placeholder,'0')]");
 	public By Generate = By.xpath("//span[normalize-space()='Generate QR code']");
