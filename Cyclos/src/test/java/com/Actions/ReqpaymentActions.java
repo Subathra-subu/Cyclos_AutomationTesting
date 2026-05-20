@@ -167,7 +167,7 @@ public class ReqpaymentActions extends BaseAction {
  
 =======
     
-    public void addPaymentRequestWithEmptyDate(String receiver, String amountVal) {
+  /*  public void addPaymentRequestWithEmptyDate(String receiver, String amountVal) {
         try {
             // 1. Fill Receiver and select autocomplete match
             waitForVisibility(paypage.user);
@@ -226,4 +226,4 @@ public class ReqpaymentActions extends BaseAction {
         }
     }
 }
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git*/
