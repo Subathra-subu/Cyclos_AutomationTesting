@@ -8,15 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 		features = "src/test/resources/Features",
        
-
-		glue = "com.StepDefinitions",
 
 		glue = "com.StepDefinitions",
 
@@ -31,14 +24,14 @@ import io.cucumber.testng.CucumberOptions;
 				"pretty",
 
 				"html:target/CucumberReports/Cucumber.html",
-
-        
  
 				"json:target/CucumberReports/Cucumber.json",
 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+				
+				"rerun:target/failedrerun.txt"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 }
