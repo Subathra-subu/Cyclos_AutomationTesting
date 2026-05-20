@@ -9,7 +9,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
+		features = "src/test/resources/features/ReceivePayment.feature",
+
+	    tags = "@RecievePaymentFeature",
 
 		glue = "com.StepDefinitions",
 
@@ -34,7 +36,6 @@ import io.cucumber.testng.CucumberOptions;
 
 		})
 
-
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 
@@ -45,3 +46,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	}
 
 }
+
+
+
+

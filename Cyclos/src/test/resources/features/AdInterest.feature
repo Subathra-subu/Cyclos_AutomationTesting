@@ -16,6 +16,10 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
   @addNew
   Scenario: Add a New Advertisement Interest
     When the user clicks the Add New button
+
+    And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "min" , "max" and submit it.
+    Then the user should see the popup message "The ad interest was created"
+
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.
     Then the user should see the popup message
 

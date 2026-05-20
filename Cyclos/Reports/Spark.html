@@ -37,6 +37,7 @@
 <li class="m-r-10">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <a href="#"><span class="badge badge-primary">May 19, 2026 01:01:41 pm</span></a>
 =======
 <a href="#"><span class="badge badge-primary">May 19, 2026 03:21:17 pm</span></a>
@@ -942,6 +943,1047 @@ failGrandChild: 0,
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 warningGrandChild: 0,
 skipGrandChild: 2,
+=======
+<a href="#"><span class="badge badge-primary">May 20, 2026 02:46:32 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@RecievePaymentFeature</a><a class="dropdown-item" href="#">@ReceivePaymentWithBlankDetails</a><a class="dropdown-item" href="#">@ReceivePaymentWithInvalidName</a><a class="dropdown-item" href="#">@Akksheetha</a><a class="dropdown-item" href="#">@ReceivePaymentWithValidDetails</a><a class="dropdown-item" href="#">@ReceivePaymentWithInvalidAmount</a><a class="dropdown-item" href="#">@ReceivePaymentExceedLimit</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature</p>
+            <p class="text-sm">
+              <span>2:46:33 pm</span> / <span>00:03:10:042</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature</h5>
+<span class='badge badge-success'>05.20.2026 2:46:33 pm</span>
+<span class='badge badge-danger'>05.20.2026 2:49:43 pm</span>
+<span class='badge badge-default'>00:03:10:042</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Description : Testing the receive payment feature in Banking</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify scheduled receive payment functionality with Confirmation</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verify scheduled receive payment functionality with Confirmation</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters payment details with "The Bakery shop", "1" and "Making a valid Payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the Submit button and confirms the password "1234"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Payment should be received successfully</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="11"><span class="badge log pass-bg mr-2">Pass</span>Verify scheduled receive payment functionality with Confirmation</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters payment details with "The Irish Pub", "3" and "Checking a payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the Submit button and confirms the password "1234"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Payment should be received successfully</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="19"><span class="badge log pass-bg mr-2">Pass</span>Verify failure message for blank user field</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.registered_user_launches_the_cyclos_application()">
+                <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_navigates_to_the_receive_payment_page()">
+                <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_enters_invalid_name()">
+                <span>And User leaves name field blank and enter only amount detail</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_clicks_on_the_submit_button()">
+                <span>And User clicks on the next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.appropriate_error_message_for_invalid_user_should_be_displayed()">
+                <span>Then Appropriate error message for invalid user should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>Verify failure message for blank amount field</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Verify failure message for blank amount field</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters invalid payment details with "The Bakery shop", "00" and "Making an Invalid Payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the next button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Appropriate error message for amount should be displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Verify failure message for blank amount field</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters invalid payment details with "The Irish Pub", "3" and "Checking a payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the next button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then Appropriate error message for amount should be displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Verify failure message when both user and amount fields are blank</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.registered_user_launches_the_cyclos_application()">
+                <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_navigates_to_the_receive_payment_page()">
+                <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_leaves_name_field_blank_and_enter_only_amount_detail()">
+                <span>And User leaves payment fields empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.user_clicks_on_the_submit_button()">
+                <span>And User clicks on the next button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.StepDefinitions.ReceivePaymentTest.validation_message_for_mandatory_fields_should_be_displayed()">
+                <span>Then Validation message for mandatory fields should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Verify  alert message when receive payment amount exceeds maximum limit</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="53"><span class="badge log pass-bg mr-2">Pass</span>Verify  alert message when receive payment amount exceeds maximum limit</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters payment details with "The Bakery shop", "1" and "Making a valid Payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the Submit button and confirms the password "1234"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the alert message for exceeding limit should be displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>Verify  alert message when receive payment amount exceeds maximum limit</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given Registered user launches the Cyclos application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User navigates to the Receive Payment page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters payment details with "The Irish Pub", "3" and "Checking a payment"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on the Submit button and confirms the password "1234"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the alert message for exceeding limit should be displayed</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">7</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+</span>
+<p class="name">@RecievePaymentFeature</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RecievePaymentFeature</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:46:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Verify failure message for blank user field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank user field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='36'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Verify failure message when both user and amount fields are blank</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message when both user and amount fields are blank</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='53'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:49:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='61'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ReceivePaymentWithBlankDetails</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ReceivePaymentWithBlankDetails</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Verify failure message when both user and amount fields are blank</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message when both user and amount fields are blank</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@ReceivePaymentWithInvalidName</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ReceivePaymentWithInvalidName</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Verify failure message for blank user field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank user field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>8</span>
+</span>
+<p class="name">@Akksheetha</p>
+<p class="duration text-sm">8 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Akksheetha</h4>
+<span status="pass" class='badge log pass-bg'>8 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:46:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='19'>Verify failure message for blank user field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank user field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='36'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='44'>Verify failure message when both user and amount fields are blank</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message when both user and amount fields are blank</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='53'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:49:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='61'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@ReceivePaymentWithValidDetails</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ReceivePaymentWithValidDetails</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:46:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='3'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='11'>Verify scheduled receive payment functionality with Confirmation</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify scheduled receive payment functionality with Confirmation</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@ReceivePaymentWithInvalidAmount</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ReceivePaymentWithInvalidAmount</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:47:50 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='28'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='36'>Verify failure message for blank amount field</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify failure message for blank amount field</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">@ReceivePaymentExceedLimit</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@ReceivePaymentExceedLimit</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:48:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='53'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:49:17 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='61'>Verify alert message when receive payment amount exceeds maximum limit</a>
+<div class="">
+<span class="badge badge-default">Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature.Verify alert message when receive payment amount exceeds maximum limit</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 20, 2026 02:46:32 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 20, 2026 02:49:43 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>8</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>40</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature":190.042
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@RecievePaymentFeature</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ReceivePaymentWithBlankDetails</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ReceivePaymentWithInvalidName</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Akksheetha</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ReceivePaymentWithValidDetails</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ReceivePaymentWithInvalidAmount</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@ReceivePaymentExceedLimit</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>10</td>
+</tr>
+<tr>
+<td>os</td>
+<td>windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 8,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 40,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 infoGrandChild: 0,
 eventsCount: 5,
 };
