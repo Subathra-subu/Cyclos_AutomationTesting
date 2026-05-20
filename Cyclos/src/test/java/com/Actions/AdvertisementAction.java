@@ -158,7 +158,7 @@ public class AdvertisementAction extends BaseAction {
                 sendKeys(advertisementPage.searchInput,keyword);
                 HelperClass.log.info("Searched advertisement keyword : " + keyword);
                 waitForVisibility( advertisementPage.favouriteIcon);
-                click(advertisementPage.favouriteIcon);
+                jsClick(advertisementPage.favouriteIcon);
                 HelperClass.log.info("Added advertisement to favourites : "+ keyword);
             }
         }
@@ -172,8 +172,9 @@ public class AdvertisementAction extends BaseAction {
     public void verifyAdvertisementAddedToFavourites() {
 
         try {
-            waitForVisibility(advertisementPage.advertisementCards);
-            Assert.assertTrue(isDisplayed(advertisementPage.advertisementCards));
+//            waitForVisibility(advertisementPage.advertisementCards);
+        	String msg = getText(advertisementPage.favouriteSuccessMessage);
+        	Assert.assertTrue(msg.contains("favorite"));
             HelperClass.log.info("Advertisements added to favourites successfully");
         }
 

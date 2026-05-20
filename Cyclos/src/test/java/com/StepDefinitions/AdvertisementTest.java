@@ -52,13 +52,13 @@ public class AdvertisementTest {
     public void user_searches_for_keyword(
             String keyword) {
 
-        //advertisementAction.searchByKeyword(keyword);
+        advertisementAction.searchByKeyword(keyword);
     }
 
     @Then("no matching advertisements should be displayed")
     public void no_matching_advertisements_should_be_displayed() {
 
-//        advertisementAction.verifyNoSearchResults();
+        advertisementAction.verifyNoSearchResults();
     }
     @When("user adds advertisements to favourites using excel data")
     public void user_adds_advertisements_to_favourites_using_excel_data()

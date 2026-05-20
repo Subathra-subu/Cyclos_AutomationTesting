@@ -30,9 +30,9 @@ public class AdvertisementPage {
     public By advertisementImage = By.xpath("(//img[contains(@src,'content') or contains(@src,'image')])[1]");
 
     // Favourite
-    public By favouriteIcon = By.xpath("(//*[contains(@class,'favorite')])[1]");
+    public By favouriteIcon = By.xpath("(//*[contains(@class,'favorite')]/*)[1]");
 
-    public By favouriteSuccessMessage = By.xpath("//*[contains(text(),'Favourite') or contains(text(),'favorite')]");
+    public By favouriteSuccessMessage  = By.xpath("/html/body/ui-root/snack-bar");
 
     public By favouritesOnlyFilter = By.xpath("//boolean-field//label-value//label");
 
