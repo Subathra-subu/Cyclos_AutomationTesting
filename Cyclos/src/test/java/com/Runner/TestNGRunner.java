@@ -10,15 +10,12 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 		features = "src/test/resources/Features",
-        
-        tags="@krishna",
-	
+
 		glue = "com.StepDefinitions",
         
 		monochrome = true,
 
 		publish = false,
-
 
 		plugin = {
 
@@ -29,8 +26,11 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-				
-				"rerun:target/failedrerun.txt"})
+
+				"rerun:target/failedrerun.txt"
+
+		})
+
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 	@Override
@@ -39,5 +39,3 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 		return super.scenarios();
 	}
 }
-
-
