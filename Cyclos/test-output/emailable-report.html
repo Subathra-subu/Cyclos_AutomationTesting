@@ -9,10 +9,54 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
+<<<<<<< HEAD
 <tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">95,684</td><td></td><td></td></tr>
+=======
+<<<<<<< HEAD
+<tr><td><a href="#t0">Default test</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">242,156</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1779238348520</td><td rowspan="2">35253</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.Runner.TestNGRunner</td><td><a href="#m2">runScenario</a></td><td rowspan="5">1779238194716</td><td rowspan="5">107052</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m5">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m6">runScenario</a></td></tr></tbody>
+</table>
+<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;positive number&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;positive number&apos;)]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\Hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51524}, goog:processID: 34480, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51524/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 777e3d07d43fb27399e24bd613ad0040
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.PaymentToUserActions.validateLimitExceededMessage(PaymentToUserActions.java:194)
+	at com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_limit_exceeded_message(PaymentToUserStepDefinition.java:97)
+	at ✽.User clicks the next button and should validate limit exceeded message &quot;Amount must be a positive number.&quot;(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:25)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message when payment amount exceeds available limit&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;less or equal&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;less or equal&apos;)]&quot;}.
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\Hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56957}, goog:processID: 29940, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56957/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9359584f74e6c5d2cc7687d5ef895fa8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.PaymentToUserActions.validateLimitExceededMessage(PaymentToUserActions.java:184)
+	at com.StepDefinitions.PaymentToUserStepDefinition.user_clicks_the_next_button_and_should_validate_limit_exceeded_message(PaymentToUserStepDefinition.java:97)
+	at ✽.User clicks the next button and should validate limit exceeded message &quot;Amount must be less or equal to 500,00 IU&apos;s.&quot;(file:///C:/Users/Hp/OneDrive/Desktop/Shobana-Selenium%20Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/paymentToUser.feature:25)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify validation message for blank user field&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can schedule monthly installment payment&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify recurring payment scheduling functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify scheduled payment functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify Payment Confirmation using pay now functionality&quot;</td><td>&quot;Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+=======
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,300</td><td></td><td></td></tr>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </table>
 <table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1779240193274</td><td rowspan="2">25936</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m2">runScenario</a></td><td rowspan="1">1779240157251</td><td rowspan="1">36012</td></tr></tbody>
 </table>
+<<<<<<< HEAD
 <h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can Edit Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
@@ -32,5 +76,9 @@
 	at ✽.User searches advertisement mentioned in the CSV file(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:28)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can add new Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+=======
+<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify print functionality in payment request details page&quot;</td><td>&quot;Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 </body>
 </html>

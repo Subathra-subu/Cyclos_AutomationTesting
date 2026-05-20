@@ -78,7 +78,7 @@ public class MyAdvertisementsTest {
 	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
 		
 		String title = CSVUtility
-	            . getVoucherCodes("src/test/resources/TestData/Advertisement.csv")
+	            . getVoucherCodes("src/test/resources/TestData/InputData.csv")
 	            .get(0);
 
 	    actions.searchAdvertisement(title);
