@@ -48,6 +48,16 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "BusinessDirectory");
     }
+    
+    @DataProvider(name = "advertisementFavourites", parallel = true)
+
+    public Object[][] advertisementFavourites()
+            throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "favourites_akkshee");
+    }
 
     @DataProvider(name = "paymentRequestKrishna")
     public Object[][] paymentRequestKrishnaData() throws IOException {
