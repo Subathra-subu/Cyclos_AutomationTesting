@@ -27,31 +27,20 @@ public class MyAdvertisesmentsPage {
 
 	    public By descriptionFrame = By.xpath("//div[contains(@class,'editor')]");
 
-<<<<<<< HEAD
-	    public By uploadImageBtn = By.xpath("//input[@type='file']");
-
-	    public By saveBtn = By.xpath("//button[contains(text(),'Save')]");
-=======
 	    public By saveBtn = By.xpath("//span[text()='Save']");
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 
-	    public By successMessage = By.xpath("//div[contains(@class,'notification-message')]");
+	    public By Message = By.xpath("//ui-root[@class='flex-grow-1 d-flex root']/child::snack-bar");
 
 	    public By searchField = By.xpath("//input[@class='form-control w-100 ng-untouched ng-pristine ng-valid']");
 	    
 	    public By item = By.xpath("(//div[@class='avatar-container full-size'])[1]");
 
-	    public By editBtn = By.xpath("//div[contains(text(),'Edit')]");
+	    public By editBtn = By.xpath("//div[text()='Edit']");
 
-	    public By removeBtn = By.xpath("//div[contains(text(),'Remove')]");
+	    public By removeBtn = By.xpath("//div[text()='Remove']");
 
 	    public By confirmPopup = By.xpath("//div[@class='modal-content']/child::*");
 
-<<<<<<< HEAD
-	    public By confirmRemoveBtn = By.xpath("//button[contains(text(),'Remove')]");
-=======
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
-	    
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
-	}
 
+	}
