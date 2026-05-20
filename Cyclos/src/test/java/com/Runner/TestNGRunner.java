@@ -10,6 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features/MyAdvertisements.feature",
 
+		glue = "com.StepDefinitions",
 
 		glue = "com.StepDefinitions",
 
@@ -17,6 +18,8 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
+		
+	
 		plugin = {
 
 				"pretty",
