@@ -10,17 +10,6 @@ public class MyAdvertisementsAction extends BaseAction {
 	
 	MyAdvertisesmentsPage advertisementPage = new MyAdvertisesmentsPage();
 	
-	public void clickMarketPlaceMenu() {
-		
-		click(advertisementPage.marketPlaceMenu);
-		
-	}
-
-    public void clickMyAdvertisements() {
-    	
-    	scrollIntoView(advertisementPage.myAdvertisements);
-
-        click(advertisementPage.myAdvertisements);
     public void clickMarketPlaceMenu() {
 
         try {
@@ -43,6 +32,7 @@ public class MyAdvertisementsAction extends BaseAction {
         catch (Exception e) {
             Hooks.logger.error("Unable to click my advertisements", e);
         }
+
     }
 
     public void clickNewAdvertisement() {
@@ -137,7 +127,6 @@ public class MyAdvertisementsAction extends BaseAction {
 
     public String validateMessage() {
 
-        return getText(advertisementPage.successMessage);
         try {
             return getText(advertisementPage.Message);
         } 
@@ -234,4 +223,4 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
-}
+   }
