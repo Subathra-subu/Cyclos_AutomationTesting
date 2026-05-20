@@ -10,7 +10,7 @@ Background:
 	When the user upload profile image
 	When the user enters the valid credentials and click next button
 	| name    | loginName | email          | website     | mobile         | landline       | address   | zip   | city    | region    | password |
-  	| John    | John_Doe  | john@yahoo.com | www.test.com| +91 9876543213 | (201)555-0123  | Chennai   | 636001| Chennai | TamilNadu | john@123 |
+  	| John    | John_Doe  | john@yahoo.com | www.test.com| +91 9876543219 | (201)555-0123  | Chennai   | 636001| Chennai | TamilNadu | john@123 |
   	And the user clicks submit button
   	Then the user should be able to see the "Registration successful" message
   	
