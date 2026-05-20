@@ -1,75 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="21" passed="20" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-20T17:36:54 IST" name="Default suite" finished-at="2026-05-20T17:38:02 IST" duration-ms="68089">
+  <suite started-at="2026-05-20T15:37:09 IST" name="Default suite" finished-at="2026-05-20T15:44:24 IST" duration-ms="434468">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-20T17:36:54 IST" name="Default test" finished-at="2026-05-20T17:38:02 IST" duration-ms="68089">
+    <test started-at="2026-05-20T15:37:09 IST" name="Default test" finished-at="2026-05-20T15:44:24 IST" duration-ms="434468">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:36:54 IST" name="setUpClass" finished-at="2026-05-20T17:36:56 IST" duration-ms="1768" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:09 IST" name="setUpClass" finished-at="2026-05-20T15:37:10 IST" duration-ms="803" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@572db5ee]]>
+                <![CDATA[org.testng.TestRunner@2d393a72]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:36:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:20 IST" duration-ms="24487" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:37:28 IST" duration-ms="17358" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can add new Advertisement"]]>
+                <![CDATA["Delete an Advertisement Interest"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:39 IST" duration-ms="18734" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:37:44 IST" duration-ms="16354" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can Edit Advertisement"]]>
+                <![CDATA["Add a New Advertisement Interest"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user should see the popup message "The ad interest was created"' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the user should see the popup message {string}")
+public void the_user_should_see_the_popup_message(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user should see the popup message "The ad interest was created"' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the user should see the popup message {string}")
+public void the_user_should_see_the_popup_message(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user should see the popup message "The ad interest was created"(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:03 IST" duration-ms="19044" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a New Advertisement without Name Fields"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:56 IST" duration-ms="16999" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:18 IST" duration-ms="15132" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can remove Advertisement"]]>
+                <![CDATA["To verify the Cinema voucher"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:56 IST" name="tearDownClass" finished-at="2026-05-20T17:38:02 IST" duration-ms="5958" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:32 IST" duration-ms="13467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the Cinema voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:45 IST" duration-ms="13550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the Cinema voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:57 IST" duration-ms="12196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the gift voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:13 IST" duration-ms="15106" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the gift voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:26 IST" duration-ms="13737" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the gift voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:44 IST" duration-ms="18059" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the restaruant voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:01 IST" duration-ms="17113" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the restaruant voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:14 IST" duration-ms="12392" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify voucher code search using CSV data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:52 IST" duration-ms="38120" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:41:29 IST" duration-ms="36837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:41:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:42:04 IST" duration-ms="35088" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:42:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:42:41 IST" duration-ms="36657" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:42:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:12 IST" duration-ms="31169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:45 IST" duration-ms="32813" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions for different status filters"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:58 IST" duration-ms="13222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:44:08 IST" duration-ms="10682" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:44:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:44:22 IST" duration-ms="13373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:44:22 IST" name="tearDownClass" finished-at="2026-05-20T15:44:24 IST" duration-ms="2114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

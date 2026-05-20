@@ -9,10 +9,10 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/features",
+		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
-
+        
 		monochrome = true,
 		
         publish = false,
@@ -42,9 +42,4 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}
-
 }
-
-
-
-
