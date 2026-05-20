@@ -79,8 +79,6 @@ public class AddInterestTest {
 		}
 	}
 
-	
-
 	@When("the user clicks the Add New button")
 	public void the_user_clicks_the_add_new_button() {
 		// Write code here that turns the phrase above into concrete actions
@@ -93,6 +91,7 @@ public class AddInterestTest {
 		// Write code here that turns the phrase above into concrete actions
 		addInterestActions.excelData();
 	}
+
 
 
 

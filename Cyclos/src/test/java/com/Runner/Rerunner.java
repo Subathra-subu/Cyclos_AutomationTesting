@@ -1,5 +1,6 @@
 package com.Runner;
 
+
 import org.testng.annotations.Test;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -8,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
+		features = {"@target/failedrerun.txt"},
 
 		glue = "com.StepDefinitions",
 
@@ -16,6 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
+		tags = "@SRIRAM",
 
 		plugin = {
 
@@ -30,6 +32,7 @@ import io.cucumber.testng.CucumberOptions;
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", "rerun:target/failedrerun.txt"
 
 		})
-public class TestNGRunner extends AbstractTestNGCucumberTests {
+
+public class Rerunner extends AbstractTestNGCucumberTests {
 
 }
