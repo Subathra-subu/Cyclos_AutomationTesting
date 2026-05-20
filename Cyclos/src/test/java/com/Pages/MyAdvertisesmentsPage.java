@@ -29,7 +29,7 @@ public class MyAdvertisesmentsPage {
 
 	    public By saveBtn = By.xpath("//span[text()='Save']");
 
-	    public By Message = By.xpath("//div[contains(@class,'notification-message')]");
+	    public By Message = By.xpath("//div[@id='rootAlertContainer']/following-sibling::ui-root/child::snack-bar");
 
 	    public By searchField = By.xpath("//input[@class='form-control w-100 ng-untouched ng-pristine ng-valid']");
 	    

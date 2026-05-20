@@ -1,216 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="4" failed="4" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-20T11:13:35 IST" name="Default suite" finished-at="2026-05-20T11:15:01 IST" duration-ms="86072">
+  <suite started-at="2026-05-20T17:36:54 IST" name="Default suite" finished-at="2026-05-20T17:38:02 IST" duration-ms="68089">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-20T11:13:35 IST" name="Default test" finished-at="2026-05-20T11:15:01 IST" duration-ms="86072">
+    <test started-at="2026-05-20T17:36:54 IST" name="Default test" finished-at="2026-05-20T17:38:02 IST" duration-ms="68089">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:13:35 IST" name="setUpClass" finished-at="2026-05-20T11:13:36 IST" duration-ms="1077" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:36:54 IST" name="setUpClass" finished-at="2026-05-20T17:36:56 IST" duration-ms="1768" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3a744e32]]>
+                <![CDATA[org.testng.TestRunner@572db5ee]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:13:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:08 IST" duration-ms="31683" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:36:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:20 IST" duration-ms="24487" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with valid credentials"]]>
+                <![CDATA["Verify user can add new Advertisement"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //div[text()='Dashboard'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Dashboard']"}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50044}, goog:processID: 22508, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50044/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f0942008a59c6f7d5e1409399a078bb9]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[text()='Dashboard'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Dashboard']"}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50044}, goog:processID: 22508, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50044/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f0942008a59c6f7d5e1409399a078bb9
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
-at com.Actions.BaseAction.getText(BaseAction.java:56)
-at com.Actions.DashBoardAction.successfullLogin(DashBoardAction.java:14)
-at com.StepDefinitions.LoginTest.the_user_should_be_able_to_see_the_dashboard_page(LoginTest.java:50)
-at ✽.the user should be able to see the dashboard page(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:12)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:15 IST" duration-ms="7464" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with Invalid Credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:23 IST" duration-ms="7324" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:39 IST" duration-ms="18734" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with Invalid Credentials"]]>
+                <![CDATA["Verify user can Edit Advertisement"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:30 IST" duration-ms="7075" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:37:56 IST" duration-ms="16999" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with Invalid Credentials"]]>
+                <![CDATA["Verify user can remove Advertisement"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:30 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:37 IST" duration-ms="7279" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with Blank Username"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot load from object array because "data" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot load from object array because "data" is null
-at com.StepDefinitions.LoginTest.the_user_enters_a_valid_password_and_leaves_the_username_field_blank(LoginTest.java:75)
-at ✽.the user enters a valid password and leaves the username field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:28)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:44 IST" duration-ms="7150" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with Blank password"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot load from object array because "data" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot load from object array because "data" is null
-at com.StepDefinitions.LoginTest.the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank(LoginTest.java:96)
-at ✽.the user enter a valid userName and leaves the password field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:34)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:51 IST" duration-ms="6707" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login With Blank credentials"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot load from object array because "data" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot load from object array because "data" is null
-at com.StepDefinitions.LoginTest.the_user_leaves_the_user_name_and_password_fields_blank(LoginTest.java:118)
-at ✽.the user leaves the userName and password fields blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:40)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T11:14:59 IST" duration-ms="8261" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can perform logout functionality"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-20T11:14:59 IST" name="tearDownClass" finished-at="2026-05-20T11:15:01 IST" duration-ms="1987" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-20T17:37:56 IST" name="tearDownClass" finished-at="2026-05-20T17:38:02 IST" duration-ms="5958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
