@@ -11,6 +11,8 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/features/ReceivePayment.feature",
 
+	    tags = "@RecievePaymentFeature",
+
 		glue = "com.StepDefinitions",
 
 		monochrome = true,
