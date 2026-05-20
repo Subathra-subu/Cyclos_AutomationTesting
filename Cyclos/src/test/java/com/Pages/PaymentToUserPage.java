@@ -4,50 +4,32 @@ import org.openqa.selenium.By;
 
 public class PaymentToUserPage {
 
-	public By nextBtn = By.xpath(
-			"//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']");
-    public By payuser = By.xpath(
-            "//a[@href='/banking/self/payment']//div[@class='quick-access-icon']");
+	public By nextBtn = By.xpath("//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']");
+	public By payuser = By.xpath("//a[@href='/banking/self/payment']//div[@class='quick-access-icon']");
 
-    public By userfield = By.cssSelector(
-            "input[placeholder='Type to search']");
+	public By userfield = By.cssSelector("input[placeholder='Type to search']");
 
-    public By errormsg = By.xpath(
-            "//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
+	public By errormsg = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
 
-    public By amountField = By.xpath(
-            "//input[@type='tel']");
+	public By amountField = By.xpath("//input[@type='tel']");
 
-    public By paymentConfirmationTitle = By.xpath(
-            "//div[contains(@class,'title-text')]");
+	public By paymentConfirmationTitle = By.xpath("//div[contains(@class,'title-text')]");
+	public By limitExceededMsg = By.xpath("//*[contains(text(),'less or equal')]");
 
-    public By limitExceededMsg = By.xpath(
-            "//div[contains(@class,'invalid-feedback') and contains(text(),'less or equal')]");
+	public By positiveNumberMsg = By.xpath("//*[contains(text(),'positive number')]");
+	public By futureDate = By.xpath("//input[@type='date']");
 
-     public  By positiveNumberMsg =
-    		By.xpath("//div[contains(@class,'invalid-feedback') and contains(normalize-space(),'positive number')]");
+	public By descriptionField = By.xpath("//textarea");
 
-    public By futureDate = By.xpath(
-            "//input[@type='date']");
+	public By dropdown = By.xpath("//button[contains(@class,'form-control')]");
 
-    public By descriptionField = By.xpath(
-            "//textarea");
+	public By scheduledOption = By.xpath("//a[normalize-space()='Scheduled']");
 
-    public By dropdown = By.xpath(
-            "//button[contains(@class,'form-control')]");
+	public By payNowOption = By.xpath("//a[normalize-space()='Pay now']");
 
-    public By scheduledOption = By.xpath(
-            "//a[normalize-space()='Scheduled']");
+	public By monthlyInstallmentOption = By.xpath("//a[normalize-space()='Monthly installments']");
 
-    public By payNowOption = By.xpath(
-            "//a[normalize-space()='Pay now']");
+	public By recurringPaymentOption = By.xpath("//a[normalize-space()='Recurring payments']");
 
-    public By monthlyInstallmentOption = By.xpath(
-            "//a[normalize-space()='Monthly installments']");
-
-    public By recurringPaymentOption = By.xpath(
-            "//a[normalize-space()='Recurring payments']");
-
-    public By numberOfInstallments = By.xpath(
-            "//input[@type='number']");
+	public By numberOfInstallments = By.xpath("//input[@type='number']");
 }

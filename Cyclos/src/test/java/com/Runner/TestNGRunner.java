@@ -11,36 +11,34 @@ import io.cucumber.testng.CucumberOptions;
 
 
 
-
 		features = "src/test/resources/Features",
 
+        tags="@ListView",
+
+
+		glue = "com.StepDefinitions",
+
+		monochrome = true,
+
+		publish = false,
+
+		
 	
+		plugin = {
 
+				"pretty",
 
-
-        glue = "com.StepDefinitions",
-
-        monochrome = true,
+				"html:target/CucumberReports/Cucumber.html",
 
         
-        publish = false,
-    
+ 
+				"json:target/CucumberReports/Cucumber.json",
 
-        plugin = {
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
-
-                "pretty",
-
-                "html:target/CucumberReports/Cucumber.html",
-
-                "json:target/CucumberReports/Cucumber.json",
-
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
-        }
-)
+				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" })
 public class TestNGRunner extends AbstractTestNGCucumberTests {
+
 
 	@Override
 	@DataProvider(parallel = true)

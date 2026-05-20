@@ -1,4 +1,3 @@
-@Subathra
 Feature:Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister
 
 Background:
