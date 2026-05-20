@@ -1,4 +1,4 @@
-package com.Actions;
+/*package com.Actions;
 
 import org.openqa.selenium.By;
 
@@ -245,3 +245,4 @@ public class MyAdvertisementsAction extends BaseAction {
 >>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 }
 
+*/
