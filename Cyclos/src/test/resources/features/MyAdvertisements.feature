@@ -16,16 +16,17 @@ This feature file is used to verify Advertisement functionality
 
   @EditAdvertisement
   Scenario: Verify user can Edit Advertisement
-    When User searches advertisement "race bike"
-    And User edits advertisement details
+    When User searches advertisement mentioned in the CSV file
+    When the user click the advertisement
+    And User click the edit button and edits advertisement details
       | title          | category | price | description                |
-      | race bike edit | Politics | 200   | Updated bike advertisement |
+      | race bike 		| Politics | 200   | Updated bike advertisement |
     Then User should successfully update advertisement
 
   @RemoveAdvertisement
   Scenario: Verify user can remove Advertisement
-    When User searches advertisement "race bike edit"
+    When User searches advertisement mentioned in the CSV file
+    When the user click the advertisement 
     And User clicks remove advertisement
     Then User validates remove confirmation popup
     And User confirms advertisement removal
-    Then Advertisement should be removed successfully

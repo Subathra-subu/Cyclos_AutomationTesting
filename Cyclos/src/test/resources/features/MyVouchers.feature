@@ -1,3 +1,4 @@
+@SRIRAM
 Feature: SRIRAM_K_17_5_2026_MyVochers
    description : This feature tests the My Vouchers section, ensuring users can view and manage their vouchers correctly.
 
@@ -44,3 +45,9 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
     Examples:
       | no | amount | assert                          |
       | 2  | 2      | The voucher(s) has been bought. |
+
+	@csv @smoke 
+  Scenario: Verify voucher code search using CSV data
+    When the user enter the valid voucher code "<code>"
+    And the user click the result
+    Then the user should seen the Qr code code
