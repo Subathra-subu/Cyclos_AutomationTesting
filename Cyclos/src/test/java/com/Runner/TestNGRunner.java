@@ -34,4 +34,11 @@ import io.cucumber.testng.CucumberOptions;
 				"rerun:target/failedrerun.txt"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
+	@Override
+	@DataProvider(parallel = false)
+	public Object[][] scenarios() {
+	    return super.scenarios();
+	}
 }
+
+

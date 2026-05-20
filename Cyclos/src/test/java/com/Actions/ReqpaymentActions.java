@@ -1,4 +1,4 @@
-/*package com.Actions;
+package com.Actions;
 
 import java.io.IOException;
 import org.openqa.selenium.By;
@@ -159,13 +159,6 @@ public class ReqpaymentActions extends BaseAction {
     public void cancelRequest() {
         click(paypage.cancel);
     }
-<<<<<<< HEAD
-
-}
-
-}*/
- 
-=======
     
     public void addPaymentRequestWithEmptyDate(String receiver, String amountVal) {
         try {
@@ -226,4 +219,3 @@ public class ReqpaymentActions extends BaseAction {
         }
     }
 }
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
