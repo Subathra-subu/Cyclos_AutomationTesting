@@ -1,4 +1,4 @@
-/*package com.Actions;
+package com.Actions;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -223,15 +223,7 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
    }
 
 
-*/
-=======
-}
->>>>>>> fe40c13 (PR#10Business directory shobana (#68))
-=======
-}
->>>>>>> 6d124e2 ( PR #14 - Advertisement Module Enhancements & Framework Improvements (#69))
+

@@ -38,7 +38,7 @@ public class InviteUserActions extends BaseAction {
     
     public void clickSendInvitation() {
         try {
-            click(page.sendInvitationButton);
+            jsClick(page.sendInvitationButton);
         } catch (Exception e) {
             HelperClass.log.error("Failed clicking send invitation", e);
         }

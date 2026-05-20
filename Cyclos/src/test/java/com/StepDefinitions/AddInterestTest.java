@@ -1,4 +1,4 @@
-/*package com.StepDefinitions;
+package com.StepDefinitions;
 
 import java.io.IOException;
 
@@ -79,6 +79,7 @@ public class AddInterestTest {
 		}
 	}
 
+
 	@When("the user clicks the Add New button")
 	public void the_user_clicks_the_add_new_button() {
 		// Write code here that turns the phrase above into concrete actions
@@ -92,27 +93,36 @@ public class AddInterestTest {
 		addInterestActions.excelData();
 	}
 
+
+
+
+	@Then("the user should see the popup message")
+	public void the_user_should_see_the_popup_message() {
+	    // Write code here that turns the phrase above into concrete actions
+		
+		if (addInterestActions.isUniqueVisible())
+		{
+			addInterestActions.assertuniqe();
+		}
+		
+		else
+		{
+		addInterestActions.assertPopup("The ad interest was created");
+		
+		}
+		
+	}
+
 	@Then("the user enters the details without name fields and should see the {string} message")
 	public void the_user_enters_the_details_without_name_fields_and_should_see_the_message(String expectedMessage,
 			DataTable dataTable) {
 		addInterestActions.dataTable(dataTable, expectedMessage);
 
-	}
+	
 
-	@Then("the user should see the popup message")
-	public void the_user_should_see_the_popup_message() {
-		// Write code here that turns the phrase above into concrete actions
-
-		if (addInterestActions.isUniqueVisible()) {
-			addInterestActions.assertuniqe();
-		}
-
-		else {
-			addInterestActions.assertPopup("The ad interest was created");
-
-		}
+	
 
 	}
 
 }
-*/
+

@@ -36,7 +36,6 @@ public class ReqpaymentActions extends BaseAction {
 
     public void addPaymentRequest(String receiver, String amountVal) {
         try {
-            // 1. Enter receiver and select from autocomplete dropdown
             waitForVisibility(paypage.user);
             sendKeys(paypage.user, receiver);
 
@@ -44,11 +43,9 @@ public class ReqpaymentActions extends BaseAction {
             waitForVisibility(genericOptionLocator);
             click(genericOptionLocator);
 
-            // 2. Populate transaction amount
             sendKeys(paypage.amount, amountVal);
             HelperClass.log.info("Typed amount: " + amountVal);
 
-            // 3. Clear and input structured date sequence smoothly
             waitForVisibility(paypage.date);
             WebElement dateInput = HelperClass.getDriver().findElement(paypage.date);
             
@@ -59,7 +56,6 @@ public class ReqpaymentActions extends BaseAction {
             sendKeys(paypage.date, dynamicDate);
             HelperClass.log.info("Populated date field via structured string: " + dynamicDate);
 
-            // FIX IS HERE: Send TAB to clear the active blue focus highlight from the year
             dateInput.sendKeys(org.openqa.selenium.Keys.TAB);
             HelperClass.log.info("Sent TAB key to release focus from the date input component wrapper.");
 
@@ -131,14 +127,12 @@ public class ReqpaymentActions extends BaseAction {
             addPaymentRequest(receiver, amountVal);
         }
         
-        // HANDS-FREE SYNC: Wait explicitly until the date attribute value matches our target text perfectly
         try {
             HelperClass.getWait().until(
                 org.openqa.selenium.support.ui.ExpectedConditions.attributeToBe(paypage.date, "value", "2026-12-25")
             );
             HelperClass.log.info("Framework explicit wait confirmed date value has settled in DOM.");
         } catch (Exception e) {
-            // Fallback fallback check for alternative internal HTML DOM attribute structural matching
             HelperClass.getWait().until(
                 org.openqa.selenium.support.ui.ExpectedConditions.attributeToBeNotEmpty(HelperClass.getDriver().findElement(paypage.date), "value")
             );
@@ -162,7 +156,6 @@ public class ReqpaymentActions extends BaseAction {
     
     public void addPaymentRequestWithEmptyDate(String receiver, String amountVal) {
         try {
-            // 1. Fill Receiver and select autocomplete match
             waitForVisibility(paypage.user);
             sendKeys(paypage.user, receiver);
 
@@ -170,21 +163,17 @@ public class ReqpaymentActions extends BaseAction {
             waitForVisibility(genericOptionLocator);
             click(genericOptionLocator);
 
-            // 2. Fill Amount field
             sendKeys(paypage.amount, amountVal);
             HelperClass.log.info("Typed amount value: " + amountVal);
 
-            // 3. Clear the Date field completely and leave it untouched
             waitForVisibility(paypage.date);
             WebElement dateInput = HelperClass.getDriver().findElement(paypage.date);
             click(paypage.date);
             
-            // Backspace selection trick to flush default placeholder masks out of Chrome native input wrappers
             dateInput.sendKeys(org.openqa.selenium.Keys.chord(org.openqa.selenium.Keys.CONTROL, "a"));
             dateInput.sendKeys(org.openqa.selenium.Keys.BACK_SPACE);
             dateInput.clear();
             
-            // Release cursor block focus
             dateInput.sendKeys(org.openqa.selenium.Keys.TAB);
             HelperClass.log.info("Date field wiped out completely and left blank.");
 
@@ -196,7 +185,6 @@ public class ReqpaymentActions extends BaseAction {
 
     public String assertDateValidationError() {
         try {
-            // Explicitly wait for the validation warning label element to capture focus in DOM
         	
             waitForVisibility(paypage.dateValidationError);
             return getText(paypage.dateValidationError);
@@ -214,7 +202,6 @@ public class ReqpaymentActions extends BaseAction {
             String receiver = data[i][0].toString().trim();
             String amountVal = data[i][1].toString().trim();
             
-            // Reuses the negative data entry logic to populate everything EXCEPT the date
             addPaymentRequestWithEmptyDate(receiver, amountVal);
         }
     }
