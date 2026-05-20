@@ -36,7 +36,7 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
-                "valid_vovucher");
+                "validVoucher");
     }
     
     

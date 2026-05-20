@@ -48,4 +48,7 @@ Examples:
     When User enters monthly installment payment details
       | username       | amount | type                 | installments | description                 |
       | Active Walking | 200    | Monthly installments | 5            | Monthly installment payment |
+
     Then Monthly installment payment should be scheduled successfully
+
+ 
