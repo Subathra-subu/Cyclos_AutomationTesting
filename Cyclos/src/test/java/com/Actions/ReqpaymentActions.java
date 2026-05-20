@@ -159,10 +159,6 @@ public class ReqpaymentActions extends BaseAction {
     public void cancelRequest() {
         click(paypage.cancel);
     }
-
-
-
-
     
     public void addPaymentRequestWithEmptyDate(String receiver, String amountVal) {
         try {
