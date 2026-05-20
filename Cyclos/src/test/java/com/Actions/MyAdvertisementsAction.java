@@ -1,6 +1,7 @@
 package com.Actions;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 import com.Pages.MyAdvertisesmentsPage;
 import com.StepDefinitions.Hooks;
@@ -134,7 +135,7 @@ public class MyAdvertisementsAction extends BaseAction {
         }
     }
 
-    public String validateSuccessMessage() {
+    public String validateMessage() {
 
         return getText(advertisementPage.successMessage);
         try {
@@ -233,6 +234,4 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
-
 }
-
