@@ -11,28 +11,41 @@ public class CSVUtility {
 
 		List<String> voucherCodes = new ArrayList<>();
 
-		try {
+
+
+
+        try {
+
 
 			BufferedReader br = new BufferedReader(new FileReader(filePath));
 
-			br.readLine();
 
-			String line;
+            // Skip header row
+            br.readLine();
 
-			while ((line = br.readLine()) != null) {
+            String line;
 
-				String[] data = line.split(",");
+            while ((line = br.readLine()) != null) {
+
+                String[] data = line.split(",");
 
 				voucherCodes.add(data[0].trim());
 			}
 
-			br.close();
+
+
+
+            br.close();
 
 		} catch (Exception e) {
 
-			e.printStackTrace();
-		}
+            e.printStackTrace();
+        }
 
 		return voucherCodes;
 	}
+
+
+
+
 }

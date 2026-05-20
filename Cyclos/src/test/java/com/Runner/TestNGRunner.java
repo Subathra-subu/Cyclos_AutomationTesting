@@ -26,11 +26,8 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-
-				"rerun:target/failedrerun.txt"
-
-		})
-
+				
+				"rerun:target/failedrerun.txt"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
 	@Override
@@ -38,4 +35,10 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}
+
 }
+
+}
+
+
+
