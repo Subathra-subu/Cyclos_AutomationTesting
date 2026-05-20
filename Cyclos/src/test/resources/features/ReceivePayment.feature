@@ -18,7 +18,6 @@ Background:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
       | The Irish Pub      | 3      | Checking a payment     | 1234      |
-      | Business One       | 5      | Checking a payment     | 1234      |
       
 @ReceivePaymentWithInvalidName
  Scenario: Verify failure message for blank user field
@@ -38,7 +37,6 @@ Background:
       | Name             | Amount | Description               |   
       | The Bakery shop  | 00     | Making an Invalid Payment |
       | The Irish Pub    | 3      | Checking a payment        |
-      | Business One     | 5      | Checking a payment        |
 
 
  @ReceivePaymentWithBlankDetails
@@ -59,5 +57,4 @@ Background:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
       | The Irish Pub      | 3      | Checking a payment     | 1234      |
-      | Business One       | 5      | Checking a payment     | 1234      |
  

@@ -1,3 +1,4 @@
+@Akksheetha @Advertisement
 Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
 
   Description:
@@ -33,7 +34,7 @@ Scenario: Verify advertisement filter by price range
   Then filtered advertisements should be displayed
   
   @AdvertisementImageFilter
-Scenario: Verify advertisements with images filter
+  Scenario: Verify advertisements with images filter
 
   When user filters advertisements with images
   Then advertisements containing images should be displayed
