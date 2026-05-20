@@ -8,7 +8,9 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/Features",
+		features = "src/test/resources/features/ReceivePayment.feature",
+
+	    tags = "@RecievePaymentFeature",
 
 		glue = "com.StepDefinitions",
 
