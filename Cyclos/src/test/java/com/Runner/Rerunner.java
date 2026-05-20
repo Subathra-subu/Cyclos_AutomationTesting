@@ -17,7 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
-		tags = "@krishna",
+	
 
 		plugin = {
 
