@@ -36,7 +36,7 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
-                "validVoucher");
+                "valid_vovucher");
     }
     
     
@@ -47,16 +47,6 @@ public class ExcelData {
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
                 "BusinessDirectory");
-    }
-    
-    @DataProvider(name = "advertisementFavourites", parallel = true)
-
-    public Object[][] advertisementFavourites()
-            throws IOException {
-
-        return getExcelData(
-                "src/test/resources/testData/ExcelData.xlsx",
-                "AdvertisementFavourites");
     }
 
     @DataProvider(name = "paymentRequestKrishna")

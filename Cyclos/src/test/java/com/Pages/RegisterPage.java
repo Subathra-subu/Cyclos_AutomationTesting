@@ -27,7 +27,9 @@ public class RegisterPage {
 	
 	public By agreement = By.cssSelector(".custom-control-label");
 	
-	public By recaptcha = By.xpath("//div[@class='recaptcha-checkbox-border']");
+	//public By recaptcha = By.xpath("//div[@class='recaptcha-checkbox-border']");
+	
+	public By recaptcha = By.xpath("//div[@data-sitekey='6LdFrvMsAAAAAPthjEUXzzXSb30vIgKEVBD8zY5X']");
 	
 	public By submit = By.xpath("//span[text()='Submit']");
 	
