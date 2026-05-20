@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 		features = "src/test/resources/Features",
-       
+        tags="@BusinessDirectory_Shobana",
 
 		glue = "com.StepDefinitions",
 
