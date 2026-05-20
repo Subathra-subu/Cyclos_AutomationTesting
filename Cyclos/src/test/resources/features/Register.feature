@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-@Register_Subathra
-=======
 @Subathra
->>>>>>> branch 'MY_ADVERTISEMENTS_Subathra' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 Feature:Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister
 
 Background:
