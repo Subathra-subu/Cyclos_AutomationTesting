@@ -160,10 +160,15 @@ public class ReqpaymentActions extends BaseAction {
         click(paypage.cancel);
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 
 }
 
 }*/
+<<<<<<< HEAD
+=======
  
 =======
     
@@ -226,4 +231,5 @@ public class ReqpaymentActions extends BaseAction {
         }
     }
 }
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git

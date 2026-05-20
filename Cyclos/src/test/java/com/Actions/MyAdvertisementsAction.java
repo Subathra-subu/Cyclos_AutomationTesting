@@ -223,7 +223,11 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
+<<<<<<< HEAD
    }
 
 
 */
+=======
+}
+>>>>>>> fe40c13 (PR#10Business directory shobana (#68))

@@ -1,4 +1,4 @@
-/*package com.Pages;
+package com.Pages;
 
 import org.openqa.selenium.By;
 
@@ -44,4 +44,4 @@ public class MyAdvertisesmentsPage {
 	    public By confirmRemoveBtn = By.xpath("//span[text()='Confirm']");
 
 	}
-*/
+
