@@ -17,7 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 
         publish = false,
 
-        tags = "@SRIRAM",
+        
         
         plugin = {
 
@@ -33,14 +33,14 @@ import io.cucumber.testng.CucumberOptions;
 
                 "rerun:target/failedrerun.txt"
 
-        })
+	@Override
+	@DataProvider(parallel = false)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 
-public class TestNGRunner extends AbstractTestNGCucumberTests {
-
-    @Override
-    @DataProvider(parallel = false)
-    public Object[][] scenarios() {
-
-        return super.scenarios();
-    }
 }
+
+  
+
+

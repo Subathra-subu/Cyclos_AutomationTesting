@@ -223,8 +223,10 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
-}
 
+   }
+
+   }
 
 
 
