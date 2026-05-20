@@ -7,15 +7,15 @@ import java.util.List;
 
 public class CSVUtility {
 
-    public static List<String> getVoucherCodes(String filePath) {
+	public static List<String> getVoucherCodes(String filePath) {
 
-        List<String> voucherCodes = new ArrayList<>();
+		List<String> voucherCodes = new ArrayList<>();
+
 
         try {
 
-            BufferedReader br =
-                    new BufferedReader(
-                            new FileReader(filePath));
+			BufferedReader br = new BufferedReader(new FileReader(filePath));
+
 
             // Skip header row
             br.readLine();
@@ -26,16 +26,18 @@ public class CSVUtility {
 
                 String[] data = line.split(",");
 
-                voucherCodes.add(data[0].trim());
-            }
+				voucherCodes.add(data[0].trim());
+			}
+
 
             br.close();
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
             e.printStackTrace();
         }
 
-        return voucherCodes;
-    }
+		return voucherCodes;
+	}
+
 }
