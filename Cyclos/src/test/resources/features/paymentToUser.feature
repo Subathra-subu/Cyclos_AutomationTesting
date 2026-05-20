@@ -27,7 +27,7 @@ Scenario Outline: Verify validation message when payment amount exceeds availabl
 Examples:
   | username        | amount | message                                      |
   | Active Walking  | 999999 | Amount must be less or equal to 500,00 IU's. |
-  | The Bakery shop | 0      | Amount must be a positive number.            |
+  | The Bakery shop | 0,00     | Amount must be a positive number.            |
 
   @ScheduledPayment
   Scenario: Verify scheduled payment functionality

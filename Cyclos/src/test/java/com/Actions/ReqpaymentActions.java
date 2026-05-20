@@ -1,4 +1,4 @@
-package com.Actions;
+/*package com.Actions;
 
 import java.io.IOException;
 
@@ -36,4 +36,8 @@ public class ReqpaymentActions extends BaseAction {
     public void cancelRequest() {
         click(paypage.cancel);
     }
+
 }
+
+}*/
+ 

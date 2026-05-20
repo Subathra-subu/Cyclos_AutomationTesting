@@ -11,8 +11,8 @@ import io.cucumber.testng.CucumberOptions;
 
 
 
-		features = "src/test/resources/Features/paymentToUser.feature",
-
+		features = "src/test/resources/Features",
+       
 
 
         glue = "com.StepDefinitions",
