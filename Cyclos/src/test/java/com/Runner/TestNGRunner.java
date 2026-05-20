@@ -1,5 +1,6 @@
 package com.Runner;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -9,7 +10,6 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 		features = "src/test/resources/Features",
-       
 
 		glue = "com.StepDefinitions",
 
@@ -17,15 +17,11 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
-		
-	
 		plugin = {
 
 				"pretty",
 
-				"html:target/CucumberReports/Cucumber.html",
-
-				"json:target/CucumberReports/Cucumber.json",
+				"html:target/CucumberReports/Cucumber.html", "json:target/CucumberReports/Cucumber.json",
 
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
@@ -34,6 +30,11 @@ import io.cucumber.testng.CucumberOptions;
 				"rerun:target/failedrerun.txt"})
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
+	@Override
+	@DataProvider(parallel = false)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 }
 
 
