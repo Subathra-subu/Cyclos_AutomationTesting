@@ -206,13 +206,11 @@ public class MyVoucherActions extends BaseAction {
 
 	    try {
 
-	        waitForVisibility(myvov.voucherCode);
+	        waitForClickable(myvov.voucherCode);
+
+	        scrollIntoView(myvov.voucherCode);
 
 	        click(myvov.voucherCode);
-
-	        HelperClass.getDriver()
-	                .findElement(myvov.voucherCode)
-	                .clear();
 
 	        sendKeys(myvov.voucherCode, code);
 
@@ -229,7 +227,6 @@ public class MyVoucherActions extends BaseAction {
 	        throw e;
 	    }
 	}
-	
 	public void AssertResult() {
 
 	    try {

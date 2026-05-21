@@ -48,6 +48,6 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
 
 	@csv @smoke 
   Scenario: Verify voucher code search using CSV data
-    When the user enter the valid voucher code "<code>"
+    When the user enter the valid voucher code
     And the user click the result
     Then the user should seen the Qr code code

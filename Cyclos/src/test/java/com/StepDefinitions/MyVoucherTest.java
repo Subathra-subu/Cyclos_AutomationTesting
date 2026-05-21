@@ -120,25 +120,20 @@ public class MyVoucherTest
 	            "QR code validated from CSV execution");
 	}
 	
-	@When("the user enter the valid voucher code {string}")
-	public void the_user_enter_the_valid_voucher_code(String string) 
-	{
-	    // Write code here that turns the phrase above into concrete actions
-		List<String> voucherCodes =
+	@When("the user enter the valid voucher code")
+	public void the_user_enter_the_valid_voucher_code() {
+
+	    List<String> voucherCodes =
 	            CSVUtility.getVoucherCodes(
 	                    "src/test/resources/testData/VoucherCode.csv");
 
 	    for (String code : voucherCodes) {
 
-	    	MyVouAcc.enterVoucherCode(code);
-	    	
+	        MyVouAcc.enterVoucherCode(code);
 
-	    	MyVouAcc.AssertResult();
-
-	    	
+	        MyVouAcc.AssertResult();
 	    }
 	}
-	
 
 
 }
