@@ -11,8 +11,6 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/features",
 
-	    tags = "@Akksheetha",
-
 		glue = "com.StepDefinitions",
         
 		monochrome = true,
