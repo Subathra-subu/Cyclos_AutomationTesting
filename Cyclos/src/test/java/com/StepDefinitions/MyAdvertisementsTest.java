@@ -45,8 +45,8 @@ public class MyAdvertisementsTest {
 		actions.clickMyAdvertisements();
 	}
 
-	@When("User enters advertisement details")
-	public void user_enters_advertisement_details(DataTable dataTable) {
+	@When("User clicks add new button and enters advertisement details")
+	public void user_clicks_add_new_button_and_enters_advertisement_details(DataTable dataTable) {
 
 		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
 

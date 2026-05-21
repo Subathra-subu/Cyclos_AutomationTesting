@@ -10,7 +10,7 @@ This feature file is used to verify Advertisement functionality
 
   @AddAdvertisement
   Scenario: Verify user can add new Advertisement
-    When User enters advertisement details
+    When User clicks add new button and enters advertisement details
       | title     | category | price | fromDate   | toDate     | description         |
       | race bike | Politics | 100   | 18-05-2026 | 18-05-2029 | Bike for sale offer |
     Then User should successfully add advertisement
