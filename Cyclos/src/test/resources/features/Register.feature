@@ -7,7 +7,6 @@ Background:
   	
   	@ExistRegister
   	Scenario: Register with Existing credentials
-  	When the user upload profile image
 	When the user enters the already existing Login name
 	| name    | loginName |
   	| sham    | Sham123   |
@@ -16,7 +15,6 @@ Background:
   	
   	@BlankRegister
   	Scenario: Register with Blank Field Validation
-  	When the user upload profile image
 	When the user leaves the name,loginName and email input field blank
 	| name    | loginName |email|
   	|		  |  		  |		|
