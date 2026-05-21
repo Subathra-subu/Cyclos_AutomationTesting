@@ -16,19 +16,19 @@ Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
     Then relevant advertisements should be displayed
     
   @InvalidAdvertisementSearch
-Scenario: Verify invalid advertisement keyword search
+ Scenario: Verify no result message for invalid keyword search
 
   When user searches for keyword "xyz123"
   Then no matching advertisements should be displayed
   
   @AddAdvertisementFavourites
-  Scenario: Add advertisements to favourites
+  Scenario: Add and remove advertisements to favourites
 
   When user adds advertisements to favourites using excel data
   Then selected advertisements should be added to favourites
   
   @AdvertisementPriceFilter
-Scenario: Verify advertisement filter by price range
+ Scenario: Verify advertisement filter by price range
 
   When user filters advertisements with minimum price "10" and maximum price "500"
   Then filtered advertisements should be displayed
