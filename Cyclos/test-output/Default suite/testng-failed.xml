@@ -8,10 +8,14 @@
           <include name="setUpClass"/>
           <include name="tearDownClass"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="2 3"/>
 =======
           <include name="runScenario" invocation-numbers="0"/>
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+          <include name="runScenario" invocation-numbers="0 1"/>
+>>>>>>> 628933c9745f44b24d50c69791a58e6ed739ec91
         </methods>
       </class> <!-- com.Runner.TestNGRunner -->
     </classes>

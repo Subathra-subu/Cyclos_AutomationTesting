@@ -18,7 +18,9 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
 
     Examples:
       | no | amount | assert                          |
-      | 1  | 1      | The voucher(s) has been bought. |
+      | 11 | 100    | The voucher(s) has been bought. |
+      | 2  | 200    | The voucher(s) has been bought. |
+      | 2  | 20     | The voucher(s) has been bought. |
 
   @buyVouchers @gift
   Scenario Outline: To verify the gift voucher
@@ -31,7 +33,9 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
 
     Examples:
       | no | amount | assert                          |
-      | 3  | 3      | The voucher(s) has been bought. |
+      | 30 | 3      | The voucher(s) has been bought. |
+      | 20 | 2      | The voucher(s) has been bought. |
+      | 20 | 2      | The voucher(s) has been bought. |
 
   @buyVouchers @restaruant
   Scenario: To verify the restaruant voucher
@@ -46,8 +50,10 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
       | no | amount | assert                          |
       | 2  | 2      | The voucher(s) has been bought. |
 
-	@csv @smoke 
+
+  @csv @smoke
   Scenario: Verify voucher code search using CSV data
     When the user enter the valid voucher code "<code>"
     And the user click the result
     Then the user should seen the Qr code code
+

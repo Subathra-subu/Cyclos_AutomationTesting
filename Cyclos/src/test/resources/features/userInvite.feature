@@ -1,4 +1,4 @@
-@krishna
+@krishna  @userinvite
 Feature: Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality
 
   Background:
