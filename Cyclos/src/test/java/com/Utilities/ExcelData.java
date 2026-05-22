@@ -56,7 +56,11 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
+
                 "favourites_akkshee");
+
+               
+
     }
 
     @DataProvider(name = "paymentRequestKrishna")

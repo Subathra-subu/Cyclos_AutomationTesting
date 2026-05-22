@@ -5,7 +5,6 @@ PdfReport/
 Reports/
 test-output/
 target/
-<<<<<<< HEAD
 logs/
 screenshots/
 
@@ -19,7 +18,6 @@ screenshots/
 # OS files
 .DS_Store
 Thumbs.db
-=======
 *.log
 allure-results/
 HtmlReport/
@@ -27,4 +25,3 @@ PdfReport/
 Reports/
 test-output/
 screenshots/
->>>>>>> 51f6d212ef9e76b1a387c1beccf45c99206d9b67
