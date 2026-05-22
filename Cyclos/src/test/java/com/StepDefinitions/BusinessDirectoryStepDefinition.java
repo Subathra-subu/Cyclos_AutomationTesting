@@ -59,7 +59,7 @@ public class BusinessDirectoryStepDefinition {
 	@When("User selects list view option using csv")
 	public void user_selects_list_view_option_using_csv() {
 
-		String filePath = "src/test/resources/TestData/BusinessDirectoryView.csv";
+		String filePath = "src/test/resources/TestData/BusinessDirectory.csv";
 
 		List<String> views = CSVUtility.getVoucherCodes(filePath);
 
