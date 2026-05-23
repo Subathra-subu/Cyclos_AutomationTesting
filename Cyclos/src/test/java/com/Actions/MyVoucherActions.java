@@ -6,258 +6,166 @@ import com.Pages.MyVouchersPages;
 import com.Utilities.HelperClass;
 
 public class MyVoucherActions extends BaseAction {
-	MyVouchersPages myvov = new MyVouchersPages();
 
-	public void clickMarkPlace() {
-		try {
-			waitForClickable(myvov.markPlace);
-
-			click(myvov.markPlace);
-
-			HelperClass.log.info("Clicked Marketplace successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to click Marketplace: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void clickVoucher()
-
-	{
-		try {
-			waitForClickable(myvov.voucher);
-			click(myvov.voucher);
-
-			HelperClass.log.info("Current URL after clicking Voucher: " + HelperClass.getDriver().getCurrentUrl());
-		} catch (Exception e) {
-			HelperClass.log.error("Failed to click Voucher: " + e.getMessage());
-			throw e;
-		}
-	}
-
-	public void clickBuyVoucher() {
-		try
-
-		{
-
-			HelperClass.log.info("Current URL before Buy Voucher: " + HelperClass.getDriver().getCurrentUrl());
-			HelperClass.log.info("Page title: " + HelperClass.getDriver().getTitle());
-			waitForVisibility(myvov.buyVocher);
-			jsClick(myvov.buyVocher);
-		} catch (Exception e) {
-			HelperClass.log.error("Failed to click Buy Voucher: " + e.getMessage());
-			throw e;
-		}
-	}
-
-	public void clickCinema() {
-		try {
-			waitForClickable(myvov.cinema);
-
-			click(myvov.cinema);
-
-			HelperClass.log.info("Clicked Cinema voucher successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to click Cinema voucher: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void amountAndNumber(String number, String amount) {
-		try {
-			sendKeys(myvov.number, number);
-
-			sendKeys(myvov.amount, amount);
-
-			HelperClass.log.info("Entered mobile number and amount successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to enter mobile number and amount: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void next() {
-		try {
-			waitForClickable(myvov.next);
-
-			click(myvov.next);
-
-			HelperClass.log.info("Clicked Next button successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to click Next button: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void confirm() {
-		try {
-			waitForClickable(myvov.confirm);
-
-			click(myvov.confirm);
-
-			HelperClass.log.info("Clicked Confirm button successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to click Confirm button: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void assertion(String expected) {
-		try {
-			waitForVisibility(myvov.assertPopUp);
-
-			String actual = getText(myvov.assertPopUp);
-
-			Assert.assertEquals(actual, expected);
-
-			HelperClass.log.info("Voucher assertion successful");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Voucher assertion failed: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void isAlertAssert() {
-		try {
-			String expectedPartial = "The current user exceeds the maximum allowed open amount";
-
-			waitForVisibility(myvov.assertAlert);
-
-			String actual = getText(myvov.assertAlert);
-
-			Assert.assertTrue(actual.contains(expectedPartial), "Alert message mismatch. Actual: " + actual);
-
-			HelperClass.log.info("Alert assertion successful. Message: " + actual);
-
-		} catch (Exception e) {
-			HelperClass.log.error("Alert assertion failed: " + e.getMessage());
-			throw e;
-		}
-	}
-	
-	public void clickGift()
-	{
-		try {
-			waitForClickable(myvov.gift);
-
-			click(myvov.gift);
-
-			HelperClass.log.info("Clicked GIFT voucher successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to GIFT Cinema voucher: " + e.getMessage());
-
-			throw e;
-		}
-	}
-
-	public void clickrestaurant()
-	{
-		try {
-			waitForClickable(myvov.restaurant);
-
-			click(myvov.restaurant);
-
-			HelperClass.log.info("Clicked GIFT voucher successfully");
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to GIFT Cinema voucher: " + e.getMessage());
-
-			throw e;
-		}
-	}
-	public boolean isDisplayedAlert() {
-		try {
-			boolean status = isDisplayed(myvov.assertAlert);
-
-			HelperClass.log.info("Alert visibility status: " + status);
-
-			return status;
-		}
-
-		catch (Exception e) {
-			HelperClass.log.error("Failed to check alert visibility: " + e.getMessage());
-
-			return false;
-		}
-	}
-	
-	public void enterVoucherCode(String code) {
-
-	    try {
-
-	        waitForVisibility(myvov.voucherCode);
-
-	        click(myvov.voucherCode);
-
-	        HelperClass.getDriver()
-	                .findElement(myvov.voucherCode)
-	                .clear();
-
-	        sendKeys(myvov.voucherCode, code);
-
-	        HelperClass.log.info(
-	                "Entered voucher code successfully : "
-	                        + code);
-
-	    } catch (Exception e) {
-
-	        HelperClass.log.error(
-	                "Failed to enter voucher code : "
-	                        + e.getMessage());
-
-	        throw e;
-	    }
-	}
-	
-	public void AssertResult() {
-
-	    try {
-
-	        waitForVisibility(myvov.result);
-
-	        boolean actual =
-	                isDisplayed(myvov.result);
-	        
-	        boolean expect = true;
-	        
-	        Assert.assertEquals(
-	                actual,
-	                expect);
-
-	        HelperClass.log.info(
-	                "Result displayed successfully");
-
-	    } catch (Exception e) {
-
-	        HelperClass.log.error(
-	                "Failed to validate result : "
-	                        + e.getMessage());
-
-	        throw e;
-	    }
-	}
-	
-	
-
+    MyVouchersPages p = new MyVouchersPages();
+
+    public void clickMarkPlace() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.markPlace);
+            click(p.markPlace);
+            HelperClass.log.info("Marketplace clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Marketplace: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickVoucher() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.voucher);
+            click(p.voucher);
+            HelperClass.log.info("Voucher menu clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Voucher: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickBuyVoucher() {
+        try {
+            waitForPageLoad();
+            waitForVisibility(p.buyVocher);
+            jsClick(p.buyVocher);
+            HelperClass.log.info("Buy Voucher button clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Buy Voucher: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickCinema() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.cinema);
+            click(p.cinema);
+            HelperClass.log.info("Cinema voucher clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Cinema: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickGift() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.gift);
+            click(p.gift);
+            HelperClass.log.info("Gift voucher clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Gift: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickrestaurant() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.restaurant);
+            click(p.restaurant);
+            HelperClass.log.info("Restaurant voucher clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Restaurant: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void amountAndNumber(String number, String amount) {
+        try {
+            sendKeys(p.number, number);
+            sendKeys(p.amount, amount);
+            HelperClass.log.info("Entered number: {} amount: {}", number, amount);
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to enter amount/number: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void next() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.next);
+            click(p.next);
+            HelperClass.log.info("Next clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Next: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void confirm() {
+        try {
+            waitForPageLoad();
+            waitForClickable(p.confirm);
+            click(p.confirm);
+            HelperClass.log.info("Confirm clicked");
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click Confirm: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void assertion(String expected) {
+        try {
+            waitForVisibility(p.assertPopUp);
+            String actual = getText(p.assertPopUp);
+            Assert.assertEquals(actual, expected,
+                    "Voucher assertion failed. Expected: " + expected + " Actual: " + actual);
+            HelperClass.log.info("Voucher assertion passed: {}", actual);
+        } catch (Exception e) {
+            HelperClass.log.error("assertion failed: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void isAlertAssert() {
+        try {
+            waitForVisibility(p.assertAlert);
+            String actual = getText(p.assertAlert);
+            Assert.assertTrue(actual.contains("The current user exceeds the maximum allowed open amount"),
+                    "Alert message mismatch. Actual: " + actual);
+            HelperClass.log.info("Alert assertion passed: {}", actual);
+        } catch (Exception e) {
+            HelperClass.log.error("isAlertAssert failed: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public boolean isDisplayedAlert() {
+        return isDisplayed(p.assertAlert, 3);
+    }
+
+    public void enterVoucherCode(String code) {
+        try {
+            waitForVisibility(p.voucherCode);
+            highlightElement(p.voucherCode);
+            sendKeys(p.voucherCode, code);
+            HelperClass.log.info("Voucher code entered: {}", code);
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to enter voucher code: {}", e.getMessage());
+            throw e;
+        }
+    }
+
+    public void AssertResult() {
+        try {
+            waitForVisibility(p.result);
+            Assert.assertTrue(isDisplayed(p.result), "Result not displayed for voucher code");
+            HelperClass.log.info("Result verified for voucher code");
+        } catch (Exception e) {
+            HelperClass.log.error("AssertResult failed: {}", e.getMessage());
+            throw e;
+        }
+    }
 }

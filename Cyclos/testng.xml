@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+
+<!--
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  Cyclos Automation Suite – Parallel Execution Config            │
+  │                                                                 │
+  │  data-provider-thread-count = 3                                 │
+  │  → Controls how many Cucumber scenarios run simultaneously.     │
+  │  → Set to 3 for demo.cyclos.org (remote shared server);        │
+  │    increase to 5 only if server can handle the load.            │
+  │                                                                 │
+  │  parallel="methods" at suite level + DataProvider(parallel=true)│
+  │  in TestNGRunner are the correct combination for                │
+  │  Cucumber-TestNG parallel scenario execution.                   │
+  └─────────────────────────────────────────────────────────────────┘
+-->
+<suite name="CyclosAutomationSuite"
+       data-provider-thread-count="3"
+       verbose="1">
+
+  <test name="CyclosParallelTests">
     <classes>
       <class name="com.Runner.TestNGRunner"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test>
 
+</suite>

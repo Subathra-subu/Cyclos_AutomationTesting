@@ -1,247 +1,109 @@
 package com.Actions;
 
 import org.openqa.selenium.By;
-
+import org.testng.Assert;
 import com.Pages.MyAdvertisesmentsPage;
 import com.StepDefinitions.Hooks;
 
 public class MyAdvertisementsAction extends BaseAction {
-	
-	MyAdvertisesmentsPage advertisementPage = new MyAdvertisesmentsPage();
-	
-<<<<<<< HEAD
-	public void clickMarketPlaceMenu() {
-		
-		click(advertisementPage.marketPlaceMenu);
-		
-	}
-
-    public void clickMyAdvertisements() {
-    	
-    	scrollIntoView(advertisementPage.myAdvertisements);
-
-        click(advertisementPage.myAdvertisements);
-=======
-    public void clickMarketPlaceMenu() {
-
+    
+    MyAdvertisesmentsPage advertisementPage = new MyAdvertisesmentsPage();
+    
+    public void ensureSidebarExpanded() {
+        By menuTrigger = By.xpath("//a[contains(@class,'menu-trigger')] | //button[contains(@class,'navbar-toggler')] | //*[@class='menu-trigger'] | //a[@id='menu-trigger']");
         try {
-            waitForVisibility(advertisementPage.marketPlaceMenu);
+            if (isDisplayed(menuTrigger) && !isDisplayed(advertisementPage.marketPlaceMenu)) {
+                click(menuTrigger);
+            }
+        } catch (Exception ignored) {}
+    }
 
-            jsClick(advertisementPage.marketPlaceMenu);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click marketplace menu", e);
-        }
+    public void clickMarketPlaceMenu() {
+        ensureSidebarExpanded();
+        click(advertisementPage.marketPlaceMenu);
     }
 
     public void clickMyAdvertisements() {
-
-        try {
-            waitForVisibility(advertisementPage.myAdvertisements);
-
-            jsClick(advertisementPage.myAdvertisements);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click my advertisements", e);
-        }
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+        ensureSidebarExpanded();
+        scrollIntoView(advertisementPage.myAdvertisements);
+        click(advertisementPage.myAdvertisements);
     }
 
     public void clickNewAdvertisement() {
-
-        try {
-            click(advertisementPage.newAdvertisementBtn);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click new advertisement button", e);
-        }
+        click(advertisementPage.newAdvertisementBtn);
     }
 
     public void enterTitle(String title) {
-
-        try {
-            sendKeys(advertisementPage.titleField, title);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to enter title", e);
-        }
+        sendKeys(advertisementPage.titleField, title);
     }
 
     public void selectCategory(String category) {
-
-        try {
-            click(advertisementPage.categoryDropdown);
-
-            By option = advertisementPage.categoryOption(category);
-
-            waitForVisibility(option);
-
-            click(option);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to select category", e);
-        }
+        click(advertisementPage.categoryDropdown);
+        By option = advertisementPage.categoryOption(category);
+        waitForVisibility(option);
+        click(option);
     }
 
     public void enterPrice(String price) {
-
-        try {
-            sendKeys(advertisementPage.priceField, price);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to enter price", e);
-        }
+        sendKeys(advertisementPage.priceField, price);
     }
 
     public void selectFromDate(String date) {
-
-        try {
-            sendKeys(advertisementPage.fromDate, date);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to select from date", e);
-        }
+        sendKeys(advertisementPage.fromDate, date);
     }
 
     public void selectToDate(String date) {
-
-        try {
-            sendKeys(advertisementPage.toDate, date);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to select to date", e);
-        }
+        sendKeys(advertisementPage.toDate, date);
     }
 
     public void enterDescription(String description) {
-
-        try {
-            waitForVisibility(advertisementPage.descriptionFrame);
-
-            sendKeys(advertisementPage.descriptionFrame, description);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to enter description", e);
-        }
+        waitForVisibility(advertisementPage.descriptionFrame);
+        sendKeys(advertisementPage.descriptionFrame, description);
     }
 
     public void clickSave() {
-
-        try {
-            waitForVisibility(advertisementPage.saveBtn);
-
-            click(advertisementPage.saveBtn);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click save button", e);
-        }
+        waitForVisibility(advertisementPage.saveBtn);
+        click(advertisementPage.saveBtn);
     }
 
     public String validateSuccessMessage() {
-
-<<<<<<< HEAD
         return getText(advertisementPage.successMessage);
-=======
-        try {
-            return getText(advertisementPage.Message);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to validate message", e);
-        }
-
-        return null;
     }
 
     public void assertSuccessfullMessage() {
-
-        try {
-            isDisplayed(advertisementPage.Message);
-
-            Assert.assertTrue(validateMessage().contains("was saved"));
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to assert successful message", e);
-        }
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
+        waitForVisibility(advertisementPage.successMessage);
+        String msg = validateSuccessMessage().toLowerCase();
+        Assert.assertTrue(msg.contains("saved") || msg.contains("success") || msg.contains("created"));
     }
 
     public void searchAdvertisement(String title) {
-
-        try {
-            sendKeys(advertisementPage.searchField, title);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to search advertisement", e);
-        }
+        sendKeys(advertisementPage.searchField, title);
     }
 
     public void clickItem() {
-
-        try {
-        	waitForVisibility(advertisementPage.item);
-            click(advertisementPage.item);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click item", e);
-        }
+        waitForVisibility(advertisementPage.item);
+        click(advertisementPage.item);
     }
 
     public void clickEditAdvertisement() {
-
-        try {
-            click(advertisementPage.editBtn);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click edit button", e);
-        }
+        click(advertisementPage.editBtn);
     }
 
     public void clickRemoveAdvertisement() {
-
-        try {
-            click(advertisementPage.removeBtn);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to click remove button", e);
-        }
+        click(advertisementPage.removeBtn);
     }
 
     public String validateRemovePopup() {
-
-        try {
-            return getText(advertisementPage.confirmPopup);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to validate remove popup", e);
-        }
-
-        return null;
+        return getText(advertisementPage.confirmPopup);
     }
 
     public void confirmRemoveAdvertisement() {
-
-        try {
-            click(advertisementPage.confirmRemoveBtn);
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to confirm remove advertisement", e);
-        }
+        jsClick(advertisementPage.confirmRemoveBtn);
     }
-<<<<<<< HEAD
-=======
 
     public void assertRemovalMessage() {
-
-        try {
-            isDisplayed(advertisementPage.Message);
-
-            Assert.assertTrue(validateMessage().contains("was removed"));
-        } 
-        catch (Exception e) {
-            Hooks.logger.error("Unable to assert removal message", e);
-        }
+        waitForVisibility(advertisementPage.successMessage);
+        String msg = validateSuccessMessage().toLowerCase();
+        Assert.assertTrue(msg.contains("removed") || msg.contains("success"));
     }
-
->>>>>>> 54618e4eca3f4ae10a01bdd265fadc8d6438dfa9
 }
-
