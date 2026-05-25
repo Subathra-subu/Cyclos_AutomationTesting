@@ -2,8 +2,10 @@ package com.Actions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.Pages.AddIntrestPage;
 import com.Utilities.ExcelData;
@@ -13,261 +15,360 @@ import io.cucumber.datatable.DataTable;
 
 public class AddInterestActions extends BaseAction {
 
-    AddIntrestPage p = new AddIntrestPage();
+	AddIntrestPage addInterst = new AddIntrestPage();
 
-    // ═══════════════════════════════════════════════════════════════
-    //  ASSERTIONS
-    // ═══════════════════════════════════════════════════════════════
+	public void assertNoresult()
 
-    public void assertNoresult() {
-        try {
-            waitForVisibility(p.noResult);
-            String actual = getText(p.noResult);
-            Assert.assertEquals(actual, "No results match the search criteria",
-                    "No-results message mismatch");
-            HelperClass.log.info("No-results assertion passed");
-        } catch (Exception e) {
-            HelperClass.log.error("assertNoresult failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+	{
+		try {
+			String expect = "No results match the search criteria";
 
-    public void assertDel() {
-        try {
-            waitForVisibility(p.successToast);
-            String msg = getText(p.successToast);
-            Assert.assertTrue(msg.contains("was removed"),
-                    "Delete toast missing 'was removed'. Actual: " + msg);
-            HelperClass.log.info("Delete assertion passed: {}", msg);
-        } catch (Exception e) {
-            HelperClass.log.error("assertDel failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			String actual = getText(addInterst.noResult);
 
-    public void assertuniqe() {
-        try {
-            waitForVisibility(p.unique);
-            String msg = getText(p.unique);
-            Assert.assertTrue(msg.contains("unique"),
-                    "Unique toast missing 'unique'. Actual: " + msg);
-            HelperClass.log.info("Unique assertion passed: {}", msg);
-        } catch (Exception e) {
-            HelperClass.log.error("assertuniqe failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			Assert.assertEquals(expect, actual);
 
-    public void assertAdd(String expectedMessage) {
-        try {
-            waitForVisibility(p.add);
-            String actual = getText(p.add);
-            Assert.assertEquals(actual, expectedMessage,
-                    "Popup message mismatch. Expected: " + expectedMessage + " Actual: " + actual);
-            HelperClass.log.info("Popup assertion passed: {}", actual);
-        } catch (Exception e) {
-            HelperClass.log.error("assertPopup failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			HelperClass.log.info("No result assert SucessFull");
 
-    // ═══════════════════════════════════════════════════════════════
-    //  NAVIGATION
-    // ═══════════════════════════════════════════════════════════════
+		} catch (Exception e) {
 
-    public void clickMarketPlace() {
-        try {
-            waitForPageLoad();
-            click(p.marketPlace);
-            HelperClass.log.info("Marketplace clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("clickMarketPlace failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			HelperClass.log.error("assertion failed: " + e.getMessage());
 
-    public void clickAdIntrestLink() {
-        try {
-            waitForPageLoad();
-            waitForVisibility(p.adIntrestLink);
-            waitForClickable(p.adIntrestLink);
-            jsClick(p.adIntrestLink);
-            HelperClass.log.info("Ad interest link clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("clickAdIntrestLink failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			throw e;
+		}
 
-    public void addNew() {
-        try {
-            waitForPageLoad();
-            waitForVisibility(p.addNew);
-            waitForClickable(p.addNew);
-            jsClick(p.addNew);
-            HelperClass.log.info("Add New button clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("addNew failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+	}
 
-    public void clickDeleteButton() {
-        try {
-            waitForPageLoad();
-            waitForVisibility(p.tableRows);
-            waitForClickable(p.delFirstRow);
-            jsClick(p.delFirstRow);
-            HelperClass.log.info("Delete button clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("clickDeleteButton failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+	public void addNew() {
 
-    public void clickConfirm() {
-        try {
-            waitForPageLoad();
-            waitForVisibility(p.confirmDelBtn);
-            jsClick(p.confirmDelBtn);
-            HelperClass.log.info("Confirm delete clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("clickConfirm failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+		try {
 
-    public void clickAll() {
-        try {
-            waitForVisibility(p.AllFirst);
-            waitForClickable(p.AllFirst);
-            jsClick(p.AllFirst);
-            HelperClass.log.info("Category dropdown opened");
-        } catch (Exception e) {
-            HelperClass.log.error("clickAll failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			waitForVisibility(addInterst.addNew);
 
-    public void clickCatagry() {
-        try {
-            waitForVisibility(p.categry);
-            waitForClickable(p.categry);
-            jsClick(p.categry);
-            HelperClass.log.info("Category option selected");
-        } catch (Exception e) {
-            HelperClass.log.error("clickCatagry failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			waitForClickable(addInterst.addNew);
 
-    public void clickSubmit() {
-        try {
-            waitForVisibility(p.subMit);
-            waitForClickable(p.subMit);
-            jsClick(p.subMit);
-            HelperClass.log.info("Submit clicked");
-        } catch (Exception e) {
-            HelperClass.log.error("clickSubmit failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			jsClick(addInterst.addNew);
 
-    // ═══════════════════════════════════════════════════════════════
-    //  STATE CHECKS
-    // ═══════════════════════════════════════════════════════════════
+			HelperClass.log.info("Clicked Add New button successfully");
 
-    public boolean isVisibleResult() {
-        return isDisplayed(p.noResult, 3);
-    }
+		} catch (Exception e) {
 
-    public boolean isUniqueVisible() {
-        return isDisplayed(p.unique, 3);
-    }
+			HelperClass.log.error("Failed to click Add New button: " + e.getMessage());
 
-    // ═══════════════════════════════════════════════════════════════
-    //  FORM FILLERS
-    // ═══════════════════════════════════════════════════════════════
+			throw e;
+		}
+	}
 
-    public void add(String name, String keyword, String by, String min, String max) {
-        try {
-            sendKeys(p.name, name);
-            sendKeys(p.keyWord, keyword);
-            sendKeys(p.doneBy, by);
-            clickAll();
-            clickCatagry();
-            sendKeys(p.min, min);
-            sendKeys(p.max, max);
-            clickSubmit();
-            HelperClass.log.info("Ad interest created: {}", name);
-        } catch (Exception e) {
-            HelperClass.log.error("add failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+	public void assertDel() {
 
-    public void excelData() throws IOException {
-        ExcelData excelData = new ExcelData();
-        Object[][] data = excelData.validData();
-        for (Object[] row : data) {
-            add(
-                row[0].toString(),
-                row[1].toString(),
-                row[2].toString(),
-                row[3].toString(),
-                row[4].toString()
-            );
-        }
-    }
+		try {
 
-    // ═══════════════════════════════════════════════════════════════
-    //  DATA TABLE – iterative validation
-    // ═══════════════════════════════════════════════════════════════
+			waitForVisibility(addInterst.successToast);
 
-    public void dataTable(DataTable table, String expectedMessage) {
-        try {
-            List<List<String>> data = table.asLists(String.class);
+			String actualMessage = getText(addInterst.successToast);
 
-            for (int i = 1; i < data.size(); i++) {
-                // First row already opened from feature file step
-                if (i > 1) {
-                    HelperClass.getDriver().navigate().back();
-                    waitForPageLoad();
-                    addNew();
-                }
+			HelperClass.log.info("Toast Message: " + actualMessage);
 
-                List<String> row = data.get(i);
-                String keyword = row.get(0);
-                String by      = row.get(1);
-                String min     = row.get(2);
-                String max     = row.get(3);
+			Assert.assertTrue(actualMessage.contains("was removed"));
 
-                if (!keyword.trim().isEmpty()) sendKeys(p.keyWord, keyword);
-                if (!by.trim().isEmpty())      sendKeys(p.doneBy, by);
+			HelperClass.log.info("Delete assertion successful");
 
-                clickAll();
-                clickCatagry();
+		} catch (Exception e) {
 
-                if (!min.trim().isEmpty()) sendKeys(p.min, min);
-                if (!max.trim().isEmpty()) sendKeys(p.max, max);
+			HelperClass.log.error("Delete assertion failed: " + e.getMessage());
 
-                clickSubmit();
+			throw e;
+		}
+	}
+	
+	public void assertuniqe() {
 
-                waitForVisibility(p.requiredMessage);
-                String actual = getText(p.requiredMessage);
-                Assert.assertEquals(actual, expectedMessage,
-                        "Row " + i + " validation failed. Expected: " + expectedMessage + " Actual: " + actual);
-                HelperClass.log.info("Row {} validation passed", i);
-            }
+		try {
 
-        } catch (Exception e) {
-            HelperClass.log.error("dataTable failed: {}", e.getMessage());
-            throw e;
-        }
-    }
+			waitForVisibility(addInterst.unique);
 
-    public void navigateBack() {
-        HelperClass.getDriver().navigate().back();
-        waitForPageLoad();
-    }
+			String actualMessage = getText(addInterst.unique);
+
+			HelperClass.log.info("Toast Message: " + actualMessage);
+
+			Assert.assertTrue(actualMessage.contains("unique"));
+
+			HelperClass.log.info("unique assertion successful");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("unique assertion failed: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+
+	public void clickMarketPlace() {
+
+		try {
+
+			click(addInterst.marketPlace);
+
+			HelperClass.log.info("Clicked on Marketplace successfully");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("Failed to click Marketplace: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void add(String name, String keyword, String by, String min, String max) {
+		try {
+
+			sendKeys(addInterst.name, name);
+
+			sendKeys(addInterst.keyWord, keyword);
+
+			sendKeys(addInterst.doneBy, by);
+
+			clickAll();
+
+			clickCatagry();
+
+			sendKeys(addInterst.min, min);
+
+			sendKeys(addInterst.max, max);
+
+			clickSubmit();
+
+			
+			HelperClass.log.info("Entered all add details successfully");
+		}
+
+		catch (Exception e) {
+
+			HelperClass.log.error("Failed to enter add details: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void clickAll() {
+		try {
+			waitForVisibility(addInterst.AllFirst);
+
+			waitForClickable(addInterst.AllFirst);
+
+			jsClick(addInterst.AllFirst);
+
+			HelperClass.log.info("Clicked category dropdown successfully");
+		}
+
+		catch (Exception e) {
+			HelperClass.log.error("Failed to click category dropdown: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void clickSubmit() {
+		try {
+			waitForVisibility(addInterst.subMit);
+
+			waitForClickable(addInterst.subMit);
+
+			jsClick(addInterst.subMit);
+
+			HelperClass.log.info("Clicked Submit button successfully");
+		}
+
+		catch (Exception e) {
+			HelperClass.log.error("Failed to click Submit button: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void clickCatagry() {
+		waitForVisibility(addInterst.categry);
+
+		waitForClickable(addInterst.categry);
+
+		jsClick(addInterst.categry);
+
+		HelperClass.log.info("Clicked all cetaogry  successfully");
+
+	}
+
+	public void clickAdIntrestLink() {
+
+		try {
+
+			waitForVisibility(addInterst.adIntrestLink);
+
+			waitForClickable(addInterst.adIntrestLink);
+
+			jsClick(addInterst.adIntrestLink);
+
+			HelperClass.log.info("Clicked Advertisement Interest link successfully");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("Failed to click Advertisement Interest link: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void clickDeleteButton() {
+
+		try {
+
+			waitForVisibility(addInterst.tableRows);
+
+			waitForClickable(addInterst.delFirstRow);
+
+			jsClick(addInterst.delFirstRow);
+
+			HelperClass.log.info("Clicked Delete button successfully");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("Failed to click Delete button: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void clickConfirm() {
+
+		try {
+
+			waitForVisibility(addInterst.confirmDelBtn);
+
+			jsClick(addInterst.confirmDelBtn);
+
+			HelperClass.log.info("Clicked Confirm button successfully");
+
+		} catch (Exception e) {
+
+			HelperClass.log.error("Failed to click Confirm button: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public boolean isVisibleResult() {
+		return isDisplayed(addInterst.noResult);
+	}
+
+	
+	public boolean isUniqueVisible()
+	{
+		return isDisplayed(addInterst.unique);
+	}
+	public void assertPopup(String expectedMessage) {
+		try {
+			waitForVisibility(addInterst.popUp);
+
+			String actualMessage = getText(addInterst.popUp);
+
+			HelperClass.log.info("Actual Popup Message: " + actualMessage);
+
+			Assert.assertEquals(actualMessage, expectedMessage);
+
+			HelperClass.log.info("Popup assertion successful");
+		}
+
+		catch (Exception e) {
+			HelperClass.log.error("Popup assertion failed: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void dataTable(DataTable table, String expectedMessage) {
+		try {
+			List<List<String>> data = table.asLists(String.class);
+
+			for (int i = 1; i < data.size(); i++) {
+				// First iteration already opened from feature file
+				if (i > 1) {
+					HelperClass.getDriver().navigate().back();
+
+					addNew();
+				}
+
+				List<String> row = data.get(i);
+
+				String keyword = row.get(0);
+
+				String by = row.get(1);
+
+				String min = row.get(2);
+
+				String max = row.get(3);
+
+				// Name field intentionally skipped
+
+				if (!keyword.trim().isEmpty()) {
+					sendKeys(addInterst.keyWord, keyword);
+				}
+
+				if (!by.trim().isEmpty()) {
+					sendKeys(addInterst.doneBy, by);
+				}
+
+				clickAll();
+
+				clickCatagry();
+
+				if (!min.trim().isEmpty()) {
+					sendKeys(addInterst.min, min);
+				}
+
+				if (!max.trim().isEmpty()) {
+					sendKeys(addInterst.max, max);
+				}
+
+				clickSubmit();
+
+				waitForVisibility(addInterst.requiredMessage);
+
+				String actualMessage = getText(addInterst.requiredMessage);
+
+				Assert.assertEquals(actualMessage, expectedMessage);
+
+				HelperClass.log.info("Required validation asserted successfully");
+			}
+		}
+
+		catch (Exception e) {
+			HelperClass.log.error("DataTable execution failed: " + e.getMessage());
+
+			throw e;
+		}
+	}
+
+	public void navigateBack() {
+		HelperClass.getDriver().navigate().back();
+	}
+
+	public void excelData() throws IOException {
+		ExcelData excelData = new ExcelData();
+
+		Object[][] data = excelData.validData();
+
+		for (Object[] row : data) {
+			String name = row[0].toString();
+
+			String keyword = row[1].toString();
+
+			String by = row[2].toString();
+
+			String min = row[3].toString();
+
+			String max = row[4].toString();
+
+			add(name, keyword, by, min, max);
+		}
+	}
+
 }

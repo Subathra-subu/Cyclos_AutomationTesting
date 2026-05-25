@@ -51,7 +51,7 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
       | 2  | 2      | The voucher(s) has been bought. |
 
 
-  @csv @smoke
+	@csv @smoke 
   Scenario: Verify voucher code search using CSV data
     When the user enter the valid voucher code "<code>"
     And the user click the result
