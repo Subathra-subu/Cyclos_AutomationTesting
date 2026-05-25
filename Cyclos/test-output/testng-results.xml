@@ -1,85 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="21" passed="20" failed="1" skipped="0">
+<testng-results ignored="0" total="23" passed="23" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-20T15:37:09 IST" name="Default suite" finished-at="2026-05-20T15:44:24 IST" duration-ms="434468">
+  <suite started-at="2026-05-25T14:39:37 IST" name="Default suite" finished-at="2026-05-25T14:42:46 IST" duration-ms="188896">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-20T15:37:09 IST" name="Default test" finished-at="2026-05-20T15:44:24 IST" duration-ms="434468">
+    <test started-at="2026-05-25T14:39:37 IST" name="Default test" finished-at="2026-05-25T14:42:46 IST" duration-ms="188896">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:09 IST" name="setUpClass" finished-at="2026-05-20T15:37:10 IST" duration-ms="803" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:37 IST" name="setUpClass" finished-at="2026-05-25T14:39:38 IST" duration-ms="890" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2d393a72]]>
+                <![CDATA[org.testng.TestRunner@6e243175]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:37:28 IST" duration-ms="17358" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:51 IST" duration-ms="72714" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Delete an Advertisement Interest"]]>
+                <![CDATA["To verify the gift voucher"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:37:44 IST" duration-ms="16354" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:49 IST" duration-ms="71548" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Add a New Advertisement Interest"]]>
+                <![CDATA["To verify the gift voucher"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.testng.UndefinedStepException">
-            <message>
-              <![CDATA[The step 'the user should see the popup message "The ad interest was created"' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("the user should see the popup message {string}")
-public void the_user_should_see_the_popup_message(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user should see the popup message "The ad interest was created"' is undefined.
-You can implement this step using the snippet(s) below:
-
-@Then("the user should see the popup message {string}")
-public void the_user_should_see_the_popup_message(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-at ✽.the user should see the popup message "The ad interest was created"(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:21)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:37:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:03 IST" duration-ms="19044" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:41:13 IST" duration-ms="94731" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the gift voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:51 IST" duration-ms="73042" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the Cinema voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:57 IST" duration-ms="79582" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,103 +101,23 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:18 IST" duration-ms="15132" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:41:49 IST" duration-ms="130904" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify the Cinema voucher"]]>
+                <![CDATA["Delete an Advertisement Interest"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:32 IST" duration-ms="13467" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify the Cinema voucher"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:45 IST" duration-ms="13550" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify the Cinema voucher"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:38:57 IST" duration-ms="12196" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify the gift voucher"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:38:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:13 IST" duration-ms="15106" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify the gift voucher"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:26 IST" duration-ms="13737" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["To verify the gift voucher"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:39:44 IST" duration-ms="18059" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:41:12 IST" duration-ms="93921" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -207,11 +133,27 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:39:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:01 IST" duration-ms="17113" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:40 IST" duration-ms="62690" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["To verify the restaruant voucher"]]>
+                <![CDATA["Add a New Advertisement Interest"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_15/05/2026_Advertisements"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:49 IST" duration-ms="71424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the Cinema voucher"]]>
               </value>
             </param>
             <param index="1">
@@ -223,7 +165,23 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:01 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:14 IST" duration-ms="12392" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:39:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:40:44 IST" duration-ms="66638" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["To verify the Cinema voucher"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_17_5_2026_MyVochers"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:41:31 IST" duration-ms="50965" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,7 +197,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:40:52 IST" duration-ms="38120" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:41:34 IST" duration-ms="49628" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,7 +213,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:40:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:41:29 IST" duration-ms="36837" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:08 IST" duration-ms="78761" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -271,7 +229,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:41:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:42:04 IST" duration-ms="35088" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:12 IST" duration-ms="82991" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -287,7 +245,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:42:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:42:41 IST" duration-ms="36657" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:15 IST" duration-ms="84822" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -303,7 +261,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:42:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:12 IST" duration-ms="31169" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:11 IST" duration-ms="79897" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -319,7 +277,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:45 IST" duration-ms="32813" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:40:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:12 IST" duration-ms="75017" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -335,7 +293,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:43:58 IST" duration-ms="13222" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:41:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:12 IST" duration-ms="60308" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -351,7 +309,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:43:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:44:08 IST" duration-ms="10682" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:41:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:12 IST" duration-ms="59427" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -367,7 +325,7 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:44:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T15:44:22 IST" duration-ms="13373" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:41:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:23 IST" duration-ms="51946" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -383,7 +341,55 @@ at ✽.the user should see the popup message "The ad interest was created"(file:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-20T15:44:22 IST" name="tearDownClass" finished-at="2026-05-20T15:44:24 IST" duration-ms="2114" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:41:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:21 IST" duration-ms="47294" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:41:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:33 IST" duration-ms="44207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:42:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-25T14:42:40 IST" duration-ms="32341" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ticket transactions filter options works properly"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@2bec854f]" started-at="2026-05-25T14:42:40 IST" name="tearDownClass" finished-at="2026-05-25T14:42:46 IST" duration-ms="5405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
