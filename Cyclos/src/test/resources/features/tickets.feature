@@ -6,7 +6,7 @@ Feature: SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality
     And the user click the Banking menu
     And the user navigate to  the Tickets Page
 
-  @ticketStatus @smoke
+  @ticketStatus
   Scenario Outline: Verify ticket transactions for different status filters
     When user selects "<status>" from status dropdown
     And user clicks first row of the transactions table
