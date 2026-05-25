@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>17/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 19 15:21:16 IST 2026</td>
+<td>Started on:</td><td>Sun May 24 19:06:18 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>19 seconds (19300 ms)</td>
+<tr><td>Total time:</td><td>123 seconds (123569 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,71 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete an Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.cssSelector: tbody tr, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;tbody tr&quot;}.
+(tried for 40 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51109}, goog:processID: 13304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51109/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d06de7595d4cd1c9488c26fbddd6d57
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.AddInterestActions.clickDeleteButton(AddInterestActions.java:118)
+	at com.StepDefinitions.AddInterestTest.the_user_clicks_the_delete_button(AddInterestTest.java:52)
+	at ✽.the user clicks the Delete button(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:12)
+</pre></div><a href='#' onClick='toggleBox("stack-trace594863008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace594863008'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.cssSelector: tbody tr, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;tbody tr&quot;}.
+(tried for 40 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51109}, goog:processID: 13304, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51109/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d06de7595d4cd1c9488c26fbddd6d57
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
+	at com.Actions.AddInterestActions.clickDeleteButton(AddInterestActions.java:118)
+	at com.StepDefinitions.AddInterestTest.the_user_clicks_the_delete_button(AddInterestTest.java:52)
+	at ✽.the user clicks the Delete button(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:12)
+</pre></div></td>
+<td>83</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement Interest", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td><div><pre>java.lang.AssertionError: Popup message mismatch. Expected:  Advertisement interests  Actual: Advertisement interests expected [ Advertisement interests ] but found [Advertisement interests]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.Actions.AddInterestActions.assertAdd(AddInterestActions.java:65)
+	at com.StepDefinitions.AddInterestTest.the_user_should_see_add_interst_text(AddInterestTest.java:112)
+	at ✽.the user should see AddInterst text(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:20)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1212805173", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1212805173'><pre>java.lang.AssertionError: Popup message mismatch. Expected:  Advertisement interests  Actual: Advertisement interests expected [ Advertisement interests ] but found [Advertisement interests]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.Actions.AddInterestActions.assertAdd(AddInterestActions.java:65)
+	at com.StepDefinitions.AddInterestTest.the_user_should_see_add_interst_text(AddInterestTest.java:112)
+	at ✽.the user should see AddInterst text(file:///D:/Project/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/AdInterest.feature:20)
+</pre></div></td>
+<td>60</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +141,90 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify print functionality in payment request details page", "Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality"</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the gift voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
 <td></td>
-<td>16</td>
-<td>com.Runner.TestNGRunner@6950ed69</td></tr>
+<td>58</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>31</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a New Advertisement without Name Fields", "SRIRAM_K_15/05/2026_Advertisements"</td>
+<td></td>
+<td>95</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>44</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>52</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>60</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>29</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify voucher code search using CSV data", "SRIRAM_K_17_5_2026_MyVochers"</td>
+<td></td>
+<td>60</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the restaruant voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
+<td></td>
+<td>65</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>19</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>31</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>71</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>35</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions filter options works properly", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>36</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>54</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To verify the Cinema voucher", "SRIRAM_K_17_5_2026_MyVochers"</td>
+<td></td>
+<td>65</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ticket transactions for different status filters", "SRIRAM_K_13/05/2026_Validate Ticket Status Filter Functionality"</td>
+<td></td>
+<td>62</td>
+<td>com.Runner.TestNGRunner@15a04efb</td></tr>
 </table><p>
 </body>
 </html>
