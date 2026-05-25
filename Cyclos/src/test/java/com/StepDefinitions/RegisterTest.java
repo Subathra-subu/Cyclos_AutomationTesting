@@ -21,18 +21,6 @@ public class RegisterTest {
 		
 	}
 
-	@When("the user upload profile image")
-	public void the_user_upload_profile_image() {
-		
-		try {
-			registerAction.uploadImage("D:\\ProfileImage.jpg");
-		} 
-		
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
 
 	@When("the user clicks submit button")
 	public void the_user_clicks_submit_button() {
@@ -40,6 +28,7 @@ public class RegisterTest {
 		registerAction.clickSubmitButton();
 		
 	}
+
 	
 	@When("the user enters the already existing Login name")
 	public void the_user_enters_the_already_existing_login_name(io.cucumber.datatable.DataTable dataTable) {
@@ -91,4 +80,5 @@ public class RegisterTest {
 	  
 	}
 
-}
+	}
+
