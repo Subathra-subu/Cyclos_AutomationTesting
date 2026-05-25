@@ -9,15 +9,14 @@ import io.cucumber.testng.CucumberOptions;
 @Test
 @CucumberOptions(
 
-		features = "src/test/resources/features/MyAdvertisements.feature",
+		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
 
+        
 		monochrome = true,
 		
         publish = false,
-        
-        tags="@Subathra",
         
 
 		plugin = {
@@ -44,9 +43,4 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}
-
 }
-
-
-
-
