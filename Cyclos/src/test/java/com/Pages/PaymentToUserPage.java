@@ -14,9 +14,7 @@ public class PaymentToUserPage {
 	public By amountField = By.xpath("//input[@type='tel']");
 
 	public By paymentConfirmationTitle = By.xpath("//div[contains(@class,'title-text')]");
-	public By limitExceededMsg = By.xpath("//*[contains(text(),'less or equal')]");
-
-	public By positiveNumberMsg = By.xpath("//*[contains(text(),'positive number')]");
+	public By validateMessage = By.xpath("//div[@class='invalid-feedback']");
 	public By futureDate = By.xpath("//input[@type='date']");
 
 	public By descriptionField = By.xpath("//textarea");
