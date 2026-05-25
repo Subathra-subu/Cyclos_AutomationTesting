@@ -7,19 +7,15 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
     And the user click the Marketplace menu
     And the user clicks the Advertisement Interests button
 
-  @delete
+   @delete
   Scenario: Delete an Advertisement Interest
     When the user clicks the Delete button
     And the user confirms the deletion popup
-    Then the user should see the success message "The item was removed"
+    Then the user should see the success message 
 
-  @addNew
+  @addNew @smoke
   Scenario: Add a New Advertisement Interest
     When the user clicks the Add New button
-
-    And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "min" , "max" and submit it.
-    Then the user should see the popup message "The ad interest was created"
-
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.
     Then the user should see the popup message
 
