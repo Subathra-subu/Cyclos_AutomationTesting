@@ -20,7 +20,7 @@ public class AddIntrestPage {
             By.xpath("//button[contains(.,'Confirm')]");
 
     public By successToast =
-            By.xpath("//snack-bar[contains(text(),'was removed')]");
+            By.xpath("//*[contains(text(),'was removed')]");
 
     public By noResult =
             By.xpath("//div[contains(text(),'No results')]");
@@ -52,11 +52,11 @@ public class AddIntrestPage {
     public By subMit =
             By.xpath("//button//span[text()='Submit']");
     
-    public By add =
-            By.xpath("//div[text()=\" Advertisement interests \"]");
+    public By popUp =
+            By.xpath("//*[contains(text(),'was created')]");
     
     public By requiredMessage =
             By.xpath("//div[contains(text(),\" This field is required\")]");
-    
+
     public By unique = By.xpath("//div[contains(text(),\"unique\")]");
 }

@@ -2,6 +2,8 @@ package com.StepDefinitions;
 
 import java.io.IOException;
 
+import org.testng.annotations.Test;
+
 import com.Actions.AddInterestActions;
 import com.Actions.LoginAction;
 import com.Utilities.ExcelData;
@@ -42,7 +44,7 @@ public class AddInterestTest {
 	}
 
 	@When("the user clicks the Delete button")
-	public void the_user_clicks_the_delete_button() {
+	public void the_user_clicks_the_delete_button() throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
 		if (addInterestActions.isVisibleResult()) {
 			HelperClass.log.info("no row is present");
@@ -99,20 +101,19 @@ public class AddInterestTest {
 
 	}
 
-	
-	
-	@Then("the user should see AddInterst text")
-	public void the_user_should_see_add_interst_text() {
-	    // Write code here that turns the phrase above into concrete actions
+	@Then("the user should see the popup message")
+	public void the_user_should_see_the_popup_message() {
+		// Write code here that turns the phrase above into concrete actions
+
 		if (addInterestActions.isUniqueVisible()) {
 			addInterestActions.assertuniqe();
 		}
 
 		else {
-			addInterestActions.assertAdd(" Advertisement interests ");
+			addInterestActions.assertPopup("The ad interest was created");
 
 		}
-	}
 
+	}
 
 }
