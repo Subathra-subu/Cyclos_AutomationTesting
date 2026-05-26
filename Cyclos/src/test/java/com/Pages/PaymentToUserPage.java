@@ -20,6 +20,8 @@ public class PaymentToUserPage {
 
 	public By validateMessage = By.xpath("//div[contains(@class,'invalid-feedback')]");
 
+	
+
 	public By futureDate = By.xpath("//input[@type='date']");
 
 	public By descriptionField = By.xpath("//label[contains(.,'Description')]/following-sibling::div//textarea");
@@ -34,5 +36,7 @@ public class PaymentToUserPage {
 
 	public By recurringPaymentOption = By.xpath("//button[contains(@class,'form-control')]/following-sibling::div//a[contains(.,'Recurring payments')]");
 
+
 	public By numberOfInstallments = By.xpath("//label[contains(.,'installments')]/following-sibling::div//input");
 }
+

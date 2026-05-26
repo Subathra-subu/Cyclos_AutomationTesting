@@ -142,27 +142,29 @@ public class PaymentToUserActions extends BaseAction {
 			throw e;
 		}
 	}
-	public void validateLimitExceededMessage(String expectedMessage) {
 
-	    try {
+public void validateLimitExceededMessage(String expectedMessage) {
 
-	        waitForVisibility(paymentpage.validateMessage);
+    try {
 
-	        String actualMessage = getText(paymentpage.validateMessage);
+        waitForVisibility(paymentpage.validateMessage);
 
-	        System.out.println("Actual Validation Message : " + actualMessage);
+        String actualMessage = getText(paymentpage.validateMessage);
 
-	        Assert.assertEquals(actualMessage, expectedMessage);
+        System.out.println("Actual Validation Message : " + actualMessage);
 
-	        HelperClass.log.info("Limit validation successful");
+        Assert.assertEquals(actualMessage, expectedMessage);
 
-	    } catch (Exception e) {
+        HelperClass.log.info("Limit validation successful");
 
-	        HelperClass.log.error("Limit validation failed : " + e.getMessage());
+    } catch (Exception e) {
 
-	        throw e;
-	    }
-	}
+        HelperClass.log.error("Limit validation failed : " + e.getMessage());
+
+        throw e;
+    }
+}
+
 	public void selectSchedulingType(String type) {
 
 		try {

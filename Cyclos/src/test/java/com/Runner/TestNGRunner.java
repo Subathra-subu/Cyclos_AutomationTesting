@@ -10,12 +10,12 @@ import io.cucumber.testng.CucumberOptions;
 
 
 		features = "src/test/resources/Features",
-        tags="@PaymentToUser_Shobana",
-		monochrome = true,
-		glue="com.StepDefinitions",
-        publish = false,
-        
 
+		glue = "com.StepDefinitions",
+
+		monochrome = true,
+
+		publish = false,
 
 	
 		plugin = {
@@ -32,12 +32,10 @@ import io.cucumber.testng.CucumberOptions;
 
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
-
-	@Override
-	@DataProvider(parallel = false)
-	public Object[][] scenarios() {
-	    return super.scenarios();
-	}
+    
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }
-
-

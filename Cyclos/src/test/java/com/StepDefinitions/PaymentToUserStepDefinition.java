@@ -83,7 +83,7 @@ public class PaymentToUserStepDefinition {
 
 		actions.clickNext();
 
-		
+
 	}
 
 	@When("User enters scheduled payment details")
