@@ -15,6 +15,8 @@ import io.cucumber.testng.CucumberOptions;
 		
 		tags = "@InvalidKeywordSearch",
 
+	    tags = "@Akksheetha",
+
 		monochrome = true,
 
 		publish = false,
