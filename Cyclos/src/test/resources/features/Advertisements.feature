@@ -44,3 +44,10 @@ Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
   Scenario: Verify favourite advertisements filter
   When user filters favourite advertisements
   Then only favourite advertisements should be displayed
+  
+  
+  @InvalidKeywordSearch
+
+  Scenario: Search advertisement with invalid keyword
+  When user searches advertisement with invalid keyword
+  Then invalid keyword search result should be displayed
