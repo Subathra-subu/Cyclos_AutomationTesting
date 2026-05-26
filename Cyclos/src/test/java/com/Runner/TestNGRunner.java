@@ -9,6 +9,7 @@ import io.cucumber.testng.CucumberOptions;
         glue = "com.StepDefinitions",
         monochrome = true,
         publish = false,
+        tags="@Subathra",
     
         plugin = {
                 "pretty",
