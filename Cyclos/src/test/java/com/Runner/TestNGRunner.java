@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 		features = "src/test/resources/Features",
-        tags="@BusinessDirectory_Shobana",
+        tags="@PaymentToUser_Shobana",
 		monochrome = true,
 		
         publish = false,
