@@ -10,7 +10,7 @@ public class memberAccountPage
 
 	public By downloadBtn = By.xpath("//div[text()=\"Download\"]/parent::button");
 
-	public By bankingMenu = By.xpath("//a[@id='menu_banking']");
+	public By bankingMenu = By.xpath("//div[@class='menu-container']//following::div[text()='Banking']");
 	
 	public By pdfOption = By.xpath("//div[text()=\"PDF\"]/parent::button");
 	
