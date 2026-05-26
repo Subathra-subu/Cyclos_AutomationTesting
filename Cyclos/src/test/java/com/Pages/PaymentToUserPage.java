@@ -4,30 +4,35 @@ import org.openqa.selenium.By;
 
 public class PaymentToUserPage {
 
-	public By nextBtn = By.xpath("//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']");
-	public By payuser = By.xpath("//a[@href='/banking/self/payment']//div[@class='quick-access-icon']");
 
-	public By userfield = By.cssSelector("input[placeholder='Type to search']");
+	
+	public By nextBtn = By.xpath("//button[.//span[contains(text(),'Next')] or contains(.,'Next')]");
+
+	public By payuser = By.xpath("//div[contains(@class,'quick-access-icon')]/parent::a[contains(@href,'payment')]");
+
+	public By userfield = By.xpath("//label[contains(.,'To user')]/following-sibling::div//input");
 
 	public By errormsg = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
 
-	public By amountField = By.xpath("//input[@type='tel']");
+	public By amountField = By.xpath("//label[contains(.,'Amount')]/following-sibling::div//input");
 
-	public By paymentConfirmationTitle = By.xpath("//div[contains(@class,'title-text')]");
-	public By validateMessage = By.xpath("//div[@class='invalid-feedback']");
+	public By paymentConfirmationTitle = By.xpath("//div[contains(@class,'title-text')]/ancestor::div[contains(@class,'card')]");
+
+	public By validateMessage = By.xpath("//div[contains(@class,'invalid-feedback')]");
+
 	public By futureDate = By.xpath("//input[@type='date']");
 
-	public By descriptionField = By.xpath("//textarea");
+	public By descriptionField = By.xpath("//label[contains(.,'Description')]/following-sibling::div//textarea");
 
 	public By dropdown = By.xpath("//button[contains(@class,'form-control')]");
 
-	public By scheduledOption = By.xpath("//a[normalize-space()='Scheduled']");
+	public By scheduledOption = By.xpath("//button[contains(@class,'form-control')]/following-sibling::div//a[contains(.,'Scheduled')]");
 
-	public By payNowOption = By.xpath("//a[normalize-space()='Pay now']");
+	public By payNowOption = By.xpath("//button[contains(@class,'form-control')]/following-sibling::div//a[contains(.,'Pay now')]");
 
-	public By monthlyInstallmentOption = By.xpath("//a[normalize-space()='Monthly installments']");
+	public By monthlyInstallmentOption = By.xpath("//button[contains(@class,'form-control')]/following-sibling::div//a[contains(.,'Monthly installments')]");
 
-	public By recurringPaymentOption = By.xpath("//a[normalize-space()='Recurring payments']");
+	public By recurringPaymentOption = By.xpath("//button[contains(@class,'form-control')]/following-sibling::div//a[contains(.,'Recurring payments')]");
 
-	public By numberOfInstallments = By.xpath("//input[@type='number']");
+	public By numberOfInstallments = By.xpath("//label[contains(.,'installments')]/following-sibling::div//input");
 }

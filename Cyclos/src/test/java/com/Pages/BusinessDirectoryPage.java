@@ -18,9 +18,8 @@ public class BusinessDirectoryPage {
 
 	public By orderDropdown = By.xpath("//button[contains(@class,'custom-select')]");
 
-	public By ascendingOrder = By.xpath("//*[contains(text(),'Name (A-Z)')]");
-
-	public By descendingOrder = By.xpath("//*[contains(text(),'Name (Z-A)')]");
+	public By ascendingOrder = By.xpath("//a[@id='id_6_alphabeticallyAsc']");
+	public By descendingOrder = By.xpath("//a[@id='id_6_alphabeticallyDesc']']");
 
 	public By activeListView = By.xpath("//*[contains(@class,'resultType-list') and contains(@class,'active')]");
 

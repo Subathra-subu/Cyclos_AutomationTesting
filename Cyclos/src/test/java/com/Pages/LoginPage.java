@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class LoginPage {
 	
-	public By loginLink = By.xpath("//div[text()=' Login ']");
+	public By loginLink = By.xpath("//div[text()=' Login ']/parent::a");
 	
 	public By userName = By.xpath("//input[@placeholder='User']");
 	public By password = By.xpath("//input[@placeholder='Password']");
@@ -17,5 +17,7 @@ public class LoginPage {
 	public By userRequiredMessage = By.xpath("//div[@class='input-group login-margin-bottom']/following-sibling::*");
 	
 	public By passwordRequiredMessage = By.xpath("//div[@class='input-group']/following-sibling::*");
+	
+	
 
 }

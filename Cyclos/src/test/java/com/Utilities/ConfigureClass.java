@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class ConfigureClass {
 
-    private static Properties properties;
+    private static final Properties properties;
 
     static {
         try {
@@ -20,7 +20,8 @@ public class ConfigureClass {
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException(
-                    "Failed to load Configure.properties. Ensure it exists at src/test/resources/Configure.properties");
+                    "Failed to load Configure.properties. " +
+                    "Ensure it exists at src/test/resources/Configure.properties");
         }
     }
 
@@ -41,7 +42,21 @@ public class ConfigureClass {
     }
 
     public static int getExplicitWait() {
-        return Integer.parseInt(properties.getProperty("explicitWait", "20"));
+        return Integer.parseInt(properties.getProperty("explicitWait", "40"));
+    }
+
+    public static int getPageLoadTimeout() {
+        return Integer.parseInt(properties.getProperty("pageLoadTimeout", "90"));
+    }
+
+    /** Dedicated timeout (seconds) used only for post-login dashboard wait */
+    public static int getLoginWaitTimeout() {
+        return Integer.parseInt(properties.getProperty("loginWaitTimeout", "60"));
+    }
+
+    /** How many times the login step retries before throwing */
+    public static int getLoginRetryCount() {
+        return Integer.parseInt(properties.getProperty("loginRetryCount", "2"));
     }
 
     public static boolean isHeadless() {
@@ -53,14 +68,10 @@ public class ConfigureClass {
     }
 
     public static String getReportPath() {
-        return properties.getProperty("reportPath", "target/reports/");
+        return properties.getProperty("reportPath", "reports/");
     }
 
     public static boolean isParallel() {
         return Boolean.parseBoolean(properties.getProperty("parallel", "false"));
-    }
-
-    public static int getPageLoadTimeout() {
-        return Integer.parseInt(properties.getProperty("pageLoadTimeout", "60"));
     }
 }
