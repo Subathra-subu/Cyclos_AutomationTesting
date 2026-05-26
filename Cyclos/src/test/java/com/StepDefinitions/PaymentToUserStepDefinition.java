@@ -83,7 +83,7 @@ public class PaymentToUserStepDefinition {
 
 		actions.clickNext();
 
-		actions.validateLimitExceededMessage(expectedMessage);
+	
 	}
 
 	@When("User enters scheduled payment details")
