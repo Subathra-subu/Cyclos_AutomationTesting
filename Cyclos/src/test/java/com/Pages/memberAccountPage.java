@@ -13,5 +13,7 @@ public class memberAccountPage
 	public By bankingMenu = By.xpath("//a[@id='menu_banking']");
 	
 	public By pdfOption = By.xpath("//div[text()=\"PDF\"]/parent::button");
+	
+	public By execOption = By.xpath("//div[text()=\"Excel (xlsx)\"]/parent::button");
 
 }

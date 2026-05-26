@@ -1,8 +1,15 @@
 package com.Actions;
 
+import java.io.FileInputStream;
+
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import com.Pages.memberAccountPage;
+import com.Utilities.ExcelUtilities;
 import com.Utilities.FileUtility;
 import com.Utilities.HelperClass;
 import com.Utilities.PDFUtility;
@@ -59,22 +66,111 @@ public class memberAction extends BaseAction
 		}
 	}
 	
+	public void clickexcelOption() {
+		try {
+			waitForClickable(mPage.execOption);
+			click(mPage.execOption);
+			HelperClass.log.info("PDF option clicked successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click PDF option : " + e.getMessage());
+			throw new RuntimeException("Unable to click PDF option", e);
+		}
+	}
+	
+	
+	@SuppressWarnings("resource")
+	public void validateMemberAccountExcel() {
+
+	    try {
+
+	        String downloadPath =
+	                HelperClass.getDownloadPath();
+
+	        waitForFileDownload(
+	                downloadPath,
+	                ".xlsx");
+
+	        String excelPath =
+	                FileUtility.getDownloadedFilePath(
+	                        downloadPath,
+	                        ".xlsx");
+
+	        if (excelPath == null) {
+
+	            HelperClass.log.error(
+	                    "Excel file not found");
+
+	            throw new AssertionError(
+	                    "Excel file was not downloaded");
+	        }
+
+	        HelperClass.log.info(
+	                "Excel file found at : " + excelPath);
+
+	        FileInputStream fis =
+	                new FileInputStream(excelPath);
+
+	        XSSFWorkbook workbook =
+	                new XSSFWorkbook(fis);
+
+	        XSSFSheet sheet =
+	                workbook.getSheetAt(0);
+
+	        XSSFRow row =
+	                sheet.getRow(0);
+
+	        XSSFCell cell =
+	                row.getCell(1);
+
+	        String excelData =
+	                cell.toString();
+
+	        String expectedText =
+	                "Transaction number";
+
+	        if (!excelData.contains(expectedText)) {
+
+	            HelperClass.log.error(
+	                    "Expected text not found in Excel file");
+
+	            throw new AssertionError(
+	                    "Expected text not present in Excel file : "
+	                            + expectedText);
+	        }
+
+	        workbook.close();
+
+	        fis.close();
+
+	        HelperClass.log.info(
+	                "Excel validation successful");
+
+	    } catch (Exception e) {
+
+	        HelperClass.log.error(
+	                "Failed to validate Excel file : "
+	                        + e.getMessage());
+
+	        throw new RuntimeException(
+	                "Unable to validate Excel file", e);
+	    }
+	}
 	public void validateMemberAccountPDF() {
 
 	    try {
 
-	        String downloadPath = HelperClass.getDownloadPath();
+	        String downloadPath =
+	                HelperClass.getDownloadPath();
 
-	        
-	        waitForFileDownload(downloadPath, ".pdf");
+	        waitForFileDownload(
+	                downloadPath,
+	                ".pdf");
 
-	        
 	        String pdfPath =
 	                FileUtility.getDownloadedFilePath(
 	                        downloadPath,
 	                        ".pdf");
 
-	        
 	        if (pdfPath == null) {
 
 	            HelperClass.log.error(
@@ -87,33 +183,24 @@ public class memberAction extends BaseAction
 	        HelperClass.log.info(
 	                "PDF found at : " + pdfPath);
 
-	        
-	        String pdfText = PDFUtility.readPDF(pdfPath);
+	        String pdfText =
+	                PDFUtility.readPDF(pdfPath);
 
-	        
-	        if (pdfText.length() > 300) {
-
-	            pdfText = pdfText.substring(0, 300);
-	        }
-
-	        
 	        System.out.println(pdfText);
 
 	        HelperClass.log.info(
-	                "PDF Content (First 300 chars) : \n" + pdfText);
+	                "PDF Content : \n" + pdfText);
 
-	        
 	        String expectedText =
 	                "Transaction history";
 
-	        
 	        if (!pdfText.contains(expectedText)) {
 
 	            HelperClass.log.error(
 	                    "Expected text not found in PDF");
 
 	            throw new AssertionError(
-	                    "Expected text not present in first 300 characters : "
+	                    "Expected text not present in PDF : "
 	                            + expectedText);
 	        }
 
@@ -127,7 +214,8 @@ public class memberAction extends BaseAction
 	                        + e.getMessage());
 
 	        throw new RuntimeException(
-	                "Unable to validate member account PDF", e);
+	                "Unable to validate member account PDF",
+	                e);
 	    }
 	}
 

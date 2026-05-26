@@ -33,5 +33,17 @@ public class memeberAccountTest {
 
 		actions.validateMemberAccountPDF();
 	}
+	
+	@When("the user clicks the excel option")
+	public void the_user_clicks_the_excel_option() {
+	    // Write code here that turns the phrase above into concrete actions
+	    actions.clickexcelOption();
+	}
+
+	@Then("the user should see the member account details in Excel file")
+	public void the_user_should_see_the_member_account_details_in_excel_file() {
+	    // Write code here that turns the phrase above into concrete actions
+	    actions.validateMemberAccountExcel();
+	}
 
 }
