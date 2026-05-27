@@ -13,6 +13,8 @@ import com.Utilities.ExcelUtilities;
 import com.Utilities.FileUtility;
 import com.Utilities.HelperClass;
 import com.Utilities.PDFUtility;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class memberAction extends BaseAction
 
@@ -66,18 +68,89 @@ public class memberAction extends BaseAction
 		}
 	}
 	
+	public void clickCsvOption() {
+		try {
+			waitForClickable(mPage.csvOption);
+			click(mPage.csvOption);
+			HelperClass.log.info("Csv option clicked successfully");
+		} catch (Exception e) {
+			HelperClass.log.error("Failed to click Csv option : " + e.getMessage());
+			throw new RuntimeException("Unable to click Csv option", e);
+		}
+	}
+	
 	public void clickexcelOption() {
 		try {
 			waitForClickable(mPage.execOption);
 			click(mPage.execOption);
-			HelperClass.log.info("PDF option clicked successfully");
+			HelperClass.log.info("Csv option clicked successfully");
 		} catch (Exception e) {
-			HelperClass.log.error("Failed to click PDF option : " + e.getMessage());
-			throw new RuntimeException("Unable to click PDF option", e);
+			HelperClass.log.error("Failed to click Csv option : " + e.getMessage());
+			throw new RuntimeException("Unable to click Csv option", e);
 		}
 	}
 	
 	
+	public void validateMemberAccountCSV() {
+
+	    try {
+
+	        String downloadPath =
+	                HelperClass.getDownloadPath();
+
+	        waitForFileDownload(
+	                downloadPath,
+	                ".csv");
+
+	        String csvPath =
+	                FileUtility.getDownloadedFilePath(
+	                        downloadPath,
+	                        ".csv");
+
+	        if (csvPath == null) {
+
+	            HelperClass.log.error(
+	                    "CSV file not found");
+
+	            throw new AssertionError(
+	                    "CSV file was not downloaded");
+	        }
+
+	        HelperClass.log.info(
+	                "CSV file found at : " + csvPath);
+
+	        BufferedReader br =
+	                new BufferedReader(
+	                        new FileReader(csvPath));
+
+	        String firstLine =
+	                br.readLine();
+
+	        br.close();
+
+	        if (firstLine == null ||
+	                !firstLine.contains("transactionNumber")) {
+
+	            HelperClass.log.error(
+	                    "transactionNumber not found in first cell");
+
+	            throw new AssertionError(
+	                    "transactionNumber not present in CSV file");
+	        }
+
+	        HelperClass.log.info(
+	                "CSV validation successful");
+
+	    } catch (Exception e) {
+
+	        HelperClass.log.error(
+	                "Failed to validate CSV file : "
+	                        + e.getMessage());
+
+	        throw new RuntimeException(
+	                "Unable to validate CSV file", e);
+	    }
+	}
 	@SuppressWarnings("resource")
 	public void validateMemberAccountExcel() {
 

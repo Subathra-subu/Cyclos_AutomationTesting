@@ -15,5 +15,6 @@ public class memberAccountPage
 	public By pdfOption = By.xpath("//div[text()=\"PDF\"]/parent::button");
 	
 	public By execOption = By.xpath("//div[text()=\"Excel (xlsx)\"]/parent::button");
-
+	
+	public By csvOption = By.xpath("//div[text() = \"PDF\"]/preceding::div[text()=\"CSV\"]");
 }
