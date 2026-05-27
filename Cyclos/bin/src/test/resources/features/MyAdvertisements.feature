@@ -10,6 +10,23 @@ This feature file is used to verify Advertisement functionality
 
   @AddAdvertisement
   Scenario: Verify user can add new Advertisement
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    When User clicks add new button and enters advertisement details
+      | title     | category  | price | fromDate   | toDate     | description         |
+      |race bike  | Politics  | 100   | 26-05-2026 | 26-05-2029 | Marketing           |
+    Then User should successfully add advertisement
+
+  @EditAdvertisement
+  Scenario: Verify user can Edit Advertisement
+    When User searches advertisement mentioned in the CSV file
+    When the user click the advertisement
+    And User click the edit button and edits advertisement details
+      | title           | category  | price | description                |
+      | Chocolate		| Childcare | 200   | ChildAdvertisement         |
+=======
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
     When User enters advertisement details
       | title     | category | price | fromDate   | toDate     | description         |
       | race bike | Politics | 100   | 18-05-2026 | 18-05-2029 | Bike for sale offer |
@@ -22,6 +39,10 @@ This feature file is used to verify Advertisement functionality
     And User click the edit button and edits advertisement details
       | title          | category | price | description                |
       | race bike 		| Politics | 200   | Updated bike advertisement |
+<<<<<<< HEAD
+=======
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
     Then User should successfully update advertisement
 
   @RemoveAdvertisement

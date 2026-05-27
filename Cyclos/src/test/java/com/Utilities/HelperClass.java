@@ -40,11 +40,14 @@ public class HelperClass {
         ChromeOptions options = new ChromeOptions();
 
         String downloadPath = getDownloadPath();
+<<<<<<< HEAD
        
         
 
         downloadDir.set(downloadPath);
 
+=======
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
         new File(downloadPath).mkdirs();
 
        

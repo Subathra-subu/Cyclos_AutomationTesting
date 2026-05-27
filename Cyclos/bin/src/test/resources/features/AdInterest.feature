@@ -11,9 +11,21 @@ Feature: SRIRAM_K_15/05/2026_Advertisements
   Scenario: Delete an Advertisement Interest
     When the user clicks the Delete button
     And the user confirms the deletion popup
+<<<<<<< HEAD
     Then the user should see the success message 
 
   @addNew @smoke
+=======
+<<<<<<< HEAD
+    Then the user should see the success message "The item was removed"
+
+  @addNew
+=======
+    Then the user should see the success message 
+
+  @addNew @smoke
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
   Scenario: Add a New Advertisement Interest
     When the user clicks the Add New button
     And the user enters all required details "<name>" , "<keyWord>" , "<by>" , "<min>" , "<max>" and submit it.

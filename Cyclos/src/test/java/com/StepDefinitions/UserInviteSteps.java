@@ -67,5 +67,7 @@ public class UserInviteSteps {
     public void user_enters_valid_email_in_each_field() {
         // Write code here that turns the phrase above into concrete actions
         inviteActions.enterEmailInMultipleFields();
+
     }
 }
+

@@ -79,6 +79,4 @@ public class RegisterTest {
 		registerAction.assertRequiredMessage(string);
 	  
 	}
-		
 	}
-

@@ -13,14 +13,14 @@ import io.cucumber.testng.CucumberOptions;
 
 		glue = "com.StepDefinitions",
 
-	    tags="@krishna",
-	
 		monochrome = true,
 
-	plugin = {
+		publish = false,
+	
+		plugin = {
 
 				"pretty",
-
+        
 				"html:target/CucumberReports/Cucumber.html",
 
 				"json:target/CucumberReports/Cucumber.json",
@@ -31,10 +31,9 @@ import io.cucumber.testng.CucumberOptions;
 
 public class TestNGRunner extends AbstractTestNGCucumberTests {
 
-
     
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }

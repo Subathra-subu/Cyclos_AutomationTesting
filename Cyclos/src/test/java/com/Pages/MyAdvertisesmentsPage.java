@@ -12,7 +12,7 @@ public class MyAdvertisesmentsPage {
 
 	    public By titleField = By.xpath("//input[@type='text']");
 
-	    public By categoryDropdown = By.xpath("//button[contains(@class,'form-control')]");
+	    public By categoryDropdown = By.xpath("(//button[contains(@class,'form-control')])[1]");
 
 	    public By categoryOption(String category) {
 
