@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 		features = "src/test/resources/Features",
-
+        tags="@PaymentToUser_Shobana"
 		glue = "com.StepDefinitions",
 
 		monochrome = true,
