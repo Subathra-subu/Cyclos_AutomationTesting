@@ -19,7 +19,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
        
-		tags="@multipleinvite",
+		
 	
 		plugin = {
 
