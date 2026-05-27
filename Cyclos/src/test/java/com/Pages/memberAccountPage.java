@@ -1,0 +1,20 @@
+package com.Pages;
+
+import org.openqa.selenium.By;
+
+public class memberAccountPage
+
+{
+
+	public By memberAccountLink = By.xpath("//div[text()=\"Member account\"]");
+
+	public By downloadBtn = By.xpath("//div[text()=\"Download\"]/parent::button");
+
+	public By bankingMenu = By.xpath("//div[@class='menu-container']//following::div[text()='Banking']");
+	
+	public By pdfOption = By.xpath("//div[text()=\"PDF\"]/parent::button");
+	
+	public By execOption = By.xpath("//div[text()=\"Excel (xlsx)\"]/parent::button");
+	
+	public By csvOption = By.xpath("//div[text() = \"PDF\"]/preceding::div[text()=\"CSV\"]");
+}

@@ -40,7 +40,14 @@ public class HelperClass {
         ChromeOptions options = new ChromeOptions();
 
         String downloadPath = getDownloadPath();
+       
+        
+
+        downloadDir.set(downloadPath);
+
         new File(downloadPath).mkdirs();
+
+       
 
         Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory",        downloadPath);

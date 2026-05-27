@@ -109,9 +109,7 @@ public class BaseAction {
 
     
 
-    // ═══════════════════════════════════════════════════════════════════
-    //  SMART WAIT — loader + table state detection
-    // ═══════════════════════════════════════════════════════════════════
+   
 
     public void waitForLoaderToDisappear(By loaderLocator) {
         try {
