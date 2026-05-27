@@ -1,5 +1,6 @@
 package com.StepDefinitions;
 
+import com.Actions.LoginAction;
 import com.Actions.TicketsActions;
 import com.Utilities.HelperClass;
 
@@ -11,13 +12,13 @@ public class TicketsTest {
 
 	TicketsActions ticketsActions = new TicketsActions();
 
-	@Given("user in the Tickets Page")
-	public void user_in_the_tickets_page() {
-	    // Write code here that turns the phrase above into concrete actions
-		ticketsActions.clickOnBankingMenu();
+
+
+	@Given("the user navigate to  the Tickets Page")
+	public void the_user_navigate_to_the_tickets_page() {
+		// Write code here that turns the phrase above into concrete actions
 		ticketsActions.clickOnTicketsMenu();
 	}
-
 
 	@When("user selects {string} from status dropdown")
 	public void user_selects_from_status_dropdown(String status) {
@@ -34,13 +35,12 @@ public class TicketsTest {
 			HelperClass.log.warn("Skipping print action because no records found");
 		}
 
-		else
-		{
-		String downloadPath = HelperClass.getDownloadPath();
+		else {
+			String downloadPath = HelperClass.getDownloadPath();
 
-		ticketsActions.clearDownloadFolder(downloadPath);
+			ticketsActions.clearDownloadFolder(downloadPath);
 
-		ticketsActions.clickPrintButton();
+			ticketsActions.clickPrintButton();
 		}
 	}
 
@@ -52,9 +52,8 @@ public class TicketsTest {
 			HelperClass.log.warn("Skipping first row click because no records found");
 		}
 
-		else
-		{
-		ticketsActions.clickOnFirstRow();
+		else {
+			ticketsActions.clickOnFirstRow();
 		}
 	}
 
@@ -75,10 +74,10 @@ public class TicketsTest {
 
 	}
 
-	@When("user select the Open in the status")
-	public void user_select_the_open_in_the_status() {
+	@When("user select the {string} status")
+	public void user_select_the_status(String string) {
 		// Write code here that turns the phrase above into concrete actions
-		ticketsActions.clickOpenSts();
+		ticketsActions.clickStatus(string);
 	}
 
 	@Then("the user should see the transactions with {string} status")
@@ -104,9 +103,8 @@ public class TicketsTest {
 			ticketsActions.assertNoResultsMessage();
 		}
 
-		else
-		{
-		ticketsActions.validateTransactionStatusFromPDF(expectedStatus);
+		else {
+			ticketsActions.validateTransactionStatusFromPDF(expectedStatus);
 		}
 	}
 }

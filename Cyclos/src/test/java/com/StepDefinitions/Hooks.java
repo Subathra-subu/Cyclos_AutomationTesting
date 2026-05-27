@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import com.Actions.commonLoginAction;
+import com.Utilities.ConfigureClass;
 import com.Utilities.HelperClass;
 
 import io.cucumber.java.After;
@@ -19,68 +19,55 @@ public class Hooks {
 
     public static final Logger logger = LogManager.getLogger(Hooks.class);
 
-    commonLoginAction loginActions = new commonLoginAction();
-
-    @Before("@UserLogin")
-    public void setUplogin(Scenario scenario) {
-    	
-        logger.info("=== Scenario STARTED: {} ===", scenario.getName());
-
-        HelperClass.setupDriver();
-        HelperClass.openPage();
-        
-        
-        
-
-        logger.info("Setup complete. Browser ready.");
-    }
-    @Before
+    @Before(order = 0)
     public void setUp(Scenario scenario) {
-        logger.info("=== Scenario STARTED: {} ===", scenario.getName());
+        logger.info("=== SCENARIO START: [{}] | Thread: [{}] ===",
+                scenario.getName(), Thread.currentThread().getName());
 
-        HelperClass.setupDriver();
-        HelperClass.openPage();
-        loginActions.loginToApplication();
-
-        logger.info("Setup complete. Browser ready.");
+        try {
+            HelperClass.setupDriver();
+            HelperClass.openPage();
+            logger.info("Browser ready for: [{}]", scenario.getName());
+        } catch (Exception e) {
+            logger.error("Browser setup FAILED: {}", e.getMessage());
+            throw new RuntimeException("Browser setup failed", e);
+        }
     }
 
-    // AI refer 
-    @After
-  
+    @After(order = 0)
     public void tearDown(Scenario scenario) {
-
         if (scenario.isFailed()) {
-
-            try {
-
-                byte[] screenshotBytes = ((TakesScreenshot) HelperClass.getDriver())
-                        .getScreenshotAs(OutputType.BYTES);
-
-                scenario.attach(screenshotBytes, "image/png", "Failure Screenshot");
-
-                File screenshotFile = ((TakesScreenshot) HelperClass.getDriver())
-                        .getScreenshotAs(OutputType.FILE);
-
-                
-                String fileName = scenario.getName().replace(" ", "_");
-
-                FileUtils.copyFile(
-                        screenshotFile,
-                        new File("screenshots/" + fileName + ".png"));
-
-                logger.error("Scenario Failed : " + scenario.getName());
-
-            } catch (Exception e) {
-
-                logger.error("Screenshot capture failed");
-            }
-
+            logger.error("=== SCENARIO FAILED: [{}] | Thread: [{}] ===",
+                    scenario.getName(), Thread.currentThread().getName());
+            captureScreenshot(scenario);
         } else {
-
-            logger.info("Scenario Passed : " + scenario.getName());
+            logger.info("=== SCENARIO PASSED: [{}] | Thread: [{}] ===",
+                    scenario.getName(), Thread.currentThread().getName());
         }
-
         HelperClass.tearDown();
+    }
+
+    private void captureScreenshot(Scenario scenario) {
+        try {
+            if (HelperClass.getDriver() == null) return;
+
+            byte[] bytes = ((TakesScreenshot) HelperClass.getDriver())
+                    .getScreenshotAs(OutputType.BYTES);
+            scenario.attach(bytes, "image/png", "Failure Screenshot");
+
+            File srcFile = ((TakesScreenshot) HelperClass.getDriver())
+                    .getScreenshotAs(OutputType.FILE);
+
+            String safeName = scenario.getName()
+                    .replaceAll("[^a-zA-Z0-9_\\-]", "_");
+            String destPath = ConfigureClass.getScreenshotPath()
+                    + safeName + "_" + Thread.currentThread().getName() + ".png";
+
+            FileUtils.copyFile(srcFile, new File(destPath));
+            logger.info("Screenshot saved: {}", destPath);
+
+        } catch (Exception e) {
+            logger.warn("Screenshot failed: {}", e.getMessage());
+        }
     }
 }

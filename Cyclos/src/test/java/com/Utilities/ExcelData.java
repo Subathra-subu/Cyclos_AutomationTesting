@@ -11,6 +11,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
 public class ExcelData {
+	@DataProvider(name = "validLogin", parallel = true)
+
+    public Object[][] LoginData() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "UserLogin_Subathra");
+    }
 
     @DataProvider(name = "addNew", parallel = true)
 
@@ -21,6 +29,43 @@ public class ExcelData {
                 "AddFeature_sriram_k");
     }
 
+
+    @DataProvider(name = "validVoucher", parallel = true)
+
+    public Object[][] validVoucher() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "valid_vovucher");
+    }
+    
+    
+    @DataProvider(name = "businessDirectory", parallel = true)
+
+    public Object[][] businessDirectoryData() throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "BusinessDirectory");
+    }
+    
+    @DataProvider(name = "advertisementFavourites", parallel = true)
+
+    public Object[][] advertisementFavourites()
+            throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "favourites_akkshee");
+    }
+
+    @DataProvider(name = "paymentRequestKrishna")
+    public Object[][] paymentRequestKrishnaData() throws IOException {
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "PaymentRequest_Krishna");
+    }
+    
     private Object[][] getExcelData(String file, String sheet) {
 
         String[][] data = null;
