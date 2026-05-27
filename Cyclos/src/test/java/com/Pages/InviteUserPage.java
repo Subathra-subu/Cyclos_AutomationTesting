@@ -6,8 +6,13 @@ public class InviteUserPage {
 
     public By marketPlace = By.xpath("//div[contains(text(),'Marketplace')][@class='menu-text']");
     public By inviteUsers = By.xpath("//div[text()='Invite users']");
-    public By emailTextBox = By.xpath("//div[contains(@class,'input-fields')]//input[@type='text']");
-    public By sendInvitationButton = By.xpath("//span[normalize-space()='Send']");
-    public By successMessage = By.xpath("//snack-bar[contains(text(),'invitation') or contains(text(),'sent')]");
-    public By validationMessage = By.xpath("//*[contains(text(),'invalid') or contains(text(),'email')]");
+    public By sendInvitationButton = By.xpath("//action-button[@class='d-inline-block button']/child::button");
+    public By successMessage = By.xpath("//ui-root[@class='flex-grow-1 d-flex root']/child::snack-bar");
+    public By validationMessage = By.xpath("//div[@class='notification-message']");
+    
+
+    public By emailtextbox = By.xpath("(//div[@class='input-fields']//input)[1]");
+
+
+
 }

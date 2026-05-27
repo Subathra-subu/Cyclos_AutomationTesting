@@ -57,5 +57,16 @@ public class UserInviteSteps {
     public void proper_validation_message_should_be_displayed() {
         Assert.assertTrue(inviteActions.isValidationMessageDisplayed());
     }
+    
+    @When("the user clicks on Add email button a few times")
+    public void the_user_clicks_on_add_email_button_a_few_times() {
+        // Write code here that turns the phrase above into concrete actions
+        inviteActions.clickAddEmailButton();
+    }
+    @When("User enters valid email in each field")
+    public void user_enters_valid_email_in_each_field() {
+        // Write code here that turns the phrase above into concrete actions
+        inviteActions.enterEmailInMultipleFields();
+    }
 }
 

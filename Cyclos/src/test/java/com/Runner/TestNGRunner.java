@@ -18,7 +18,8 @@ import io.cucumber.testng.CucumberOptions;
 		monochrome = true,
 
 		publish = false,
-
+       
+		tags="@multipleinvite",
 	
 		plugin = {
 
@@ -37,7 +38,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }
