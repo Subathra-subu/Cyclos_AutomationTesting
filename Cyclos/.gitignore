@@ -40,3 +40,4 @@ Downloads/
 # OS Files
 .DS_Store
 Thumbs.db
+/bin/

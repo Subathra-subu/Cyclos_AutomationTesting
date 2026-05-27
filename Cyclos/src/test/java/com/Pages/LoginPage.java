@@ -16,7 +16,7 @@ public class LoginPage {
 	
 	public By userRequiredMessage = By.xpath("//div[contains(text(),'This field is required')]");
 	
-	public By passwordRequiredMessage = By.xpath("//div[contains(text(),'This field is required')]");
+	public By passwordRequiredMessage = By.xpath("//div[@class='input-group']/following-sibling::*");
 	
 	
 

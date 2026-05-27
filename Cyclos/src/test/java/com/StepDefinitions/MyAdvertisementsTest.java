@@ -72,8 +72,29 @@ public class MyAdvertisementsTest {
 		actions.clickSave();
 
 		Assert.assertTrue(actions.validateMessage().contains("was saved"));
+	}
+
+	@When("User enters advertisement details")
+	public void user_enters_advertisement_details(DataTable dataTable) {
+
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
+
+		actions.clickNewAdvertisement();
+
+		actions.enterTitle(data.get("title"));
+
+		actions.selectCategory(data.get("category"));
+
+		actions.enterPrice(data.get("price"));
+
+		actions.selectFromDate(data.get("fromDate"));
+
+		actions.selectToDate(data.get("toDate"));
+
+		actions.enterDescription(data.get("description"));
 
 	}
+
 
 	@When("User searches advertisement mentioned in the CSV file")
 	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
