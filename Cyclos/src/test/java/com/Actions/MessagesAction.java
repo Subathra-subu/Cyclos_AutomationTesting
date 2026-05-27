@@ -14,7 +14,7 @@ public class MessagesAction extends BaseAction {
 		try {
 
 			waitForVisibility(messagesPage.messageIcon);
-			click(messagesPage.messageIcon);
+			jsClick(messagesPage.messageIcon);
 
 			HelperClass.log.info("Clicked Message icon successfully");
 		}
@@ -33,7 +33,7 @@ public class MessagesAction extends BaseAction {
 
 			waitForVisibility(messagesPage.newMessageLink);
 
-			click(messagesPage.newMessageLink);
+			jsClick(messagesPage.newMessageLink);
 
 			HelperClass.log.info("Clicked New Message link");
 		}

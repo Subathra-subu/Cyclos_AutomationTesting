@@ -9,48 +9,30 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,369</td><td></td><td></td></tr>
-=======
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,300</td><td></td><td></td></tr>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">25,704</td><td></td><td></td></tr>
 </table>
-<<<<<<< HEAD
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779175902374</td><td rowspan="1">35813</td></tr></tbody>
-=======
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779184277752</td><td rowspan="1">16190</td></tr></tbody>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779898405049</td><td rowspan="1">19502</td></tr></tbody>
 </table>
-<<<<<<< HEAD
-<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can add new Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),&apos;Add new&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Add new&apos;)]&quot;}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can create new message&quot;</td><td>&quot;Subathra_25/05/2026_Error_Slayers_Messages&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.JavascriptException: javascript error: arguments[0].click is not a function
+  (Session info: chrome=148.0.7778.179)
+Build info: version: &apos;4.44.0&apos;, revision: &apos;da2039b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59487}, goog:processID: 20088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59487/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 76c4d45a6ed6fee91ba49da33138b9dd
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
-	at com.Actions.MyAdvertisementsAction.clickMyAdvertisements(MyAdvertisementsAction.java:21)
-	at com.StepDefinitions.MyAdvertisementsTest.user_clicks_advertisement_menu(MyAdvertisementsTest.java:44)
-	at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/MyAdvertisements.feature:8)
+Command: [c690fd124a9e549b1932b9b8fbd3f04c, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.0437953AD6A06BBDC1A2700437DFB808.d.79A7ADF97BAFEC074DC63371C357BD3E.e.74}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59810}, goog:processID: 26500, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59810/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c690fd124a9e549b1932b9b8fbd3f04c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:529)
+	at com.Actions.BaseAction.jsClick(BaseAction.java:179)
+	at com.Actions.MessagesAction.clickMessageIcon(MessagesAction.java:17)
+	at com.StepDefinitions.MessagesTest.user_clicks_message_icon(MessagesTest.java:16)
+	at ✽.User clicks Message icon(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Messages.feature:7)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-=======
-<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify print functionality in payment request details page&quot;</td><td>&quot;Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">289,591</td><td></td><td></td></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Runner.TestNGRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779801874618</td><td rowspan="1">281461</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.Runner.TestNGRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="2">1779801874618</td><td rowspan="2">38305</td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr></tbody>
-</table>
-<h2>Default test</h2><h3 id="m0">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can Edit Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;String.contains(java.lang.CharSequence)&quot; because the return value of &quot;com.Actions.MyAdvertisementsAction.validateMessage()&quot; is null
-	at com.StepDefinitions.MyAdvertisementsTest.user_should_successfully_update_advertisement(MyAdvertisementsTest.java:116)
-	at ✽.User should successfully update advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:25)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can add new Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.Runner.TestNGRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify user can remove Advertisement&quot;</td><td>&quot;Subathra_18/05/2026_Error_Slayers_My Advertisements&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
 </body>
 </html>

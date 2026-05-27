@@ -1,182 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
-=======
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2026-05-19T13:01:40 IST" name="Default suite" finished-at="2026-05-19T13:02:21 IST" duration-ms="41369">
-=======
-  <suite started-at="2026-05-19T15:21:16 IST" name="Default suite" finished-at="2026-05-19T15:21:36 IST" duration-ms="19300">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-05-26T18:54:32 IST" name="Default suite" finished-at="2026-05-26T18:59:22 IST" duration-ms="289591">
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
+  <suite started-at="2026-05-27T21:43:23 IST" name="Default suite" finished-at="2026-05-27T21:43:48 IST" duration-ms="25704">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <test started-at="2026-05-19T13:01:40 IST" name="Default test" finished-at="2026-05-19T13:02:21 IST" duration-ms="41369">
-=======
-    <test started-at="2026-05-19T15:21:16 IST" name="Default test" finished-at="2026-05-19T15:21:36 IST" duration-ms="19300">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+    <test started-at="2026-05-27T21:43:23 IST" name="Default test" finished-at="2026-05-27T21:43:48 IST" duration-ms="25704">
       <class name="com.Runner.TestNGRunner">
-<<<<<<< HEAD
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:01:40 IST" name="setUpClass" finished-at="2026-05-19T13:01:42 IST" duration-ms="1627" status="PASS">
-=======
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:16 IST" name="setUpClass" finished-at="2026-05-19T15:21:17 IST" duration-ms="957" status="PASS">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-27T21:43:23 IST" name="setUpClass" finished-at="2026-05-27T21:43:25 IST" duration-ms="1726" status="PASS">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA[org.testng.TestRunner@61f377d1]]>
-=======
-                <![CDATA[org.testng.TestRunner@36c7cbe1]]>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-    <test started-at="2026-05-26T18:54:32 IST" name="Default test" finished-at="2026-05-26T18:59:22 IST" duration-ms="289591">
-      <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:32 IST" name="setUpClass" finished-at="2026-05-26T18:54:34 IST" duration-ms="1709" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@a1691c0]]>
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
+                <![CDATA[org.testng.TestRunner@15986dd5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:01:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:02:18 IST" duration-ms="35813" status="FAIL">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T15:21:33 IST" duration-ms="16190" status="PASS">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-27T21:43:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-27T21:43:44 IST" duration-ms="19502" status="FAIL">
           <params>
             <param index="0">
               <value>
-<<<<<<< HEAD
-                <![CDATA["Verify user can add new Advertisement"]]>
-=======
-                <![CDATA["Verify print functionality in payment request details page"]]>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:55:12 IST" duration-ms="38305" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can add new Advertisement"]]>
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
+                <![CDATA["Verify user can create new message"]]>
               </value>
             </param>
             <param index="1">
               <value>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
-=======
-                <![CDATA["Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
+                <![CDATA["Subathra_25/05/2026_Error_Slayers_Messages"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="org.openqa.selenium.JavascriptException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),'Add new')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Add new')]"}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
+              <![CDATA[javascript error: arguments[0].click is not a function
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59487}, goog:processID: 20088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59487/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 76c4d45a6ed6fee91ba49da33138b9dd]]>
+Command: [c690fd124a9e549b1932b9b8fbd3f04c, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.0437953AD6A06BBDC1A2700437DFB808.d.79A7ADF97BAFEC074DC63371C357BD3E.e.74}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59810}, goog:processID: 26500, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59810/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c690fd124a9e549b1932b9b8fbd3f04c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //*[contains(text(),'Add new')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Add new')]"}.
-(tried for 20 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
+              <![CDATA[org.openqa.selenium.JavascriptException: javascript error: arguments[0].click is not a function
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.44.0', revision: 'da2039b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59487}, goog:processID: 20088, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59487/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 76c4d45a6ed6fee91ba49da33138b9dd
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at com.Actions.BaseAction.waitForVisibility(BaseAction.java:67)
-at com.Actions.MyAdvertisementsAction.clickMyAdvertisements(MyAdvertisementsAction.java:21)
-at com.StepDefinitions.MyAdvertisementsTest.user_clicks_advertisement_menu(MyAdvertisementsTest.java:44)
-at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/features/MyAdvertisements.feature:8)
+Command: [c690fd124a9e549b1932b9b8fbd3f04c, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.0437953AD6A06BBDC1A2700437DFB808.d.79A7ADF97BAFEC074DC63371C357BD3E.e.74}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59810}, goog:processID: 26500, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59810/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c690fd124a9e549b1932b9b8fbd3f04c
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:529)
+at com.Actions.BaseAction.jsClick(BaseAction.java:179)
+at com.Actions.MessagesAction.clickMessageIcon(MessagesAction.java:17)
+at com.StepDefinitions.MessagesTest.user_clicks_message_icon(MessagesTest.java:16)
+at ✽.User clicks Message icon(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Messages.feature:7)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.JavascriptException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:02:18 IST" name="tearDownClass" finished-at="2026-05-19T13:02:21 IST" duration-ms="3774" status="PASS">
-=======
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:33 IST" name="tearDownClass" finished-at="2026-05-19T15:21:36 IST" duration-ms="2083" status="PASS">
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:55:11 IST" duration-ms="36862" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can remove Advertisement"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:59:16 IST" duration-ms="281461" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can Edit Advertisement"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.Actions.MyAdvertisementsAction.validateMessage()" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.Actions.MyAdvertisementsAction.validateMessage()" is null
-at com.StepDefinitions.MyAdvertisementsTest.user_should_successfully_update_advertisement(MyAdvertisementsTest.java:116)
-at ✽.User should successfully update advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:25)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:59:16 IST" name="tearDownClass" finished-at="2026-05-26T18:59:22 IST" duration-ms="6253" status="PASS">
->>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-27T21:43:44 IST" name="tearDownClass" finished-at="2026-05-27T21:43:48 IST" duration-ms="4306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
