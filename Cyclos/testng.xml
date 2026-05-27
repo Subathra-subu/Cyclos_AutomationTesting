@@ -12,5 +12,4 @@
       <class name="com.Runner.TestNGRunner"/>
     </classes>
   </test>
-
 </suite>

@@ -28,3 +28,43 @@ Examples:
     | @gmail.com |
     | test@gmail |
     | test.com   |
+    
+    
+    
+    @27/05/2026   @multipleinvite
+  Scenario: verify user can invite multiple users 
+      When User navigates to Invite Users page
+      And the user clicks on Add email button a few times
+      And User enters valid email in each field
+      And User clicks on submit invite button  
+      Then Invite should be sent successfully
+         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+

@@ -5,10 +5,14 @@ Background:
     Given that the user launches the application
     When the user clicks the Register link
 <<<<<<< HEAD
+  	
+=======
+<<<<<<< HEAD
     
 =======
   	
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
   	@ExistRegister
   	Scenario: Register with Existing credentials
 	When the user enters the already existing Login name
