@@ -38,7 +38,8 @@ public class ExcelData {
                 "src/test/resources/testData/ExcelData.xlsx",
                 "valid_vovucher");
     }
-
+    
+    
     @DataProvider(name = "businessDirectory", parallel = true)
 
     public Object[][] businessDirectoryData() throws IOException {
@@ -46,6 +47,16 @@ public class ExcelData {
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
                 "BusinessDirectory");
+    }
+    
+    @DataProvider(name = "advertisementFavourites", parallel = true)
+
+    public Object[][] advertisementFavourites()
+            throws IOException {
+
+        return getExcelData(
+                "src/test/resources/testData/ExcelData.xlsx",
+                "favourites_akkshee");
     }
 
     @DataProvider(name = "paymentRequestKrishna")

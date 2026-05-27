@@ -7,35 +7,34 @@ import java.util.List;
 
 public class CSVUtility {
 
-    public static List<String> getStatusData(String filePath) {
+	public static List<String> getVoucherCodes(String filePath) {
 
-        List<String> statuses = new ArrayList<>();
+		List<String> voucherCodes = new ArrayList<>();
 
-        try {
 
-            BufferedReader br =
-                    new BufferedReader(new FileReader(filePath));
+		try {
 
-            br.readLine();
+			BufferedReader br = new BufferedReader(new FileReader(filePath));
 
-            String line;
+			br.readLine();
 
-            while ((line = br.readLine()) != null) {
+			String line;
 
-                String[] data = line.split(",");
+			while ((line = br.readLine()) != null) {
 
-                statuses.add(data[0].trim());
-            }
+				String[] data = line.split(",");
 
-            br.close();
+				voucherCodes.add(data[0].trim());
+			}
 
-        }
 
-        catch (Exception e) {
+			br.close();
 
-            e.printStackTrace();
-        }
+		} catch (Exception e) {
 
-        return statuses;
-    }
+			e.printStackTrace();
+		}
+
+		return voucherCodes;
+	}
 }

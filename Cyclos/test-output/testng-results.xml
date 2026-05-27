@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
 =======
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
@@ -11,11 +12,18 @@
 =======
   <suite started-at="2026-05-19T15:21:16 IST" name="Default suite" finished-at="2026-05-19T15:21:36 IST" duration-ms="19300">
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-26T18:54:32 IST" name="Default suite" finished-at="2026-05-26T18:59:22 IST" duration-ms="289591">
+>>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <test started-at="2026-05-19T13:01:40 IST" name="Default test" finished-at="2026-05-19T13:02:21 IST" duration-ms="41369">
 =======
@@ -35,12 +43,22 @@
 =======
                 <![CDATA[org.testng.TestRunner@36c7cbe1]]>
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+    <test started-at="2026-05-26T18:54:32 IST" name="Default test" finished-at="2026-05-26T18:59:22 IST" duration-ms="289591">
+      <class name="com.Runner.TestNGRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:32 IST" name="setUpClass" finished-at="2026-05-26T18:54:34 IST" duration-ms="1709" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@a1691c0]]>
+>>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
 <<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:01:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T13:02:18 IST" duration-ms="35813" status="FAIL">
 =======
@@ -54,15 +72,26 @@
 =======
                 <![CDATA["Verify print functionality in payment request details page"]]>
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:55:12 IST" duration-ms="38305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can add new Advertisement"]]>
+>>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
               </value>
             </param>
             <param index="1">
               <value>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
 =======
                 <![CDATA["Krishnaprasath_15/06/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+>>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
               </value>
             </param>
           </params>
@@ -97,10 +126,57 @@ at ✽.User clicks Advertisement menu(file:///D:/Cyclos_Automation_Testing/Cyclo
           </reporter-output>
         </test-method> <!-- runScenario -->
 <<<<<<< HEAD
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T13:02:18 IST" name="tearDownClass" finished-at="2026-05-19T13:02:21 IST" duration-ms="3774" status="PASS">
 =======
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6950ed69]" started-at="2026-05-19T15:21:33 IST" name="tearDownClass" finished-at="2026-05-19T15:21:36 IST" duration-ms="2083" status="PASS">
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:55:11 IST" duration-ms="36862" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can remove Advertisement"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T18:59:16 IST" duration-ms="281461" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can Edit Advertisement"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Subathra_18/05/2026_Error_Slayers_My Advertisements"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.Actions.MyAdvertisementsAction.validateMessage()" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.contains(java.lang.CharSequence)" because the return value of "com.Actions.MyAdvertisementsAction.validateMessage()" is null
+at com.StepDefinitions.MyAdvertisementsTest.user_should_successfully_update_advertisement(MyAdvertisementsTest.java:116)
+at ✽.User should successfully update advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:25)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-26T18:59:16 IST" name="tearDownClass" finished-at="2026-05-26T18:59:22 IST" duration-ms="6253" status="PASS">
+>>>>>>> 3845aa8a9d87ed016a2cd6300ed0b14c1b6c7a5f
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
