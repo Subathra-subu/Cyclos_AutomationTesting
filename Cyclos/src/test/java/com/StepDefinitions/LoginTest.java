@@ -41,7 +41,7 @@ public class LoginTest {
 	@When("click submit button")
 	public void click_submit_button() {
 
-		loginAction.clickSubmitButton();
+		loginAction.click_Submit_Button();
 	}
 
 	@Then("the user should be able to see the dashboard page")
