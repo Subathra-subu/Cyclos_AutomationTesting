@@ -74,7 +74,7 @@ public class MessagesAction extends BaseAction {
 
 			click(messagesPage.userField);
 			
-			click(messagesPage.user);
+			sendKeys(messagesPage.user,"Active walking");
 			
 
 			HelperClass.log.info("Clicked UserField");

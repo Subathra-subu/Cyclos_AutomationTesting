@@ -1,4 +1,4 @@
-package src.test.java.com.Runner;
+package com.Runner;
 
 import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
