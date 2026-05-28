@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class BusinessDirectoryPage {
 
-	public By businessDirectoryMenu = By.xpath("//a[@href='/users/search']");
+	public By businessDirectoryMenu = By.xpath("//a[@href='/users/search']//parent::div[@class='quick-access-icon']");
 
 	public By keywordField = By.xpath("//input[@type='text']");
 
