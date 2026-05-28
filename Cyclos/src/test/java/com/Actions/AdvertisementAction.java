@@ -307,4 +307,68 @@ public class AdvertisementAction extends BaseAction {
             throw e;
         }
     }
+    public void searchInvalidKeyword(
+            String invalidKeyword) {
+
+        try {
+
+            waitForVisibility(
+                    advertisementPage.searchInput);
+
+            HelperClass.getDriver().findElement(
+                    advertisementPage.searchInput)
+                    .clear();
+
+            sendKeys(
+                    advertisementPage.searchInput,
+                    invalidKeyword);
+
+            HelperClass.getDriver().findElement(
+                    advertisementPage.searchInput)
+                    .sendKeys(Keys.ENTER);
+
+            HelperClass.log.info(
+                    "Entered invalid keyword : "
+                            + invalidKeyword);
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Invalid keyword search failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
+    public void verifyInvalidKeywordPopup() {
+
+        try {
+
+            waitForVisibility(
+                    advertisementPage.invalidKeywordMessage);
+
+            String actualMessage =
+                    getText(
+                            advertisementPage.invalidKeywordMessage);
+
+            Assert.assertTrue(
+                    actualMessage.toLowerCase()
+                            .contains("invalid keyword"));
+
+            HelperClass.log.info(
+                    "Invalid keyword popup validated successfully");
+
+        }
+
+        catch (Exception e) {
+
+            HelperClass.log.error(
+                    "Invalid keyword validation failed : "
+                            + e.getMessage());
+
+            throw e;
+        }
+    }
 }

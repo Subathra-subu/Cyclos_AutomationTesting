@@ -57,4 +57,3 @@ Background:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
       | The Irish Pub      | 3      | Checking a payment     | 1234      |
- 
