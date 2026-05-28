@@ -1,6 +1,10 @@
 package com.Actions;
 
 import org.testng.Assert;
+import java.util.List;
+import java.util.Map;
+
+import io.cucumber.datatable.DataTable;
 
 import com.Pages.ReceivePaymentPage;
 import com.Utilities.HelperClass;
@@ -95,5 +99,37 @@ public class ReceivePaymentActions extends BaseAction {
         sendKeys(receivePaymentPage.amount, rupee);
         HelperClass.log.info("Entered valid Amount : " + rupee);
     }
+    public void verifyExceededAmountValidationMessage() {
+        try {
+            waitForVisibility(receivePaymentPage.exceededAmountValidationMessage);
+            String actualMessage =getText(receivePaymentPage.exceededAmountValidationMessage);
+            Assert.assertTrue(actualMessage.contains("Amount must be less or equal to"),"Exceeded amount validation message not displayed");
+            HelperClass.log.info("Exceeded amount validation message displayed successfully");
+        }
+        catch (Exception e) {
+            HelperClass.log.error("Failed to validate exceeded amount message : " + e.getMessage());
+            throw e;
+        }
+    }
+    public void enterExceededPaymentDetails(DataTable dataTable) {
+        try {
+            List<Map<String, String>> data =dataTable.asMaps(String.class,String.class);
+            for (Map<String, String> row : data) {
+                String name =row.get("Name");
+                String amount = row.get("Amount");
+                String description = row.get("Description");
+                waitForVisibility(receivePaymentPage.user);
+                sendKeys(receivePaymentPage.user,name);
+                click(receivePaymentPage.userClick);
+                sendKeys(receivePaymentPage.amount,amount);
+                sendKeys(receivePaymentPage.description,description);
+                HelperClass.log.info("Entered exceeded payment details successfully");
+            }
+        }
 
+        catch (Exception e) {
+            HelperClass.log.error("Failed to enter exceeded payment details : " + e.getMessage());
+            throw e;
+        }
+    }
 }

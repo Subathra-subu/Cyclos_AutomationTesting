@@ -45,4 +45,11 @@ public class ReceivePaymentPage {
 
     public By exceededLimit =
             By.xpath("//*[contains(text(),'maximum of payments per day')]");
+    
+    public By exceededAmountValidationMessage =
+            By.xpath("//div[contains(text(),'Amount must be less or equal to')]");
+
+    public By nextButton =
+            By.xpath("//span[text()='Next']");
+    
 }
