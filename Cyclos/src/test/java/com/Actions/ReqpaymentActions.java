@@ -218,5 +218,4 @@ public class ReqpaymentActions extends BaseAction {
             addPaymentRequestWithEmptyDate(receiver, amountVal);
         }
     }
-
 }

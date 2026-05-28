@@ -3,7 +3,6 @@ package com.Pages;
 import org.openqa.selenium.By;
 
 public class PaymentRequestPage {
-
     public By Banking = By.xpath("//div[@class='menu-text'][normalize-space()='Banking']");
     public By paymentrequest = By.xpath("//div[text()='Payment requests']");
     public By sendrequest = By.xpath("//div[normalize-space()='Send a new request']");

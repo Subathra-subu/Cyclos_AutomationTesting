@@ -46,6 +46,3 @@ Feature: Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin
    When the logs into the application with valid credentials
    When the clicks logout link
    Then the user should be able to logout the application successfully
-   
-   
-   

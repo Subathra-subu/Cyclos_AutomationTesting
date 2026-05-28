@@ -130,6 +130,10 @@ public class LoginAction extends BaseAction {
         Hooks.logger.error("Unable to login after {} attempts", maxRetries, lastException);
         throw new RuntimeException("Login Failed");
     }
+    
+    public void click_Submit_Button() {
+    	click(loginPage.loginButton);
+    }
 
     // ── Invalid login helper ──────────────────────────────────────────────────
     public void enterinvalidUsernameandPassword(String name, String password) {

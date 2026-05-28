@@ -39,4 +39,3 @@ public class PaymentToUserPage {
 
 	public By numberOfInstallments = By.xpath("//label[contains(.,'installments')]/following-sibling::div//input");
 }
-

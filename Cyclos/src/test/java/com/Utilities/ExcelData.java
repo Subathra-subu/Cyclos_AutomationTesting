@@ -36,7 +36,7 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
-                "validVoucher");
+                "valid_vovucher");
     }
     
     
@@ -56,11 +56,7 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
-
                 "favourites_akkshee");
-
-               
-
     }
 
     @DataProvider(name = "paymentRequestKrishna")

@@ -17,11 +17,13 @@ import io.cucumber.testng.CucumberOptions;
 
 		publish = false,
 
+
+
 	
 		plugin = {
 
 				"pretty",
-
+        
 				"html:target/CucumberReports/Cucumber.html",
 
 				"json:target/CucumberReports/Cucumber.json",
