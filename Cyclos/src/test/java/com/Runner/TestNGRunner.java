@@ -9,11 +9,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features/Messages.feature",
+		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
 
-		tags="@Subathra",
+		tags="@Akksheetha",
 
 		monochrome = true,
 
@@ -35,7 +35,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     
     @Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         return super.scenarios();
     }
