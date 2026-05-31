@@ -14,3 +14,25 @@ This feature file is used to verify Messages functionality
     And User enters the required details
     And User clicks on Send button
     Then User should see popup message "The message was successfully sent"
+    
+    @InboxMessages
+	Scenario: Verify user can view Inbox messages
+	
+	When User clicks the Inbox button
+    Then User should see Inbox messages
+    
+    @SentMessages
+	Scenario: Verify user can view Sent messages
+
+    When User clicks on Sent button
+    Then User should see Sent messages
+    
+    @TrashMessages
+	Scenario: Verify user can view Trash messages
+
+    When User clicks on Trash button
+    Then User should see Trash messages
+    
+    
+    
+    

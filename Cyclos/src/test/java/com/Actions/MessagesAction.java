@@ -53,14 +53,13 @@ public class MessagesAction extends BaseAction {
 			waitForVisibility(messagesPage.recipientField);
 
 			click(messagesPage.recipientField);
-			
+
 			waitForVisibility(messagesPage.userField);
 
 			click(messagesPage.userField);
 
 			HelperClass.log.info("Clicked SendTo");
 		}
-
 
 		catch (Exception e) {
 
@@ -69,24 +68,21 @@ public class MessagesAction extends BaseAction {
 			throw e;
 		}
 	}
-	
+
 	public void UserFeild() {
 
 		try {
 
-			
 			waitForVisibility(messagesPage.user);
-			
+
 			click(messagesPage.user);
-			
+
 			waitForVisibility(messagesPage.user_name);
-			
+
 			click(messagesPage.user_name);
-			
 
 			HelperClass.log.info("Clicked UserField");
 		}
-
 
 		catch (Exception e) {
 
@@ -99,14 +95,14 @@ public class MessagesAction extends BaseAction {
 	public void clickSendButton() {
 
 		try {
-			
+
 			waitForVisibility(messagesPage.sendButton);
-			
+
 			jsClick(messagesPage.subjectField);
-			
-			sendKeys(messagesPage.subjectField,"About Walking");
-			
-			sendKeys(messagesPage.textField,"Active Walking...");
+
+			sendKeys(messagesPage.subjectField, "About Walking");
+
+			sendKeys(messagesPage.textField, "Active Walking...");
 
 			waitForVisibility(messagesPage.sendButton);
 
@@ -142,5 +138,48 @@ public class MessagesAction extends BaseAction {
 
 			throw e;
 		}
+	}
+
+	public void verifyInboxMessages() {
+
+		Assert.assertTrue(isDisplayed(messagesPage.activeInboxTab));
+
+		HelperClass.log.info("Inbox tab displayed successfully");
+	}
+
+	public void clickSentTab() {
+
+		click(messagesPage.sentTab);
+
+		HelperClass.log.info("Clicked Sent tab");
+	}
+
+	public void verifySentMessages() {
+
+		Assert.assertTrue(isDisplayed(messagesPage.activeSentTab));
+
+		HelperClass.log.info("Sent tab displayed successfully");
+	}
+
+	public void clickTrashTab() {
+
+		click(messagesPage.trashTab);
+
+		HelperClass.log.info("Clicked Trash tab");
+	}
+
+	public void verifyTrashMessages() {
+
+		Assert.assertTrue(isDisplayed(messagesPage.activeTrashTab));
+
+		HelperClass.log.info("Trash tab displayed successfully");
+	}
+
+	public void clickInboxTab() {
+		
+		click(messagesPage.inboxTab);
+
+		HelperClass.log.info("Clicked inbox tab");
+		
 	}
 }
