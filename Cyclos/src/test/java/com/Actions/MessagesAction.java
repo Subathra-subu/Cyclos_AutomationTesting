@@ -83,11 +83,6 @@ public class MessagesAction extends BaseAction {
 			
 			click(messagesPage.user_name);
 			
-//			sendKeys(messagesPage.user,"Active walking");
-//			
-//			pressEnter(messagesPage.user);
-			
-			
 
 			HelperClass.log.info("Clicked UserField");
 		}
