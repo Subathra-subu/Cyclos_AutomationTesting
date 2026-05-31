@@ -199,8 +199,7 @@ public class AdvertisementAction extends BaseAction {
         	}
         	else {
 
-        	    Assert.fail(
-        	            "Favourite success message not displayed");
+        	    Assert.fail("Favourite success message not displayed in the page");
         	}
         }
 
