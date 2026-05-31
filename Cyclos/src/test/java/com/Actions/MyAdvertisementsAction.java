@@ -159,14 +159,32 @@ public class MyAdvertisementsAction extends BaseAction {
         }
     }
 
-    public void clickItem() {
+    public boolean clickItem() {
 
         try {
-        	waitForVisibility(advertisementPage.item);
+
+            if (isDisplayed(advertisementPage.notFound)) {
+
+                String message = getText(advertisementPage.notFound);
+
+                if (message.contains("No results match the search criteria")) {
+
+                    Hooks.logger.warn("No advertisements available");
+
+                    return false; 
+                }
+            }
+
+            waitForVisibility(advertisementPage.item);
             click(advertisementPage.item);
-        } 
+
+            return true;
+        }
+
         catch (Exception e) {
+
             Hooks.logger.error("Unable to click item", e);
+            return false;
         }
     }
 
@@ -223,4 +241,6 @@ public class MyAdvertisementsAction extends BaseAction {
             Hooks.logger.error("Unable to assert removal message", e);
         }
     }
+
    }
+

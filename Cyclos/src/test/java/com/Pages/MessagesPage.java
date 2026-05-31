@@ -1,0 +1,28 @@
+package com.Pages;
+
+import org.openqa.selenium.By;
+
+public class MessagesPage {
+
+	public By messageIcon = By.xpath("//a[@id='messages-link']");
+
+	public By newMessageLink = By.xpath("//div[contains(text(),'New message')]");
+
+	public By recipientField = By.xpath("//button[@class='form-control text-left custom-select w-100']");
+	
+	public By userField =By.xpath("//div[@class='dropdown-menu show']/child::a[1]");
+	
+//	public By user = By.xpath("//input[@placeholder='Type to search']");
+	
+	public By user = By.xpath("//button[@class='btn btn-icon ml-2']");
+	
+	public By user_name = By.xpath("//a[normalize-space()='Active Walking']");
+
+	public By subjectField = By.xpath("//input[contains(@class,'form-control') and contains(@class,'w-100')]");
+	
+	public By textField = By.xpath("//div[@class='editor']");
+
+	public By sendButton = By.xpath("//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']");
+
+	public By successPopup = By.xpath("//snack-bar[normalize-space()='The message was successfully sent']");
+}

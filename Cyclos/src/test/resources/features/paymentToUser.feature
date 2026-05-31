@@ -52,4 +52,4 @@ Description:This feature file is used to verify the payment to user functionalit
     When User enters monthly installment payment details
       | username       | amount | type                 | installments | description                 |
       | Active Walking | 200    | Monthly installments | 5            | Monthly installment payment |
-    Then Monthly installment payment should be scheduled successfullyw
+    Then Monthly installment payment should be scheduled successfully
