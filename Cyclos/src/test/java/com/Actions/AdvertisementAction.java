@@ -190,9 +190,18 @@ public class AdvertisementAction extends BaseAction {
 
         try {
 //            waitForVisibility(advertisementPage.advertisementCards);
-        	String msg = getText(advertisementPage.favouriteSuccessMessage);
-        	Assert.assertTrue(msg.contains("favorite"));
-            HelperClass.log.info("Advertisements added to favourites successfully");
+        	if (isDisplayed(advertisementPage.favouriteSuccessMessage)) {
+
+        	    String text = getText(advertisementPage.favouriteSuccessMessage);
+
+        	    Assert.assertTrue(
+        	            text.contains("favourite"));
+        	}
+        	else {
+
+        	    Assert.fail(
+        	            "Favourite success message not displayed");
+        	}
         }
 
         catch (Exception e) {
