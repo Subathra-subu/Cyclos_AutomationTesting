@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.Pages.AdvertisementPage;
+import com.Utilities.CSVUtility;
 import com.Utilities.ExcelData;
 import com.Utilities.HelperClass;
 
@@ -110,22 +111,38 @@ public class AdvertisementAction extends BaseAction {
             throw e;
         }
     }
-    public void searchByKeyword(String keyword) {
+    public void searchInvalidAdvertisementKeyword() {
 
         try {
-            waitForVisibility(advertisementPage.searchInput);
-            sendKeys(advertisementPage.searchInput,keyword);
-            HelperClass.log.info("Searched keyword : " + keyword);
 
-        }
+            List<String> keywords =
+                    CSVUtility.getVoucherCodes(
+                            "src/test/resources/testData/InputData.csv");
+            
+            System.out.println("CSV Value = " + keywords.get(0));
 
-        catch (StaleElementReferenceException e) {
-            HelperClass.log.info("Handled stale element for search field");
-            sendKeys(advertisementPage.searchInput,keyword);
+            String keyword =
+                    keywords.get(0);
+
+            waitForVisibility(
+                    advertisementPage.searchInput);
+
+            sendKeys(
+                    advertisementPage.searchInput,
+                    keyword);
+            
+
+            HelperClass.log.info(
+                    "Searched invalid advertisement keyword : "
+                            + keyword);
         }
 
         catch (Exception e) {
-            HelperClass.log.error("Failed to search keyword : " + e.getMessage());
+
+            HelperClass.log.error(
+                    "Failed to search invalid keyword : "
+                            + e.getMessage());
+
             throw e;
         }
     }
@@ -306,5 +323,56 @@ public class AdvertisementAction extends BaseAction {
             HelperClass.log.error("Favorites filter validation failed : " + e.getMessage());
             throw e;
         }
+    }
+    public void searchInvalidKeyword(
+            String invalidKeyword) {
+
+        try {
+
+            waitForVisibility(advertisementPage.searchInput);
+            HelperClass.getDriver().findElement(advertisementPage.searchInput).clear();
+            sendKeys(advertisementPage.searchInput,invalidKeyword);
+            HelperClass.getDriver().findElement(advertisementPage.searchInput).sendKeys(Keys.ENTER);
+            HelperClass.log.info("Entered invalid keyword : " + invalidKeyword);
+        }
+
+        catch (Exception e) {
+            HelperClass.log.error("Invalid keyword search failed : " + e.getMessage());
+            throw e;
+        }
+    }
+    public void verifyInvalidKeywordPopup() {
+        try {
+            waitForVisibility(advertisementPage.invalidKeywordMessage);
+            String actualMessage =getText(advertisementPage.invalidKeywordMessage);
+            Assert.assertTrue(actualMessage.toLowerCase().contains("invalid keyword"));
+            HelperClass.log.info("Invalid keyword popup validated successfully");
+        }
+
+        catch (Exception e) {
+            HelperClass.log.error("Invalid keyword validation failed : " + e.getMessage());
+            throw e;
+        }
+    }
+    public void communityListClick() {
+    	try {
+    		waitForVisibility(advertisementPage.searchInput);
+    		click(advertisementPage.communityList);
+    	}
+    	catch(Exception e) {
+    		HelperClass.log.error("Failed to click the community in advertisement page" + e.getMessage());
+    		throw e;
+    	}
+    }
+    public void verifyAdvertisementsList() {
+    	try {
+    		waitForVisibility(advertisementPage.advertisementCards);
+    		Assert.assertTrue(isDisplayed(advertisementPage.favouriteIcon));
+            HelperClass.log.info("Advetisements List in page was validated Successfully");
+    	}
+    	catch(Exception e){
+    		HelperClass.log.error("Failed to list Advertisements list" + e.getMessage());
+    		throw e;
+    	}
     }
 }

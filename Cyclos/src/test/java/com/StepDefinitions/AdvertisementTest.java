@@ -48,11 +48,10 @@ public class AdvertisementTest {
         advertisementAction.verifySearchResults();
     }
     
-    @When("user searches for keyword {string}")
-    public void user_searches_for_keyword(
-            String keyword) {
+    @When("user searches advertisement with not available products keyword")
+    public void user_searches_advertisement_with_not_available_products_keyword() {
 
-        advertisementAction.searchByKeyword(keyword);
+        advertisementAction.searchInvalidAdvertisementKeyword();
     }
 
     @Then("no matching advertisements should be displayed")
@@ -112,5 +111,27 @@ public class AdvertisementTest {
     public void only_favourite_advertisements_should_be_displayed() {
 
         advertisementAction.verifyFavouriteFilteredAdvertisements();
+    }
+    
+    @When("user searches advertisement with invalid keyword")
+    public void user_searches_advertisement_with_invalid_keyword() {
+
+        advertisementAction
+                .searchInvalidKeyword("@@@@@");
+    }
+
+    @Then("invalid keyword search result should be displayed")
+    public void invalid_keyword_search_result_should_be_displayed() {
+
+        advertisementAction
+                .verifyInvalidKeywordPopup();
+    }
+    @When("user clicks any one of the listed advertisement in the page")
+    public void user_clicks_any_one_of_the_listed_advertisement_in_the_page() {
+    	advertisementAction.communityListClick();
+    }
+    @Then("the respective advertisement details should be shown successfully")
+    public void the_respective_advertisement_details_should_be_shown_successfully() {
+    	
     }
 }

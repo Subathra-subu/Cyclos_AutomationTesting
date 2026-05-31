@@ -22,5 +22,6 @@ public class AdvertisementPage {
     public By minPriceField = By.xpath("(//input[@type='tel'])[1]");
     public By maxPriceField = By.xpath("(//input[@type='tel'])[2]");
     public By withImagesFilter = By.xpath("//*[contains(text(),'With images')]");
-    
+    public By invalidKeywordMessage = By.xpath("//*[contains(text(),'invalid keyword') or contains(text(),'Invalid keyword')]");
+    public By communityList = By.xpath("//page-content/descendant::a[1]");
 }
