@@ -1,5 +1,5 @@
 @Akksheetha @Advertisement
-Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
+Feature: Akksheetha_2026-05-15_Error_Slayers_Advertisement.feature
 
   Description:
   Validate advertisement search functionality in Marketplace.
@@ -51,3 +51,9 @@ Feature: Akksheetha_2026-05-13_Error_Slayers_Advertisement.feature
   Scenario: Search advertisement with invalid keyword
   When user searches advertisement with invalid keyword
   Then invalid keyword search result should be displayed
+  
+  @MainPageListing
+  
+  Scenario: Verify the Advertisement pageadvertisements list 
+  When user clicks any one of the listed advertisement in the page 
+  Then the respective advertisement details should be shown successfully

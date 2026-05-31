@@ -312,63 +312,50 @@ public class AdvertisementAction extends BaseAction {
 
         try {
 
-            waitForVisibility(
-                    advertisementPage.searchInput);
-
-            HelperClass.getDriver().findElement(
-                    advertisementPage.searchInput)
-                    .clear();
-
-            sendKeys(
-                    advertisementPage.searchInput,
-                    invalidKeyword);
-
-            HelperClass.getDriver().findElement(
-                    advertisementPage.searchInput)
-                    .sendKeys(Keys.ENTER);
-
-            HelperClass.log.info(
-                    "Entered invalid keyword : "
-                            + invalidKeyword);
-
+            waitForVisibility(advertisementPage.searchInput);
+            HelperClass.getDriver().findElement(advertisementPage.searchInput).clear();
+            sendKeys(advertisementPage.searchInput,invalidKeyword);
+            HelperClass.getDriver().findElement(advertisementPage.searchInput).sendKeys(Keys.ENTER);
+            HelperClass.log.info("Entered invalid keyword : " + invalidKeyword);
         }
 
         catch (Exception e) {
-
-            HelperClass.log.error(
-                    "Invalid keyword search failed : "
-                            + e.getMessage());
-
+            HelperClass.log.error("Invalid keyword search failed : " + e.getMessage());
             throw e;
         }
     }
     public void verifyInvalidKeywordPopup() {
-
         try {
-
-            waitForVisibility(
-                    advertisementPage.invalidKeywordMessage);
-
-            String actualMessage =
-                    getText(
-                            advertisementPage.invalidKeywordMessage);
-
-            Assert.assertTrue(
-                    actualMessage.toLowerCase()
-                            .contains("invalid keyword"));
-
-            HelperClass.log.info(
-                    "Invalid keyword popup validated successfully");
-
+            waitForVisibility(advertisementPage.invalidKeywordMessage);
+            String actualMessage =getText(advertisementPage.invalidKeywordMessage);
+            Assert.assertTrue(actualMessage.toLowerCase().contains("invalid keyword"));
+            HelperClass.log.info("Invalid keyword popup validated successfully");
         }
 
         catch (Exception e) {
-
-            HelperClass.log.error(
-                    "Invalid keyword validation failed : "
-                            + e.getMessage());
-
+            HelperClass.log.error("Invalid keyword validation failed : " + e.getMessage());
             throw e;
         }
+    }
+    public void communityListClick() {
+    	try {
+    		waitForVisibility(advertisementPage.searchInput);
+    		click(advertisementPage.communityList);
+    	}
+    	catch(Exception e) {
+    		HelperClass.log.error("Failed to click the community in advertisement page" + e.getMessage());
+    		throw e;
+    	}
+    }
+    public void verifyAdvertisementsList() {
+    	try {
+    		waitForVisibility(advertisementPage.advertisementCards);
+    		Assert.assertTrue(isDisplayed(advertisementPage.favouriteIcon));
+            HelperClass.log.info("Advetisements List in page was validated Successfully");
+    	}
+    	catch(Exception e){
+    		HelperClass.log.error("Failed to list Advertisements list" + e.getMessage());
+    		throw e;
+    	}
     }
 }
