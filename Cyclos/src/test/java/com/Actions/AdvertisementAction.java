@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.Pages.AdvertisementPage;
+import com.Utilities.CSVUtility;
 import com.Utilities.ExcelData;
 import com.Utilities.HelperClass;
 
@@ -110,22 +111,38 @@ public class AdvertisementAction extends BaseAction {
             throw e;
         }
     }
-    public void searchByKeyword(String keyword) {
+    public void searchInvalidAdvertisementKeyword() {
 
         try {
-            waitForVisibility(advertisementPage.searchInput);
-            sendKeys(advertisementPage.searchInput,keyword);
-            HelperClass.log.info("Searched keyword : " + keyword);
 
-        }
+            List<String> keywords =
+                    CSVUtility.getVoucherCodes(
+                            "src/test/resources/testData/InputData.csv");
+            
+            System.out.println("CSV Value = " + keywords.get(0));
 
-        catch (StaleElementReferenceException e) {
-            HelperClass.log.info("Handled stale element for search field");
-            sendKeys(advertisementPage.searchInput,keyword);
+            String keyword =
+                    keywords.get(0);
+
+            waitForVisibility(
+                    advertisementPage.searchInput);
+
+            sendKeys(
+                    advertisementPage.searchInput,
+                    keyword);
+            
+
+            HelperClass.log.info(
+                    "Searched invalid advertisement keyword : "
+                            + keyword);
         }
 
         catch (Exception e) {
-            HelperClass.log.error("Failed to search keyword : " + e.getMessage());
+
+            HelperClass.log.error(
+                    "Failed to search invalid keyword : "
+                            + e.getMessage());
+
             throw e;
         }
     }

@@ -16,10 +16,10 @@ Feature: Akksheetha_2026-05-15_Error_Slayers_Advertisement.feature
     Then relevant advertisements should be displayed
     
   @InvalidAdvertisementSearch
- Scenario: Verify no result message for invalid keyword search
+Scenario: Verify no result message for invalid keyword search
 
-  When user searches for keyword "xyz123"
-  Then no matching advertisements should be displayed
+    When user searches advertisement with not available products keyword
+    Then no matching advertisements should be displayed
   
   @AddAdvertisementFavourites
   Scenario: Add and remove advertisements to favourites
