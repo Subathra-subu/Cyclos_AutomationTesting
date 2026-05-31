@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 27 22:18:52 IST 2026</td>
+<td>Started on:</td><td>Sun May 31 13:49:46 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>2 seconds (2129 ms)</td>
+<tr><td>Total time:</td><td>47 seconds (47070 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,108 +76,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.setUpClass()'><b>setUpClass</b><br>Test class: com.Runner.TestNGRunner<br>Parameters: org.testng.TestRunner@4e2c95ee</td>
-<td><div><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyVouchers.feature
-(53:1): expected: #EOF, #TableRow, #TagLine, #ExamplesLine, #ScenarioLine, #RuleLine, #Comment, #Empty, got &apos;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD&apos;
-(63:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;=======&apos;
-(66:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch &apos;main&apos; of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git&apos;
-(67:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Verify voucher code search using CSV data&apos;
-(68:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When the user enter the valid voucher code &quot;&lt;code&gt;&quot;&apos;
-(69:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;And the user click the result&apos;
-(70:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then the user should seen the Qr code code&apos;
-(72:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty
-	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
-	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
-	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
-	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:82)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:67)
-	at java.base/java.nio.file.Files.walkFileTree(Files.java:2799)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:61)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:54)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:34)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:125)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1508059488", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1508059488'><pre>io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyVouchers.feature
-(53:1): expected: #EOF, #TableRow, #TagLine, #ExamplesLine, #ScenarioLine, #RuleLine, #Comment, #Empty, got &apos;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD&apos;
-(63:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;=======&apos;
-(66:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch &apos;main&apos; of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git&apos;
-(67:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Scenario: Verify voucher code search using CSV data&apos;
-(68:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;When the user enter the valid voucher code &quot;&lt;code&gt;&quot;&apos;
-(69:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;And the user click the result&apos;
-(70:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got &apos;Then the user should seen the Qr code code&apos;
-(72:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty
-	at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
-	at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
-	at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
-	at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:82)
-	at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:67)
-	at java.base/java.nio.file.Files.walkFileTree(Files.java:2799)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:61)
-	at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:54)
-	at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:34)
-	at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-	at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-	at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:125)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>1</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can create new message", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
+<td></td>
+<td>41</td>
 <td>com.Runner.TestNGRunner@6f3187b0</td></tr>
 </table><p>
 </body>

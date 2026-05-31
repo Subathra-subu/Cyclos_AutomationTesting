@@ -9,13 +9,13 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features",
+		features = "src/test/resources/Features/Messages.feature",
 
 		glue = "com.StepDefinitions",
 
 		monochrome = true,
 
-		publish = false,
+		publish = false,		
 	
 		plugin = {
 
@@ -33,7 +33,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }

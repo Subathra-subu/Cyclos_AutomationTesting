@@ -24,7 +24,8 @@ public class MessagesTest {
 
     @When("User enters the required details")
     public void user_enters_the_required_details() {
-
+    	
+    	messagesAction.ClickSendTo();
         messagesAction.UserFeild();
     }
 
