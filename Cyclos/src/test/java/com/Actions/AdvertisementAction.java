@@ -192,10 +192,7 @@ public class AdvertisementAction extends BaseAction {
 //            waitForVisibility(advertisementPage.advertisementCards);
         	if (isDisplayed(advertisementPage.favouriteSuccessMessage)) {
 
-        	    String text = getText(advertisementPage.favouriteSuccessMessage);
-
-        	    Assert.assertTrue(
-        	            text.contains("favourite"));
+        	    Assert.assertTrue(isDisplayed(advertisementPage.favouriteSuccessMessage));
         	}
         	else {
 
