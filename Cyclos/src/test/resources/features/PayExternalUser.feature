@@ -1,5 +1,5 @@
 @PayExternalUser_Shobana
-Feature: Pay External User
+Feature: Shobana_25/05/2026_Error_Slayers_Pay External User
 
 
 Scenario: Verify external payment successfully
@@ -14,7 +14,7 @@ And User clicks pay external user option
 
 And User enters external payment details
 | email         | amount | description |
-| shi@gmail.com | 100    | hi          |
+| shobs@gmail.com | 10    | hi          |
 
 Then User should navigate to payment confirmation page
 

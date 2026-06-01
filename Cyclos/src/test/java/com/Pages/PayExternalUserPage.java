@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 
 public class PayExternalUserPage {
 
-	public By payUser = By.xpath("//div[contains(text(),'Pay user')]");
+	public By payUser = By.xpath("//div[@class='menu-text'][normalize-space()='Banking']");
 
-	public By externalPayments = By.xpath("//a[contains(.,'External payments')]");
+	public By externalPayments = By.xpath("//div[@class='root-container']//a[8]");
 
-	public By payExternalUser = By.xpath("//div[normalize-space()='External payments']");
+	public By payExternalUser = By.xpath("//div[normalize-space()='Pay external user']");
 
 	public By emailField = By.xpath("//label[contains(.,'E-mail')]/following-sibling::div//input");
 
