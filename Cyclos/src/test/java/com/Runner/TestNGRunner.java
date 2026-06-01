@@ -15,6 +15,8 @@ import io.cucumber.testng.CucumberOptions;
 		
 		tags = "@NotificationsNavigation",
 
+	    tags = "@Akksheetha",
+
 		monochrome = true,
 
 		publish = false,		
