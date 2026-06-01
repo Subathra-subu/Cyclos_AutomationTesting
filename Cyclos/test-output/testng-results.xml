@@ -1,227 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-26T16:52:55 IST" name="Default suite" finished-at="2026-05-26T16:54:55 IST" duration-ms="119793">
+  <suite started-at="2026-05-28T22:45:26 IST" name="Default suite" finished-at="2026-05-28T22:47:13 IST" duration-ms="106919">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-26T16:52:55 IST" name="Default test" finished-at="2026-05-26T16:54:55 IST" duration-ms="119793">
+    <test started-at="2026-05-28T22:45:26 IST" name="Default test" finished-at="2026-05-28T22:47:13 IST" duration-ms="106919">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:52:55 IST" name="setUpClass" finished-at="2026-05-26T16:52:58 IST" duration-ms="2644" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-28T22:45:26 IST" name="setUpClass" finished-at="2026-05-28T22:45:29 IST" duration-ms="3071" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@72cf43fa]]>
-=======
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-05-27T22:18:52 IST" name="Default suite" finished-at="2026-05-27T22:18:55 IST" duration-ms="2129">
-    <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test started-at="2026-05-27T22:18:52 IST" name="Default test" finished-at="2026-05-27T22:18:55 IST" duration-ms="2129">
-      <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-27T22:18:53 IST" name="setUpClass" finished-at="2026-05-27T22:18:54 IST" duration-ms="1739" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4e2c95ee]]>
->>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+                <![CDATA[org.testng.TestRunner@26f0141]]>
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.core.gherkin.FeatureParserException">
-            <message>
-              <![CDATA[Failed to parse resource at: file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyVouchers.feature
-(53:1): expected: #EOF, #TableRow, #TagLine, #ExamplesLine, #ScenarioLine, #RuleLine, #Comment, #Empty, got '<<<<<<< HEAD'
-(63:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got '======='
-(66:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got '>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git'
-(67:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Scenario: Verify voucher code search using CSV data'
-(68:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'When the user enter the valid voucher code "<code>"'
-(69:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'And the user click the result'
-(70:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Then the user should seen the Qr code code'
-(72:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyVouchers.feature
-(53:1): expected: #EOF, #TableRow, #TagLine, #ExamplesLine, #ScenarioLine, #RuleLine, #Comment, #Empty, got '<<<<<<< HEAD'
-(63:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got '======='
-(66:1): expected: #TagLine, #RuleLine, #Comment, #Empty, got '>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git'
-(67:3): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Scenario: Verify voucher code search using CSV data'
-(68:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'When the user enter the valid voucher code "<code>"'
-(69:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'And the user click the result'
-(70:5): expected: #TagLine, #RuleLine, #Comment, #Empty, got 'Then the user should seen the Qr code code'
-(72:0): unexpected end of file, expected: #TagLine, #RuleLine, #Comment, #Empty
-at io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
-at io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
-at java.base/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
-at io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
-at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:82)
-at io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:67)
-at java.base/java.nio.file.Files.walkFileTree(Files.java:2799)
-at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:61)
-at io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:54)
-at io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:34)
-at io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
-at io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
-at io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
-at io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
-at io.cucumber.testng.TestNGCucumberRunner.<init>(TestNGCucumberRunner.java:125)
-at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.core.gherkin.FeatureParserException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:52:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:53:18 IST" duration-ms="20124" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-28T22:45:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-28T22:47:08 IST" duration-ms="98655" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify validation message for blank user field"]]>
+                <![CDATA["Verify external payment successfully"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
+                <![CDATA["Pay External User"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Browser setup failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Browser setup failed
+at com.StepDefinitions.Hooks.setUp(Hooks.java:33)
+Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: chrome=148.0.7778.181)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f51b35d3b464210718b70c48f0d2d80d, get {url=https://demo.cyclos.org/ui/home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.181, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62268}, goog:processID: 31548, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62268/devtoo..., se:cdpVersion: 148.0.7778.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f51b35d3b464210718b70c48f0d2d80d
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:374)
+at com.Utilities.HelperClass.openPage(HelperClass.java:106)
+at com.StepDefinitions.Hooks.setUp(Hooks.java:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:53:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:53:33 IST" duration-ms="15585" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-28T22:45:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-28T22:47:08 IST" duration-ms="98669" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify Payment Confirmation using pay now functionality"]]>
+                <![CDATA["Verify error message when email field is empty"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
+                <![CDATA["Pay External User"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Browser setup failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Browser setup failed
+at com.StepDefinitions.Hooks.setUp(Hooks.java:33)
+Caused by: org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: -0.012
+  (Session info: chrome=148.0.7778.181)
+Build info: version: '4.43.0', revision: 'dd0f534'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [97391801b898c81fb9440d027e076d7f, get {url=https://demo.cyclos.org/ui/home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.181, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\Hp\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62267}, goog:processID: 16596, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62267/devtoo..., se:cdpVersion: 148.0.7778.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 97391801b898c81fb9440d027e076d7f
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:374)
+at com.Utilities.HelperClass.openPage(HelperClass.java:106)
+at com.StepDefinitions.Hooks.setUp(Hooks.java:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:53:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:53:47 IST" duration-ms="13914" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify validation message when payment amount exceeds available limit"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:53:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:54:00 IST" duration-ms="13035" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify validation message when payment amount exceeds available limit"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:54:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:54:18 IST" duration-ms="17471" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify scheduled payment functionality"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:54:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:54:34 IST" duration-ms="16471" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify recurring payment scheduling functionality"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-26T16:54:50 IST" duration-ms="16083" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can schedule monthly installment payment"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Shobana_14/05/2026_Error_Slayers_PaymentToUser_Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-26T16:54:50 IST" name="tearDownClass" finished-at="2026-05-26T16:54:55 IST" duration-ms="4306" status="PASS">
-=======
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@6f3187b0]" started-at="2026-05-27T22:18:55 IST" name="tearDownClass" finished-at="2026-05-27T22:18:55 IST" duration-ms="4" status="PASS">
->>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@544d57e]" started-at="2026-05-28T22:47:08 IST" name="tearDownClass" finished-at="2026-05-28T22:47:13 IST" duration-ms="5007" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -20,11 +20,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-<<<<<<< HEAD
-			<version>4.44.0</version>
-=======
 			<version>4.43.0</version>
->>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 		</dependency>
 
 		<!-- WebDriverManager -->
