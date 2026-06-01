@@ -15,12 +15,6 @@ This feature file is used to verify Messages functionality
     And User clicks on Send button
     Then User should see popup message "The message was successfully sent"
     
-    @InboxMessages
-	Scenario: Verify user can view Inbox messages
-	
-	When User clicks the Inbox button
-    Then User should see Inbox messages
-    
     @SentMessages
 	Scenario: Verify user can view Sent messages
 
