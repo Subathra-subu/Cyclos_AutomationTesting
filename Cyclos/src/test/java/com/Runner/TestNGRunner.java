@@ -15,6 +15,8 @@ import io.cucumber.testng.CucumberOptions;
 
 		monochrome = true,
 
+		tags="@Subathra",
+
 		publish = false,		
 	
 		plugin = {
