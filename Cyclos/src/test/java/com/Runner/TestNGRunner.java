@@ -12,10 +12,6 @@ import io.cucumber.testng.CucumberOptions;
 		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
-		
-		tags = "@NotificationsNavigation",
-
-	    tags = "@Akksheetha",
 
 		monochrome = true,
 
