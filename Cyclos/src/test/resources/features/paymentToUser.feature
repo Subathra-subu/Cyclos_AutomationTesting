@@ -50,5 +50,3 @@ Examples:
       | Active Walking | 200    | Monthly installments | 5            | Monthly installment payment |
 
     Then Monthly installment payment should be scheduled successfully
-
-
