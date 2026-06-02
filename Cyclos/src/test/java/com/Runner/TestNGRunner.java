@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		glue = "com.StepDefinitions",
 
-	    tags="@PaymentToUser_Shobana and @PayExternalUser_Shobana",
+	    tags = "@PaymentToUser_Shobana or @PayExternalUser_Shobana",
 
 		monochrome = true,
 
