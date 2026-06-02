@@ -40,5 +40,17 @@ public class ContactTest
 	public void the_user_should_see_the(String expectedMessage) {
 	    contactActions.verifyContactCreated(expectedMessage);
 	}
+	
+	@When("the user clicks the contact list view button")
+	public void the_user_clicks_the_contact_list_view_button() {
+
+	    contactActions.clickContactListViewButton();
+	}
+
+	@Then("the user should see the contact list view page with a user message")
+	public void the_user_should_see_the_contact_list_view_page_with_a_user_message() {
+
+	    contactActions.verifyUserColumnDisplayed();
+	}
 
 }

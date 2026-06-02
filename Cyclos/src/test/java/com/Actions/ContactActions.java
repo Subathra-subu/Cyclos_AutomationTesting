@@ -122,4 +122,32 @@ public class ContactActions extends BaseAction {
             throw e;
         }
     }
+    
+    public void clickContactListViewButton() {
+
+        try {
+
+            waitForVisibility(contactPage.contactListViewButton);
+
+            waitForClickable(contactPage.contactListViewButton);
+
+            jsClick(contactPage.contactListViewButton);
+
+            HelperClass.log.info("Clicked Contact List View Button Successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Failed to click Contact List View Button : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    
+    public void verifyUserColumnDisplayed() {
+
+        String actualText = getText(contactPage.userAssert);
+
+        Assert.assertEquals(actualText, "User",
+                "User column text mismatch");
+    }
 }
