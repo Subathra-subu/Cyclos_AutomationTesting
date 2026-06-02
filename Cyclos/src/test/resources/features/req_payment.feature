@@ -21,7 +21,4 @@ Feature: Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Function
     And clicks the form primary confirm button
     Then the date field should display an error indicator text message saying "This field is required"
     
-    @validpaymentrequest @28/06/2026
-    Scenario: verify  the user can make a valid payment request
-    When the user clicks the Send a new request button
-    And the user enters the  
+ 
