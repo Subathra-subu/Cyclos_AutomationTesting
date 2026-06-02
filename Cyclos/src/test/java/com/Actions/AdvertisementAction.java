@@ -117,7 +117,7 @@ public class AdvertisementAction extends BaseAction {
 
             List<String> keywords =
                     CSVUtility.getVoucherCodes(
-                            "src/test/resources/testData/InputData.csv");
+                            "src/test/resources/testData/AdvertisementKeyword.csv");
             
             System.out.println("CSV Value = " + keywords.get(0));
 
