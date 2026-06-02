@@ -2,7 +2,6 @@
 
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<<<<<<< HEAD
 <suite name="CyclosAutomationSuite"
        parallel="methods"
        thread-count="3"
@@ -14,31 +13,4 @@
       <class name="com.Runner.TestNGRunner"/>
     </classes>
   </test>
-=======
-<<<<<<< HEAD
-<suite name="CyclosAutomationSuite"
-       data-provider-thread-count="3"
-       verbose="1">
-
-  <test name="CyclosParallelTests">
-    <classes>
-      <class name="com.Runner.TestNGRunner"/>
-    </classes>
-  </test>
-=======
-<suite name="Suite">
->>>>>>> branch 'USER_LOGIN_Subathra' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
-
-<<<<<<< HEAD
-=======
-    <test name="CucumberTests">
-
-        <classes>
-            <class name="com.Runner.TestNGRunner"/>
-        </classes>
-
-    </test>
->>>>>>> branch 'USER_LOGIN_Subathra' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
->>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
-
 </suite>

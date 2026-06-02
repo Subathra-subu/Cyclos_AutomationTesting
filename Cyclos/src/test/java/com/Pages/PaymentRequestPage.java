@@ -12,8 +12,8 @@ public class PaymentRequestPage {
     public By option = By.cssSelector("a[class='select-option autocomplete-option-0']");
     public By amount = By.xpath("//input[@type='tel']");
     public By date = By.cssSelector("input[type='date']");
-    public By scheduling = By.xpath("//button[contains(@aria-controls,'dropdown-menu')]"); // Adjusted based on dropdown patterns
-    public By description = By.xpath("//textarea | //input[contains(@class, 'description')]"); // Based on standard UI textareas
+    public By scheduling = By.xpath("//button[contains(@aria-controls,'dropdown-menu')]"); 
+    public By description = By.xpath("//textarea | //input[contains(@class, 'description')]"); 
 
     // Buttons & Popups
     public By confirm = By.xpath("//span[normalize-space()='Confirm']");

@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
-		glue = "com.StepDefinitions",
+		glue = "com.StepDefinitions", tags="@scheduledpayment",
 
 		monochrome = true,
 
