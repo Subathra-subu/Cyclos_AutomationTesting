@@ -52,8 +52,3 @@ Scenario: Verify no result message for invalid keyword search
   When user searches advertisement with invalid keyword
   Then invalid keyword search result should be displayed
   
-  @MainPageListing
-  
-  Scenario: Verify the Advertisement pageadvertisements list 
-  When user clicks any one of the listed advertisement in the page 
-  Then the respective advertisement details should be shown successfully

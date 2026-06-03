@@ -7,8 +7,11 @@ test-output/
 target/
 logs/
 screenshots/
+<<<<<<< HEAD
+=======
 # Maven Target Folder
 /target/
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 
 # Allure Reports
 /allure-results/
@@ -49,6 +52,9 @@ Downloads/
 # OS Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+=======
 /bin/
 .metadata/
 bin/
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
