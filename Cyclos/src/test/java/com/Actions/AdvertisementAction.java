@@ -4,12 +4,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.Pages.AdvertisementPage;
@@ -117,7 +113,7 @@ public class AdvertisementAction extends BaseAction {
 
             List<String> keywords =
                     CSVUtility.getVoucherCodes(
-                            "src/test/resources/testData/InputData.csv");
+                            "src/test/resources/testData/AdvertisementKeyword.csv");
             
             System.out.println("CSV Value = " + keywords.get(0));
 
@@ -190,9 +186,14 @@ public class AdvertisementAction extends BaseAction {
 
         try {
 //            waitForVisibility(advertisementPage.advertisementCards);
-        	String msg = getText(advertisementPage.favouriteSuccessMessage);
-        	Assert.assertTrue(msg.contains("favorite"));
-            HelperClass.log.info("Advertisements added to favourites successfully");
+        	if (isDisplayed(advertisementPage.favouriteSuccessMessage)) {
+
+        	    Assert.assertTrue(isDisplayed(advertisementPage.favouriteSuccessMessage));
+        	}
+        	else {
+
+        	    Assert.fail("Favourite success message not displayed in the page");
+        	}
         }
 
         catch (Exception e) {

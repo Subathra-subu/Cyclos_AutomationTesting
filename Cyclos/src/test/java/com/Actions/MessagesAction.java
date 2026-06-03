@@ -139,7 +139,7 @@ public class MessagesAction extends BaseAction {
 			throw e;
 		}
 	}
-
+	
 	public void clickSentTab() {
 
 		click(messagesPage.sentTab);
@@ -166,5 +166,6 @@ public class MessagesAction extends BaseAction {
 		Assert.assertTrue(isDisplayed(messagesPage.activeTrashTab));
 
 		HelperClass.log.info("Trash tab displayed successfully");
+
 	}
 }

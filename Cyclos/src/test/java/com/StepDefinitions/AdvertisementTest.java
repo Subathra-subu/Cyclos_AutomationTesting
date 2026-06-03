@@ -126,12 +126,4 @@ public class AdvertisementTest {
         advertisementAction
                 .verifyInvalidKeywordPopup();
     }
-    @When("user clicks any one of the listed advertisement in the page")
-    public void user_clicks_any_one_of_the_listed_advertisement_in_the_page() {
-    	advertisementAction.communityListClick();
-    }
-    @Then("the respective advertisement details should be shown successfully")
-    public void the_respective_advertisement_details_should_be_shown_successfully() {
-    	
-    }
 }

@@ -40,6 +40,7 @@ public class MessagesTest {
 		messagesAction.verifyMessageSentPopup(expectedMessage);
 	}
 
+
 	@When("User clicks on Sent button")
 	public void user_clicks_on_sent_button() {
 		messagesAction.clickSentTab();
