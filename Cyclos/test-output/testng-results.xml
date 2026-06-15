@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-02T19:56:17 IST" name="Default suite" finished-at="2026-06-02T19:57:20 IST" duration-ms="62792">
+  <suite started-at="2026-06-15T16:52:49 IST" name="Default suite" finished-at="2026-06-15T16:57:31 IST" duration-ms="281786">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-06-02T19:56:17 IST" name="Default test" finished-at="2026-06-02T19:57:20 IST" duration-ms="62792">
+    <test started-at="2026-06-15T16:52:49 IST" name="Default test" finished-at="2026-06-15T16:57:31 IST" duration-ms="281786">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-02T19:56:17 IST" name="setUpClass" finished-at="2026-06-02T19:56:18 IST" duration-ms="1146" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:52:49 IST" name="setUpClass" finished-at="2026-06-15T16:52:50 IST" duration-ms="1272" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@61b65d54]]>
+                <![CDATA[org.testng.TestRunner@79a8b897]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-02T19:56:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-02T19:57:18 IST" duration-ms="59122" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:52:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:22 IST" duration-ms="31293" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["verify user can perform a scheduled payment"]]>
+                <![CDATA["Verify user can make payment to system with pay now scheduling successfully"]]>
               </value>
             </param>
             <param index="1">
@@ -34,38 +34,218 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element found by By.xpath: //span[text()='Confirm']/parent::button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Confirm']/parent::button"}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.19'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\KRISHN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62485}, goog:processID: 40984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62485/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a819bacfad95083cdaafb4bedf3d6cf]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //span[text()='Confirm']/parent::button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Confirm']/parent::button"}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.19'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\KRISHN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62485}, goog:processID: 40984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62485/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a819bacfad95083cdaafb4bedf3d6cf
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at com.Actions.BaseAction.waitForClickable(BaseAction.java:74)
-at com.Actions.BaseAction.jsClick(BaseAction.java:180)
-at com.Actions.systempaymentAction.clickConfirmButton(systempaymentAction.java:26)
-at com.StepDefinitions.systempaymentsteps.the_user_clicks_on_the_confirm_button(systempaymentsteps.java:48)
-at ✽.the user clicks on the Confirm button(file:///E:/cyclos_init/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/PaymentToSystem.feature:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-02T19:57:18 IST" name="tearDownClass" finished-at="2026-06-02T19:57:20 IST" duration-ms="2444" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:41 IST" duration-ms="19335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify validation message for invalid amount inputs"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:59 IST" duration-ms="18134" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can generate QR-code with valid amount"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:54:17 IST" duration-ms="17847" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify validation message for invalid or blank amount"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:54:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:54:34 IST" duration-ms="16715" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can regenerate a new QR code successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:00 IST" duration-ms="26698" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify print functionality in payment request details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:22 IST" duration-ms="21174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify system validation rule when leaving required payment field expiration date completely empty via Excel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:41 IST" duration-ms="19899" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user can invite with valid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:00 IST" duration-ms="19014" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user cannot invite with invalid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:15 IST" duration-ms="14575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user cannot invite with invalid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:35 IST" duration-ms="20171" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user cannot invite with invalid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:55 IST" duration-ms="19810" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user cannot invite with invalid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:57:10 IST" duration-ms="15407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify user cannot invite with invalid email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:57:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:57:28 IST" duration-ms="17543" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["verify user can invite multiple users"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:57:28 IST" name="tearDownClass" finished-at="2026-06-15T16:57:31 IST" duration-ms="2799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

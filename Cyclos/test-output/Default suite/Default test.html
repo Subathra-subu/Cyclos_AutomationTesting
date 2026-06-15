@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 02 19:56:17 IST 2026</td>
+<td>Started on:</td><td>Mon Jun 15 16:52:49 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>62 seconds (62792 ms)</td>
+<tr><td>Total time:</td><td>281 seconds (281786 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,38 +76,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can perform a scheduled payment", "Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //span[text()=&apos;Confirm&apos;]/parent::button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Confirm&apos;]/parent::button&quot;}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.19&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\KRISHN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62485}, goog:processID: 40984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62485/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a819bacfad95083cdaafb4bedf3d6cf
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.waitForClickable(BaseAction.java:74)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:180)
-	at com.Actions.systempaymentAction.clickConfirmButton(systempaymentAction.java:26)
-	at com.StepDefinitions.systempaymentsteps.the_user_clicks_on_the_confirm_button(systempaymentsteps.java:48)
-	at ✽.the user clicks on the Confirm button(file:///E:/cyclos_init/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/PaymentToSystem.feature:33)
-</pre></div><a href='#' onClick='toggleBox("stack-trace51181239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace51181239'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //span[text()=&apos;Confirm&apos;]/parent::button to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&apos;Confirm&apos;]/parent::button&quot;}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.19&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\KRISHN~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62485}, goog:processID: 40984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62485/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8a819bacfad95083cdaafb4bedf3d6cf
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.waitForClickable(BaseAction.java:74)
-	at com.Actions.BaseAction.jsClick(BaseAction.java:180)
-	at com.Actions.systempaymentAction.clickConfirmButton(systempaymentAction.java:26)
-	at com.StepDefinitions.systempaymentsteps.the_user_clicks_on_the_confirm_button(systempaymentsteps.java:48)
-	at ✽.the user clicks on the Confirm button(file:///E:/cyclos_init/Cyclos_AutomationTesting/Cyclos/src/test/resources/Features/PaymentToSystem.feature:33)
-</pre></div></td>
-<td>59</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot invite with invalid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>14</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify system validation rule when leaving required payment field expiration date completely empty via Excel", "Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Functionality"</td>
+<td></td>
+<td>21</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot invite with invalid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>20</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can invite multiple users", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>17</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot invite with invalid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>19</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot invite with invalid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>15</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can make payment to system with pay now scheduling successfully", "Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"</td>
+<td></td>
+<td>31</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can invite with valid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>19</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify validation message for invalid or blank amount", "Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"</td>
+<td></td>
+<td>17</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can generate QR-code with valid amount", "Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"</td>
+<td></td>
+<td>18</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can regenerate a new QR code successfully", "Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"</td>
+<td></td>
+<td>16</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot invite with invalid email", "Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"</td>
+<td></td>
+<td>19</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify validation message for invalid amount inputs", "Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"</td>
+<td></td>
+<td>19</td>
+<td>com.Runner.TestNGRunner@791d1f8b</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify print functionality in payment request details page", "Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Functionality"</td>
+<td></td>
+<td>26</td>
 <td>com.Runner.TestNGRunner@791d1f8b</td></tr>
 </table><p>
 </body>

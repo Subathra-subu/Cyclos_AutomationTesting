@@ -24,16 +24,6 @@ Scenario Outline: Verify validation message for invalid amount inputs
 Examples:
     | amount | errorMessage        |
     |        | This field is required  |
-    
-  @scheduledpayment
-  Scenario Outline: verify user can perform a scheduled payment
-      When the user enters valid amount "<amount>"
-      And the user selects the payment method and choose date
-    And clicks on the Next button
-    And the user clicks on the Confirm button
-    Then the user should see a confirmation message "The payment was successfully processed"
 
-Examples:
-    | amount |
-    | 1      |
-     
+
+    

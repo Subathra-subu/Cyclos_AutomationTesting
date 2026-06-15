@@ -11,11 +11,12 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
-		glue = "com.StepDefinitions", 
+
+		glue = "com.StepDefinitions", tags="@krishna",
 
 		monochrome = true,
 
-	    tags="@krishna",
+	    
 
 		publish = false,
 	
@@ -35,7 +36,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }
