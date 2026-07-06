@@ -99,4 +99,33 @@ public class PaymentRequestSteps {
     public void the_date_field_should_display_an_error_indicator_text_message_saying(String expectedErrorText) {
        Assert.assertEquals(reqaction.assertDateValidationError(),expectedErrorText ); 
     }
+    @When("the user selects the receiver from the contact list")
+    public void the_user_selects_the_receiver_from_the_contact_list() {
+        reqaction.selectReceiverFromContact();
+    }
+
+    @When("the user enters the amount and date details")
+    public void the_user_enters_the_amount_and_date_details() {
+        reqaction.enterAmountAndDate("100");
+    }
+
+    @When("the user selects the installment option from sheduling dropdown and enters the installment count")
+    public void the_user_selects_the_installment_option_from_sheduling_dropdown_and_enters_the_installment_count() {
+        reqaction.selectMonthlyInstallment(6);
+    }
+
+    @When("the user clicks the form primary confirm button")
+    public void the_user_clicks_the_form_primary_confirm_button() {
+        reqaction.clickPrimaryConfirm();
+    }
+
+    @When("the user clicks on the popup confirm button")
+    public void the_user_clicks_on_the_popup_confirm_button() {
+        reqaction.clickPopupConfirm();
+    }
+
+    @Then("the user should see a success confirmation message")
+    public void the_user_should_see_a_success_confirmation_message() {
+        reqaction.verifyPaymentRequestSuccess();
+    }
 }

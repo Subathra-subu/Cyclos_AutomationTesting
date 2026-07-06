@@ -1,111 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-15T16:52:49 IST" name="Default suite" finished-at="2026-06-15T16:57:31 IST" duration-ms="281786">
+  <suite started-at="2026-07-07T05:26:59 IST" name="Default suite" finished-at="2026-07-07T05:27:40 IST" duration-ms="40365">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-06-15T16:52:49 IST" name="Default test" finished-at="2026-06-15T16:57:31 IST" duration-ms="281786">
+    <test started-at="2026-07-07T05:26:59 IST" name="Default test" finished-at="2026-07-07T05:27:40 IST" duration-ms="40365">
       <class name="com.Runner.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:52:49 IST" name="setUpClass" finished-at="2026-06-15T16:52:50 IST" duration-ms="1272" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-07-07T05:27:00 IST" name="setUpClass" finished-at="2026-07-07T05:27:02 IST" duration-ms="2260" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@79a8b897]]>
+                <![CDATA[org.testng.TestRunner@61fa3583]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:52:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:22 IST" duration-ms="31293" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-07-07T05:27:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-07T05:27:36 IST" duration-ms="34088" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user can make payment to system with pay now scheduling successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:41 IST" duration-ms="19335" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify validation message for invalid amount inputs"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_30/05/2026_Error_Slayers_Cyclos_Payment to System Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:53:59 IST" duration-ms="18134" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can generate QR-code with valid amount"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:53:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:54:17 IST" duration-ms="17847" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify validation message for invalid or blank amount"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:54:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:54:34 IST" duration-ms="16715" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can regenerate a new QR code successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_14/05/2026_Error_Slayers_Cyclos_Receive QR Code Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:54:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:00 IST" duration-ms="26698" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify print functionality in payment request details page"]]>
+                <![CDATA["Verify user can make a installment payment request"]]>
               </value>
             </param>
             <param index="1">
@@ -117,135 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:22 IST" duration-ms="21174" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify system validation rule when leaving required payment field expiration date completely empty via Excel"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:55:41 IST" duration-ms="19899" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user can invite with valid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:55:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:00 IST" duration-ms="19014" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user cannot invite with invalid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:15 IST" duration-ms="14575" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user cannot invite with invalid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:35 IST" duration-ms="20171" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user cannot invite with invalid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:56:55 IST" duration-ms="19810" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user cannot invite with invalid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:56:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:57:10 IST" duration-ms="15407" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify user cannot invite with invalid email"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:57:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-06-15T16:57:28 IST" duration-ms="17543" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["verify user can invite multiple users"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Krishnaprasath_13/05/2026_Error_Slayers_Cyclos_Invite Users Functionality"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-06-15T16:57:28 IST" name="tearDownClass" finished-at="2026-06-15T16:57:31 IST" duration-ms="2799" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.Runner.TestNGRunner@791d1f8b]" started-at="2026-07-07T05:27:36 IST" name="tearDownClass" finished-at="2026-07-07T05:27:40 IST" duration-ms="3887" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

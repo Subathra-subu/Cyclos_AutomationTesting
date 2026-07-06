@@ -12,8 +12,16 @@ Feature: Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Function
        And the user clicks on the print button
        Then a PDF of the payment request should be generated successfully
        
-    
-    
+      @validpaymentrequest  @06/07/2027
+    Scenario:	Verify user can make a installment payment request
+          When the user clicks the Send a new request button
+          And the user selects the receiver from the contact list
+          And the user enters the amount and date details
+          And the user selects the installment option from sheduling dropdown and enters the installment count
+          And the user clicks the form primary confirm button
+          And the user clicks on the popup confirm button
+          Then the user should see a success confirmation message 
+          
     @negativeValidation @dateCheck
   Scenario: Verify system validation rule when leaving required payment field expiration date completely empty via Excel
     When the user clicks the Send a new request button

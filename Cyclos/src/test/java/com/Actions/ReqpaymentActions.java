@@ -4,6 +4,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import com.Pages.PaymentRequestPage;
 import com.Utilities.ExcelData;
@@ -216,6 +217,117 @@ public class ReqpaymentActions extends BaseAction {
             
             // Reuses the negative data entry logic to populate everything EXCEPT the date
             addPaymentRequestWithEmptyDate(receiver, amountVal);
+        }
+    }
+ // ====================== Installment Payment Request ======================
+
+    public void selectReceiverFromContact() {
+        try {
+            waitForClickable(paypage.contact);
+            click(paypage.contact);
+
+            waitForVisibility(paypage.contactname);
+            click(paypage.contactname);
+
+            HelperClass.log.info("Receiver selected successfully from contact list.");
+
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to select receiver from contact list: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public void enterAmountAndDate(String amountValue) {
+        try {
+
+            waitForVisibility(paypage.amount);
+            sendKeys(paypage.amount, amountValue);
+
+            waitForVisibility(paypage.date);
+
+            WebElement dateInput = HelperClass.getDriver().findElement(paypage.date);
+            dateInput.clear();
+            dateInput.sendKeys("31-12-2026");
+
+            HelperClass.log.info("Entered amount and date successfully.");
+
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to enter amount/date: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public void selectMonthlyInstallment(int installmentCount) {
+        try {
+
+            waitForClickable(paypage.scheduling);
+            click(paypage.scheduling);
+
+            waitForVisibility(paypage.monthlyInstallment);
+
+            WebElement option = HelperClass.getDriver().findElement(paypage.monthlyInstallment);
+
+            // Use JavaScript to trigger the click
+            JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
+            js.executeScript("arguments[0].click();", option);
+
+            HelperClass.log.info("Clicked Monthly Installments.");
+
+            waitForVisibility(paypage.installmentCount);
+            sendKeys(paypage.installmentCount, String.valueOf(installmentCount));
+
+        } catch (Exception e) {
+            HelperClass.log.error(e.getMessage());
+            throw e;
+        }
+    }
+    public void clickPrimaryConfirm() {
+        try {
+
+            waitForClickable(paypage.confirm);
+            jsClick(paypage.confirm);
+
+            HelperClass.log.info("Clicked primary Confirm button.");
+
+        } catch (Exception e) {
+            HelperClass.log.error("Failed to click primary Confirm button: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    public void clickPopupConfirm() {
+
+        waitForVisibility(paypage.modalConfirm);
+        waitForClickable(paypage.modalConfirm);
+
+        WebElement button =
+                HelperClass.getDriver().findElement(paypage.modalConfirm);
+
+        ((JavascriptExecutor)HelperClass.getDriver())
+                .executeScript("arguments[0].scrollIntoView({block:'center'});", button);
+
+        ((JavascriptExecutor)HelperClass.getDriver())
+                .executeScript("arguments[0].click();", button);
+
+        HelperClass.log.info("Popup Confirm clicked");
+    }
+
+    public void verifyPaymentRequestSuccess() {
+        try {
+
+            waitForVisibility(paypage.successBanner);
+
+            String actualMessage = getText(paypage.successBanner);
+
+            Assert.assertTrue(
+                    actualMessage.contains("successfully"),
+                    "Payment Request was not created successfully.");
+
+            HelperClass.log.info("Payment Request created successfully.");
+
+        } catch (Exception e) {
+            HelperClass.log.error("Payment Request success validation failed: " + e.getMessage());
+            throw e;
         }
     }
 }
