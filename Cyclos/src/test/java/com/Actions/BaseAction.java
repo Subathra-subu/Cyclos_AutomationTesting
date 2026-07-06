@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -214,6 +215,10 @@ public class BaseAction {
             }
         }
         throw new RuntimeException("sendKeys failed after " + MAX_RETRIES + " retries: " + locator);
+    }
+    
+    public void pressEnter(By locator) {
+        waitForVisibility(locator).sendKeys(Keys.ENTER);
     }
 
     // ═══════════════════════════════════════════════════════════════════

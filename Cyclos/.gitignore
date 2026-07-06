@@ -41,3 +41,7 @@ Downloads/
 .DS_Store
 Thumbs.db
 /bin/
+<<<<<<< HEAD
+=======
+.metadata/
+>>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
