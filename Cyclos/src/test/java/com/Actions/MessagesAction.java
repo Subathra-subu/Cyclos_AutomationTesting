@@ -139,14 +139,7 @@ public class MessagesAction extends BaseAction {
 			throw e;
 		}
 	}
-
-	public void verifyInboxMessages() {
-
-		Assert.assertTrue(isDisplayed(messagesPage.activeInboxTab));
-
-		HelperClass.log.info("Inbox tab displayed successfully");
-	}
-
+	
 	public void clickSentTab() {
 
 		click(messagesPage.sentTab);
@@ -173,13 +166,6 @@ public class MessagesAction extends BaseAction {
 		Assert.assertTrue(isDisplayed(messagesPage.activeTrashTab));
 
 		HelperClass.log.info("Trash tab displayed successfully");
-	}
 
-	public void clickInboxTab() {
-		
-		click(messagesPage.inboxTab);
-
-		HelperClass.log.info("Clicked inbox tab");
-		
 	}
 }

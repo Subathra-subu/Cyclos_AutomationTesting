@@ -14,8 +14,11 @@ target/
 >>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
 logs/
 screenshots/
+<<<<<<< HEAD
+=======
 # Maven Target Folder
 /target/
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 
 # Allure Reports
 /allure-results/
@@ -58,6 +61,7 @@ Downloads/
 Thumbs.db
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
@@ -73,7 +77,13 @@ screenshots/
 >>>>>>> 51f6d212ef9e76b1a387c1beccf45c99206d9b67
 >>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
 =======
+>>>>>>> c7182636d05d904e6203c1169a89a25072d42893
+=======
 /bin/
 .metadata/
 bin/
+<<<<<<< HEAD
 >>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
+=======
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> c7182636d05d904e6203c1169a89a25072d42893

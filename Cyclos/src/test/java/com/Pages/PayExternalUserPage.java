@@ -26,6 +26,19 @@ public class PayExternalUserPage {
 
 	public By pendingStatus = By.xpath("//div[contains(text(),'Pending')]");
 
-	public By emailErrorMessage = By
-			.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
+	public By emailErrorMessage = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
+	
+	public By paymentRow = By.xpath("//div[contains(text(),'Cancel Test')]");
+
+	public By cancelPaymentBtn = By.xpath("//button[contains(.,'Cancel this external payment')]");
+
+	public By cancellationComment = By.xpath("//textarea");
+
+	public By confirmCancelBtn =By.xpath("//button[.//span[contains(text(),'Confirm')] or contains(.,'Confirm')]");
+
+	public By cancelledMessage =By.xpath("//*[contains(text(),'cancelled') or contains(text(),'canceled')]");
+	
+	public By payment(String description) {
+	    return By.xpath("//div[contains(text(),'" + description + "')]");
+	}
 }

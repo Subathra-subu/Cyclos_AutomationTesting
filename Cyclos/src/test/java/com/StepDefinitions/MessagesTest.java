@@ -40,15 +40,6 @@ public class MessagesTest {
 		messagesAction.verifyMessageSentPopup(expectedMessage);
 	}
 
-	@When("User clicks the Inbox button")
-	public void user_clicks_the_inbox_button() {
-		messagesAction.clickInboxTab();
-	}
-
-	@Then("User should see Inbox messages")
-	public void user_should_see_inbox_messages() {
-		messagesAction.verifyInboxMessages();
-	}
 
 	@When("User clicks on Sent button")
 	public void user_clicks_on_sent_button() {
