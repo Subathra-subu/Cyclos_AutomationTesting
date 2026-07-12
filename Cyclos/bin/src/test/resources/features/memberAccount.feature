@@ -17,3 +17,9 @@ Feature: SRIRAM_K_125/05/2026_Validate the memeber account Functionality
     When user clicks the download button
     And the user clicks the excel option
     Then the user should see the member account details in Excel file
+    
+  @CSV
+  Scenario: Verify the member account details in CSV
+    When user clicks the download button
+    And the user clicks the CSV option
+    Then the user should see the member account details in CSV file

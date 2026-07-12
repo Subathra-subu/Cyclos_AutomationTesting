@@ -113,4 +113,18 @@ public class AdvertisementTest {
 
         advertisementAction.verifyFavouriteFilteredAdvertisements();
     }
+    
+    @When("user searches advertisement with invalid keyword")
+    public void user_searches_advertisement_with_invalid_keyword() {
+
+        advertisementAction
+                .searchInvalidKeyword("@@@@@");
+    }
+
+    @Then("invalid keyword search result should be displayed")
+    public void invalid_keyword_search_result_should_be_displayed() {
+
+        advertisementAction
+                .verifyInvalidKeywordPopup();
+    }
 }

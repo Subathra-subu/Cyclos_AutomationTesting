@@ -48,7 +48,11 @@ Examples:
     When User enters monthly installment payment details
       | username       | amount | type                 | installments | description                 |
       | Active Walking | 200    | Monthly installments | 5            | Monthly installment payment |
+<<<<<<< HEAD
+    Then Monthly installment payment should be scheduled successfully
+=======
 
     Then Monthly installment payment should be scheduled successfully
 
  
+>>>>>>> cde08c1b288603da6135da7bfb22c1e334a31622
