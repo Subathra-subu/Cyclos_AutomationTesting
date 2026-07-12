@@ -48,11 +48,10 @@ public class AdvertisementTest {
         advertisementAction.verifySearchResults();
     }
     
-    @When("user searches for keyword {string}")
-    public void user_searches_for_keyword(
-            String keyword) {
+    @When("user searches advertisement with not available products keyword")
+    public void user_searches_advertisement_with_not_available_products_keyword() {
 
-        advertisementAction.searchByKeyword(keyword);
+        advertisementAction.searchInvalidAdvertisementKeyword();
     }
 
     @Then("no matching advertisements should be displayed")

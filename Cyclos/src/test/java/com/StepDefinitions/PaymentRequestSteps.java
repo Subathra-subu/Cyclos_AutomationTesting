@@ -99,6 +99,7 @@ public class PaymentRequestSteps {
     public void the_date_field_should_display_an_error_indicator_text_message_saying(String expectedErrorText) {
        Assert.assertEquals(reqaction.assertDateValidationError(),expectedErrorText ); 
     }
+
     @When("the user selects the receiver from the contact list")
     public void the_user_selects_the_receiver_from_the_contact_list() {
         reqaction.selectReceiverFromContact();
@@ -128,4 +129,5 @@ public class PaymentRequestSteps {
     public void the_user_should_see_a_success_confirmation_message() {
         reqaction.verifyPaymentRequestSuccess();
     }
+
 }

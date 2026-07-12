@@ -52,4 +52,5 @@ public class PaymentRequestPage {
     // Print / Cancel
     public By print = By.xpath("//div[contains(text(),'Print')]");
     public By cancel = By.xpath("//div[contains(text(),'Cancel this payment request')]");
+
 }

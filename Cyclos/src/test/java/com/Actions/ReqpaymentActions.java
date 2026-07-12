@@ -219,7 +219,6 @@ public class ReqpaymentActions extends BaseAction {
             addPaymentRequestWithEmptyDate(receiver, amountVal);
         }
     }
- // ====================== Installment Payment Request ======================
 
     public void selectReceiverFromContact() {
         try {
@@ -330,4 +329,5 @@ public class ReqpaymentActions extends BaseAction {
             throw e;
         }
     }
+
 }

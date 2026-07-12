@@ -10,12 +10,12 @@ Feature: Shobana_16/05/2026_Error_SlayersBusiness Directory Functionality
     When User enters keyword from excel
     Then Matching business records should be displayed
 
-
- @ListView
-Scenario: Verify business directory list view functionality using csv
-  When User selects list view option using csv
-  Then Business records should display in list view
-
+  @ListView
+  Scenario: Verify business directory list view functionality using data table
+    When User selects list view option
+      | view |
+      | list |
+    Then Business records should display in list view
 
   @GridView
   Scenario: Verify business directory grid view functionality using data table

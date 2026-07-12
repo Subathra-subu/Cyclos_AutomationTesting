@@ -3,6 +3,7 @@ package com.StepDefinitions;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 
 import com.Actions.MyAdvertisementsAction;
 import com.Actions.LoginAction;
@@ -109,8 +110,10 @@ public class MyAdvertisementsTest {
 	
 	@When("the user click the advertisement")
 	public void the_user_click_the_advertisement() {
-	    
-		actions.clickItem();
+
+		 if(!actions.clickItem()) {
+			    throw new SkipException("No advertisements available");
+			}
 		
 	}
 

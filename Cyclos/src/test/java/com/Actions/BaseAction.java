@@ -217,6 +217,10 @@ public class BaseAction {
         }
         throw new RuntimeException("sendKeys failed after " + MAX_RETRIES + " retries: " + locator);
     }
+    
+    public void pressEnter(By locator) {
+        waitForVisibility(locator).sendKeys(Keys.ENTER);
+    }
 
     // ═══════════════════════════════════════════════════════════════════
     //  GET TEXT – with stale-element retry
