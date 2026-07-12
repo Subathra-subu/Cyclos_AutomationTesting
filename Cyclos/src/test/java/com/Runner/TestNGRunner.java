@@ -11,8 +11,13 @@ import io.cucumber.testng.CucumberOptions;
 
 		features = "src/test/resources/Features",
 
+<<<<<<< HEAD
         
 		glue = "com.StepDefinitions",
+=======
+
+		glue = "com.StepDefinitions", tags="@krishna",
+>>>>>>> 12bfa088ceaf25659eda226ada0097c5af438ec8
 
 		monochrome = true,
 
