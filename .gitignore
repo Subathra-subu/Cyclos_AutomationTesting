@@ -5,6 +5,13 @@ PdfReport/
 Reports/
 test-output/
 target/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+=======
+>>>>>>> origin/new-main
 logs/
 screenshots/
 <<<<<<< HEAD
@@ -54,7 +61,23 @@ Downloads/
 Thumbs.db
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+*.log
+allure-results/
+HtmlReport/
+PdfReport/
+Reports/
+test-output/
+screenshots/
+<<<<<<< HEAD
+=======
+>>>>>>> 51f6d212ef9e76b1a387c1beccf45c99206d9b67
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+=======
 /bin/
 .metadata/
 bin/
 >>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> origin/new-main
