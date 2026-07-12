@@ -243,4 +243,3 @@ public class MyAdvertisementsAction extends BaseAction {
     }
 
    }
-

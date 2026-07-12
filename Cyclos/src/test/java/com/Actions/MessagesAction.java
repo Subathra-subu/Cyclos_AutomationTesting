@@ -15,6 +15,7 @@ public class MessagesAction extends BaseAction {
 
 			waitForVisibility(messagesPage.messageIcon);
 			click(messagesPage.messageIcon);
+			jsClick(messagesPage.messageIcon);
 
 			HelperClass.log.info("Clicked Message icon successfully");
 		}
@@ -53,13 +54,13 @@ public class MessagesAction extends BaseAction {
 			waitForVisibility(messagesPage.recipientField);
 
 			click(messagesPage.recipientField);
-
 			waitForVisibility(messagesPage.userField);
 
 			click(messagesPage.userField);
 
 			HelperClass.log.info("Clicked SendTo");
 		}
+
 
 		catch (Exception e) {
 
@@ -68,7 +69,6 @@ public class MessagesAction extends BaseAction {
 			throw e;
 		}
 	}
-
 	public void UserFeild() {
 
 		try {
@@ -80,6 +80,12 @@ public class MessagesAction extends BaseAction {
 			waitForVisibility(messagesPage.user_name);
 
 			click(messagesPage.user_name);
+
+			waitForVisibility(messagesPage.userField);
+
+			click(messagesPage.userField);
+			
+			sendKeys(messagesPage.user,"Active walking");
 
 			HelperClass.log.info("Clicked UserField");
 		}

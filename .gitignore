@@ -5,6 +5,13 @@ PdfReport/
 Reports/
 test-output/
 target/
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+>>>>>>> cde08c1b288603da6135da7bfb22c1e334a31622
 logs/
 screenshots/
 # Maven Target Folder
@@ -49,6 +56,24 @@ Downloads/
 # OS Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 /bin/
 .metadata/
 bin/
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+*.log
+allure-results/
+HtmlReport/
+PdfReport/
+Reports/
+test-output/
+screenshots/
+<<<<<<< HEAD
+=======
+>>>>>>> 51f6d212ef9e76b1a387c1beccf45c99206d9b67
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+>>>>>>> cde08c1b288603da6135da7bfb22c1e334a31622

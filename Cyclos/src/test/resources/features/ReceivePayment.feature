@@ -56,6 +56,7 @@ Scenario: Verify alert message when receive payment daily limit exceeds
     And User clicks on the Submit button and confirms the password "1234"
     Then the alert message for exceeding limit should be displayed
 
+
 @ReceivePaymentExceedMaximumAmount
 Scenario: Verify validation message when payment amount exceeds allowed limit
 
@@ -64,3 +65,9 @@ Scenario: Verify validation message when payment amount exceeds allowed limit
         | The Bakery shop | 999999999999 | Exceeding maximum payment limit |
     And User clicks on the next button
     Then Appropriate validation message for exceeded amount should be displayed
+
+    
+    Examples:
+      | Name               | Amount | Description            | Password  |
+      | The Bakery shop    | 1      | Making a valid Payment | 1234      |
+      | The Irish Pub      | 3      | Checking a payment     | 1234      |
