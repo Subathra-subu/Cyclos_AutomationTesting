@@ -13,8 +13,6 @@ import io.cucumber.testng.CucumberOptions;
 		
 		glue = "com.StepDefinitions",
 
-	    tags = "@Akksheetha",
-
 		monochrome = true,
 
 		publish = false,
