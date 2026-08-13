@@ -23,9 +23,9 @@ Feature: Krishnaprasath_15/05/2026_Error_Slayers_Cyclos_Payment Request Function
           Then the user should see a success confirmation message 
           
     @negativeValidation @dateCheck
-  Scenario: Verify system validation rule when leaving required payment field expiration date completely empty via Excel
+  Scenario: Verify system validation rule when leaving required payment field expiration date completely empty
     When the user clicks the Send a new request button
-    And the user enters only the name and amount details from excel leaving the date empty
+    And the user enters only the name and amount details leaving the date empty
     And clicks the form primary confirm button
     Then the date field should display an error indicator text message saying "This field is required"
     
