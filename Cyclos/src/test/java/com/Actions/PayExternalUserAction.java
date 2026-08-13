@@ -400,4 +400,24 @@ public class PayExternalUserAction extends BaseAction {
             throw e;
         }
     }
+    
+    public void validateInvalidEmailErrorMessage() {
+
+        try {
+
+            waitForVisibility(page.invalidEmailErrorMessage);
+
+            String actualMessage =getText(page.invalidEmailErrorMessage);
+
+            Assert.assertEquals(actualMessage.trim(),"Destination user identifier is invalid.");
+
+            HelperClass.log.info("Invalid email error validated successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Invalid email error validation failed : "+ e.getMessage());
+
+            throw e;
+        }
+    }
 }

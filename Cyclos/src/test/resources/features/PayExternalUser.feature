@@ -1,5 +1,5 @@
 @Shobana
-Feature: Shobana_25/05/2026_Error_Slayers_Pay External User
+Feature: Shobana_25/05/2026(13-08-26 updated)_Error_Slayers_Pay External User
 
 
 Scenario: Verify external payment successfully
@@ -61,3 +61,20 @@ And User clicks "Cancel this external payment"
 And User enters cancellation comment "Cancelled by automation"
 And User clicks Confirm
 Then External payment should be cancelled successfully
+
+
+Scenario: Verify error message when invalid email is entered
+
+Given User should login successfully
+
+When User clicks pay user option
+
+And User clicks external payments option
+
+And User clicks pay external user option
+
+And User enters external payment details
+| email | amount | description |
+| h     | 100    | example     |
+
+Then User should validate invalid email error message

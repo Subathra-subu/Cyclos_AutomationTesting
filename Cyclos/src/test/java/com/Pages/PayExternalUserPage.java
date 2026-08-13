@@ -41,4 +41,5 @@ public class PayExternalUserPage {
 	public By payment(String description) {
 	    return By.xpath("//div[contains(text(),'" + description + "')]");
 	}
+	public By invalidEmailErrorMessage = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'Destination user identifier is invalid.')]");
 }

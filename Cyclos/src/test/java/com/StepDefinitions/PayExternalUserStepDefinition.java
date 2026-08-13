@@ -143,4 +143,11 @@ public class PayExternalUserStepDefinition {
 
         actions.validateCancellationSuccess();
     }
+    @Then("User should validate invalid email error message")
+    public void user_should_validate_invalid_email_error_message() {
+
+        actions.clickNext();
+
+        actions.validateInvalidEmailErrorMessage();
+    }
 }
