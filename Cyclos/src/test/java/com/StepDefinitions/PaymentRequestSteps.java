@@ -85,7 +85,7 @@ public class PaymentRequestSteps {
         reqaction.clickSendRequest();
     }
 
-    @When("the user enters only the name and amount details from excel leaving the date empty")
+    @When("the user enters only the name and amount details leaving the date empty")
     public void the_user_enters_only_the_name_and_amount_details_from_excel_leaving_the_date_empty() throws IOException {
         reqaction.excelDataForEmptyDate();
     }
