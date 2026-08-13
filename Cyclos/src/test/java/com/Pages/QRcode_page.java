@@ -10,7 +10,7 @@ public class QRcode_page  {
 	public By QRcode = By.xpath("//div[text()='Receive QR-code']");
 	public By Amount = By.xpath("//input[contains(@placeholder,'0')]");
 	public By Generate = By.xpath("//span[normalize-space()='Generate QR code']");
-	public By Qrcode = By.xpath("//receive-qr-payment-step-pending/descendant::img[1]");
+	public By Qrcode = By.xpath("//div[@class='page-content-body card-body d-flex flex-column']/descendant::img");
 	public By errormsg = By.xpath("//field-errors/descendant::div");
 	public By new_generate = By.xpath("//span[text()='Generate new QR code']");
 
