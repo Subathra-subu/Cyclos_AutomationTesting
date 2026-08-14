@@ -371,5 +371,28 @@ public class BaseAction {
 
         return HelperClass.getDriver().findElements(locator);
     }
+    
+    public void waitForAllText(By locator, String expectedText) {
+
+        HelperClass.getWait().until(driver -> {
+
+            List<WebElement> elements = driver.findElements(locator);
+
+            if (elements.isEmpty()) {
+                return false;
+            }
+
+            for (WebElement element : elements) {
+
+                String text = element.getText().trim();
+
+                if (!text.isEmpty() && !text.contains(expectedText)) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
 
 }

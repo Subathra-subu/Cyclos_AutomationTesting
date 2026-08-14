@@ -183,7 +183,7 @@ public class MessagesAction extends BaseAction {
 	
 	public void checkDisplayedUsers() throws InterruptedException {
 		
-		waitForPageLoad();
+		 waitForAllText(messagesPage.DisplayedUsers, "Active Walking");
 		
 		 List<WebElement> users = getElements(messagesPage.DisplayedUsers);
 
