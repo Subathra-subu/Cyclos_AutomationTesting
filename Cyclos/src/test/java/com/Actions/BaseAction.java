@@ -366,5 +366,10 @@ public class BaseAction {
                 .sendKeys(Keys.TAB)
                 .perform();
     }
+    
+    public List<WebElement> getElements(By locator) {
+
+        return HelperClass.getDriver().findElements(locator);
+    }
 
 }

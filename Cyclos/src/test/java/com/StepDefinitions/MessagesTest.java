@@ -1,7 +1,5 @@
 package com.StepDefinitions;
 
-import org.testng.Assert;
-
 import com.Actions.MessagesAction;
 
 import io.cucumber.java.en.Then;
@@ -67,4 +65,19 @@ public class MessagesTest {
     public void messages_page_should_be_displayed() {
 		messagesAction.verifyMessagesPageDisplayed();
     }
+	
+	@When("the user selects the Send to message box option")
+	public void the_user_selects_the_send_to_message_box_option() {
+		messagesAction.clickSentTab();
+	}
+
+	@When("the user selects a username in the user tab")
+	public void the_user_selects_a_username_in_the_user_tab() {
+		messagesAction.UserFeild();
+	}
+
+	@Then("the user should be able to see only the messages sent to the selected user")
+	public void the_user_should_be_able_to_see_only_the_messages_sent_to_the_selected_user() throws InterruptedException {
+		messagesAction.checkDisplayedUsers();
+	}
 }
