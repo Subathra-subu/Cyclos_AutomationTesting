@@ -366,5 +366,34 @@ public class BaseAction {
                 .sendKeys(Keys.TAB)
                 .perform();
     }
+    
+    public List<WebElement> getElements(By locator) {
+
+        return HelperClass.getDriver().findElements(locator);
+    }
+    
+    public void waitForAllText(By locator, String expectedText) {
+
+        HelperClass.getWait().until(driver -> {
+
+            List<WebElement> elements = driver.findElements(locator);
+
+            if (elements.isEmpty()) {
+                return false;
+            }
+
+            for (WebElement element : elements) {
+                try {
+                    if (!element.getText().trim().contains(expectedText)) {
+                        return false;
+                    }
+                } catch (StaleElementReferenceException e) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
 
 }

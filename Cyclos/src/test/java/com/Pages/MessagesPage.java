@@ -37,4 +37,6 @@ public class MessagesPage {
 	public By activeTrashTab = By.xpath("(//div[@class='page-content-body card-body d-flex flex-column'])[2]/descendant::th[2]");
 	
 	public By messageHeader = By.xpath("//div[text()=' Messages ']");
+
+	public By DisplayedUsers = By.xpath("//tbody/tr/td[2]/span[contains(@class,'ellipsis') and normalize-space(text())]");
 }
