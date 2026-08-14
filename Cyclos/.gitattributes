@@ -1,0 +1,9 @@
+# Tell Git to always prefer our local version for auto-generated reports and binaries during a merge
+HtmlReport/** merge=ours
+PdfReport/** merge=ours
+Reports/** merge=ours
+test-output/** merge=ours
+bin/** merge=ours
+*.class merge=ours
+*.csv merge=ours
+*.xlsx merge=ours

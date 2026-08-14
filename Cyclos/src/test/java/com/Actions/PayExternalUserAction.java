@@ -318,4 +318,107 @@ public class PayExternalUserAction extends BaseAction {
             throw e;
         }
     }
+
+    public void openPayment(String description) {
+
+        waitForVisibility(page.payment(description));
+
+        scrollIntoView(page.payment(description));
+
+        jsClick(page.payment(description));
+    }
+    public void clickCancelPayment() {
+
+        try {
+
+            waitForVisibility(page.cancelPaymentBtn);
+
+            scrollIntoView(page.cancelPaymentBtn);
+
+            jsClick(page.cancelPaymentBtn);
+
+            HelperClass.log.info("Clicked cancel payment button successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Failed to click cancel payment button : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    public void enterCancellationComment(String comment) {
+
+        try {
+
+            waitForVisibility(page.cancellationComment);
+
+            sendKeys(page.cancellationComment, comment);
+
+            HelperClass.log.info("Entered cancellation comment successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Failed to enter cancellation comment : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    public void clickConfirmCancellation() {
+
+        try {
+
+            waitForVisibility(page.confirmCancelBtn);
+
+            scrollIntoView(page.confirmCancelBtn);
+
+            jsClick(page.confirmCancelBtn);
+
+            HelperClass.log.info("Clicked confirm cancellation successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Failed to confirm cancellation : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    public void validateCancellationSuccess() {
+
+        try {
+
+            waitForVisibility(page.cancelledMessage);
+
+            String actual = getText(page.cancelledMessage);
+
+            Assert.assertTrue(actual.contains("cancel"));
+
+            HelperClass.log.info("Cancellation validated successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Cancellation validation failed : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    
+    public void validateInvalidEmailErrorMessage() {
+
+        try {
+
+            waitForVisibility(page.invalidEmailErrorMessage);
+
+            String actualMessage =getText(page.invalidEmailErrorMessage);
+
+            Assert.assertEquals(actualMessage.trim(),"Destination user identifier is invalid.");
+
+            HelperClass.log.info("Invalid email error validated successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Invalid email error validation failed : "+ e.getMessage());
+
+            throw e;
+        }
+    }
 }

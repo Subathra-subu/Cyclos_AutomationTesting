@@ -118,4 +118,36 @@ public class PayExternalUserStepDefinition {
         actions.validateEmailErrorMessage(
                 expectedMessage);
     }
+    @When("User opens the payment with description {string}")
+    public void user_opens_the_payment_with_description(String description) {
+
+        actions.openPayment(description);
+    }
+    @When("User clicks {string}")
+    public void user_clicks(String button) {
+
+        actions.clickCancelPayment();
+    }
+    @When("User enters cancellation comment {string}")
+    public void user_enters_cancellation_comment(String comment) {
+
+        actions.enterCancellationComment(comment);
+    }
+    @When("User clicks Confirm")
+    public void user_clicks_confirm() {
+
+        actions.clickConfirmCancellation();
+    }
+    @Then("External payment should be cancelled successfully")
+    public void external_payment_should_be_cancelled_successfully() {
+
+        actions.validateCancellationSuccess();
+    }
+    @Then("User should validate invalid email error message")
+    public void user_should_validate_invalid_email_error_message() {
+
+        actions.clickNext();
+
+        actions.validateInvalidEmailErrorMessage();
+    }
 }
