@@ -12,10 +12,11 @@ import io.cucumber.testng.CucumberOptions;
 		features = "src/test/resources/Features/Notifications.feature",
 
 		glue = "com.StepDefinitions",
+        tags= "@Shobana",
 
 		monochrome = true,
 
-		publish = false,		
+		publish = false,
 	
 		plugin = {
 

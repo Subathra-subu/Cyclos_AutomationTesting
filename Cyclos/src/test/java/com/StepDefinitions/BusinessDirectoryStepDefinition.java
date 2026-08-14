@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.Actions.BusinessDirectoryActions;
 import com.Actions.LoginAction;
+import com.Utilities.CSVUtility;
 import com.Utilities.ExcelData;
 import com.Utilities.HelperClass;
 
@@ -15,113 +16,108 @@ import io.cucumber.java.en.When;
 
 public class BusinessDirectoryStepDefinition {
 
-    BusinessDirectoryActions actions =
-            new BusinessDirectoryActions();
+	BusinessDirectoryActions actions = new BusinessDirectoryActions();
 
-    LoginAction loginAction =
-            new LoginAction();
+	LoginAction loginAction = new LoginAction();
 
-    @Given("User logs into the cyclos application for business directory")
-    public void user_logs_into_the_cyclos_application_for_business_directory() {
+	@Given("User logs into the cyclos application for business directory")
+	public void user_logs_into_the_cyclos_application_for_business_directory() {
 
-        HelperClass.openPage();
+		HelperClass.openPage();
 
-        loginAction.clickLoginLink();
+		loginAction.clickLoginLink();
 
-        loginAction.entervaliduserNameAndPassword();
+		loginAction.entervaliduserNameAndPassword();
 
-        loginAction.clickSubmitButton();
-    }
+		loginAction.clickSubmitButton();
+	}
 
-    @When("User navigates to business directory page")
-    public void user_navigates_to_business_directory_page() {
+	@When("User navigates to business directory page")
+	public void user_navigates_to_business_directory_page() {
 
-        actions.navigateBusinessDirectory();
-    }
+		actions.navigateBusinessDirectory();
+	}
 
-    @When("User enters keyword from excel")
-    public void user_enters_keyword_from_excel() throws Exception {
+	@When("User enters keyword from excel")
+	public void user_enters_keyword_from_excel() throws Exception {
 
-        ExcelData excel =
-                new ExcelData();
+		ExcelData excel = new ExcelData();
 
-        Object[][] data =
-                excel.businessDirectoryData();
+		Object[][] data = excel.businessDirectoryData();
 
-        String keyword =
-                data[0][0].toString();
+		String keyword = data[0][0].toString();
 
-        actions.enterKeyword(keyword);
-    }
-    @Then("Matching business records should be displayed")
-    public void matching_business_records_should_be_displayed() {
+		actions.enterKeyword(keyword);
+	}
 
-        actions.validateSearchResults();
-    }
+	@Then("Matching business records should be displayed")
+	public void matching_business_records_should_be_displayed() {
 
-    @When("User selects list view option")
-    public void user_selects_list_view_option(DataTable dataTable) {
+		actions.validateSearchResults();
+	}
 
-        List<Map<String, String>> data =
-                dataTable.asMaps(String.class, String.class);
+	@When("User selects list view option using csv")
+	public void user_selects_list_view_option_using_csv() {
 
-        String view =
-                data.get(0).get("view");
+		String filePath = "src/test/resources/TestData/BusinessDirectory.csv";
 
-        if (view.equalsIgnoreCase("list")) {
+		List<String> views = CSVUtility.getVoucherCodes(filePath);
 
-            actions.clickListView();
-        }
-    }
+		for (String view : views) {
 
-    @Then("Business records should display in list view")
-    public void business_records_should_display_in_list_view() {
+			if (view.equalsIgnoreCase("list")) {
 
-        actions.validateListView();
-    }
+				actions.clickListView();
+			}
+		}
+	}
 
-    @When("User selects tiled view option")
-    public void user_selects_tiled_view_option(DataTable dataTable) {
+	@Then("Business records should display in list view")
+	public void business_records_should_display_in_list_view() {
 
-        List<Map<String, String>> data =
-                dataTable.asMaps(String.class, String.class);
+		actions.validateListView();
+	}
 
-        String view =
-                data.get(0).get("view");
+	@When("User selects tiled view option")
+	public void user_selects_tiled_view_option(DataTable dataTable) {
 
-        if (view.equalsIgnoreCase("tile")) {
+		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
 
-            actions.clickTiledView();
-        }
-    }
+		String view = data.get(0).get("view");
 
-    @Then("Business records should display in tiled view")
-    public void business_records_should_display_in_tiled_view() {
+		if (view.equalsIgnoreCase("tile")) {
 
-        actions.validateTiledView();
-    }
+			actions.clickTiledView();
+		}
+	}
 
-    @When("User selects ascending order from orders dropdown")
-    public void user_selects_ascending_order_from_orders_dropdown() {
+	@Then("Business records should display in tiled view")
+	public void business_records_should_display_in_tiled_view() {
 
-        actions.selectAscendingOrder();
-    }
+		actions.validateTiledView();
+	}
 
-    @Then("Business records should display in ascending order")
-    public void business_records_should_display_in_ascending_order() {
+	@When("User selects ascending order from orders dropdown")
+	public void user_selects_ascending_order_from_orders_dropdown() {
 
-        actions.validateAscendingOrder();
-    }
+		actions.selectAscendingOrder();
+	}
 
-    @When("User selects descending order from orders dropdown")
-    public void user_selects_descending_order_from_orders_dropdown() {
+	@Then("Business records should display in ascending order")
+	public void business_records_should_display_in_ascending_order() {
 
-        actions.selectDescendingOrder();
-    }
+		actions.validateAscendingOrder();
+	}
 
-    @Then("Business records should display in descending order")
-    public void business_records_should_display_in_descending_order() {
+	@When("User selects descending order from orders dropdown")
+	public void user_selects_descending_order_from_orders_dropdown() {
 
-        actions.validateDescendingOrder();
-    }
+		actions.selectDescendingOrder();
+	}
+
+	@Then("Business records should display in descending order")
+	public void business_records_should_display_in_descending_order() {
+
+		actions.validateDescendingOrder();
+	}
 }
