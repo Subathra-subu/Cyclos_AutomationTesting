@@ -383,10 +383,11 @@ public class BaseAction {
             }
 
             for (WebElement element : elements) {
-
-                String text = element.getText().trim();
-
-                if (!text.isEmpty() && !text.contains(expectedText)) {
+                try {
+                    if (!element.getText().trim().contains(expectedText)) {
+                        return false;
+                    }
+                } catch (StaleElementReferenceException e) {
                     return false;
                 }
             }
