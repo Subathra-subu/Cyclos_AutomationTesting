@@ -4,6 +4,7 @@
 # Allure Reports
 /allure-results/
 /allure-report/
+.metadata/
 
 # Extent Reports
 /HtmlReport/

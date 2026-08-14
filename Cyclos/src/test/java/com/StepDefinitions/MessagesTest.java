@@ -1,5 +1,7 @@
 package com.StepDefinitions;
 
+import org.testng.Assert;
+
 import com.Actions.MessagesAction;
 
 import io.cucumber.java.en.Then;
@@ -60,4 +62,9 @@ public class MessagesTest {
 	public void user_should_see_trash_messages() {
 		messagesAction.verifyTrashMessages();
 	}
+	
+	@Then("Messages page should be displayed")
+    public void messages_page_should_be_displayed() {
+		messagesAction.verifyMessagesPageDisplayed();
+    }
 }

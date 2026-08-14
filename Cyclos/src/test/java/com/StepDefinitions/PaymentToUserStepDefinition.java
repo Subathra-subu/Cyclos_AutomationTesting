@@ -155,5 +155,4 @@ public class PaymentToUserStepDefinition {
 
 		actions.validatePaymentConfirmationTitle();
 	}
-	
 }

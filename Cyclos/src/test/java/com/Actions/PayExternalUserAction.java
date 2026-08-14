@@ -318,6 +318,7 @@ public class PayExternalUserAction extends BaseAction {
             throw e;
         }
     }
+
     public void openPayment(String description) {
 
         waitForVisibility(page.payment(description));

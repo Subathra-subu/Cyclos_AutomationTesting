@@ -168,4 +168,12 @@ public class MessagesAction extends BaseAction {
 		HelperClass.log.info("Trash tab displayed successfully");
 
 	}
+	
+	public void verifyMessagesPageDisplayed() {
+		
+		Assert.assertTrue(isDisplayed(messagesPage.messageHeader));
+
+		HelperClass.log.info("Trash tab displayed successfully");
+		
+	}
 }

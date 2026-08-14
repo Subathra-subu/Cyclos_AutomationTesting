@@ -17,7 +17,7 @@ public class ExcelData {
 
         return getExcelData(
                 "src/test/resources/testData/ExcelData.xlsx",
-                "UserLogin_Subathra");
+                "LoginData");
     }
 
     @DataProvider(name = "addNew", parallel = true)

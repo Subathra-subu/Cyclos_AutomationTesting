@@ -78,3 +78,4 @@ And User enters external payment details
 | h     | 100    | example     |
 
 Then User should validate invalid email error message
+

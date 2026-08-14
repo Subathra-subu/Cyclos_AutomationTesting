@@ -9,15 +9,16 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
 
-		features = "src/test/resources/Features/Notifications.feature",
+		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
-        tags= "@Shobana",
+        tags= "@Subathra",
 
 		monochrome = true,
 
-		publish = false,
-	
+		publish = false,	
+
+		
 		plugin = {
 
 				"pretty",
