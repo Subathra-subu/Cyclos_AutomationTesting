@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/4/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/2</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 14 13:10:43 IST 2026</td>
+<td>Started on:</td><td>Fri Aug 14 13:46:55 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>417 seconds (417510 ms)</td>
+<tr><td>Total time:</td><td>267 seconds (267104 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,73 +77,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login With Blank credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
+<td><div><pre>java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
 	at com.StepDefinitions.LoginTest.the_user_leaves_the_user_name_and_password_fields_blank(LoginTest.java:118)
 	at ✽.the user leaves the userName and password fields blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:40)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1089324622", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1089324622'><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
+</pre></div><a href='#' onClick='toggleBox("stack-trace1851882510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1851882510'><pre>java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
 	at com.StepDefinitions.LoginTest.the_user_leaves_the_user_name_and_password_fields_blank(LoginTest.java:118)
 	at ✽.the user leaves the userName and password fields blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:40)
 </pre></div></td>
 <td>9</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Blank Username", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
-	at com.StepDefinitions.LoginTest.the_user_enters_a_valid_password_and_leaves_the_username_field_blank(LoginTest.java:75)
-	at ✽.the user enters a valid password and leaves the username field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:28)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1138663369", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1138663369'><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
-	at com.StepDefinitions.LoginTest.the_user_enters_a_valid_password_and_leaves_the_username_field_blank(LoginTest.java:75)
-	at ✽.the user enters a valid password and leaves the username field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:28)
-</pre></div></td>
-<td>11</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Blank password", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
-	at com.StepDefinitions.LoginTest.the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank(LoginTest.java:96)
-	at ✽.the user enter a valid userName and leaves the password field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:34)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2096524537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2096524537'><pre>java.lang.NullPointerException: Cannot load from object array because &quot;data&quot; is null
-	at com.StepDefinitions.LoginTest.the_user_enter_a_valid_user_name_and_leaves_the_password_field_blank(LoginTest.java:96)
-	at ✽.the user enter a valid userName and leaves the password field blank(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Login.feature:34)
-</pre></div></td>
-<td>9</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Existing credentials", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(text(),&apos;Login name must be unique.&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos;Login name must be unique.&apos;)]&quot;}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.138, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55796}, goog:processID: 3132, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55796/devtoo..., se:cdpVersion: 151.0.7922.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c0cdb584b73520e390a58fca33137fc4
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:69)
-	at com.Actions.BaseAction.getText(BaseAction.java:232)
-	at com.Actions.RegisterAction.assertAlreadyExistMessage(RegisterAction.java:205)
-	at com.StepDefinitions.RegisterTest.the_user_should_be_able_to_see_the_message_under_login_name_field(RegisterTest.java:58)
-	at ✽.the user should be able to see the &quot;Login name must be unique.&quot; message under login name field(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:14)
-</pre></div><a href='#' onClick='toggleBox("stack-trace218904467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace218904467'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(text(),&apos;Login name must be unique.&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos;Login name must be unique.&apos;)]&quot;}.
-(tried for 40 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 151.0.7922.138, chrome: {chromedriverVersion: 151.0.7922.138 (41fa8244239..., userDataDir: C:\Users\ADMIN\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55796}, goog:processID: 3132, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55796/devtoo..., se:cdpVersion: 151.0.7922.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c0cdb584b73520e390a58fca33137fc4
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at com.Actions.BaseAction.waitForVisibility(BaseAction.java:69)
-	at com.Actions.BaseAction.getText(BaseAction.java:232)
-	at com.Actions.RegisterAction.assertAlreadyExistMessage(RegisterAction.java:205)
-	at com.StepDefinitions.RegisterTest.the_user_should_be_able_to_see_the_message_under_login_name_field(RegisterTest.java:58)
-	at ✽.the user should be able to see the &quot;Login name must be unique.&quot; message under login name field(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/Register.feature:14)
-</pre></div></td>
-<td>52</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -157,6 +99,46 @@ Session ID: c0cdb584b73520e390a58fca33137fc4
 <tr>
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can navigate to Messages page", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
 <td></td>
+<td>16</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can create new message", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
+<td></td>
+<td>20</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Blank Username", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td></td>
+<td>11</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can view Trash messages", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
+<td></td>
+<td>18</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td></td>
+<td>10</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Existing credentials", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
+<td></td>
+<td>13</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Blank password", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td></td>
+<td>9</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can view Sent messages", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
+<td></td>
+<td>17</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td></td>
 <td>15</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 <tr>
@@ -165,59 +147,57 @@ Session ID: c0cdb584b73520e390a58fca33137fc4
 <td>19</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can view Sent messages", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
-<td></td>
-<td>17</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td></td>
-<td>10</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td></td>
-<td>11</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
-<td></td>
-<td>10</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can create new message", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
-<td></td>
-<td>26</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can Edit Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
-<td></td>
-<td>61</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can add new Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
 <td></td>
 <td>21</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Blank Field Validation", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td></td>
+<td>10</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with Invalid Credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
 <td></td>
 <td>11</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 <tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid credentials", "Subathra_14/05/2026_Error_Slayers_Cyclos_UserLogin"</td>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register with Blank Field Validation", "Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister"</td>
 <td></td>
-<td>39</td>
+<td>13</td>
+<td>com.Runner.TestNGRunner@7857fe2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can Edit Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
+<td><div><pre>org.testng.SkipException: No advertisements available
+	at com.StepDefinitions.MyAdvertisementsTest.the_user_click_the_advertisement(MyAdvertisementsTest.java:115)
+	at ✽.the user click the advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2117395558", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2117395558'><pre>org.testng.SkipException: No advertisements available
+	at com.StepDefinitions.MyAdvertisementsTest.the_user_click_the_advertisement(MyAdvertisementsTest.java:115)
+	at ✽.the user click the advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:21)
+</pre></div></td>
+<td>18</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 <tr>
 <td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can remove Advertisement", "Subathra_18/05/2026_Error_Slayers_My Advertisements"</td>
-<td></td>
-<td>58</td>
-<td>com.Runner.TestNGRunner@7857fe2</td></tr>
-<tr>
-<td title='com.Runner.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: com.Runner.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can view Trash messages", "Subathra_25/05/2026_Error_Slayers_Messages"</td>
-<td></td>
-<td>16</td>
+<td><div><pre>org.testng.SkipException: No advertisements available
+	at com.StepDefinitions.MyAdvertisementsTest.the_user_click_the_advertisement(MyAdvertisementsTest.java:115)
+	at ✽.the user click the advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:30)
+</pre></div><a href='#' onClick='toggleBox("stack-trace746092315", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace746092315'><pre>org.testng.SkipException: No advertisements available
+	at com.StepDefinitions.MyAdvertisementsTest.the_user_click_the_advertisement(MyAdvertisementsTest.java:115)
+	at ✽.the user click the advertisement(file:///D:/Cyclos_Automation_Testing/Cyclos/src/test/resources/Features/MyAdvertisements.feature:30)
+</pre></div></td>
+<td>18</td>
 <td>com.Runner.TestNGRunner@7857fe2</td></tr>
 </table><p>
 </body>
