@@ -11,13 +11,13 @@ public class MyVouchersPages
 	public By buyVocher = By.xpath("//*[contains(text(),'Buy vouchers')]");
 	public By cinema = By.xpath("//a[contains(text(),\" Cinema\")]");
 
-	public By number = By.xpath("//input[@autocomplete=\"off\" and @type=\"number\"]");
+	public By number = By.xpath("//input[@type='number']");
 
-	public By amount = By.xpath("//input[@autocomplete=\"off\" and @type=\"tel\"]");
+	public By amount = By.xpath("//input[@type='tel']");
 
-	public By next = By.xpath("//button/span[contains(text(),\"Next\")]");
+	public By next = By.xpath("//button[contains(.,'Next')]");
 
-	public By confirm = By.xpath("//button/span[contains(text(),\"Con\")]");
+	public By confirm = By.xpath("//button[contains(.,'Confirm')]");
 
 	public By assertAmount = By.xpath("//label-value[2]//div[1]//div[1]");
 

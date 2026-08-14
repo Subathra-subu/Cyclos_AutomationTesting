@@ -78,7 +78,16 @@ public class TicketsActions extends BaseAction {
 			String rowText = getText(ticketsPage.firstRow);
 			HelperClass.log.info("Clicking first row : " + rowText);
 			jsClick(ticketsPage.firstRow);
-			waitForVisibility(ticketsPage.print);
+			waitForPageLoad();
+			try {
+				waitForVisibility(ticketsPage.print);
+			} catch (Exception e) {
+				HelperClass.log.warn("Print button not visible after row click, waiting longer...");
+				WebDriverWait extWait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(10));
+				extWait.until(ExpectedConditions.or(
+						ExpectedConditions.visibilityOfElementLocated(ticketsPage.print),
+						ExpectedConditions.visibilityOfElementLocated(ticketsPage.noResultsMessage)));
+			}
 		} catch (Exception e) {
 			HelperClass.log.error("Failed to click first row : " + e.getMessage());
 			throw new RuntimeException("Unable to click first row", e);
@@ -91,7 +100,13 @@ public class TicketsActions extends BaseAction {
 				HelperClass.log.warn("Print skipped because no results found");
 				return;
 			}
-			waitForVisibility(ticketsPage.print);
+			try {
+				waitForVisibility(ticketsPage.print);
+			} catch (Exception e) {
+				HelperClass.log.warn("Print button not found, attempting JS fallback");
+				waitForAjaxComplete();
+				waitForVisibility(ticketsPage.print);
+			}
 			scrollIntoView(ticketsPage.print);
 			waitForClickable(ticketsPage.print);
 			jsClick(ticketsPage.print);

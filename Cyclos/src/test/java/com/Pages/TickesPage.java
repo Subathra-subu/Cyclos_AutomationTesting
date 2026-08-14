@@ -7,7 +7,7 @@ public class TickesPage {
     public By bankingMenu       = By.xpath("//a[@id='menu_banking']");
     public By ticketsMenu       = By.xpath("//div[text()=\"Tickets\"]/parent::a");
     public By statusBtn         = By.xpath("//button[contains(@class,'form-control')]");
-    public By print             = By.xpath("//div[contains(text(),'Print')]");
+    public By print             = By.xpath("//div[contains(text(),'Print')] | //button[contains(.,'Print')] | //a[contains(.,'Print')]");
     public By transactionStatus = By.xpath("(//div[contains(@class,'label-value-value')])[1]");
     public By noResultsMessage  = By.xpath("//div[contains(text(),'No results match the search criteria')]");
     public By firstRow          = By.xpath("//table[contains(@class,'table-hover')]/tbody/tr[1]");
