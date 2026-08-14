@@ -50,6 +50,7 @@ public class MyVoucherActions extends BaseAction {
             waitForPageLoad();
             waitForClickable(p.cinema);
             click(p.cinema);
+            waitForPageLoad();
             HelperClass.log.info("Cinema voucher clicked");
         } catch (Exception e) {
             HelperClass.log.error("Failed to click Cinema: {}", e.getMessage());
@@ -62,6 +63,7 @@ public class MyVoucherActions extends BaseAction {
             waitForPageLoad();
             waitForClickable(p.gift);
             click(p.gift);
+            waitForPageLoad();
             HelperClass.log.info("Gift voucher clicked");
         } catch (Exception e) {
             HelperClass.log.error("Failed to click Gift: {}", e.getMessage());
@@ -74,6 +76,7 @@ public class MyVoucherActions extends BaseAction {
             waitForPageLoad();
             waitForClickable(p.restaurant);
             click(p.restaurant);
+            waitForPageLoad();
             HelperClass.log.info("Restaurant voucher clicked");
         } catch (Exception e) {
             HelperClass.log.error("Failed to click Restaurant: {}", e.getMessage());
@@ -83,6 +86,8 @@ public class MyVoucherActions extends BaseAction {
 
     public void amountAndNumber(String number, String amount) {
         try {
+            waitForPageLoad();
+            waitForVisibility(p.number);
             sendKeys(p.number, number);
             sendKeys(p.amount, amount);
             HelperClass.log.info("Entered number: {} amount: {}", number, amount);
@@ -97,6 +102,8 @@ public class MyVoucherActions extends BaseAction {
             waitForPageLoad();
             waitForClickable(p.next);
             click(p.next);
+            waitForPageLoad();
+            waitForAjaxComplete();
             HelperClass.log.info("Next clicked");
         } catch (Exception e) {
             HelperClass.log.error("Failed to click Next: {}", e.getMessage());
@@ -107,8 +114,10 @@ public class MyVoucherActions extends BaseAction {
     public void confirm() {
         try {
             waitForPageLoad();
+            waitForAjaxComplete();
+            waitForVisibility(p.confirm);
             waitForClickable(p.confirm);
-            click(p.confirm);
+            jsClick(p.confirm);
             HelperClass.log.info("Confirm clicked");
         } catch (Exception e) {
             HelperClass.log.error("Failed to click Confirm: {}", e.getMessage());

@@ -17,4 +17,13 @@ public class ContactPage
 	public By submit = By.xpath("//span[text()=\"Submit\"]");
 	
 	public By successMessage = By.xpath("//h1/following::div[contains(text(),\"required\")]");
+	
+	public By contactListViewButton = By.xpath("//div/following::label[2]");
+	
+	public By userAssert = By.xpath("//th[text()=\"User\"]");
+	
+	public By contactTiledViewButton = By.xpath("//div/following::label[1]");
+	
+	public By contactTiledViewAssert = By.xpath("(//div[@class=\"card-title\"])[1]");
+
 }

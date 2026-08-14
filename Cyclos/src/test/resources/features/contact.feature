@@ -18,3 +18,16 @@ Feature: SRIRAM_K_1/06/2026_CONTACT
     
       | search | field                  |
       |        | This field is required |
+      
+   @listView
+   Scenario: to verify the contact list view
+     When the user clicks the contact list view button
+     Then the user should see the contact list view page with a user message
+     
+   @tiledView
+   Scenario: to verify the contact tiled view
+     When the user clicks the contact tiled view button
+     Then the user should see the contact tiled view page with a user message
+     
+     
+

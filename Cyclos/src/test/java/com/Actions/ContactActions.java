@@ -122,4 +122,68 @@ public class ContactActions extends BaseAction {
             throw e;
         }
     }
+
+    
+    public void clickContactListViewButton() {
+
+        try {
+
+            waitForVisibility(contactPage.contactListViewButton);
+
+            waitForClickable(contactPage.contactListViewButton);
+
+            jsClick(contactPage.contactListViewButton);
+
+            HelperClass.log.info("Clicked Contact List View Button Successfully");
+
+        } catch (Exception e) {
+
+            HelperClass.log.error("Failed to click Contact List View Button : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    
+    public void verifyUserColumnDisplayed() {
+
+        String actualText = getText(contactPage.userAssert);
+
+        Assert.assertEquals(actualText, "User",
+                "User column text mismatch");
+    }
+    
+	public void clickContactTiledViewButton() {
+
+		try
+		{
+			waitForClickable(contactPage.contactTiledViewButton);
+			
+			jsClick(contactPage.contactTiledViewButton);
+			
+			HelperClass.log.info("Clicked Contact Tiled View Button Successfully");
+		}
+		
+		catch (Exception e) {
+			HelperClass.log.error("Failed to click Contact Tiled View Button : " + e.getMessage());
+
+			throw e;
+		}
+	}
+	
+	public void verifyContactTiledViewDisplayed() {
+
+		try
+		{
+			String actualText = getText(contactPage.contactTiledViewAssert);
+
+			Assert.assertEquals(actualText, "Active Walking", "Contact Tiled View text mismatch");
+		}
+		
+		catch (Exception e) {
+			HelperClass.log.error("Contact Tiled View Verification Failed : " + e.getMessage());
+
+			throw e;
+		}
+	}
+
 }
