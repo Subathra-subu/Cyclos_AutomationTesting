@@ -5,6 +5,7 @@ import java.util.Map;
 //
 import org.openqa.selenium.By;
 import com.Pages.InviteUserPage;
+import com.Utilities.CSVUtility;
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -28,7 +29,7 @@ public class InviteUserActions extends BaseAction {
 
     public void enterEmail(String email) {
         try {
-            sendKeys(page.emailTextBox, email);
+            sendKeys(page.emailtextbox, email);
         } catch (Exception e) {
             HelperClass.log.error("Failed entering email", e);
         }
@@ -59,6 +60,24 @@ public class InviteUserActions extends BaseAction {
         } catch (Exception e) {
             HelperClass.log.error("Validation message not found", e);
             return false;
+        }
+    }
+    
+    public void clickAddEmailButton() {
+    	    for (int i=1;i<=3;i++) {
+    	    	 jsClick(By.xpath("//div[@class='input-fields']/descendant::button["+i+"]"));
+    	    }
+    }
+    
+    public void enterEmailInMultipleFields() {
+
+        List<String> emails =
+                CSVUtility.getVoucherCodes("src/test/resources/testData/email_InputData.csv");
+
+        for (int i = 1; i <= emails.size(); i++) {
+
+            sendKeys(
+                By.xpath("(//div[@class='input-fields']//input)[" + i + "]"), emails.get(i - 1));
         }
     }
 }

@@ -1,0 +1,87 @@
+[33m994b0ff[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32madvertisment_sriram[m[33m)[m HEAD@{0}: pull origin main: Merge made by the 'ort' strategy.
+[33maf11946[m HEAD@{1}: pull origin advertisment_sriram --rebase (finish): returning to refs/heads/advertisment_sriram
+[33maf11946[m HEAD@{2}: pull origin advertisment_sriram --rebase (pick): enchance the add feature
+[33me773137[m[33m ([m[1;31morigin/advertisment_sriram[m[33m)[m HEAD@{3}: pull origin advertisment_sriram --rebase (start): checkout e773137fad174ec9a7e5e79abe23d33a8bd0238b
+[33mdb1d31a[m HEAD@{4}: commit: enchance the add feature
+[33mc86be21[m HEAD@{5}: pull origin advertisment_sriram --rebase (finish): returning to refs/heads/advertisment_sriram
+[33mc86be21[m HEAD@{6}: pull origin advertisment_sriram --rebase (pick): csv added
+[33mbdfa2b4[m HEAD@{7}: pull origin advertisment_sriram --rebase (start): checkout bdfa2b407ad63e25288d6da64caa8d457431f8e1
+[33m5dae1c2[m HEAD@{8}: commit: csv added
+[33m84f94e4[m HEAD@{9}: commit: enhance the AddinterstPage
+[33m21cba78[m HEAD@{10}: commit (merge): resolve conflict
+[33m6a104ea[m HEAD@{11}: commit (merge): ticket feature complete
+[33m26fdd4a[m HEAD@{12}: commit: ticket feature complete
+[33m411db24[m HEAD@{13}: commit (merge): resolve merge conflicts and remove test-output reports
+[33m88a4536[m HEAD@{14}: rebase (finish): returning to refs/heads/advertisment_sriram
+[33m88a4536[m HEAD@{15}: rebase (continue): enchance delete
+[33mf7205d0[m HEAD@{16}: pull origin advertisment_sriram --rebase (pick): enhance feature with excel integration and business directory
+[33meb2718a[m HEAD@{17}: pull origin advertisment_sriram --rebase (pick): enhance the feature with excel and delete scenario
+[33mec7aa74[m HEAD@{18}: pull origin advertisment_sriram --rebase (start): checkout ec7aa749fdc402d0897e1f53730824bda17c396f
+[33m4684b6b[m HEAD@{19}: commit: enchance delete
+[33m76b3d2f[m HEAD@{20}: commit: enhance feature with excel integration and business directory
+[33mfa6e211[m HEAD@{21}: commit: enhance the feature with excel and delete scenario
+[33mcf54fcb[m HEAD@{22}: pull origin advertisment_sriram --rebase (finish): returning to refs/heads/advertisment_sriram
+[33mcf54fcb[m HEAD@{23}: pull origin advertisment_sriram --rebase (pick): enhance the feature with excel
+[33m5e668aa[m HEAD@{24}: pull origin advertisment_sriram --rebase (start): checkout 5e668aa39ddad56481fe0275e306d12df184dfda
+[33m972dd67[m HEAD@{25}: commit: enhance the feature with excel
+[33m5c7b441[m HEAD@{26}: checkout: moving from main to advertisment_sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{27}: reset: moving to HEAD
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{28}: checkout: moving from advertisment_sriram to main
+[33m5c7b441[m HEAD@{29}: pull origin main: Merge made by the 'ort' strategy.
+[33m67d455c[m HEAD@{30}: rebase (finish): returning to refs/heads/advertisment_sriram
+[33m67d455c[m HEAD@{31}: rebase (pick): PR#5 - Enhancement in login feature lfile (#38)
+[33m511508f[m HEAD@{32}: rebase (pick): #pr2 Qr code krishna (#32)
+[33m0c5a27d[m HEAD@{33}: rebase (continue): pr#3 invite users functionality Krishna (#36)
+[33m3f1e86b[m HEAD@{34}: commit: Removed generated report folders
+[33md314101[m HEAD@{35}: rebase (continue): for jenkins
+[33mc7a29f0[m HEAD@{36}: pull origin advertisment_sriram --rebase (start): checkout c7a29f03a5a85f57ccd396b5ac97797248a8c7ba
+[33mabd292b[m HEAD@{37}: commit (merge): Removed generated report folders
+[33me6cb14b[m HEAD@{38}: reset: moving to HEAD
+[33me6cb14b[m HEAD@{39}: commit (merge): @SRIRAM - tag added
+[33ma05c7c6[m HEAD@{40}: reset: moving to HEAD
+[33ma05c7c6[m HEAD@{41}: commit: for jenkins
+[33m7289ed2[m HEAD@{42}: commit: enhance tickets and voucher feature
+[33mecfa5dd[m HEAD@{43}: commit (merge): enchance tickets and voucher feature
+[33mdade5b0[m HEAD@{44}: commit: modified ticket feature
+[33md3d1bab[m HEAD@{45}: checkout: moving from sriram to advertisment_sriram
+[33m5f4aff7[m[33m ([m[1;31morigin/sriram[m[33m, [m[1;32msriram[m[33m)[m HEAD@{46}: checkout: moving from main to sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{47}: checkout: moving from advertisment_sriram to main
+[33md3d1bab[m HEAD@{48}: pull origin advertisment_sriram --rebase (finish): returning to refs/heads/advertisment_sriram
+[33md3d1bab[m HEAD@{49}: pull origin advertisment_sriram --rebase (pick): Updated feature tickets
+[33m6012f65[m HEAD@{50}: pull origin advertisment_sriram --rebase (start): checkout 6012f65e0d76c1679b1a8a79586a5ed22e8bb337
+[33me7cfc49[m HEAD@{51}: commit: Updated feature tickets
+[33m0bf36e0[m HEAD@{52}: commit (merge): adverticement intrest update
+[33mda53668[m HEAD@{53}: commit (merge): Resolved merge conflicts
+[33m7c22357[m HEAD@{54}: reset: moving to HEAD
+[33m7c22357[m HEAD@{55}: checkout: moving from main to advertisment_sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{56}: checkout: moving from advertisment_sriram to main
+[33m7c22357[m HEAD@{57}: checkout: moving from sriram to advertisment_sriram
+[33m5f4aff7[m[33m ([m[1;31morigin/sriram[m[33m, [m[1;32msriram[m[33m)[m HEAD@{58}: checkout: moving from advertisment_sriram to sriram
+[33m7c22357[m HEAD@{59}: checkout: moving from main to advertisment_sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{60}: checkout: moving from advertisment_sriram to main
+[33m7c22357[m HEAD@{61}: checkout: moving from main to advertisment_sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{62}: checkout: moving from advertisment_sriram to main
+[33m7c22357[m HEAD@{63}: commit: commanLogins
+[33m8afa4f5[m HEAD@{64}: commit (merge): for jenkins
+[33ma3d247b[m HEAD@{65}: commit: for jenkins
+[33m43cbaa4[m HEAD@{66}: commit: feature 2 completed
+[33m5f4aff7[m[33m ([m[1;31morigin/sriram[m[33m, [m[1;32msriram[m[33m)[m HEAD@{67}: checkout: moving from advertisment_sriram to advertisment_sriram
+[33m5f4aff7[m[33m ([m[1;31morigin/sriram[m[33m, [m[1;32msriram[m[33m)[m HEAD@{68}: checkout: moving from sriram to advertisment_sriram
+[33m5f4aff7[m[33m ([m[1;31morigin/sriram[m[33m, [m[1;32msriram[m[33m)[m HEAD@{69}: commit: scenario-2 done
+[33m253ac1f[m HEAD@{70}: commit: jenkins proplem solve
+[33m1f6598f[m HEAD@{71}: commit: for jenkins
+[33m7b09aa9[m HEAD@{72}: commit: senario update
+[33m5cf8df5[m HEAD@{73}: commit: feature file change
+[33m0715338[m HEAD@{74}: commit (merge): Updated pom.xml and fixed Jenkins pipeline dependencies
+[33m2431dd5[m HEAD@{75}: commit: Completed 1 senario in the in the Tickets features
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{76}: merge main: Fast-forward
+[33mff0f3ac[m HEAD@{77}: checkout: moving from main to sriram
+[33m7dec127[m[33m ([m[1;32mmain[m[33m)[m HEAD@{78}: commit: Added ticket automation
+[33ma34ab9b[m HEAD@{79}: commit: Resolved merge conflict
+[33md13334f[m HEAD@{80}: pull origin main: Fast-forward
+[33mc0c30c9[m HEAD@{81}: reset: moving to HEAD
+[33mc0c30c9[m HEAD@{82}: checkout: moving from main to main
+[33mc0c30c9[m HEAD@{83}: pull origin main: Fast-forward
+[33mff0f3ac[m HEAD@{84}: checkout: moving from sriram to main
+[33mff0f3ac[m HEAD@{85}: checkout: moving from main to sriram
+[33mff0f3ac[m HEAD@{86}: clone: from https://github.com/Subathra-subu/Cyclos_AutomationTesting.git

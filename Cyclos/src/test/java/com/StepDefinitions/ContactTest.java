@@ -52,5 +52,18 @@ public class ContactTest
 
 	    contactActions.verifyUserColumnDisplayed();
 	}
+	
+	@When("the user clicks the contact tiled view button")
+	public void the_user_clicks_the_contact_tiled_view_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    contactActions.clickContactTiledViewButton();
+	}
+
+	@Then("the user should see the contact tiled view page with a user message")
+	public void the_user_should_see_the_contact_tiled_view_page_with_a_user_message() {
+	    // Write code here that turns the phrase above into concrete actions
+	    contactActions.verifyContactTiledViewDisplayed();
+	}
+
 
 }

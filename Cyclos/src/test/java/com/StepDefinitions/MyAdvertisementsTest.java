@@ -3,6 +3,7 @@ package com.StepDefinitions;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 
 import com.Actions.MyAdvertisementsAction;
 import com.Actions.LoginAction;
@@ -45,8 +46,8 @@ public class MyAdvertisementsTest {
 		actions.clickMyAdvertisements();
 	}
 
-	@When("User enters advertisement details")
-	public void user_enters_advertisement_details(DataTable dataTable) {
+	@When("User clicks add new button and enters advertisement details")
+	public void user_clicks_add_new_button_and_enters_advertisement_details(DataTable dataTable) {
 
 		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
 
@@ -74,6 +75,28 @@ public class MyAdvertisementsTest {
 		Assert.assertTrue(actions.validateMessage().contains("was saved"));
 	}
 
+	@When("User enters advertisement details")
+	public void user_enters_advertisement_details(DataTable dataTable) {
+
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
+
+		actions.clickNewAdvertisement();
+
+		actions.enterTitle(data.get("title"));
+
+		actions.selectCategory(data.get("category"));
+
+		actions.enterPrice(data.get("price"));
+
+		actions.selectFromDate(data.get("fromDate"));
+
+		actions.selectToDate(data.get("toDate"));
+
+		actions.enterDescription(data.get("description"));
+
+	}
+
+
 	@When("User searches advertisement mentioned in the CSV file")
 	public void user_searches_advertisement_mentioned_in_the_CSV_file() {
 		
@@ -87,8 +110,10 @@ public class MyAdvertisementsTest {
 	
 	@When("the user click the advertisement")
 	public void the_user_click_the_advertisement() {
-	    
-		actions.clickItem();
+
+		 if(!actions.clickItem()) {
+			    throw new SkipException("No advertisements available");
+			}
 		
 	}
 
@@ -144,4 +169,3 @@ public class MyAdvertisementsTest {
 		
 	}
 }
-

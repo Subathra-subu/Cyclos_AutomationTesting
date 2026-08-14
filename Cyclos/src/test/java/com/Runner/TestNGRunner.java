@@ -15,14 +15,13 @@ import io.cucumber.testng.CucumberOptions;
 
 		monochrome = true,
 
-		publish = false,
+		publish = false,	
 
-		tags = "@SRIRAM",
-	
+		
 		plugin = {
 
 				"pretty",
-
+        
 				"html:target/CucumberReports/Cucumber.html",
 
 				"json:target/CucumberReports/Cucumber.json",
@@ -35,7 +34,7 @@ public class TestNGRunner extends AbstractTestNGCucumberTests {
 
     
     @Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
         return super.scenarios();
     }

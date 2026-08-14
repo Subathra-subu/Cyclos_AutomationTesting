@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Reports & logs
 allure-results/
 HtmlReport/
@@ -5,26 +6,62 @@ PdfReport/
 Reports/
 test-output/
 target/
-<<<<<<< HEAD
 logs/
 screenshots/
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69f011f8a88f68edab431c45c2448817b77f0cc7
+# Maven Target Folder
+/target/
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
 
-# Eclipse / IDE files
-.metadata/
-.settings/
-.classpath
-.project
-*.log
+# Allure Reports
+/allure-results/
+/allure-report/
 
-# OS files
+# Extent Reports
+/HtmlReport/
+/PdfReport/
+/Reports/
+
+# Spark Report
+Spark.html
+
+# Downloads
+Downloads/
+
+
+/bin/
+# Logs
+/logs/
+
+# Screenshots
+/screenshots/
+
+# PDF Files
+*.pdf
+
+# PNG Screenshots
+*.png
+
+# IDE Files
+/.classpath
+/.project
+/.settings/
+/.idea/
+/.vscode/
+
+# OS Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
-*.log
-allure-results/
-HtmlReport/
-PdfReport/
-Reports/
-test-output/
-screenshots/
->>>>>>> 51f6d212ef9e76b1a387c1beccf45c99206d9b67
+/bin/
+.metadata/
+bin/
+>>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+/bin/
+>>>>>>> 69f011f8a88f68edab431c45c2448817b77f0cc7

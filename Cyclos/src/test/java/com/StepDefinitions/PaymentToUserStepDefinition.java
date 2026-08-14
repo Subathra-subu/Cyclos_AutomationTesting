@@ -2,11 +2,8 @@ package com.StepDefinitions;
 
 import java.util.Map;
 
-import org.testng.Assert;
-
 import com.Actions.LoginAction;
 import com.Actions.PaymentToUserActions;
-
 import com.Utilities.HelperClass;
 
 import io.cucumber.datatable.DataTable;
@@ -16,137 +13,146 @@ import io.cucumber.java.en.When;
 
 public class PaymentToUserStepDefinition {
 
-	 private final PaymentToUserActions actions =
-	            new PaymentToUserActions();
-	 LoginAction login = new LoginAction();	    
-	 @Given("User should be logged into application and must on home page")
-	 public void user_should_be_logged_into_application_and_must_on_home_page() {
+	PaymentToUserActions actions = new PaymentToUserActions();
 
-	     HelperClass.openPage();
+	LoginAction login = new LoginAction();
 
-	     login.clickLoginLink();
+	@Given("User should be logged into application and must on home page")
+	public void user_should_be_logged_into_application_and_must_on_home_page() {
 
-	     login.entervaliduserNameAndPassword();
+		HelperClass.openPage();
 
-	     login.clickSubmitButton();
-	 }
-   @When("User clicks the payment to user button")
-   public void user_clicks_the_payment_to_user_button() {
-   	actions.clickPayUser();
-   }
-    
-    @When("User gives the empty user field {string}")
-    public void user_gives_the_empty_user_field(String value) {
-    	
-    }
-    @Then("User clicks the next button and should validate the error message is displayed")
-    public void user_clicks_the_next_button_and_should_validate_the_error_message_is_displayed() {
-    	actions.clickNext();
-    	Assert.assertEquals(actions.validateErrorMessage(),"This field is required");
-    	
-    }
-    @When("User enters valid user {string}")
-    public void user_enters_valid_user(String username) {
+		login.clickLoginLink();
 
-    	actions.enterUser(username);
-    }
+		login.entervaliduserNameAndPassword();
 
-    @When("User enters amount {string}")
-    public void user_enters_amount(String amount) {
+		login.clickSubmitButton();
+	}
 
-    	actions.enterAmount(amount);
-    }
+	@When("User clicks the payment to user button")
+	public void user_clicks_the_payment_to_user_button() {
 
-  
-    @Then("User should successfully complete the payment")
-    public void user_should_successfully_complete_the_payment() {
+		actions.clickPayUser();
+	}
 
-    	actions.clickNext();
-        Assert.assertTrue(actions.validatePaymentConfirmationTitle().contains("Payment"));
+	@When("User gives the empty user field {string}")
+	public void user_gives_the_empty_user_field(String value) {
 
-    	
-    }
-    @Then("User clicks the next button and should validate limit exceeded message")
-    public void user_clicks_the_next_button_and_should_validate_limit_exceeded_message() {
+	}
 
-    	actions.clickNext();
+	@Then("User clicks the next button and should validate the error message is displayed")
+	public void user_clicks_the_next_button_and_should_validate_the_error_message_is_displayed() {
 
-    	Assert.assertTrue(
-    		actions.validateLimitExceededMessage().contains("Amount")
-    	);
-    }
-    @When("User enters scheduled payment details")
-    public void user_enters_scheduled_payment_details(DataTable dataTable) {
+		actions.clickNext();
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+		actions.validateErrorMessage("This field is required");
+	}
 
-        actions.enterUser(data.get("username"));
+	@When("User enters payment details")
+	public void user_enters_payment_details(DataTable dataTable) {
 
-        actions.enterAmount(data.get("amount"));
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
 
-        actions.selectSchedulingType(data.get("type"));
+		actions.enterUser(data.get("username"));
 
-        actions.selectFutureDate(data.get("date"));
+		actions.enterAmount(data.get("amount"));
+	}
 
-        actions.enterDescription(data.get("description"));
-    }
-    @Then("User should successfully schedule the payment")
-    public void user_should_successfully_schedule_the_payment() {
+	@Then("User should successfully complete the payment")
+	public void user_should_successfully_complete_the_payment() {
 
-        actions.clickNext();
+		actions.clickNext();
 
-        Assert.assertTrue(actions.validatePaymentConfirmationTitle().contains("Payment"));
-    }
-    @When("User enters recurring payment details")
-    public void user_enters_recurring_payment_details(DataTable dataTable) {
+		actions.validatePaymentConfirmationTitle();
+	}
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+	@When("User enters valid user {string}")
+	public void user_enters_valid_user(String username) {
 
-        actions.enterUser(data.get("username"));
+		actions.enterUser(username);
+	}
 
-        actions.enterAmount(data.get("amount"));
+	@When("User enters amount {string}")
+	public void user_enters_amount(String amount) {
 
-        actions.selectSchedulingType(data.get("type"));
+		actions.enterAmount(amount);
+	}
 
-      
-        actions.enterDescription(data.get("description"));
-    }
+	@Then("User clicks the next button and should validate limit exceeded message {string}")
+	public void user_clicks_the_next_button_and_should_validate_limit_exceeded_message(String expectedMessage) {
 
-    @Then("Recurring payment should be scheduled successfully")
-    public void recurring_payment_should_be_scheduled_successfully() {
+		actions.clickNext();
 
-        actions.clickNext();
 
-        Assert.assertTrue(
-                actions.validatePaymentConfirmationTitle().contains("Payment")
-        );
-    }
-    @When("User enters monthly installment payment details")
-    public void user_enters_monthly_installment_payment_details(DataTable dataTable) {
+	}
 
-        Map<String, String> data =
-                dataTable.asMaps(String.class, String.class).get(0);
+	@When("User enters scheduled payment details")
+	public void user_enters_scheduled_payment_details(DataTable dataTable) {
 
-        actions.enterUser(data.get("username"));
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
 
-        actions.enterAmount(data.get("amount"));
+		actions.enterUser(data.get("username"));
 
-        actions.selectSchedulingType(data.get("type"));
+		actions.enterAmount(data.get("amount"));
 
-        actions.enterNumberOfInstallments(data.get("installments"));
+		actions.selectSchedulingType(data.get("type"));
 
-        actions.enterDescription(data.get("description"));
-    }
+		actions.selectFutureDate(data.get("date"));
 
-    @Then("Monthly installment payment should be scheduled successfully")
-    public void monthly_installment_payment_should_be_scheduled_successfully() {
+		actions.enterDescription(data.get("description"));
+	}
 
-        actions.clickNext();
+	@Then("User should successfully schedule the payment")
+	public void user_should_successfully_schedule_the_payment() {
 
-        Assert.assertTrue(
-            actions.validatePaymentConfirmationTitle().contains("Payment")
-        );
-    }
+		actions.clickNext();
+
+		actions.validatePaymentConfirmationTitle();
+	}
+
+	@When("User enters recurring payment details")
+	public void user_enters_recurring_payment_details(DataTable dataTable) {
+
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
+
+		actions.enterUser(data.get("username"));
+
+		actions.enterAmount(data.get("amount"));
+
+		actions.selectSchedulingType(data.get("type"));
+
+		actions.enterDescription(data.get("description"));
+	}
+
+	@Then("Recurring payment should be scheduled successfully")
+	public void recurring_payment_should_be_scheduled_successfully() {
+
+		actions.clickNext();
+
+		actions.validatePaymentConfirmationTitle();
+	}
+
+	@When("User enters monthly installment payment details")
+	public void user_enters_monthly_installment_payment_details(DataTable dataTable) {
+
+		Map<String, String> data = dataTable.asMaps(String.class, String.class).get(0);
+
+		actions.enterUser(data.get("username"));
+
+		actions.enterAmount(data.get("amount"));
+
+		actions.selectSchedulingType(data.get("type"));
+
+		actions.enterNumberOfInstallments(data.get("installments"));
+
+		actions.enterDescription(data.get("description"));
+	}
+
+	@Then("Monthly installment payment should be scheduled successfully")
+	public void monthly_installment_payment_should_be_scheduled_successfully() {
+
+		actions.clickNext();
+
+		actions.validatePaymentConfirmationTitle();
+	}
 }

@@ -12,7 +12,7 @@ public class MyAdvertisesmentsPage {
 
 	    public By titleField = By.xpath("//input[@type='text']");
 
-	    public By categoryDropdown = By.xpath("//button[contains(@class,'form-control')]");
+	    public By categoryDropdown = By.xpath("(//button[contains(@class,'form-control')])[1]");
 
 	    public By categoryOption(String category) {
 
@@ -34,7 +34,9 @@ public class MyAdvertisesmentsPage {
 	    public By searchField = By.xpath("//input[@class='form-control w-100 ng-untouched ng-pristine ng-valid']");
 	    
 	    public By item = By.xpath("(//div[@class='avatar-container full-size'])[1]");
-
+	    
+	    public By notFound = By.xpath("//div[contains(text(),'No results match the search criteria')]");
+	    
 	    public By editBtn = By.xpath("//div[contains(text(),'Edit')]");
 
 	    public By removeBtn = By.xpath("//div[contains(text(),'Remove')]");

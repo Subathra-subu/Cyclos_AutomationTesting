@@ -7,10 +7,12 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -109,8 +111,10 @@ public class BaseAction {
 
     
 
+    // ═══════════════════════════════════════════════════════════════════
+    //  SMART WAIT — loader + table state detection
+    // ═══════════════════════════════════════════════════════════════════
    
-
     public void waitForLoaderToDisappear(By loaderLocator) {
         try {
             HelperClass.getWait()
@@ -212,6 +216,10 @@ public class BaseAction {
             }
         }
         throw new RuntimeException("sendKeys failed after " + MAX_RETRIES + " retries: " + locator);
+    }
+    
+    public void pressEnter(By locator) {
+        waitForVisibility(locator).sendKeys(Keys.ENTER);
     }
 
     // ═══════════════════════════════════════════════════════════════════
@@ -353,4 +361,10 @@ public class BaseAction {
             return false;
         });
     }
+    public void pressTab() {
+        new Actions(HelperClass.getDriver())
+                .sendKeys(Keys.TAB)
+                .perform();
+    }
+
 }

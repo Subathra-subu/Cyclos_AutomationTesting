@@ -4,7 +4,22 @@ Feature:Subathra_17/05/2026_Error_Slayers_Cyclos_UserRegister
 Background:
     Given that the user launches the application
     When the user clicks the Register link
+<<<<<<< HEAD
+<<<<<<< HEAD
   	
+=======
+<<<<<<< HEAD
+    
+=======
+  	
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+=======
+    
+=======
+  	
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
   	@ExistRegister
   	Scenario: Register with Existing credentials
 	When the user enters the already existing Login name

@@ -1,5 +1,5 @@
-@Akksheetha @RecievePaymentFeature
-Feature: Akksheetha_2026-05-13_Error_Slayers_ReceivePayment.feature
+@Akksheetha @ReceivePaymentFeature
+Feature: Akksheetha_2026-05-13_Error_Slayers_ReceivePayment
 
 Description : Testing the receive payment feature in Banking
 
@@ -7,54 +7,65 @@ Background:
     Given Registered user launches the Cyclos application
     When User navigates to the Receive Payment page
 
+
 @ReceivePaymentWithValidDetails
-  Scenario Outline: Verify scheduled receive payment functionality with Confirmation
+Scenario Outline: Verify scheduled receive payment functionality with confirmation
 
     And User enters payment details with "<Name>", "<Amount>" and "<Description>"
     And User clicks on the Submit button and confirms the password "<Password>"
     Then Payment should be received successfully
 
-    Examples:
-      | Name               | Amount | Description            | Password  |
-      | The Bakery shop    | 1      | Making a valid Payment | 1234      |
-      | The Irish Pub      | 3      | Checking a payment     | 1234      |
-      
+Examples:
+    | Name            | Amount | Description             | Password |
+    | The Bakery shop | 1      | Monthly payment         | 1234     |
+    | The Irish Pub   | 3      | Membership payment      | 1234     |
+
+
 @ReceivePaymentWithInvalidName
- Scenario: Verify failure message for blank user field
- 
-    And User leaves name field blank and enter only amount detail 
+Scenario: Verify error message for blank user field
+
+    And User leaves name field blank and enter only amount detail
     And User clicks on the next button
     Then Appropriate error message for invalid user should be displayed
 
+
 @ReceivePaymentWithInvalidAmount
-  Scenario Outline: Verify failure message for blank amount field
+Scenario Outline: Verify error message for invalid amount field
 
     And User enters invalid payment details with "<Name>", "<Amount>" and "<Description>"
     And User clicks on the next button
     Then Appropriate error message for amount should be displayed
 
-    Examples:
-      | Name             | Amount | Description               |   
-      | The Bakery shop  | 00     | Making an Invalid Payment |
-      | The Irish Pub    | 3      | Checking a payment        |
+Examples:
+    | Name            | Amount | Description               |
+    | The Bakery shop | 00     | Invalid zero amount       |
+    | The Irish Pub   | -1     | Negative payment amount   |
 
 
- @ReceivePaymentWithBlankDetails
-  Scenario: Verify failure message when both user and amount fields are blank
+@ReceivePaymentWithBlankDetails
+Scenario: Verify error message when mandatory fields are blank
 
     And User leaves payment fields empty
     And User clicks on the next button
     Then Validation message for mandatory fields should be displayed
 
- @ReceivePaymentExceedLimit
-  Scenario Outline: Verify  alert message when receive payment amount exceeds maximum limit
-    
-    And User enters payment details with "<Name>", "<Amount>" and "<Description>"
-    And User clicks on the Submit button and confirms the password "<Password>"
+@ReceivePaymentExceedLimit
+Scenario: Verify alert message when receive payment daily limit exceeds
+
+    And User enters payment details with "The Bakery shop", "1" and "Making a valid Payment"
+    And User clicks on the Submit button and confirms the password "1234"
     Then the alert message for exceeding limit should be displayed
     
     Examples:
       | Name               | Amount | Description            | Password  |
       | The Bakery shop    | 1      | Making a valid Payment | 1234      |
       | The Irish Pub      | 3      | Checking a payment     | 1234      |
- 
+
+@ReceivePaymentExceedMaximumAmount
+Scenario: Verify validation message when payment amount exceeds allowed limit
+
+    And User enters exceeded payment details
+        | Name            | Amount       | Description                     |
+        | The Bakery shop | 999999999999 | Exceeding maximum payment limit |
+    And User clicks on the next button
+    Then Appropriate validation message for exceeded amount should be displayed
