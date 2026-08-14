@@ -12,7 +12,6 @@ import io.cucumber.testng.CucumberOptions;
 		features = "src/test/resources/Features",
 
 		glue = "com.StepDefinitions",
-        tags= "@Subathra",
 
 		monochrome = true,
 
