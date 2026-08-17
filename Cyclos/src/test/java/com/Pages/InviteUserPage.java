@@ -1,5 +1,5 @@
 package com.Pages;
-//
+//iviteuser
 import org.openqa.selenium.By;
 
 public class InviteUserPage {

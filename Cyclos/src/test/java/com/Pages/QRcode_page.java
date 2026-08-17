@@ -1,5 +1,5 @@
 package com.Pages;
-
+//QRcode
 import org.openqa.selenium.By;
 
 import com.Actions.QR_Actions;
