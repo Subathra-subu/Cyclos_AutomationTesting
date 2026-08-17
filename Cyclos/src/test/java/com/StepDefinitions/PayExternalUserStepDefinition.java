@@ -150,4 +150,9 @@ public class PayExternalUserStepDefinition {
 
         actions.validateInvalidEmailErrorMessage();
     }
+    @Then("User should validate amount error message {string}")
+    public void user_should_validate_amount_error_message(String expectedMessage) {
+
+        actions.validateAmountErrorMessage(expectedMessage);
+    }
 }
