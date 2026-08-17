@@ -420,4 +420,30 @@ public class PayExternalUserAction extends BaseAction {
             throw e;
         }
     }
+    public void validateAmountErrorMessage(String expectedMessage) {
+
+        try {
+
+            clickNext();
+
+            waitForVisibility(page.amountErrorMessage);
+
+            String actualMessage = getText(page.amountErrorMessage);
+
+            Assert.assertEquals(
+                actualMessage.trim(),
+                expectedMessage.trim());
+
+            HelperClass.log.info(
+                "Amount error validated successfully: " + actualMessage);
+
+        } catch (Exception e) {
+
+            HelperClass.log.error(
+                "Amount validation failed : " + e.getMessage());
+
+            throw e;
+        }
+    }
+    
 }
