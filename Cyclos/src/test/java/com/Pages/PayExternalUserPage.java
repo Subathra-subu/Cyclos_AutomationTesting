@@ -26,8 +26,7 @@ public class PayExternalUserPage {
 
 	public By pendingStatus = By.xpath("//div[contains(text(),'Pending')]");
 
-	public By emailErrorMessage = By
-			.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
+	public By emailErrorMessage = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'This field is required')]");
 	
 	public By paymentRow = By.xpath("//div[contains(text(),'Cancel Test')]");
 
@@ -43,4 +42,6 @@ public class PayExternalUserPage {
 	    return By.xpath("//div[contains(text(),'" + description + "')]");
 	}
 	public By invalidEmailErrorMessage = By.xpath("//div[contains(@class,'invalid-feedback') and contains(text(),'Destination user identifier is invalid.')]");
+	
+	public By amountErrorMessage = By.xpath("//label[contains(.,'Amount')]/following-sibling::div//div[contains(@class,'invalid-feedback')]");
 }
