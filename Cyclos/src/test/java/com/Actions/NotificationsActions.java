@@ -56,4 +56,28 @@ public class NotificationsActions extends BaseAction {
                 isDisplayed(notificationsPage.notificationRows),
                 "Notifications are not displayed");
     }
+    
+    public void openNotification() {
+
+        HelperClass.log.info("Opening Notification");
+
+        waitForVisibility(notificationsPage.notificationRows);
+
+        click(notificationsPage.notificationRows);
+
+        HelperClass.log.info("Notification clicked successfully");
+    }
+
+    public void verifyNotificationOpened() {
+
+        HelperClass.log.info("Verifying Notification Details");
+
+        waitForVisibility(notificationsPage.printnotfns);
+
+        Assert.assertTrue(
+                isDisplayed(notificationsPage.printnotfns),
+                "Notification details are not displayed");
+
+        HelperClass.log.info("Notification details displayed successfully");
+    }
 }

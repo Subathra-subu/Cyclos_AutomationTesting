@@ -21,3 +21,9 @@ Scenario: Verify user can view all notifications
   And  User is on the Notifications page
   When User unchecks the Unread Only checkbox
   Then All notifications should be displayed
+  
+@OpenNotification
+Scenario: Verify user can open a notification
+
+    When User clicks on a notification
+    Then Notification should be opened

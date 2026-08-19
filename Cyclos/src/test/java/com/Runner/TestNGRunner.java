@@ -13,13 +13,10 @@ import io.cucumber.testng.CucumberOptions;
 
 		glue = "com.StepDefinitions",
 
-        tags= "@Shobana",
-
 		monochrome = true,
 
 		publish = false,	
 
-		
 		plugin = {
 
 				"pretty",

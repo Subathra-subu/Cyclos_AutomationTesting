@@ -36,4 +36,16 @@ public class NotificationsTest {
     @Then("All notifications should be displayed")
     public void all_notifications_should_be_displayed() {
     	notifications.verifyNotificationsDisplayed();    }
+    
+    @When("User clicks on a notification")
+    public void user_clicks_on_a_notification() {
+    	notifications.clickNotificationsIcon();
+        notifications.openNotification();
+    }
+
+    @Then("Notification should be opened")
+    public void notification_should_be_opened() {
+
+        notifications.verifyNotificationOpened();
+    }
 }
