@@ -18,7 +18,7 @@ Spark.html
 Downloads/
 
 
-
+/bin/
 # Logs
 /logs/
 
@@ -42,4 +42,10 @@ Downloads/
 .DS_Store
 Thumbs.db
 /bin/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 .metadata/
+>>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
+=======
+>>>>>>> ce424d55fa4dbcc7f9d78ba8f637a1dcb8465ba0

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Reports & logs
 allure-results/
 HtmlReport/
@@ -9,6 +10,8 @@ logs/
 screenshots/
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 69f011f8a88f68edab431c45c2448817b77f0cc7
 # Maven Target Folder
 /target/
 >>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
@@ -29,7 +32,7 @@ Spark.html
 Downloads/
 
 
-
+/bin/
 # Logs
 /logs/
 
@@ -53,8 +56,12 @@ Downloads/
 .DS_Store
 Thumbs.db
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /bin/
 .metadata/
 bin/
 >>>>>>> branch 'new-main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+=======
+/bin/
+>>>>>>> 69f011f8a88f68edab431c45c2448817b77f0cc7

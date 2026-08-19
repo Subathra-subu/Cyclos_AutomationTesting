@@ -51,6 +51,11 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
       | 2  | 2      | The voucher(s) has been bought. |
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+	@csv @smoke 
+=======
+<<<<<<< HEAD
       
    @MyVoucher 
   	Scenario: To verify the Valid voucher code to search
@@ -64,6 +69,22 @@ Feature: SRIRAM_K_17_5_2026_MyVochers
 
 	@csv @smoke 
 >>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> ac928fb0fd096f89c22c7e9a7034f81153e5c529
+=======
+      
+   @MyVoucher 
+  	Scenario: To verify the Valid voucher code to search
+  	When the user enter the valid voucher code in the voucher code field
+  	And the user click the result 
+  	Then the user should seen the same valid voucher code 
+      | 3  | 5      | The voucher(s) has been bought. |
+
+  @csv @smoke
+=======
+
+	@csv @smoke 
+>>>>>>> branch 'main' of https://github.com/Subathra-subu/Cyclos_AutomationTesting.git
+>>>>>>> 4c05a0cc4c892bca3c61630d6988ab5c05974b94
   Scenario: Verify voucher code search using CSV data
     When the user enter the valid voucher code "<code>"
     And the user click the result

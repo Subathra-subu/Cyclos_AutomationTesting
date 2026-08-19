@@ -53,7 +53,7 @@ public class AddIntrestPage {
             By.xpath("//button//span[text()='Submit']");
     
     public By popUp =
-            By.xpath("//*[contains(text(),'was created')]");
+            By.xpath("//*[contains(text(),'was created')]|//*[contains(text(),'created successfully')]|//snack-bar-container//*[contains(text(),'created')]");
     
     public By requiredMessage =
             By.xpath("//div[contains(text(),\" This field is required\")]");

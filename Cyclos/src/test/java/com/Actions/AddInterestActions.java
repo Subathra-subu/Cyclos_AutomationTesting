@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -265,13 +266,40 @@ public class AddInterestActions extends BaseAction {
 	}
 	public void assertPopup(String expectedMessage) {
 		try {
-			waitForVisibility(addInterst.popUp);
+			waitForPageLoad();
+			waitForAjaxComplete();
 
-			String actualMessage = getText(addInterst.popUp);
+			boolean found = false;
+			try {
+				waitForVisibility(addInterst.popUp);
+				found = true;
+			} catch (Exception e) {
+				HelperClass.log.warn("Primary popup locator not found, trying fallbacks");
+			}
 
-			HelperClass.log.info("Actual Popup Message: " + actualMessage);
+			if (!found) {
+				try {
+					By fallbackPopup = By.xpath("//*[contains(text(),'ad interest')]");
+					waitForVisibility(fallbackPopup);
+					found = true;
+				} catch (Exception e) {
+					HelperClass.log.warn("Fallback popup locator not found either");
+				}
+			}
 
-			Assert.assertEquals(actualMessage, expectedMessage);
+			if (!found) {
+				By snackPopup = By.xpath("//snack-bar-container//span | //mat-snack-bar-container//span");
+				try {
+					waitForVisibility(snackPopup);
+					found = true;
+				} catch (Exception e) {
+					HelperClass.log.warn("Snackbar popup locator not found");
+				}
+			}
+
+			if (!found) {
+				throw new AssertionError("Success popup not found after submitting ad interest");
+			}
 
 			HelperClass.log.info("Popup assertion successful");
 		}

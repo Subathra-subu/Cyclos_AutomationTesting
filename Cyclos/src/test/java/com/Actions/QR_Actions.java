@@ -35,7 +35,7 @@ public class QR_Actions extends BaseAction {
     // Click Generate New QR code button
     public void clickNewGenerate() {
         try {
-            click(page.new_generate);
+            jsClick(page.new_generate);
         } catch (Exception e) {
             System.out.println("Failed to click New Generate button: " + e.getMessage());
         }

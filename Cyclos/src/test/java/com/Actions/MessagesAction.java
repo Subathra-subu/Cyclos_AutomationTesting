@@ -1,5 +1,9 @@
 package com.Actions;
 
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.Pages.MessagesPage;
@@ -166,6 +170,29 @@ public class MessagesAction extends BaseAction {
 		Assert.assertTrue(isDisplayed(messagesPage.activeTrashTab));
 
 		HelperClass.log.info("Trash tab displayed successfully");
+
+	}
+	
+	public void verifyMessagesPageDisplayed() {
+		
+		Assert.assertTrue(isDisplayed(messagesPage.messageHeader));
+
+		HelperClass.log.info("Trash tab displayed successfully");
+		
+	}
+	
+	public void checkDisplayedUsers() throws InterruptedException {
+		
+		 waitForAllText(messagesPage.DisplayedUsers, "Active Walking");
+		
+		 List<WebElement> users = getElements(messagesPage.DisplayedUsers);
+
+		    for (WebElement user : users) {
+
+		        String actualUser = user.getText();
+
+		        Assert.assertTrue(actualUser.contains("Active Walking"));
+		    }
 
 	}
 }

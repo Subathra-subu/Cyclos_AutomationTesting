@@ -12,6 +12,7 @@ import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -360,4 +361,39 @@ public class BaseAction {
             return false;
         });
     }
+    public void pressTab() {
+        new Actions(HelperClass.getDriver())
+                .sendKeys(Keys.TAB)
+                .perform();
+    }
+    
+    public List<WebElement> getElements(By locator) {
+
+        return HelperClass.getDriver().findElements(locator);
+    }
+    
+    public void waitForAllText(By locator, String expectedText) {
+
+        HelperClass.getWait().until(driver -> {
+
+            List<WebElement> elements = driver.findElements(locator);
+
+            if (elements.isEmpty()) {
+                return false;
+            }
+
+            for (WebElement element : elements) {
+                try {
+                    if (!element.getText().trim().contains(expectedText)) {
+                        return false;
+                    }
+                } catch (StaleElementReferenceException e) {
+                    return false;
+                }
+            }
+
+            return true;
+        });
+    }
+
 }
